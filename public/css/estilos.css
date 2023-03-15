@@ -126,9 +126,11 @@ body {
     display: block;
     height: 40px;
     width: 40px;
-    
 }
 
+.lp-submenu-rodape{
+    margin-left: 20px;
+}
 
 
 /* ------------ SUBMENU ------------*/
@@ -250,3 +252,15 @@ body {
 }
 
 /* ------------ SUBMENU END------------*/
+
+
+/* ------------ HOME ------------*/
+
+
+.lp-home-gifs h6{
+    text-align: center;
+    color: var(--azul);
+    font-weight: 700;
+}
+
+/* ------------ HOME END ------------*/
