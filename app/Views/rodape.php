@@ -5,7 +5,7 @@
             <ul class="list-unstyled">
                 <li class="lp-titulo-rodape">SERVIÇOS</li>
                 <li>ASSISTÊNCIA TÉCNICA
-                    <ul class="">
+                    <ul class="list-unstyled lp-submenu-rodape">
                         <li>Computadores</li>
                         <li>Notebook</li>
                         <li>Tablet e Celular</li>
@@ -27,7 +27,7 @@
             <ul class="list-unstyled">
                 <li class="lp-titulo-rodape">LIDERPRO</li>
                 <li>VALORES
-                    <ul>
+                    <ul class="list-unstyled lp-submenu-rodape">
                         <li>Nossa Missão</li>
                         <li>Nossa Visão</li>
                         <li>Honestidade e Confiança</li>
@@ -38,7 +38,7 @@
                 </li>
                 <li>PARCEIROS</li>
                 <li>INFORMAÇÕES
-                    <ul>
+                    <ul class="list-unstyled lp-submenu-rodape">
                         <li>Termos de Uso</li>
                         <li>Política de Privacidade</li>
                         <li>Informações Legais</li>
@@ -46,7 +46,7 @@
                 </li>
                 <li>ACESSO AO CLIENTE</li>
                 <li>IDIOMAS
-                    <ul>
+                    <ul class="list-unstyled lp-submenu-rodape">
                         <li>Português</li>
                         <li>Inglês</li>
                         <li>Espanhol</li>
