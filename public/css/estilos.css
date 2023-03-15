@@ -1,0 +1,252 @@
+:root {
+    --computadores: 0, 98, 49;
+    --notebook: 48, 1, 107;
+    --tablet: 105, 53, 49;
+    --projetor: 249, 4, 6;
+    --fontes: 46, 102, 165;
+    --tv: 206, 56, 8;
+    --impressora: 204, 8, 104;
+    --nobreak: 236, 165, 0;
+    --azul: #003399;
+    --macipadiphone: 105, 53, 49;
+    --rodape: #FE9833;
+}
+
+body {
+    font-family: 'Titillium Web', sans-serif !important
+}
+
+
+/* ------------ MENU TOP ------------*/
+
+.lp-container {
+    max-width: 1240px;
+}
+
+.lp-nav-ul {
+    flex-basis: content;
+}
+
+.lp-nav-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 10px;
+    font-size: 14px;
+
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    text-decoration: none;
+}
+
+.lp-nav-link:hover {
+    color: var(--azul);
+    background-color: white;
+    text-decoration: none;
+}
+
+.lp-breadcrumb {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--azul);
+}
+
+.menu-top li {
+    /* position: relative; */
+    padding: 10px;
+}
+
+.menu-top li a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--azul);
+}
+
+.img_login {
+    /* margin-left: 15px; */
+    /* margin-right: 10px; */
+    height: 20px; 
+    width: 20px;
+}
+
+.lupa_login {
+    /* margin-left: 15px; */
+    /* margin-right: 10px; */
+    height: 20px;
+    width: 20px;
+}
+
+.telefone_menu {
+    height: 15px;
+    width: 15px;
+}
+
+.face_login {
+    /* margin-left: 15px; */
+    /* margin-right: 10px; */
+    height: 20px;
+    width: 25px;
+}
+
+/* ------------ MENU TOP END ------------*/
+
+
+
+@media (max-width: 1200px) {
+    .lp-nav-desktop {
+        display: none;
+    }
+
+}
+
+
+/* ------------ RODAPE ------------*/
+
+
+.lp-rodape {
+    background: var(--rodape);
+    color: white;
+}
+
+.lp-titulo-rodape{
+    font-weight: 700;
+    padding-bottom: 5px;
+}
+
+
+.lp-logo-rodape {
+    display: block;
+    height: 40px;
+    width: 40px;
+    
+}
+
+
+
+/* ------------ SUBMENU ------------*/
+
+
+
+.lp-nav-ul ul.submenu {
+    display: none;
+    position: absolute;
+    top: 62px;
+    left: auto;
+    background: #fff;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    width: 900px;
+    z-index: 9999
+}
+
+.lp-nav-ul li:hover ul {
+    display: block
+}
+
+.lp-nav-ul ul.submenu li a {
+    display: block;
+    width: 25%;
+    color: var(--azul);
+    padding: 5px 0 0 0;
+    font-size: .8em;
+    border-left: 1px solid #eee;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 1px #333;
+    float: left;
+    text-align: center;
+}
+
+.lp-nav-ul ul.submenu li:nth-child(1),
+.lp-nav-ul ul.submenu li:nth-child(2),
+.lp-nav-ul ul.submenu li:nth-child(3),
+.lp-nav-ul ul.submenu li:nth-child(4) {
+    margin-bottom: 10px
+}
+
+.submenu .img-categoria {
+    height: 100px;
+    margin: 20px 0 15px 0;
+    -moz-transition: all .3s;
+    -webkit-transition: all .3s;
+    transition: all .3s
+}
+
+.lp-nav-ul ul.submenu li a:hover .img-categoria {
+    opacity: .9;
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1)
+}
+
+.lp-nav-ul ul.submenu li a svg {
+    margin-top: 1px;
+    fill: #fff;
+    float: left;
+    width: 20px;
+    height: auto;
+    -webkit-transition: all .4s ease 0s;
+    -moz-transition: all .4s ease 0s;
+    -ms-transition: all .4s ease 0s;
+    -o-transition: all .4s ease 0s;
+    transition: all .4s ease 0s
+}
+
+.lp-nav-ul ul.submenu li a:hover svg {
+    fill: rgb(var(--nobreak))
+}
+
+.lp-nav-ul ul.submenu li a span {
+    text-align: left;
+    float: left;
+    width: 100%;
+    padding: 2px 5px;
+    text-align: center;
+    line-height: 30px;
+    color: #fff
+}
+
+.submenu .computadores a span {
+    background: rgb(var(--computadores))
+}
+
+.submenu .notebooks a span {
+    background: rgb(var(--notebook))
+}
+
+.submenu .tablets-e-celulares a span {
+    background: rgb(var(--tablet))
+}
+
+.submenu .projetores a span {
+    background: rgb(var(--projetor))
+}
+
+.submenu .fontes-de-alimentacao a span {
+    background: rgb(var(--fontes))
+}
+
+.submenu .tv-monitor a span {
+    background: rgb(var(--tv))
+}
+
+.submenu .impressoras a span {
+    background: rgb(var(--impressora))
+}
+
+.submenu .no-breaks a span {
+    background: rgb(var(--nobreak))
+}
+
+.lp-nav-ul ul.submenu li.no-breaks a:hover .submenu .macipadiphone a span {
+    background: rgb(var(--macipadiphone))
+}
+
+/* ------------ SUBMENU END------------*/
