@@ -2,27 +2,56 @@
 
 class Paginas extends Controller 
 {
+
+     //Construtor do model do Usuário que fará o acesso ao banco
+     public function __construct()
+     {
+        $this->paginasModel = $this->model("Pagina");
+     }
+
     public function index(){
+
+        $paginas = $this->paginasModel->listarMenu();
 
         //Parâmetros enviados para o método do controller VIEW
         $dados = [
-            'tituloPagina' => 'Página Inicial',
+            'tituloBreadcrumb' => 'HOME',
+            'paginas' => $paginas
+            
         ];
 
         //Chamada do novo objeto PAGINAS 
         $this->view('Paginas/home', $dados);
     }
 
+    public function gestaoInformatica(){
 
-    public function sobre(){
+        $paginas = $this->paginasModel->listarMenu();
 
         //Parâmetros enviados para o método do controller VIEW
         $dados = [
-            'tituloPagina' => 'Sobre nós'            
+            'tituloBreadcrumb' => 'GESTÃO INFORMÁTICA',
+            'paginas' => $paginas
         ];
 
         //Chamada do novo objeto PAGINAS 
-        $this->view('Paginas/sobre', $dados);
+        $this->view('Paginas/gestaoInformatica', $dados);
+
+        
+    }
+
+    public function cabeamentoEstruturado(){
+
+        $paginas = $this->paginasModel->listarMenu();
+
+        //Parâmetros enviados para o método do controller VIEW
+        $dados = [
+            'tituloBreadcrumb' => 'CABEAMENTO ESTRUTURADO',
+            'paginas' => $paginas
+        ];
+
+        //Chamada do novo objeto PAGINAS 
+        $this->view('Paginas/cabeamentoEstruturado', $dados);
 
         
     }

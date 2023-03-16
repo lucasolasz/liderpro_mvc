@@ -49,13 +49,20 @@ body {
     text-decoration: none;
 }
 
-.lp-breadcrumb {
-    text-transform: uppercase;
+.lp-nav-active {
+    color: white ;
+    background-color:var(--rodape);
     text-decoration: none;
-    font-weight: 700;
-    font-size: 14px;
-    color: var(--azul);
 }
+
+.lp-breadcrumb, .lp-breadcrumb a{
+    text-transform: uppercase !important;
+    text-decoration: none !important;
+    font-weight: 700 !important;
+    font-size: 14px !important;
+    color: var(--azul) !important;
+}
+
 
 .menu-top li {
     /* position: relative; */

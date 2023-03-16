@@ -26,31 +26,54 @@
 
 <body>
 
+    <?php
+
+    $active = "";
+    $paginaBreadCrumb = "";
+    $urlBreadCrumb = "";
+
+    if (isset($dados['paginas'])) {
+
+        foreach ($dados['paginas'] as $paginas) {
+
+            if ($paginas->ds_menu == $dados['tituloBreadcrumb']) {
+                $paginaBreadCrumb =  " > " . $paginas->ds_menu;
+                $urlBreadCrumb = $paginas->ds_url_menu;
+                $active = "active";
+            }
+        }
+    }
+
+    ?>
+
     <div class="lp-nav-desktop">
         <div class="container lp-container">
             <nav class="d-flex" style="height: 38px">
                 <div style="width: 250px;"></div>
                 <div class="flex-grow-1 d-flex align-items-center" style="padding-left: 58px">
-                    <div class="lp-breadcrumb">Home</div>
+                    <div class="lp-breadcrumb">
+                        <a href="<?= URL ?>">Home</a>
+                        <a href="<?= URL . '/Paginas' . $urlBreadCrumb ?>"><?= $paginaBreadCrumb ?></a>
+                    </div>
                     <div class="ml-auto">
                         <ul class="list-unstyled d-flex mb-0 menu-top">
                             <li class=""><a href="#">Liderpro</a></li>
-                            <li><a href="#">Clientes</a></li>
+                            <li><a href="<?= URL . '/Paginas/sobre' ?>">Clientes</a></li>
                             <li><a href="#">Contatos</a></li>
                             <li>
                                 <a href="#">
-                                    <img src="img/login_usuario.png" alt="" class="img_login">
+                                    <img src="<?= URL . '/img/login_usuario.png' ?>" alt="" class="img_login">
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <img src="img/facebook_logo.png" alt="" class="face_login">
+                                    <img src="<?= URL . '/img/facebook_logo.png' ?>" alt="" class="face_login">
                                 </a>
                             </li>
 
                             <li>
                                 <a href="#">
-                                    <img src="img/lupa_menu.png" alt="" class="lupa_login">
+                                    <img src="<?= URL . '/img/lupa_menu.png' ?>" alt="" class="lupa_login">
                                 </a>
                             </li>
                         </ul>
@@ -61,7 +84,7 @@
         <div class="" style="background-color: #003399;">
             <div class="container lp-container d-flex position-relative">
                 <a href="#" class="position-absolute" style="bottom: 0;">
-                    <img src="img/logo-liderpro.png" alt="">
+                    <img src="<?= URL . '/img/logo-liderpro.png' ?>" alt="">
                 </a>
                 <div style="width: 250px;"></div>
                 <div class="flex-grow-1">
@@ -74,56 +97,56 @@
                                     <ul class="list-unstyled submenu">
                                         <li class="sem-categoria">
                                             <a href="#">
-                                                <img src="img/cat_menu_computador.png " alt="Sem categoria" class="img-categoria">
+                                                <img src="<?= URL . '/img/cat_menu_computador.png' ?>" alt="Sem categoria" class="img-categoria">
                                                 <div class="clearfix"></div>
                                             </a>
                                         </li>
                                         <li class="notebooks">
                                             <a href="#">
-                                                <img src="img/cat_menu_notebook.png" alt="Notebooks" class="img-categoria">
+                                                <img src="<?= URL . '/img/cat_menu_notebook.png' ?>" alt="Notebooks" class="img-categoria">
                                                 <div class="clearfix"></div>
                                             </a>
                                         </li>
                                         <li class="tablets-e-celulares">
                                             <a href="#">
-                                                <img src="img/cat_menu_tablet_celular.png" alt="Tablets e Celulares" class="img-categoria">
+                                                <img src="<?= URL . '/img/cat_menu_tablet_celular.png' ?>" alt="Tablets e Celulares" class="img-categoria">
                                                 <div class="clearfix"></div>
                                             </a>
                                         </li>
                                         <li class="projetores">
                                             <a href="#">
-                                                <img src="img/cat_menu_projetor.png" alt="Projetores" class="img-categoria">
+                                                <img src="<?= URL . '/img/cat_menu_projetor.png' ?>" alt="Projetores" class="img-categoria">
                                                 <div class="clearfix"></div>
                                             </a>
                                         </li>
                                         <li class="fontes-de-alimentacao">
                                             <a href="#">
-                                                <img src="img/cat_menu_fonte_alimentacao.png" alt="Fontes de Alimentação" class="img-categoria">
+                                                <img src="<?= URL . '/img/cat_menu_fonte_alimentacao.png' ?>" alt="Fontes de Alimentação" class="img-categoria">
                                                 <div class="clearfix"></div>
                                             </a>
                                         </li>
                                         <li class="tv-monitor">
                                             <a href="#">
-                                                <img src="img/cat_menu_tv_monitor.png" alt="TV/Monitor" class="img-categoria">
+                                                <img src="<?= URL . '/img/cat_menu_tv_monitor.png' ?>" alt="TV/Monitor" class="img-categoria">
                                                 <div class="clearfix"></div>
                                             </a>
                                         </li>
                                         <li class="impressoras">
                                             <a href="#">
-                                                <img src="img/cat_menu_impressora.png" alt="Impressoras" class="img-categoria">
+                                                <img src="<?= URL . '/img/cat_menu_impressora.png' ?>" alt="Impressoras" class="img-categoria">
                                                 <div class="clearfix"></div>
                                             </a>
                                         </li>
                                         <li class="no-breaks">
                                             <a href="#">
-                                                <img src="img/cat_menu_nobreak.png" alt="No-Breaks" class="img-categoria">
+                                                <img src="<?= URL . '/img/cat_menu_nobreak.png' ?>" alt="No-Breaks" class="img-categoria">
                                                 <div class="clearfix"></div>
                                             </a>
                                         </li>
                                     </ul>
                                 </li>
-                                <li><a href="#" class="lp-nav-link">Gestão de <br>informática</a></li>
-                                <li><a href="#" class="lp-nav-link">Cabeamento <br>Estruturado</a></li>
+                                <li><a href="<?= URL . '/Paginas/gestaoInformatica' ?>" class="lp-nav-link <?= $dados['tituloBreadcrumb'] == 'GESTÃO INFORMÁTICA' ? 'lp-nav-active' : ''; ?>">Gestão de <br>informática</a></li>
+                                <li><a href="<?= URL . '/Paginas/cabeamentoEstruturado' ?>" class="lp-nav-link <?= $dados['tituloBreadcrumb'] == 'CABEAMENTO ESTRUTURADO' ? 'lp-nav-active' : ''; ?>">Cabeamento <br>Estruturado</a></li>
                                 <li><a href="#" class="lp-nav-link">Segurança <br>Eletrônica</a></li>
                                 <li><a href="#" class="lp-nav-link">Sistemas de <br>Telefonia</a></li>
                                 <li><a href="#" class="lp-nav-link">Soluções de <br>No-Breaks</a></li>
