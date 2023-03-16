@@ -31,24 +31,22 @@
     </div>
 
 
-    <div class="py-5 d-flex align-items-center justify-content-center lp-home-gifs">
+    <div class="row py-5 lp-home-gifs">
         <div class="col-md">
             <h6>NOSSOS NÚMEROS</h6>
-            <img class="img-fluid" src="<?= URL . '/img/gifs_home/nossos_numeros.gif' ?>" alt="">
+            <img class="w-100 p-3" src="<?= URL . '/img/gifs_home/nossos_numeros.gif' ?>" alt="">
         </div>
         <div class="col-md">
             <h6>PARCERIAS E CERTIFICAÇÕES</h6>
-            <img class="img-fluid" src="<?= URL . '/img/gifs_home/parcerias.gif' ?>" alt="">
+            <img class="w-100 p-3" src="<?= URL . '/img/gifs_home/parcerias.gif' ?>" alt="">
         </div>
         <div class="col-md">
             <h6>SERVIÇOS ESPECIAIS</h6>
-            <img class="img-fluid" src="<?= URL . '/img/gifs_home/servicos_especiais.gif' ?>" alt="">
+            <img class="w-100 p-3" src="<?= URL . '/img/gifs_home/servicos_especiais.gif' ?>" alt="">
         </div>
         <div class="col-md">
             <h6>DEPOIMENTOS</h6>
-            <img class="img-fluid" src="<?= URL . '/img/gifs_home/depoimentos.gif' ?>" alt="">
+            <img class="w-100 p-3" src="<?= URL . '/img/gifs_home/depoimentos.gif' ?>" alt="">
         </div>
     </div>
-
-
 </div>
