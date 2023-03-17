@@ -27,8 +27,7 @@
 <body>
 
     <?php
-
-    $active = "";
+    //Exibe o titulo do breadcrumb baseado no que veio da controller
     $paginaBreadCrumb = "";
     $urlBreadCrumb = "";
 
@@ -39,7 +38,6 @@
             if ($paginas->ds_menu == $dados['tituloBreadcrumb']) {
                 $paginaBreadCrumb =  " > " . $paginas->ds_menu;
                 $urlBreadCrumb = $paginas->ds_url_menu;
-                $active = "active";
             }
         }
     }
