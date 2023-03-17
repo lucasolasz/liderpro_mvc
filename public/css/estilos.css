@@ -50,12 +50,13 @@ body {
 }
 
 .lp-nav-active {
-    color: white ;
-    background-color:var(--rodape);
+    color: white;
+    background-color: var(--rodape);
     text-decoration: none;
 }
 
-.lp-breadcrumb, .lp-breadcrumb a{
+.lp-breadcrumb,
+.lp-breadcrumb a {
     text-transform: uppercase !important;
     text-decoration: none !important;
     font-weight: 700 !important;
@@ -80,7 +81,7 @@ body {
 .img_login {
     /* margin-left: 15px; */
     /* margin-right: 10px; */
-    height: 20px; 
+    height: 20px;
     width: 20px;
 }
 
@@ -123,7 +124,7 @@ body {
     color: white;
 }
 
-.lp-titulo-rodape{
+.lp-titulo-rodape {
     font-weight: 700;
     padding-bottom: 5px;
 }
@@ -135,7 +136,7 @@ body {
     width: 40px;
 }
 
-.lp-submenu-rodape{
+.lp-submenu-rodape {
     margin-left: 20px;
 }
 
@@ -264,10 +265,100 @@ body {
 /* ------------ HOME ------------*/
 
 
-.lp-home-gifs h6{
+.lp-home-gifs h6 {
     text-align: center;
     color: var(--azul);
     font-weight: 700;
 }
 
 /* ------------ HOME END ------------*/
+
+/* ------------ PAGINAS ------------*/
+
+.lp-paragrafo {
+    color: var(--azul);
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.lp-link-veja-mais {
+    color: var(--rodape) !important;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/* ------------ PAGINAS END ------------*/
+
+
+
+/* ------------ TABS PAGINAS ------------*/
+
+.lp-tab-servicos {
+    transform: rotate(-90deg);
+}
+
+.lp-lista-tab{
+    color: var(--azul);
+    list-style: disc;
+}
+
+.tablinks{
+    color: gray;
+}
+
+/* Style the tab */
+.tab-lp {
+    overflow: hidden;
+    /* border: 1px solid #ccc; */
+    /* background-color: #f1f1f1; */
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab-lp button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab-lp button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab-lp button.active {
+    background-color: var(--rodape);
+    color: white;
+    font-weight: 700;
+}
+
+/* Style the tab content */
+.tabcontent-lp {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    border-right: none;
+}
+
+.tabcontent-lp {
+    animation: fadeEffect 1s;
+    /* Fading effect takes 1 second */
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* ------------ TABS PAGINAS END ------------*/
