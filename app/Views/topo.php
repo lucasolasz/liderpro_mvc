@@ -35,7 +35,7 @@
 
         foreach ($dados['paginas'] as $paginas) {
 
-            if ($paginas->ds_menu == $dados['tituloBreadcrumb']) {
+            if ($paginas->ds_pagina_menu == $dados['tituloBreadcrumb']) {
                 $paginaBreadCrumb =  " > " . $paginas->ds_menu;
                 $urlBreadCrumb = $paginas->ds_url_menu;
             }
@@ -143,11 +143,11 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li><a href="<?= URL . '/Paginas/gestaoInformatica' ?>" class="lp-nav-link <?= $dados['tituloBreadcrumb'] == 'GESTÃO INFORMÁTICA' ? 'lp-nav-active' : ''; ?>">Gestão de <br>informática</a></li>
-                                <li><a href="<?= URL . '/Paginas/cabeamentoEstruturado' ?>" class="lp-nav-link <?= $dados['tituloBreadcrumb'] == 'CABEAMENTO ESTRUTURADO' ? 'lp-nav-active' : ''; ?>">Cabeamento <br>Estruturado</a></li>
+                                <li><a href="<?= URL . '/Paginas/gestao_informatica' ?>" class="lp-nav-link <?= $dados['tituloBreadcrumb'] == 'gestao_informatica' ? 'lp-nav-active' : ''; ?>">Gestão de <br>informática</a></li>
+                                <li><a href="<?= URL . '/Paginas/cabeamento_estruturado' ?>" class="lp-nav-link <?= $dados['tituloBreadcrumb'] == 'cabeamento_estruturado' ? 'lp-nav-active' : ''; ?>">Cabeamento <br>Estruturado</a></li>
                                 <li><a href="#" class="lp-nav-link">Segurança <br>Eletrônica</a></li>
                                 <li><a href="#" class="lp-nav-link">Sistemas de <br>Telefonia</a></li>
-                                <li><a href="#" class="lp-nav-link">Soluções de <br>No-Breaks</a></li>
+                                <li><a href="<?= URL . '/Paginas/solucoes_nobreak' ?>" class="lp-nav-link <?= $dados['tituloBreadcrumb'] == 'solucoes_nobreak' ? 'lp-nav-active' : ''; ?>" class="lp-nav-link">Soluções de <br>No-Breaks</a></li>
                                 <li><a href="#" class="lp-nav-link">Soluções <br>em Nuvem</a></li>
                                 <li class="d-flex align-items-center justify-content-center"><a href="#" class="lp-nav-link">(21) 2526-8100</a></li>
                             </div>
@@ -171,11 +171,11 @@
                     <li><a href="#">Clientes</a></li>
                     <li><a href="#">Contato</a></li>
                     <li><a href="#">Assistência Técnica</a>
-                    <li><a href="<?= URL . '/Paginas/gestaoInformatica' ?>">Gestão de informática</a></li>
-                    <li><a href="<?= URL . '/Paginas/cabeamentoEstruturado' ?>">Cabeamento Estruturado</a></li>
+                    <li><a href="<?= URL . '/Paginas/gestao_informatica' ?>">Gestão de informática</a></li>
+                    <li><a href="<?= URL . '/Paginas/cabeamento_estruturado' ?>">Cabeamento Estruturado</a></li>
                     <li><a href="#">Segurança Eletrônica</a></li>
                     <li><a href="#">Sistemas de Telefonia</a></li>
-                    <li><a href="#">Soluções de No-Breaks</a></li>
+                    <li><a href="<?= URL . '/Paginas/solucoes_nobreak' ?>">Soluções de No-Breaks</a></li>
                     <li><a href="#">Soluções em Nuvem</a></li>
                 </div>
             </div>

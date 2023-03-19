@@ -24,34 +24,51 @@ class Paginas extends Controller
         $this->view('Paginas/home', $dados);
     }
 
-    public function gestaoInformatica(){
+    public function gestao_informatica(){
 
         $paginas = $this->paginasModel->listarMenu();
 
         //Parâmetros enviados para o método do controller VIEW
         $dados = [
-            'tituloBreadcrumb' => 'GESTÃO INFORMÁTICA',
+            'tituloBreadcrumb' => 'gestao_informatica',
             'paginas' => $paginas
         ];
 
         //Chamada do novo objeto PAGINAS 
-        $this->view('Paginas/gestaoInformatica', $dados);
+        $this->view('Paginas/gestao_informatica', $dados);
 
         
     }
 
-    public function cabeamentoEstruturado(){
+    public function cabeamento_estruturado(){
 
         $paginas = $this->paginasModel->listarMenu();
 
         //Parâmetros enviados para o método do controller VIEW
         $dados = [
-            'tituloBreadcrumb' => 'CABEAMENTO ESTRUTURADO',
+            'tituloBreadcrumb' => 'cabeamento_estruturado',
             'paginas' => $paginas
         ];
 
         //Chamada do novo objeto PAGINAS 
-        $this->view('Paginas/cabeamentoEstruturado', $dados);
+        $this->view('Paginas/cabeamento_estruturado', $dados);
+
+        
+    }
+
+
+    public function solucoes_nobreak(){
+
+        $paginas = $this->paginasModel->listarMenu();
+
+        //Parâmetros enviados para o método do controller VIEW
+        $dados = [
+            'tituloBreadcrumb' => 'solucoes_nobreak',
+            'paginas' => $paginas
+        ];
+
+        //Chamada do novo objeto PAGINAS 
+        $this->view('Paginas/solucoes_nobreak', $dados);
 
         
     }
