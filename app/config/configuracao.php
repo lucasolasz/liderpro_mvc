@@ -12,6 +12,6 @@ define('APP', dirname(dirname(__FILE__)));
 
 define('URL', '/liderpro_mvc');
 
-define('APP_NOME', 'Projeto Base');
+define('APP_NOME', 'Lider Pro - Informática Profissional');
 
 define('APP_VERSAO', '1.0.0');
