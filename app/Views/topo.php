@@ -81,7 +81,7 @@
         </div>
         <div class="" style="background-color: #003399;">
             <div class="container lp-container d-flex position-relative">
-                <a href="#" class="position-absolute" style="bottom: 0;">
+                <a href="<?= URL ?>" class="position-absolute" style="bottom: 0;">
                     <img src="<?= URL . '/img/logo-liderpro.png' ?>" alt="">
                 </a>
                 <div style="width: 250px;"></div>
@@ -148,7 +148,7 @@
                                 <li><a href="#" class="lp-nav-link">Segurança <br>Eletrônica</a></li>
                                 <li><a href="#" class="lp-nav-link">Sistemas de <br>Telefonia</a></li>
                                 <li><a href="<?= URL . '/Paginas/solucoes_nobreak' ?>" class="lp-nav-link <?= $dados['tituloBreadcrumb'] == 'solucoes_nobreak' ? 'lp-nav-active' : ''; ?>" class="lp-nav-link">Soluções de <br>No-Breaks</a></li>
-                                <li><a href="#" class="lp-nav-link">Soluções <br>em Nuvem</a></li>
+                                <li><a href="<?= URL . '/Paginas/solucoes_em_nuvem' ?>" class="lp-nav-link <?= $dados['tituloBreadcrumb'] == 'solucoes_em_nuvem' ? 'lp-nav-active' : ''; ?>">Soluções <br>em Nuvem</a></li>
                                 <li class="d-flex align-items-center justify-content-center"><a href="#" class="lp-nav-link">(21) 2526-8100</a></li>
                             </div>
                         </div>
@@ -176,7 +176,7 @@
                     <li><a href="#">Segurança Eletrônica</a></li>
                     <li><a href="#">Sistemas de Telefonia</a></li>
                     <li><a href="<?= URL . '/Paginas/solucoes_nobreak' ?>">Soluções de No-Breaks</a></li>
-                    <li><a href="#">Soluções em Nuvem</a></li>
+                    <li><a href="<?= URL . '/Paginas/solucoes_em_nuvem' ?>">Soluções em Nuvem</a></li>
                 </div>
             </div>
         </nav>

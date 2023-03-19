@@ -64,7 +64,7 @@
                 </ul>
             </div>
             <div class="mt-auto">
-                <a href="#"><img class="img-fluid" style="padding: 20px;" src="<?= URL . '/img/logo-liderpro-rodape.png' ?>" alt="Logo Lider Pro Rodapé"></a>
+                <a href="<?= URL ?>"><img class="img-fluid" style="padding: 20px;" src="<?= URL . '/img/logo-liderpro-rodape.png' ?>" alt="Logo Lider Pro Rodapé"></a>
             </div>
         </div>
         <div class="col-md d-flex flex-column">

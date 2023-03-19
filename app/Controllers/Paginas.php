@@ -72,4 +72,21 @@ class Paginas extends Controller
 
         
     }
+
+
+    public function solucoes_em_nuvem(){
+
+        $paginas = $this->paginasModel->listarMenu();
+
+        //Parâmetros enviados para o método do controller VIEW
+        $dados = [
+            'tituloBreadcrumb' => 'solucoes_em_nuvem',
+            'paginas' => $paginas
+        ];
+
+        //Chamada do novo objeto PAGINAS 
+        $this->view('Paginas/solucoes_em_nuvem', $dados);
+
+        
+    }
 }
