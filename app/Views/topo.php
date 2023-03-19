@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet" type='text/css'>
 
     <link href="<?php echo URL ?>/public/css/estilos.css" rel="stylesheet">
-
+    <link rel="shortcut icon" href="<?= URL . '/img/favicon.png'?>" type="image/x-icon" />
 
 
     <title><?php echo APP_NOME ?></title>
@@ -55,7 +55,7 @@
                     </div>
                     <div class="ml-auto">
                         <ul class="list-unstyled d-flex mb-0 menu-top">
-                            <li class=""><a href="#">Liderpro</a></li>
+                            <li class=""><a href="<?= URL ?>">Liderpro</a></li>
                             <li><a href="<?= URL . '/Paginas/sobre' ?>">Clientes</a></li>
                             <li><a href="#">Contatos</a></li>
                             <li>
@@ -157,4 +157,27 @@
 
             </div>
         </div>
+    </div>
+
+    <div class="w-100 lp-menu-mobile">
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <a class="navbar-brand" href="<?= URL ?>"><img src="<?= URL . '/img/logo-liderpro.png' ?>" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse lp-navbar-mobile" id="navbarNavAltMarkup">
+                <div class="navbar-nav d-flex align-items-center lp-item-menu-mobile">
+                    <li><a href="<?= URL ?>">Liderpro</a></li>
+                    <li><a href="#">Clientes</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Assistência Técnica</a>
+                    <li><a href="<?= URL . '/Paginas/gestaoInformatica' ?>">Gestão de informática</a></li>
+                    <li><a href="<?= URL . '/Paginas/cabeamentoEstruturado' ?>">Cabeamento Estruturado</a></li>
+                    <li><a href="#">Segurança Eletrônica</a></li>
+                    <li><a href="#">Sistemas de Telefonia</a></li>
+                    <li><a href="#">Soluções de No-Breaks</a></li>
+                    <li><a href="#">Soluções em Nuvem</a></li>
+                </div>
+            </div>
+        </nav>
     </div>
