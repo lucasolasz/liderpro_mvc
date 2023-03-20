@@ -1,16 +1,16 @@
 <div class="container p-5">
     <div class="row">
-        <img class="img-fluid" src="<?= URL . '/img/banner/banner_gestao_informatica.png' ?>" alt="">
+        <img class="img-fluid" src="<?= URL . '/img/paginas/gestao_informatica/banner_gestao_informatica.png' ?>" alt="">
     </div>
     <div class="row py-5 d-flex align-items-center">
         <div class="col-md">
-            <img class="img-fluid" src="<?= URL . '/img/perguntas/gestao_ti_pergunta1.png' ?>" alt="">
+            <img class="img-fluid" src="<?= URL . '/img/paginas/gestao_informatica/gestao_informatica_pergunta1.png' ?>" alt="">
         </div>
         <div class="col-md py-5">
-            <img class="img-fluid" src="<?= URL . '/img/perguntas/gestao_ti_pergunta2.png' ?>" alt="">
+            <img class="img-fluid" src="<?= URL . '/img/paginas/gestao_informatica/gestao_informatica_pergunta2.png' ?>" alt="">
         </div>
         <div class="col-md">
-            <img class="img-fluid" src="<?= URL . '/img/perguntas/gestao_ti_pergunta3.png' ?>" alt="">
+            <img class="img-fluid" src="<?= URL . '/img/paginas/gestao_informatica/gestao_informatica_pergunta3.png' ?>" alt="">
         </div>
     </div>
 
@@ -20,7 +20,7 @@
             </p>
         </div>
         <div class="col-md-3 col-lg-3 d-flex justify-content-center">
-            <img class="img-fluid" style="height: 200px; width: 180px" src="<?= URL . '/img/fluxo_gestao_informatica.png' ?>" alt="">
+            <img class="img-fluid" style="height: 200px; width: 180px" src="<?= URL . '/img/paginas/gestao_informatica/imagem_texto_gestao_informatica.png' ?>" alt="">
         </div>
     </div>
 

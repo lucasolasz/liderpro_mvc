@@ -37,10 +37,10 @@
             <!-- Tab links -->
             <div class="tab-lp">
                 <button class="tablinks" onclick="openCity(event, 'tab0')" id="defaultOpen">FOTOS</button>
-                <button class="tablinks" onclick="openCity(event, 'tab1')">REDE ESTRUTURADA</button>
-                <button class="tablinks" onclick="openCity(event, 'tab2')">ORGANIZAÇÃO E RACKS</button>
-                <button class="tablinks" onclick="openCity(event, 'tab3')">REDE DE SEM FIO</button>
-                <button class="tablinks" onclick="openCity(event, 'tab4')">ATIVOS DE REDE</button>
+                <button class="tablinks" onclick="openCity(event, 'tab1')">GERENCIAMENTO DE ENERGIA</button>
+                <button class="tablinks" onclick="openCity(event, 'tab2')">INSTALAÇÃO</button>
+                <button class="tablinks" onclick="openCity(event, 'tab3')">MANUTENÇÃO</button>
+                <button class="tablinks" onclick="openCity(event, 'tab4')">BAIXA TENSÃO ELÉTRICA</button>
             </div>
             <!-- Tab content -->
             <div id="tab0" class="tabcontent-lp">
@@ -51,18 +51,18 @@
                 <div class="row">
                     <div class="col-md-6 col-lg-6">
                         <ol class="lp-lista-tab">
-                            <li>Infraestrutura de Rede - Cabeamento Estruturado</li>
+                            <!-- <li>Infraestrutura de Rede - Cabeamento Estruturado</li>
                             <li>Expansão de Rede - Estrutura, Cabos e Pontos</li>
                             <li>Organização de Rack - Equip. Ativos e Passivos</li>
-                            <li>Certificação de Cabeamento Metálico - UTP</li>
+                            <li>Certificação de Cabeamento Metálico - UTP</li> -->
                         </ol>
                     </div>
                     <div class="col-md-6 col-lg-6">
                         <ol class="lp-lista-tab">
-                            <li>Instalação, Reparo e Fusão de Fibra Óptica</li>
+                            <!-- <li>Instalação, Reparo e Fusão de Fibra Óptica</li>
                             <li>Certificação de Fibra Óptica</li>
                             <li>Teste de Performance e Perda Óptica</li>
-                            <li>Microcabos e Microfibras</li>
+                            <li>Microcabos e Microfibras</li> -->
                         </ol>
                     </div>
                 </div>
@@ -72,18 +72,18 @@
                 <div class="row">
                     <div class="col-md-6 col-lg-6">
                         <ol class="lp-lista-tab">
-                            <li>Sistema de Telefonia IP PBX e PABX Digital Algumas Características:</li>
+                            <!-- <li>Sistema de Telefonia IP PBX e PABX Digital Algumas Características:</li>
                             <li>URA - Unidade de Resposta Audível</li>
-                            <li>DAC - Distribuidor Automático de Chamadas </li>
+                            <li>DAC - Distribuidor Automático de Chamadas </li> -->
                             <!-- <li>Suporte a usuários local e remotamente</li> -->
                         </ol>
                     </div>
                     <div class="col-md-6 col-lg-6">
                         <ol class="lp-lista-tab">
-                            <li>Gravação das ligações telefônicas</li>
+                            <!-- <li>Gravação das ligações telefônicas</li>
                             <li>Capacidade ilimitada de ramais físicos e virtuais - celular</li>
                             <li>Relatórios e banco de dados próprios e ilimitados</li>
-                            <li>Aparelhos com conferência de áudio e vídeo individuais</li>
+                            <li>Aparelhos com conferência de áudio e vídeo individuais</li> -->
                         </ol>
                     </div>
                 </div>
@@ -93,18 +93,18 @@
                 <div class="row">
                     <div class="col-md-6 col-lg-6">
                         <ol class="lp-lista-tab">
-                            <li>Sistema de Câmeras Digitais e IPs</li>
+                            <!-- <li>Sistema de Câmeras Digitais e IPs</li>
                             <li>Sistema de Alarmes</li>
                             <li>Sistema de Controle de Acesso</li>
-                            <li>Sistema de Ponto Eletrônico</li>
+                            <li>Sistema de Ponto Eletrônico</li> -->
                         </ol>
                     </div>
                     <div class="col-md-6 col-lg-6">
                         <ol class="lp-lista-tab">
-                            <li>Exibição de imagens em tempo real</li>
+                            <!-- <li>Exibição de imagens em tempo real</li>
                             <li>Gravação de imagens na nuvem</li>
                             <li>Relatórios personalizados</li>
-                            <li>Banco de dados flexível para uso em diversos programas</li>
+                            <li>Banco de dados flexível para uso em diversos programas</li> -->
                         </ol>
                     </div>
                 </div>
@@ -114,18 +114,18 @@
                 <div class="row">
                     <div class="col-md-6 col-lg-6">
                         <ol class="lp-lista-tab">
-                            <li>Sistema de Proteção e Gerenciamento de Energia</li>
+                            <!-- <li>Sistema de Proteção e Gerenciamento de Energia</li>
                             <li>Sistema de Circuito Elétrico Estabilizado</li>
                             <li>Instalação Elétrica em Baixa Tensão</li>
-                            <li>Reforma de Quadro de Distribuição de Energia</li>
+                            <li>Reforma de Quadro de Distribuição de Energia</li> -->
                         </ol>
                     </div>
                     <div class="col-md-6 col-lg-6">
                         <ol class="lp-lista-tab">
-                            <li>Instalação de No-break, Estabilizador e Transformador</li>
+                            <!-- <li>Instalação de No-break, Estabilizador e Transformador</li>
                             <li>Instalação de Ares-condicionados e Automação</li>
                             <li>Automação de ares-condic. por tempo e/ou temperatura</li>
-                            <li>Contratos Flexíveis conforme o perfil do cliente</li>
+                            <li>Contratos Flexíveis conforme o perfil do cliente</li> -->
                         </ol>
                     </div>
                 </div>

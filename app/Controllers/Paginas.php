@@ -24,6 +24,22 @@ class Paginas extends Controller
         $this->view('Paginas/home', $dados);
     }
 
+    public function assistencia_tecnica(){
+
+        $paginas = $this->paginasModel->listarMenu();
+
+        //Parâmetros enviados para o método do controller VIEW
+        $dados = [
+            'tituloBreadcrumb' => 'assistencia_tecnica',
+            'paginas' => $paginas
+        ];
+
+        //Chamada do novo objeto PAGINAS 
+        $this->view('Paginas/assistencia_tecnica', $dados);
+
+        
+    }
+
     public function gestao_informatica(){
 
         $paginas = $this->paginasModel->listarMenu();

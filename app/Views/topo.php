@@ -91,7 +91,7 @@
                         <div class="navbar-collapse">
                             <div class="list-unstyled d-flex lp-nav-ul">
                                 <li>
-                                    <a href="#" class="lp-nav-link">Assistência <br>Técnica</a>
+                                    <a href="<?= URL . '/Paginas/assistencia_tecnica' ?>" class="lp-nav-link <?= $dados['tituloBreadcrumb'] == 'assistencia_tecnica' ? 'lp-nav-active' : ''; ?>">Assistência <br>Técnica</a>
                                     <ul class="list-unstyled submenu">
                                         <li class="sem-categoria">
                                             <a href="#">
@@ -170,7 +170,7 @@
                     <li><a href="<?= URL ?>">Liderpro</a></li>
                     <li><a href="#">Clientes</a></li>
                     <li><a href="#">Contato</a></li>
-                    <li><a href="#">Assistência Técnica</a>
+                    <li><a href="<?= URL . '/Paginas/assistencia_tecnica' ?>">Assistência Técnica</a>
                     <li><a href="<?= URL . '/Paginas/gestao_informatica' ?>">Gestão de informática</a></li>
                     <li><a href="<?= URL . '/Paginas/cabeamento_estruturado' ?>">Cabeamento Estruturado</a></li>
                     <li><a href="#">Segurança Eletrônica</a></li>

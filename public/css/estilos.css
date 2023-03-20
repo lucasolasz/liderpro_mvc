@@ -10,6 +10,15 @@
     --azul: #003399;
     --macipadiphone: 105, 53, 49;
     --rodape: #FE9833;
+    --computador-servico: #339866;
+    --notebook-servico: #023398;
+    --tablet-celular-servico: #cb6633;
+    --projetor-servico: #fe0000;
+    --fonte-servico: #666666;
+    --tv-monitor-servico: #FE6633;
+    --impressora-servico: #FE0098;
+    --nobreak-servico: #FDCB33;
+    --apple-servico: #3398FE;
 }
 
 body {
@@ -273,6 +282,12 @@ body {
     font-size: 16px;
 }
 
+.lp-titulo-paragrafo {
+    color: var(--azul);
+    font-weight: 700;
+    font-size: 18px;
+}
+
 .lp-link-veja-mais {
     color: var(--rodape) !important;
     text-transform: uppercase;
@@ -390,13 +405,13 @@ body {
     .lp-menu-mobile {
         display: block;
     }
-    
-    .lp-item-menu-mobile li{
+
+    .lp-item-menu-mobile li {
         padding: 10px;
         /* border: solid 1px; */
     }
 
-    .lp-item-menu-mobile li a{
+    .lp-item-menu-mobile li a {
         text-transform: uppercase;
         text-decoration: none;
         color: white;
@@ -405,4 +420,76 @@ body {
     .lp-navbar-mobile {
         background: var(--azul);
     }
+}
+
+/* ------------ MENU ASSISTÊNCIA TÉCNICA ------------*/
+
+.lp-imagem-assistencia {}
+
+.lp-imagem-texto-assistencia {
+    height: 40px;
+    width: 60px;
+}
+
+.lp-imagem-texto-assistencia-projetor {
+    height: 40px;
+    width: 95px;
+}
+
+.lp-imagem-texto-assistencia-fonte {
+    height: 40px;
+    width: 95px;
+}
+
+.lp-background-assistencia-computador {
+    background: var(--computador-servico);
+    color: white;
+}
+
+.lp-background-assistencia-notebook {
+    background: var(--notebook-servico);
+    color: white;
+}
+
+.lp-background-assistencia-tablet-celular {
+    background: var(--tablet-celular-servico);
+    color: white;
+}
+
+.lp-background-assistencia-projetor {
+    background: var(--projetor-servico);
+    color: white;
+}
+
+.lp-background-assistencia-fonte {
+    background: var(--fonte-servico);
+    color: white;
+}
+
+.lp-background-assistencia-tv-monitor {
+    background: var(--tv-monitor-servico);
+    color: white;
+}
+
+.lp-background-assistencia-impressora {
+    background: var(--impressora-servico);
+    color: white;
+}
+
+.lp-background-assistencia-nobreak {
+    background: var(--nobreak-servico);
+    color: white;
+}
+
+.lp-background-assistencia-apple {
+    background: var(--apple-servico);
+    color: white;
+}
+
+.lp-itens-assistencia li{
+    font-size: 15px;
+}
+
+.lp-titulo-servico-assistencia{
+    font-size: 12px;
 }
