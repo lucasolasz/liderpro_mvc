@@ -30,6 +30,7 @@
     //Exibe o titulo do breadcrumb baseado no que veio da controller
     $paginaBreadCrumb = "";
     $urlBreadCrumb = "";
+    $informacoes = "";
 
 
     if (isset($dados['paginas'])) {
@@ -48,10 +49,13 @@
         foreach ($dados['paginasLiderPro'] as $paginasLiderPro) {
 
             if ($dados['tituloBreadcrumb'] == "termos_de_uso" || $dados['tituloBreadcrumb'] == "politica_de_privacidade" || $dados['tituloBreadcrumb'] == "informacoes_legais") {
-                $paginaBreadCrumb =  " > " . " LIDERPRO > INFORMAÇÕES > " . $paginasLiderPro->ds_menu;
+                
+                $informacoes = "> INFORMAÇÕES";
+                $paginaBreadCrumb =  $paginasLiderPro->ds_menu;
                 $urlBreadCrumb = $paginasLiderPro->ds_url_menu;
+
             } elseif ($paginasLiderPro->ds_pagina_menu == $dados['tituloBreadcrumb']) {
-                $paginaBreadCrumb =  " > " . " LIDERPRO > " . $paginasLiderPro->ds_menu;
+                $paginaBreadCrumb = $paginasLiderPro->ds_menu;
                 $urlBreadCrumb = $paginasLiderPro->ds_url_menu;
             }
         }
@@ -71,13 +75,13 @@
                         <?php } ?>
 
                         <?php if (isset($dados['paginasLiderPro'])) { ?>
-                            <a href="<?= URL . '/LiderPro' . $urlBreadCrumb ?>"><?= $paginaBreadCrumb ?></a>
+                            > <a href="<?= URL . '/LiderPro/lider_pro' ?>"> LIDERPRO</a> <?= $informacoes ?> > <a href="<?= URL . '/LiderPro' . $urlBreadCrumb ?>"><?= $paginaBreadCrumb ?></a>
                         <?php } ?>
                     </div>
                     <div class="ml-auto">
                         <ul class="list-unstyled d-flex mb-0 menu-top">
                             <li class=""><a href="<?= URL . '/LiderPro/lider_pro' ?>">Liderpro</a></li>
-                            <li><a href="<?= URL . '/Paginas/sobre' ?>">Clientes</a></li>
+                            <li><a href="#">Clientes</a></li>
                             <li><a href="#">Contatos</a></li>
                             <li>
                                 <a href="#">
