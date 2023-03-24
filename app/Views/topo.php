@@ -55,7 +55,7 @@
                     </div>
                     <div class="ml-auto">
                         <ul class="list-unstyled d-flex mb-0 menu-top">
-                            <li class=""><a href="<?= URL ?>">Liderpro</a></li>
+                            <li class=""><a href="<?= URL . '/LiderPro/lider_pro' ?>">Liderpro</a></li>
                             <li><a href="<?= URL . '/Paginas/sobre' ?>">Clientes</a></li>
                             <li><a href="#">Contatos</a></li>
                             <li>

@@ -18,4 +18,11 @@ class Pagina
         return $this->db->resultados();
     }
 
+    //Retorna registros da tabela menu liderpro
+    public function listarMenuLiderPro(){
+        $this->db->query("SELECT * FROM tb_menu_lider_pro");
+        
+        return $this->db->resultados();
+    }
+
 }

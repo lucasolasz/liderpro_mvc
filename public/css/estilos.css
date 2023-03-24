@@ -282,9 +282,25 @@ body {
     font-size: 16px;
 }
 
-.lp-titulo-paragrafo {
+.lp-paragrafo-info {
     color: var(--azul);
     font-weight: 700;
+    font-size: 14px;
+    line-height: 200%;
+}
+
+.lp-paragrafo-sublinhado{
+    color: var(--azul);
+    font-weight: 700;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+
+
+.lp-titulo-paragrafo {
+    color: var(--azul);
+    font-weight: 900;
     font-size: 18px;
 }
 
@@ -424,7 +440,6 @@ body {
 
 /* ------------ MENU ASSISTÊNCIA TÉCNICA ------------*/
 
-.lp-imagem-assistencia {}
 
 .lp-imagem-texto-assistencia {
     height: 40px;
@@ -486,10 +501,59 @@ body {
     color: white;
 }
 
-.lp-itens-assistencia li{
+.lp-itens-assistencia li {
     font-size: 15px;
 }
 
-.lp-titulo-servico-assistencia{
+.lp-titulo-servico-assistencia {
     font-size: 12px;
 }
+
+/* ------------ MENU ASSISTÊNCIA TÉCNICA END------------*/
+
+/* ------------ TOPMENU LIDERPRO------------*/
+
+
+.lp-btn-liderpro {
+    background: var(--azul);
+    color: white;
+    text-transform: uppercase;
+    width: 150px;
+    text-align: center;
+}
+
+.lp-btn-liderpro-info {
+    background: var(--azul);
+    color: white;
+    width: 150px;
+    text-align: center;
+}
+
+.lp-btn-liderpro:hover {
+    color: var(--azul);
+    background-color: white;
+    border: 1px solid var(--azul);
+}
+
+.lp-btn-liderpro-info:hover {
+    color: var(--azul);
+    background-color: white;
+    border: 1px solid var(--azul);
+}
+
+.lp-btn-liderpro-active {
+    color: var(--azul);
+    background-color: white;
+    border: 1px solid var(--azul);
+}
+
+.lp-btn-liderpro-info-active {
+    color: var(--azul);
+    background-color: white;
+    border: 1px solid var(--azul);
+}
+
+
+
+
+/* ------------ TOPMENU LIDERPRO END -----------*/
