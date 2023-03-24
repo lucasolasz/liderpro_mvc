@@ -131,6 +131,11 @@ body {
     padding-bottom: 5px;
 }
 
+.lista-rodape li a{
+    text-decoration: none !important;
+    color: white;
+}
+
 
 .lp-logo-rodape {
     display: block;
