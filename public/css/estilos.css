@@ -65,6 +65,7 @@ body {
 }
 
 .lp-breadcrumb,
+.lp-breadcrumb-mobile,
 .lp-breadcrumb a {
     text-transform: uppercase !important;
     text-decoration: none !important;

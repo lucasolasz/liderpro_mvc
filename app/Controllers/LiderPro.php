@@ -12,12 +12,10 @@ class LiderPro extends Controller
     public function lider_pro()
     {
         $paginasLiderPro = $this->paginasModel->listarMenuLiderPro();
-        $paginas = $this->paginasModel->listarMenu();
 
         //Parâmetros enviados para o método do controller VIEW
         $dados = [
             'tituloBreadcrumb' => 'lider_pro',
-            'paginas' => $paginas,
             'paginasLiderPro' => $paginasLiderPro
         ];
 
@@ -28,12 +26,10 @@ class LiderPro extends Controller
     public function valores()
     {
         $paginasLiderPro = $this->paginasModel->listarMenuLiderPro();
-        $paginas = $this->paginasModel->listarMenu();
 
         //Parâmetros enviados para o método do controller VIEW
         $dados = [
             'tituloBreadcrumb' => 'valores',
-            'paginas' => $paginas,
             'paginasLiderPro' => $paginasLiderPro
         ];
 
@@ -44,12 +40,10 @@ class LiderPro extends Controller
     public function parcerias()
     {
         $paginasLiderPro = $this->paginasModel->listarMenuLiderPro();
-        $paginas = $this->paginasModel->listarMenu();
 
         //Parâmetros enviados para o método do controller VIEW
         $dados = [
             'tituloBreadcrumb' => 'parcerias',
-            'paginas' => $paginas,
             'paginasLiderPro' => $paginasLiderPro
         ];
 
@@ -60,12 +54,10 @@ class LiderPro extends Controller
     public function informacoes_gerais()
     {
         $paginasLiderPro = $this->paginasModel->listarMenuLiderPro();
-        $paginas = $this->paginasModel->listarMenu();
 
         //Parâmetros enviados para o método do controller VIEW
         $dados = [
             'tituloBreadcrumb' => 'informacoes_gerais',
-            'paginas' => $paginas,
             'paginasLiderPro' => $paginasLiderPro
         ];
 
@@ -76,12 +68,10 @@ class LiderPro extends Controller
     public function termos_de_uso()
     {
         $paginasLiderPro = $this->paginasModel->listarMenuLiderPro();
-        $paginas = $this->paginasModel->listarMenu();
 
         //Parâmetros enviados para o método do controller VIEW
         $dados = [
             'tituloBreadcrumb' => 'termos_de_uso',
-            'paginas' => $paginas,
             'paginasLiderPro' => $paginasLiderPro
         ];
 
@@ -92,12 +82,10 @@ class LiderPro extends Controller
     public function politica_de_privacidade()
     {
         $paginasLiderPro = $this->paginasModel->listarMenuLiderPro();
-        $paginas = $this->paginasModel->listarMenu();
 
         //Parâmetros enviados para o método do controller VIEW
         $dados = [
             'tituloBreadcrumb' => 'politica_de_privacidade',
-            'paginas' => $paginas,
             'paginasLiderPro' => $paginasLiderPro
         ];
 
@@ -108,12 +96,10 @@ class LiderPro extends Controller
     public function informacoes_legais()
     {
         $paginasLiderPro = $this->paginasModel->listarMenuLiderPro();
-        $paginas = $this->paginasModel->listarMenu();
 
         //Parâmetros enviados para o método do controller VIEW
         $dados = [
             'tituloBreadcrumb' => 'informacoes_legais',
-            'paginas' => $paginas,
             'paginasLiderPro' => $paginasLiderPro
         ];
 

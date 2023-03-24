@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet" type='text/css'>
 
     <link href="<?php echo URL ?>/public/css/estilos.css" rel="stylesheet">
-    <link rel="shortcut icon" href="<?= URL . '/img/favicon.png'?>" type="image/x-icon" />
+    <link rel="shortcut icon" href="<?= URL . '/img/favicon.png' ?>" type="image/x-icon" />
 
 
     <title><?php echo APP_NOME ?></title>
@@ -31,6 +31,7 @@
     $paginaBreadCrumb = "";
     $urlBreadCrumb = "";
 
+
     if (isset($dados['paginas'])) {
 
         foreach ($dados['paginas'] as $paginas) {
@@ -38,6 +39,20 @@
             if ($paginas->ds_pagina_menu == $dados['tituloBreadcrumb']) {
                 $paginaBreadCrumb =  " > " . $paginas->ds_menu;
                 $urlBreadCrumb = $paginas->ds_url_menu;
+            }
+        }
+    }
+
+    if (isset($dados["paginasLiderPro"])) {
+
+        foreach ($dados['paginasLiderPro'] as $paginasLiderPro) {
+
+            if ($dados['tituloBreadcrumb'] == "termos_de_uso" || $dados['tituloBreadcrumb'] == "politica_de_privacidade" || $dados['tituloBreadcrumb'] == "informacoes_legais") {
+                $paginaBreadCrumb =  " > " . " LIDERPRO > INFORMAÇÕES > " . $paginasLiderPro->ds_menu;
+                $urlBreadCrumb = $paginasLiderPro->ds_url_menu;
+            } elseif ($paginasLiderPro->ds_pagina_menu == $dados['tituloBreadcrumb']) {
+                $paginaBreadCrumb =  " > " . " LIDERPRO > " . $paginasLiderPro->ds_menu;
+                $urlBreadCrumb = $paginasLiderPro->ds_url_menu;
             }
         }
     }
@@ -51,7 +66,13 @@
                 <div class="flex-grow-1 d-flex align-items-center" style="padding-left: 58px">
                     <div class="lp-breadcrumb">
                         <a href="<?= URL ?>">Home</a>
-                        <a href="<?= URL . '/Paginas' . $urlBreadCrumb ?>"><?= $paginaBreadCrumb ?></a>
+                        <?php if (isset($dados['paginas'])) { ?>
+                            <a href="<?= URL . '/Paginas' . $urlBreadCrumb ?>"><?= $paginaBreadCrumb ?></a>
+                        <?php } ?>
+
+                        <?php if (isset($dados['paginasLiderPro'])) { ?>
+                            <a href="<?= URL . '/LiderPro' . $urlBreadCrumb ?>"><?= $paginaBreadCrumb ?></a>
+                        <?php } ?>
                     </div>
                     <div class="ml-auto">
                         <ul class="list-unstyled d-flex mb-0 menu-top">
@@ -167,7 +188,7 @@
             </button>
             <div class="collapse navbar-collapse lp-navbar-mobile" id="navbarNavAltMarkup">
                 <div class="navbar-nav d-flex align-items-center lp-item-menu-mobile">
-                    <li><a href="<?= URL ?>">Liderpro</a></li>
+                    <li><a href="<?= URL . '/LiderPro/lider_pro' ?>">Liderpro</a></li>
                     <li><a href="#">Clientes</a></li>
                     <li><a href="#">Contato</a></li>
                     <li><a href="<?= URL . '/Paginas/assistencia_tecnica' ?>">Assistência Técnica</a>
@@ -180,4 +201,15 @@
                 </div>
             </div>
         </nav>
+
+        <div class="lp-breadcrumb-mobile ml-5 mt-5">
+            <a href="<?= URL ?>">Home</a>
+            <?php if (isset($dados['paginas'])) { ?>
+                <a href="<?= URL . '/Paginas' . $urlBreadCrumb ?>"><?= $paginaBreadCrumb ?></a>
+            <?php } ?>
+
+            <?php if (isset($dados['paginasLiderPro'])) { ?>
+                <a href="<?= URL . '/LiderPro' . $urlBreadCrumb ?>"><?= $paginaBreadCrumb ?></a>
+            <?php } ?>
+        </div>
     </div>
