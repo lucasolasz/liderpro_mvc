@@ -19,6 +19,7 @@
     --impressora-servico: #FE0098;
     --nobreak-servico: #FDCB33;
     --apple-servico: #3398FE;
+    --cor-fonte-contatos: #439ACF;
 }
 
 body {
@@ -131,7 +132,7 @@ body {
     padding-bottom: 5px;
 }
 
-.lista-rodape li a{
+.lista-rodape li a {
     text-decoration: none !important;
     color: white;
 }
@@ -295,7 +296,7 @@ body {
     line-height: 200%;
 }
 
-.lp-paragrafo-sublinhado{
+.lp-paragrafo-sublinhado {
     color: var(--azul);
     font-weight: 700;
     font-size: 20px;
@@ -563,3 +564,155 @@ body {
 
 
 /* ------------ TOPMENU LIDERPRO END -----------*/
+
+/* ------------ FORMULARIO CONTATO -----------*/
+
+.form__group {
+    position: relative;
+    padding: 15px 0 0;
+    margin-top: 10px;
+    width: 50%;
+}
+
+.form__field {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid #003399;
+    outline: 0;
+    font-size: 1.3rem;
+    color: #fff;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+}
+
+.form__field::placeholder {
+    color: transparent;
+}
+
+.form__field:placeholder-shown~.form__label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+}
+
+.form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: var(--cor-fonte-contatos);
+}
+
+.form__field:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #003399, #003399);
+    border-image-slice: 1;
+}
+
+.form__field:focus~.form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #003399;
+    font-weight: 700;
+}
+
+/* reset input */
+.form__field:required,
+.form__field:invalid {
+    box-shadow: none;
+}
+
+
+.label-mensagem {
+    font-size: 1.3rem;
+    color: var(--cor-fonte-contatos);
+}
+
+.campo-obrigatorio {
+    color: var(--cor-fonte-contatos);
+}
+
+/* ------------ FORMULARIO CONTATO END -----------*/
+
+/* ------------ BUTTON CONTATOS -----------*/
+.lp-botao-enviar {
+    align-items: center;
+    background-color: var(--azul);
+    border: 2px solid var(--azul);
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    fill: white;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    height: 48px;
+    justify-content: center;
+    letter-spacing: -.8px;
+    line-height: 24px;
+    min-width: 140px;
+    outline: 0;
+    padding: 0 17px;
+    text-align: center;
+    text-decoration: none;
+    transition: all .3s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.lp-botao-enviar:focus {
+    color: white;
+}
+
+.lp-botao-anexo {
+    align-items: center;
+    background-color: var(--rodape);
+    border: 2px solid var(--azul);
+    box-sizing: border-box;
+    color: var(--azul);
+    cursor: pointer;
+    display: inline-flex;
+    fill: var(--azul);
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    height: 30px;
+    justify-content: center;
+    letter-spacing: -.8px;
+    line-height: 24px;
+    min-width: 140px;
+    outline: 0;
+    padding: 0 17px;
+    text-align: center;
+    text-decoration: none;
+    transition: all .3s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.lp-botao-anexo:focus {
+    color: var(--azul);
+}
+
+.lp-label-contato{
+    color: var(--azul);
+    font-size: 12px;
+}
+
+.lp-mapa-contatos{
+    border: solid 1px var(--azul);
+}
+
+/* ------------ BUTTON CONTATOS END -----------*/
+

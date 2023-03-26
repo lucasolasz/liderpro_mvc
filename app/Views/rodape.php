@@ -70,7 +70,7 @@
         </div>
         <div class="col-md d-flex flex-column">
             <ul class="list-unstyled">
-                <li class="lp-titulo-rodape">CONTATOS</li>
+                <li class="lp-titulo-rodape"><a href="<?= URL . '/Paginas/contatos' ?>">CONTATOS</a></li>
                 <li>Endereço</li>
                 <li>Telefones</li>
                 <li>Email e Skype</li>

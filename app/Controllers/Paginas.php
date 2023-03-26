@@ -105,4 +105,20 @@ class Paginas extends Controller
 
         
     }
+
+    public function contatos(){
+
+        $paginas = $this->paginasModel->listarMenu();
+
+        //Parâmetros enviados para o método do controller VIEW
+        $dados = [
+            'tituloBreadcrumb' => 'contatos',
+            'paginas' => $paginas
+        ];
+
+        //Chamada do novo objeto PAGINAS 
+        $this->view('Paginas/contatos', $dados);
+
+        
+    }
 }

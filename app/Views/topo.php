@@ -82,7 +82,7 @@
                         <ul class="list-unstyled d-flex mb-0 menu-top">
                             <li class=""><a href="<?= URL . '/LiderPro/lider_pro' ?>">Liderpro</a></li>
                             <li><a href="#">Clientes</a></li>
-                            <li><a href="#">Contatos</a></li>
+                            <li><a href="<?= URL . '/Paginas/contatos' ?>">Contatos</a></li>
                             <li>
                                 <a href="#">
                                     <img src="<?= URL . '/img/login_usuario.png' ?>" alt="" class="img_login">
@@ -194,7 +194,7 @@
                 <div class="navbar-nav d-flex align-items-center lp-item-menu-mobile">
                     <li><a href="<?= URL . '/LiderPro/lider_pro' ?>">Liderpro</a></li>
                     <li><a href="#">Clientes</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a href="<?= URL . '/Paginas/contatos' ?>">Contatos</a></li>
                     <li><a href="<?= URL . '/Paginas/assistencia_tecnica' ?>">Assistência Técnica</a>
                     <li><a href="<?= URL . '/Paginas/gestao_informatica' ?>">Gestão de informática</a></li>
                     <li><a href="<?= URL . '/Paginas/cabeamento_estruturado' ?>">Cabeamento Estruturado</a></li>
