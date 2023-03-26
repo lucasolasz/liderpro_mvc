@@ -1,6 +1,6 @@
 <div class="container p-5">
     <div class="row">
-        <img class="img-fluid" src="<?= URL . '/img/paginas/cabeamento_estruturado/banner_infra_rede.png' ?>" alt="">
+        <img class="img-fluid" src="<?= URL . '/img/paginas/cabeamento_estruturado/banner_cabeamento_estruturado.png' ?>" alt="">
     </div>
     <div class="row py-5 d-flex align-items-center">
         <div class="col-md">
