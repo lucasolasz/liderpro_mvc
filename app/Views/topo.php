@@ -131,7 +131,7 @@
                                             </a>
                                         </li>
                                         <li class="tablets-e-celulares">
-                                            <a href="#">
+                                            <a href="<?= URL . '/AssistenciaOpcao/tablet_celular_opc' ?>">
                                                 <img src="<?= URL . '/img/cat_menu_tablet_celular.png' ?>" alt="Tablets e Celulares" class="img-categoria">
                                                 <div class="clearfix"></div>
                                             </a>
