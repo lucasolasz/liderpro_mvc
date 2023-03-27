@@ -26,4 +26,20 @@ class AssistenciaOpcao extends Controller
         
     }
 
+    public function notebook_opc(){
+
+        $paginas = $this->paginasModel->listarMenu();
+
+        //Parâmetros enviados para o método do controller VIEW
+        $dados = [
+            'tituloBreadcrumb' => 'notebook_opc',
+            'paginas' => $paginas
+        ];
+
+        //Chamada do novo objeto PAGINAS 
+        $this->view('assistencia_tecnicas_opcao/notebook_opc', $dados);
+
+        
+    }
+
 }

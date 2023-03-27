@@ -20,8 +20,7 @@
     <div class="row">
 
         <div class="col-md-3 col-lg-3 d-flex justify-content-center flex-column py-5">
-            <a href="<?= URL . '/AssistenciaOpcao/computador_opc' ?>"><img class="img-fluid" src="<?= URL . '/img/paginas/assistencia_tecnica/assistencia_tecnica_computador.png' ?>" alt=""> </a>
-            <a href="<?= URL . '/AssistenciaOpcao/computador_opc' ?>">
+            <a href="<?= URL . '/AssistenciaOpcao/computador_opc' ?>"><img class="img-fluid" src="<?= URL . '/img/paginas/assistencia_tecnica/assistencia_tecnica_computador.png' ?>" alt="">
                 <div class="container lp-background-assistencia-computador mt-2">
                     <div class="row">
                         <div class="col-md-12 col-lg-12 d-flex justify-content-center">
@@ -48,30 +47,30 @@
         </div>
 
         <div class="col-md-3 col-lg-3 d-flex justify-content-center flex-column py-5">
-            <img class="img-fluid" src="<?= URL . '/img/paginas/assistencia_tecnica/assistencia_tecnica_notebook.png' ?>" alt="">
-            <div class="container lp-background-assistencia-notebook mt-2">
-                <div class="row">
-                    <div class="col-md-12 col-lg-12 d-flex justify-content-center">
-                        <p class="m-0">Notebook</p>
+            <a href="<?= URL . '/AssistenciaOpcao/notebook_opc' ?>"><img class="img-fluid" src="<?= URL . '/img/paginas/assistencia_tecnica/assistencia_tecnica_notebook.png' ?>" alt="">
+                <div class="container lp-background-assistencia-notebook mt-2">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-12 d-flex justify-content-center">
+                            <p class="m-0">Notebook</p>
+                        </div>
+                    </div>
+                    <div class="row py-2">
+                        <div class="col-md-12 col-lg-12 d-flex justify-content-center">
+                            <img class="lp-imagem-texto-assistencia" src="<?= URL . '/img/paginas/assistencia_tecnica/assistencia_tecnica_notebook_mini.png' ?>" alt="">
+                        </div>
+                    </div>
+                    <div class="row p-2 lp-itens-assistencia">
+                        <ul>
+                            <li>Manutenção Preventiva</li>
+                            <li>Manutenção corretiva</li>
+                            <li>Recuperação de Dados</li>
+                            <li>Instalação de Programas</li>
+                            <li>Backup -Cópia Segura de Dados</li>
+                            <li>Reparo de Peças Quebradas</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="row py-2">
-                    <div class="col-md-12 col-lg-12 d-flex justify-content-center">
-                        <img class="lp-imagem-texto-assistencia" src="<?= URL . '/img/paginas/assistencia_tecnica/assistencia_tecnica_notebook_mini.png' ?>" alt="">
-                    </div>
-                </div>
-                <div class="row p-2 lp-itens-assistencia">
-                    <ul>
-                        <li>Manutenção Preventiva</li>
-                        <li>Manutenção corretiva</li>
-                        <li>Recuperação de Dados</li>
-                        <li>Instalação de Programas</li>
-                        <li>Backup -Cópia Segura de Dados</li>
-                        <li>Reparo de Peças Quebradas</li>
-                    </ul>
-                </div>
-
-            </div>
+            </a>
         </div>
 
         <div class="col-md-3 col-lg-3 d-flex justify-content-center flex-column py-5">

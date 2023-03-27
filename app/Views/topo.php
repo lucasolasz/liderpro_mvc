@@ -125,7 +125,7 @@
                                             </a>
                                         </li>
                                         <li class="notebooks">
-                                            <a href="#">
+                                            <a href="<?= URL . '/AssistenciaOpcao/notebook_opc' ?>">
                                                 <img src="<?= URL . '/img/cat_menu_notebook.png' ?>" alt="Notebooks" class="img-categoria">
                                                 <div class="clearfix"></div>
                                             </a>
