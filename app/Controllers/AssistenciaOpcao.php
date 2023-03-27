@@ -122,4 +122,18 @@ class AssistenciaOpcao extends Controller
         $this->view('assistencia_tecnicas_opcao/nobreak_opc', $dados);
     }
 
+    public function apple_opc(){
+
+        $paginas = $this->paginasModel->listarMenu();
+
+        //Parâmetros enviados para o método do controller VIEW
+        $dados = [
+            'tituloBreadcrumb' => 'apple_opc',
+            'paginas' => $paginas
+        ];
+
+        //Chamada do novo objeto PAGINAS 
+        $this->view('assistencia_tecnicas_opcao/apple_opc', $dados);
+    }
+
 }
