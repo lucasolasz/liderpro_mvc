@@ -162,29 +162,31 @@
         </div>
 
         <div class="col-md-3 col-lg-3 d-flex justify-content-center flex-column py-5">
-            <img class="img-fluid" src="<?= URL . '/img/paginas/assistencia_tecnica/assistencia_tecnica_tv_monitor.png' ?>" alt="">
-            <div class="container lp-background-assistencia-tv-monitor mt-2">
-                <div class="row">
-                    <div class="col-md-12 col-lg-12 d-flex justify-content-center">
-                        <p class="m-0">TV / Monitor</p>
+            <a href="<?= URL . '/AssistenciaOpcao/tv_monitor_opc' ?>">
+                <img class="img-fluid" src="<?= URL . '/img/paginas/assistencia_tecnica/assistencia_tecnica_tv_monitor.png' ?>" alt="">
+                <div class="container lp-background-assistencia-tv-monitor mt-2">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-12 d-flex justify-content-center">
+                            <p class="m-0">TV / Monitor</p>
+                        </div>
+                    </div>
+                    <div class="row py-2">
+                        <div class="col-md-12 col-lg-12 d-flex justify-content-center">
+                            <img class="lp-imagem-texto-assistencia" src="<?= URL . '/img/paginas/assistencia_tecnica/assistencia_tecnica_tv_monitor_mini.png' ?>" alt="">
+                        </div>
+                    </div>
+                    <div class="row p-2 lp-itens-assistencia">
+                        <ul>
+                            <li>Manutenção Corretiva</li>
+                            <li>Reparo de Peça, Placa e Fonte</li>
+                            <li>Substituição de Telas Quebradas</li>
+                            <li>Calibração de Imagem</li>
+                            <li>Instalação de Videowall</li>
+                            <li>Modelos de LED, LCD e Plasma</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="row py-2">
-                    <div class="col-md-12 col-lg-12 d-flex justify-content-center">
-                        <img class="lp-imagem-texto-assistencia" src="<?= URL . '/img/paginas/assistencia_tecnica/assistencia_tecnica_tv_monitor_mini.png' ?>" alt="">
-                    </div>
-                </div>
-                <div class="row p-2 lp-itens-assistencia">
-                    <ul>
-                        <li>Manutenção Corretiva</li>
-                        <li>Reparo de Peça, Placa e Fonte</li>
-                        <li>Substituição de Telas Quebradas</li>
-                        <li>Calibração de Imagem</li>
-                        <li>Instalação de Videowall</li>
-                        <li>Modelos de LED, LCD e Plasma</li>
-                    </ul>
-                </div>
-            </div>
+            </a>
         </div>
 
         <div class="col-md-3 col-lg-3 d-flex justify-content-center flex-column py-5">

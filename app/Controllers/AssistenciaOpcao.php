@@ -80,4 +80,18 @@ class AssistenciaOpcao extends Controller
         $this->view('assistencia_tecnicas_opcao/fonte_alimentacao_opc', $dados);
     }
 
+    public function tv_monitor_opc(){
+
+        $paginas = $this->paginasModel->listarMenu();
+
+        //Parâmetros enviados para o método do controller VIEW
+        $dados = [
+            'tituloBreadcrumb' => 'tv_monitor_opc',
+            'paginas' => $paginas
+        ];
+
+        //Chamada do novo objeto PAGINAS 
+        $this->view('assistencia_tecnicas_opcao/tv_monitor_opc', $dados);
+    }
+
 }

@@ -149,7 +149,7 @@
                                             </a>
                                         </li>
                                         <li class="tv-monitor">
-                                            <a href="#">
+                                            <a href="<?= URL . '/AssistenciaOpcao/tv_monitor_opc' ?>">
                                                 <img src="<?= URL . '/img/cat_menu_tv_monitor.png' ?>" alt="TV/Monitor" class="img-categoria">
                                                 <div class="clearfix"></div>
                                             </a>
