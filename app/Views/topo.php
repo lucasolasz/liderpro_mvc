@@ -119,7 +119,7 @@
                                     <a href="<?= URL . '/Paginas/assistencia_tecnica' ?>" class="lp-nav-link <?= $dados['tituloBreadcrumb'] == 'assistencia_tecnica' ? 'lp-nav-active' : ''; ?>">Assistência <br>Técnica</a>
                                     <ul class="list-unstyled submenu">
                                         <li class="sem-categoria">
-                                            <a href="#">
+                                            <a href="<?= URL . '/AssistenciaOpcao/computador_opc' ?>">
                                                 <img src="<?= URL . '/img/cat_menu_computador.png' ?>" alt="Sem categoria" class="img-categoria">
                                                 <div class="clearfix"></div>
                                             </a>
