@@ -218,29 +218,31 @@
         </div>
 
         <div class="col-md-3 col-lg-3 d-flex justify-content-center flex-column py-5">
-            <img class="img-fluid" src="<?= URL . '/img/paginas/assistencia_tecnica/assistencia_tecnica_nobreak.png' ?>" alt="">
-            <div class="container lp-background-assistencia-nobreak mt-2">
-                <div class="row">
-                    <div class="col-md-12 col-lg-12 d-flex justify-content-center">
-                        <p class="m-0">No-Break</p>
+            <a href="<?= URL . '/AssistenciaOpcao/nobreak_opc' ?>">
+                <img class="img-fluid" src="<?= URL . '/img/paginas/assistencia_tecnica/assistencia_tecnica_nobreak.png' ?>" alt="">
+                <div class="container lp-background-assistencia-nobreak mt-2">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-12 d-flex justify-content-center">
+                            <p class="m-0">No-Break</p>
+                        </div>
+                    </div>
+                    <div class="row py-2">
+                        <div class="col-md-12 col-lg-12 d-flex justify-content-center">
+                            <img class="lp-imagem-texto-assistencia" src="<?= URL . '/img/paginas/assistencia_tecnica/assistencia_tecnica_nobreak_mini.png' ?>" alt="">
+                        </div>
+                    </div>
+                    <div class="row p-2 lp-itens-assistencia">
+                        <ul>
+                            <li>Substituição de Baterias</li>
+                            <li>Calibração de Baterias</li>
+                            <li>Manutenção Preventiva</li>
+                            <li>Manutenção Corretiva</li>
+                            <li>Manutenção Contratual</li>
+                            <li>Avaliação Técnica no Local</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="row py-2">
-                    <div class="col-md-12 col-lg-12 d-flex justify-content-center">
-                        <img class="lp-imagem-texto-assistencia" src="<?= URL . '/img/paginas/assistencia_tecnica/assistencia_tecnica_nobreak_mini.png' ?>" alt="">
-                    </div>
-                </div>
-                <div class="row p-2 lp-itens-assistencia">
-                    <ul>
-                        <li>Substituição de Baterias</li>
-                        <li>Calibração de Baterias</li>
-                        <li>Manutenção Preventiva</li>
-                        <li>Manutenção Corretiva</li>
-                        <li>Manutenção Contratual</li>
-                        <li>Avaliação Técnica no Local</li>
-                    </ul>
-                </div>
-            </div>
+            </a>
         </div>
     </div>
 

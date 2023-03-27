@@ -161,7 +161,7 @@
                                             </a>
                                         </li>
                                         <li class="no-breaks">
-                                            <a href="#">
+                                            <a href="<?= URL . '/AssistenciaOpcao/nobreak_opc' ?>">
                                                 <img src="<?= URL . '/img/cat_menu_nobreak.png' ?>" alt="No-Breaks" class="img-categoria">
                                                 <div class="clearfix"></div>
                                             </a>
