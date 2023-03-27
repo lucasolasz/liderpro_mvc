@@ -22,8 +22,6 @@ class AssistenciaOpcao extends Controller
 
         //Chamada do novo objeto PAGINAS 
         $this->view('assistencia_tecnicas_opcao/computador_opc', $dados);
-
-        
     }
 
     public function notebook_opc(){
@@ -37,9 +35,7 @@ class AssistenciaOpcao extends Controller
         ];
 
         //Chamada do novo objeto PAGINAS 
-        $this->view('assistencia_tecnicas_opcao/notebook_opc', $dados);
-
-        
+        $this->view('assistencia_tecnicas_opcao/notebook_opc', $dados); 
     }
 
     public function tablet_celular_opc(){
@@ -54,8 +50,6 @@ class AssistenciaOpcao extends Controller
 
         //Chamada do novo objeto PAGINAS 
         $this->view('assistencia_tecnicas_opcao/tablet_celular_opc', $dados);
-
-        
     }
 
     public function projetor_opc(){
@@ -70,8 +64,20 @@ class AssistenciaOpcao extends Controller
 
         //Chamada do novo objeto PAGINAS 
         $this->view('assistencia_tecnicas_opcao/projetor_opc', $dados);
+    }
+    
+    public function fonte_alimentacao_opc(){
 
-        
+        $paginas = $this->paginasModel->listarMenu();
+
+        //Parâmetros enviados para o método do controller VIEW
+        $dados = [
+            'tituloBreadcrumb' => 'fonte_alimentacao_opc',
+            'paginas' => $paginas
+        ];
+
+        //Chamada do novo objeto PAGINAS 
+        $this->view('assistencia_tecnicas_opcao/fonte_alimentacao_opc', $dados);
     }
 
 }

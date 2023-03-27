@@ -134,29 +134,31 @@
 
     <div class="row">
         <div class="col-md-3 col-lg-3 d-flex justify-content-center flex-column py-5">
-            <img class="img-fluid" src="<?= URL . '/img/paginas/assistencia_tecnica/assistencia_tecnica_fonte.png' ?>" alt="">
-            <div class="container lp-background-assistencia-fonte mt-2">
-                <div class="row">
-                    <div class="col-md-12 col-lg-12 d-flex justify-content-center">
-                        <p class="m-0">Fonte de Alimentação</p>
+            <a href="<?= URL . '/AssistenciaOpcao/fonte_alimentacao_opc' ?>">
+                <img class="img-fluid" src="<?= URL . '/img/paginas/assistencia_tecnica/assistencia_tecnica_fonte.png' ?>" alt="">
+                <div class="container lp-background-assistencia-fonte mt-2">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-12 d-flex justify-content-center">
+                            <p class="m-0">Fonte de Alimentação</p>
+                        </div>
+                    </div>
+                    <div class="row py-2">
+                        <div class="col-md-12 col-lg-12 d-flex justify-content-center">
+                            <img class="lp-imagem-texto-assistencia-fonte" src="<?= URL . '/img/paginas/assistencia_tecnica/assistencia_tecnica_fonte_mini.png' ?>" alt="">
+                        </div>
+                    </div>
+                    <div class="row p-2 lp-itens-assistencia">
+                        <ul>
+                            <li>Manutenção Preventiva</li>
+                            <li>Reparo em Geral</li>
+                            <li>Tipo: AT, ATX, BTX, ITX e EPS</li>
+                            <li>Padrão PC, Servidor e Hotswap</li>
+                            <li>Backup -Cópia Segura de Dados</li>
+                            <li>Teste Digital de Voltagem, Potência e Tensão</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="row py-2">
-                    <div class="col-md-12 col-lg-12 d-flex justify-content-center">
-                        <img class="lp-imagem-texto-assistencia-fonte" src="<?= URL . '/img/paginas/assistencia_tecnica/assistencia_tecnica_fonte_mini.png' ?>" alt="">
-                    </div>
-                </div>
-                <div class="row p-2 lp-itens-assistencia">
-                    <ul>
-                        <li>Manutenção Preventiva</li>
-                        <li>Reparo em Geral</li>
-                        <li>Tipo: AT, ATX, BTX, ITX e EPS</li>
-                        <li>Padrão PC, Servidor e Hotswap</li>
-                        <li>Backup -Cópia Segura de Dados</li>
-                        <li>Teste Digital de Voltagem, Potência e Tensão</li>
-                    </ul>
-                </div>
-            </div>
+            </a>
         </div>
 
         <div class="col-md-3 col-lg-3 d-flex justify-content-center flex-column py-5">

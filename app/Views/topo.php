@@ -143,7 +143,7 @@
                                             </a>
                                         </li>
                                         <li class="fontes-de-alimentacao">
-                                            <a href="#">
+                                            <a href="<?= URL . '/AssistenciaOpcao/fonte_alimentacao_opc' ?>">
                                                 <img src="<?= URL . '/img/cat_menu_fonte_alimentacao.png' ?>" alt="Fontes de Alimentação" class="img-categoria">
                                                 <div class="clearfix"></div>
                                             </a>
