@@ -94,4 +94,18 @@ class AssistenciaOpcao extends Controller
         $this->view('assistencia_tecnicas_opcao/tv_monitor_opc', $dados);
     }
 
+    public function impressora_opc(){
+
+        $paginas = $this->paginasModel->listarMenu();
+
+        //Parâmetros enviados para o método do controller VIEW
+        $dados = [
+            'tituloBreadcrumb' => 'impressora_opc',
+            'paginas' => $paginas
+        ];
+
+        //Chamada do novo objeto PAGINAS 
+        $this->view('assistencia_tecnicas_opcao/impressora_opc', $dados);
+    }
+
 }

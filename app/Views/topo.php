@@ -155,7 +155,7 @@
                                             </a>
                                         </li>
                                         <li class="impressoras">
-                                            <a href="#">
+                                            <a href="<?= URL . '/AssistenciaOpcao/impressora_opc' ?>">
                                                 <img src="<?= URL . '/img/cat_menu_impressora.png' ?>" alt="Impressoras" class="img-categoria">
                                                 <div class="clearfix"></div>
                                             </a>
