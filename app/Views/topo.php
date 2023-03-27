@@ -137,7 +137,7 @@
                                             </a>
                                         </li>
                                         <li class="projetores">
-                                            <a href="#">
+                                            <a href="<?= URL . '/AssistenciaOpcao/projetor_opc' ?>">
                                                 <img src="<?= URL . '/img/cat_menu_projetor.png' ?>" alt="Projetores" class="img-categoria">
                                                 <div class="clearfix"></div>
                                             </a>
