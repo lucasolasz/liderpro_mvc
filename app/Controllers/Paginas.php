@@ -21,7 +21,7 @@ class Paginas extends Controller
         ];
 
         //Chamada do novo objeto PAGINAS 
-        $this->view('Paginas/home', $dados);
+        $this->view('paginas/home', $dados);
     }
 
     public function assistencia_tecnica(){
@@ -35,7 +35,7 @@ class Paginas extends Controller
         ];
 
         //Chamada do novo objeto PAGINAS 
-        $this->view('Paginas/assistencia_tecnica', $dados);
+        $this->view('paginas/assistencia_tecnica', $dados);
 
         
     }
@@ -51,7 +51,7 @@ class Paginas extends Controller
         ];
 
         //Chamada do novo objeto PAGINAS 
-        $this->view('Paginas/gestao_informatica', $dados);
+        $this->view('paginas/gestao_informatica', $dados);
 
         
     }
@@ -67,7 +67,7 @@ class Paginas extends Controller
         ];
 
         //Chamada do novo objeto PAGINAS 
-        $this->view('Paginas/cabeamento_estruturado', $dados);
+        $this->view('paginas/cabeamento_estruturado', $dados);
 
         
     }
@@ -84,7 +84,7 @@ class Paginas extends Controller
         ];
 
         //Chamada do novo objeto PAGINAS 
-        $this->view('Paginas/solucoes_nobreak', $dados);
+        $this->view('paginas/solucoes_nobreak', $dados);
 
         
     }
@@ -101,7 +101,7 @@ class Paginas extends Controller
         ];
 
         //Chamada do novo objeto PAGINAS 
-        $this->view('Paginas/solucoes_em_nuvem', $dados);
+        $this->view('paginas/solucoes_em_nuvem', $dados);
 
         
     }
@@ -117,7 +117,7 @@ class Paginas extends Controller
         ];
 
         //Chamada do novo objeto PAGINAS 
-        $this->view('Paginas/contatos', $dados);
+        $this->view('paginas/contatos', $dados);
 
         
     }

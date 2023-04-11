@@ -1,6 +1,6 @@
 <div class="container p-5">
 
-    <?php include APP . '\Views\lider_pro\menu_opcoes.php'; ?>
+    <?php include APP . '/Views/lider_pro/menu_opcoes.php'; ?>
 
     <div class="row p-5">
         <div class="col-md-12 col-lg-12 d-flex  justify-content-center">

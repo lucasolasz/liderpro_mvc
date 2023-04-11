@@ -1,6 +1,6 @@
 <div class="container p-5">
 
-    <?php include APP . '\Views\lider_pro\menu_opcoes.php'; ?>
+    <?php include APP . '/Views/lider_pro/menu_opcoes.php'; ?>
 
     <p class="lp-paragrafo mt-5">
         A LIDERPRO, nesses seus mais de 20 anos, organizou um portfólio de serviços de múltiplas plataformas e variedade de equipamentos que abrangem a maioria das necessidades de TIC (Informática e Telefonia) dos nossos clientes, proporcionando um melhor valor para os serviços e uma rápida execução de projetos.

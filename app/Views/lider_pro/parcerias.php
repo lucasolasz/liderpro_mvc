@@ -1,6 +1,6 @@
 <div class="container p-5">
 
-    <?php include APP . '\Views\lider_pro\menu_opcoes.php'; ?>
+    <?php include APP . '/Views/lider_pro/menu_opcoes.php'; ?>
 
     <div class="row mt-5">
         <div class="row">

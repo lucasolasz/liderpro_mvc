@@ -1,6 +1,6 @@
 <div class="container p-5">
 
-    <?php include APP . '\Views\lider_pro\menu_opcoes.php'; ?>
+    <?php include APP . '/Views/lider_pro/menu_opcoes.php'; ?>
 
     <p class="lp-paragrafo mt-5">
         <span class="lp-titulo-paragrafo"> Nossa Missão </span>
