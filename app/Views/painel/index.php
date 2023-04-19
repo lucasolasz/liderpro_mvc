@@ -1,0 +1,45 @@
+<div class="container py-5">
+
+    <?= Alertas::mensagem('usuario') ?>
+
+    <div class="card">
+
+        <div class="card-header">
+
+            <h5 class="tituloIndex">Painel de cadastros</h5>
+
+
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Usuários</h5>
+                            <p class="card-text">Visualize e cadastre novos usuários</p>
+                            <a href="#" class="btn btn-primary">Visualizar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Páginas</h5>
+                            <p class="card-text">Visualize e cadastre novos páginas</p>
+                            <a href="<?= URL . '/Painel/visualizar' ?>" class="btn btn-primary">Visualizar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Clientes</h5>
+                            <p class="card-text">Visualize e cadastre novos clientes</p>
+                            <a href="#" class="btn btn-primary">Visualizar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

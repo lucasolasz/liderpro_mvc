@@ -6,10 +6,16 @@ class UsuariosController extends Controller
     public function __construct()
     {
         $this->usuarioModel = $this->model("Usuario");
+        $this->paginasModel = $this->model("Pagina");
     }
 
     public function cadastrar()
-    {
+    {   
+        //Redireciona para tela de login caso usuario nao esteja logado
+        if (!IsLoged::estaLogado()) {
+            //Está vazio, para retornar ao diretorio raiz
+            Redirecionamento::redirecionar('UsuariosController/login');
+        }
         
         $tiposUsuario = $this->usuarioModel->listarTipoUsuario();
         $cargoUsuario = $this->usuarioModel->listarCargoUsuario();
@@ -100,6 +106,7 @@ class UsuariosController extends Controller
 
     public function login()
     {
+        $paginas = $this->paginasModel->listarMenu();
         //Evita que codigos maliciosos sejam enviados pelos campos
         $formulario = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
         if (isset($formulario)) {
@@ -140,7 +147,9 @@ class UsuariosController extends Controller
                 'txtNome' => '',
                 'txtEmail' => '',
                 'email_erro' => '',
-                'senha_erro' => ''
+                'senha_erro' => '',
+                'paginas' => $paginas,
+                'tituloBreadcrumb' => ''
             ];
         }
 
@@ -156,9 +165,8 @@ class UsuariosController extends Controller
         $_SESSION['fk_cargo'] = $usuario->fk_cargo;
         $_SESSION['fk_tipo_usuario'] = $usuario->fk_tipo_usuario;
 
-        Redirecionamento::redirecionar('Paginas/home');
+        Redirecionamento::redirecionar('Painel/index');
     }
-
 
     //Destroi todas as variáveis de sessão para efetuar logof
     public function sair(){

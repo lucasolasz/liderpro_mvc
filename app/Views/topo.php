@@ -84,9 +84,16 @@
                             <li><a href="#">Clientes</a></li>
                             <li><a href="<?= URL . '/Paginas/contatos' ?>">Contatos</a></li>
                             <li>
-                                <a href="#">
-                                    <img src="<?= URL . '/img/login_usuario.png' ?>" alt="" class="img_login">
-                                </a>
+                            <?php if (isset($_SESSION['id_usuario'])) { ?>
+                                    <a href="<?= URL . '/Painel/index' ?>">
+                                        <img id="lp-menu-painel" src="<?= URL . '/img/login_usuario_logado.png' ?>" alt="" class="img_login">
+                                    </a>
+                                    <a href="<?= URL . '/UsuariosController/sair' ?>">Sair <i class="bi bi-x-circle"></i></a>
+                                <?php } else { ?>
+                                    <a href="<?= URL . '/UsuariosController/login' ?>">
+                                        <img src="<?= URL . '/img/login_usuario.png' ?>" alt="" class="img_login">
+                                    </a>
+                                <?php } ?>
                             </li>
                             <li>
                                 <a href="#">
