@@ -27,6 +27,45 @@ class Pagina
         return $this->db->resultados();
     }
 
+    public function idProximoRegistroPagina()
+    {
+        $this->db->query("SHOW TABLE STATUS LIKE 'tb_pagina'");
+        return $this->db->resultado();
+    }
+
+    public function criarPastaFotos($pathDefault, $nomePasta)
+    {
+        //Cria pasta dos arquivos individualmente de acordo com id
+        if (!file_exists($pathDefault . DIRECTORY_SEPARATOR . $nomePasta)) {
+            mkdir($pathDefault . DIRECTORY_SEPARATOR . $nomePasta, 0777);
+        }
+    }
+
+
+    public function armazenaImagemDinamicamente($nome_tabela, $pastaArquivo, $novoNomeArquivoAposMover, $ultimoId)
+    {
+        $this->db->query("INSERT INTO 
+                $nome_tabela (
+                    nm_path_arquivo,
+                    nm_arquivo,
+                    fk_pagina
+                )
+                VALUES (
+                    :nm_path_arquivo,
+                    :nm_arquivo,
+                    :fk_pagina
+                )");
+
+        $this->db->bind("nm_path_arquivo", $pastaArquivo);
+        $this->db->bind("nm_arquivo", $novoNomeArquivoAposMover);
+        $this->db->bind("fk_pagina", $ultimoId);
+
+        if (!$this->db->executa()) {
+            return false;
+        }
+    }
+
+
     public function armazenarPagina($dados)
     {
 
@@ -160,13 +199,110 @@ class Pagina
         $this->db->bind("ds_topico8tab4", $dados['txtTopico8Tab4']);
         $this->db->bind("chk_pagina_ativa", $dados['chkPaginaAtiva']);
 
+        $this->db->executa();
+
         $ultimoId = $this->db->ultimoIdInserido();
 
-        if ($this->db->executa()) {
-            return true;
-        } else {
-            return false;
+        if (!$dados['fileBannerPrincipal']['name'][0] == "") {
+            $this->armazenaFotoBanner($dados['fileBannerPrincipal'], $ultimoId);
         }
 
+        if (!$dados['filePerguntas']['name'][0] == "") {
+            $this->armazenaFotosPerguntas($dados['filePerguntas'], $ultimoId);
+        }
+
+        if (!$dados['fileFotoTexto']['name'][0] == "") {
+            $this->armazenarFotoTexto($dados['fileFotoTexto'], $ultimoId);
+        }
+
+        if (!$dados['fileFotosServico']['name'][0] == "") {
+            $this->armazenarFotosServico($dados['fileFotosServico'], $ultimoId);
+        }
+
+
+        return true;
+    }
+
+    public function armazenarFotosServico($dados, $ultimoId)
+    {
+        $pastaArquivo = "pagina_id_" . $ultimoId;
+        $upload = new Upload();
+        $tamanhoArray = count($dados['name']);
+
+        for ($i = 0; $i < $tamanhoArray; $i++) {
+
+            $arrayImagem = [
+                'name' => $dados['name'][$i],
+                'type' => $dados['type'][$i],
+                'tmp_name' => $dados['tmp_name'][$i],
+                'error' => $dados['error'][$i],
+                'size' => $dados['size'][$i],
+            ];
+
+            $this->criarPastaFotos($upload->getPathDefault(), $pastaArquivo);
+
+            $upload->imagem($arrayImagem, NULL, $pastaArquivo);
+
+            $novoNomeArquivoAposMover = $upload->getResultado();
+
+            $this->armazenaImagemDinamicamente("tb_foto_servico", $pastaArquivo, $novoNomeArquivoAposMover, $ultimoId);
+        }
+    }
+
+    public function armazenarFotoTexto($dados, $ultimoId)
+    {
+
+        $pastaArquivo = "pagina_id_" . $ultimoId;
+        $upload = new Upload();
+
+        $this->criarPastaFotos($upload->getPathDefault(), $pastaArquivo);
+        $upload->imagem($dados, NULL, $pastaArquivo);
+
+        $novoNomeArquivoAposMover = $upload->getResultado();
+
+        $this->armazenaImagemDinamicamente("tb_foto_texto", $pastaArquivo, $novoNomeArquivoAposMover, $ultimoId);
+    }
+
+
+    public function armazenaFotoBanner($dados, $ultimoId)
+    {
+
+        $pastaArquivo = "pagina_id_" . $ultimoId;
+        $upload = new Upload();
+
+        $this->criarPastaFotos($upload->getPathDefault(), $pastaArquivo);
+        $upload->imagem($dados, NULL, $pastaArquivo);
+
+        $novoNomeArquivoAposMover = $upload->getResultado();
+
+        $this->armazenaImagemDinamicamente("tb_foto_banner", $pastaArquivo, $novoNomeArquivoAposMover, $ultimoId);
+    }
+
+
+    public function armazenaFotosPerguntas($dados, $ultimoId)
+    {
+
+        $pastaArquivo = "pagina_id_" . $ultimoId;
+        $upload = new Upload();
+        $tamanhoArray = count($dados['name']);
+
+        for ($i = 0; $i < $tamanhoArray; $i++) {
+
+            $arrayImagem = [
+                'name' => $dados['name'][$i],
+                'type' => $dados['type'][$i],
+                'tmp_name' => $dados['tmp_name'][$i],
+                'error' => $dados['error'][$i],
+                'size' => $dados['size'][$i],
+            ];
+
+            $this->criarPastaFotos($upload->getPathDefault(), $pastaArquivo);
+
+            $upload->imagem($arrayImagem, NULL, $pastaArquivo);
+
+            $novoNomeArquivoAposMover = $upload->getResultado();
+
+            $this->armazenaImagemDinamicamente("tb_foto_pergunta", $pastaArquivo, $novoNomeArquivoAposMover, $ultimoId);
+        }
     }
 }
