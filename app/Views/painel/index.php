@@ -1,6 +1,6 @@
 <div class="container py-5">
 
-    <?= Alertas::mensagem('usuario') ?>
+    <?= Alertas::mensagem('paginas') ?>
 
     <div class="card">
 
@@ -26,7 +26,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Páginas</h5>
                             <p class="card-text">Visualize e cadastre novos páginas</p>
-                            <a href="<?= URL . '/Painel/visualizar' ?>" class="btn btn-primary">Visualizar</a>
+                            <a href="<?= URL . '/Painel/visualizarPaginas' ?>" class="btn btn-primary">Visualizar</a>
                         </div>
                     </div>
                 </div>
