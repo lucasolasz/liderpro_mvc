@@ -10,13 +10,13 @@ class UsuariosController extends Controller
     }
 
     public function cadastrar()
-    {   
+    {
         //Redireciona para tela de login caso usuario nao esteja logado
         if (!IsLoged::estaLogado()) {
             //Está vazio, para retornar ao diretorio raiz
             Redirecionamento::redirecionar('UsuariosController/login');
         }
-        
+
         $tiposUsuario = $this->usuarioModel->listarTipoUsuario();
         $cargoUsuario = $this->usuarioModel->listarCargoUsuario();
 
@@ -113,38 +113,32 @@ class UsuariosController extends Controller
 
             $dados = [
                 'txtEmail' => trim($formulario['txtEmail']),
-                'txtSenha' => trim($formulario['txtSenha'])
+                'txtSenha' => trim($formulario['txtSenha']),
+                'senha_erro' => '',
+                'email_erro' => '',
+                'tituloBreadcrumb' => ''
             ];
-
-            if (in_array("", $formulario)) {
-
-                //Verifica se está vazio
-                if (empty($formulario['txtEmail'])) {
-                    $dados['email_erro'] = "Preencha o email";
-                }
-                if (empty($formulario['txtSenha'])) {
-                    $dados['senha_erro'] = "Preencha a senha";
-                }
+            
+            //Invoca método estatico da classe 
+            if (Checa::checarEmail($formulario['txtEmail'])) {
+                $dados['email_erro'] = "Email inválido";
+            } elseif (strlen($formulario['txtSenha']) < 6) {
+                $dados['senha_erro'] = "A senha precisa ter no mínimo 6 caracteres";
             } else {
-                //Invoca método estatico da classe 
-                if (Checa::checarEmail($formulario['txtEmail'])) {
-                    $dados['email_erro'] = "Email inválido";
-                } elseif (strlen($formulario['txtSenha']) < 6) {
-                    $dados['senha_erro'] = "A senha precisa ter no mínimo 6 caracteres";
+
+                $usuario = $this->usuarioModel->checarLogin($formulario['txtEmail'], $formulario['txtSenha']);
+
+                if ($usuario) {
+                    $this->criarSessaoUsuario($usuario);
                 } else {
-
-                    $usuario = $this->usuarioModel->checarLogin($formulario['txtEmail'], $formulario['txtSenha']);
-
-                    if ($usuario) {
-                        $this->criarSessaoUsuario($usuario);
-                    } else {
-                        Alertas::mensagem('usuario', 'Usuário ou senha inválidos','alert alert-danger');
-                    }
+                    Alertas::mensagem('usuario', 'Usuário ou senha inválidos', 'alert alert-danger');
                 }
             }
+            
         } else {
+            echo "entrei";
             $dados = [
-                'txtNome' => '',
+                'txtSenha' => '',
                 'txtEmail' => '',
                 'email_erro' => '',
                 'senha_erro' => '',
@@ -158,9 +152,10 @@ class UsuariosController extends Controller
     }
 
     //Cria as variaveis de sessao ao fazer login, resgatando informações do usuário
-    private function criarSessaoUsuario($usuario){
+    private function criarSessaoUsuario($usuario)
+    {
         $_SESSION['id_usuario'] = $usuario->id_usuario;
-        $_SESSION['ds_nome_usuario']= $usuario->ds_nome_usuario;
+        $_SESSION['ds_nome_usuario'] = $usuario->ds_nome_usuario;
         $_SESSION['ds_email_usuario'] = $usuario->ds_email_usuario;
         $_SESSION['fk_cargo'] = $usuario->fk_cargo;
         $_SESSION['fk_tipo_usuario'] = $usuario->fk_tipo_usuario;
@@ -169,7 +164,8 @@ class UsuariosController extends Controller
     }
 
     //Destroi todas as variáveis de sessão para efetuar logof
-    public function sair(){
+    public function sair()
+    {
         unset($_SESSION['id_usuario']);
         unset($_SESSION['ds_nome_usuario']);
         unset($_SESSION['ds_email_usuario']);
@@ -179,5 +175,5 @@ class UsuariosController extends Controller
         session_destroy();
 
         Redirecionamento::redirecionar('UsuariosController/login');
-    } 
+    }
 }

@@ -2,7 +2,7 @@
     <div class="card">
         <div class="card-body">
 
-            <?= Alertas::mensagem('usuario'); ?>
+            <?= Alertas::mensagem('usuario') ?>
 
             <h2>Login de Usuário</h2>
             <small>Preencha o formulário abaixo para realizar o login</small>
@@ -10,7 +10,7 @@
             <form name="cadastrar" method="POST" action="<?= URL ?>/UsuariosController/login">
                 <div class="mb-3">
                     <label for="txtEmail" class="form-label">E-mail: *</label>
-                    <input type="text" class="form-control <?= $dados['email_erro'] ? 'is-invalid' : '' ?>" name="txtEmail" id="txtEmail" value="<?= $dados['txtEmail'] ?>">
+                    <input type="text" class="form-control <?= $dados['email_erro'] ? 'is-invalid' : '' ?>" name="txtEmail" id="txtEmail">
                     <div class="invalid-feedback"><?= $dados['email_erro'] ?></div>
                 </div>
                 <div class="mb-3">
