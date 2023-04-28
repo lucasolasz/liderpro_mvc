@@ -13,6 +13,7 @@ class Painel extends Controller
         }
 
         $this->paginasModel = $this->model("Pagina");
+        $this->paginaDinamicaModel = $this->model("PaginaDinamica");
     }
 
 
@@ -28,6 +29,125 @@ class Painel extends Controller
 
         //Retorna para a view
         $this->view('painel/index', $dados);
+    }
+
+    public function criaNomeArquivo($nomeArquivo)
+    {
+        $palavra_explode = explode(" ", strtolower($nomeArquivo));
+        $tamanhoArray = count($palavra_explode);
+
+        if ($tamanhoArray > 1) {
+
+            $palavraMontada = "";
+
+            for ($i = 0; $i < $tamanhoArray; $i++) {
+
+                $palavraMontada .= $palavra_explode[$i];
+
+                if ($i < ($tamanhoArray - 1)) {
+                    $palavraMontada .= "_";
+                }
+            }
+            return $palavraMontada;
+        } else {
+            return $palavra_explode;
+        }
+    }
+
+    public function carregarControllerEPaginaDinamica()
+    {
+
+        $paginaDinamica = $this->paginaDinamicaModel->listarPaginas();
+
+        $dolar = "$";
+        $este = "this";
+        $setaSimples = "->";
+        //$this
+        $dolarThis = $dolar . $este;
+        //$this->
+        $dolarThisMaisSetaSimples = $dolarThis . $setaSimples;
+        //$paginas
+        $dolarPaginas = $dolar . "paginas";
+        //$paginaSelecionada
+        $dolarPaginaSelecionada = $dolar . "paginaSelecionada";
+        //$dolarFotoBanner
+        $dolarFotoBanner = $dolar . "dolarFotoBanner";
+        //$dolarFotoPergunta
+        $dolarFotoPergunta = $dolar . "dolarFotoPergunta";
+        //$dolarFotoServico
+        $dolarFotoServico = $dolar . "dolarFotoServico";
+        //$dolarFotoServico
+        $dolarFotoTexto = $dolar . "dolarFotoTexto";
+        //$dados
+        $dolarDados = $dolar . "dados";
+        //$this->view
+        $esteView = $dolarThisMaisSetaSimples . "view";
+        //$id
+        $dolarId = $dolar . "idPaginaSelecionada";
+
+
+        foreach ($paginaDinamica as $paginas) {
+
+            $nomeArquivoEMetodoDinamico = $this->criaNomeArquivo($paginas->ds_pagina);
+
+            $arquivoDestino = APP . "\\Controllers\\PaginasDinamicas.php";
+
+            $modelEscolhido = "PaginaDinamica";
+            $stringModel = "model('" . $modelEscolhido . "');";
+            $stringCompletaModel = $dolarThisMaisSetaSimples . "paginaDinamicaModel = " . $dolarThisMaisSetaSimples . $stringModel;
+            $novoMetodoCompleto = "";
+            $variavelModelPaginaIdCompleto = $dolarThisMaisSetaSimples . "paginaDinamicaModel" . $setaSimples . "listarPaginasPeloId($dolarId);";
+            $variavelModelFotoBannerIdCompleto = $dolarThisMaisSetaSimples . "paginaDinamicaModel" . $setaSimples . "listarFotoBannerPeloId($dolarId);";
+            $variavelModelFotoPerguntaIdCompleto = $dolarThisMaisSetaSimples . "paginaDinamicaModel" . $setaSimples . "listarFotoPerguntaPeloId($dolarId);";
+            $variavelModelFotoServicoIdCompleto = $dolarThisMaisSetaSimples . "paginaDinamicaModel" . $setaSimples . "listarFotoServicoPeloId($dolarId);";
+            $variavelModelFotoTextoIdCompleto = $dolarThisMaisSetaSimples . "paginaDinamicaModel" . $setaSimples . "listarFotoTextoPeloId($dolarId);";
+
+
+            //aqui eu itero o que vem do banco
+            $nomeNovaPagina = $nomeArquivoEMetodoDinamico;
+
+            $novoMetodoCompleto .= "
+        
+    public function $nomeNovaPagina() { 
+
+        $dolarId = $paginas->id_pagina;
+        $dolarPaginaSelecionada = $variavelModelPaginaIdCompleto
+        $dolarFotoBanner = $variavelModelFotoBannerIdCompleto
+        $dolarFotoPergunta = $variavelModelFotoPerguntaIdCompleto
+        $dolarFotoServico = $variavelModelFotoServicoIdCompleto
+        $dolarFotoTexto = $variavelModelFotoTextoIdCompleto
+
+        $dolarDados = [
+            'tituloBreadCrumb' => '$nomeNovaPagina' ,
+            'paginaSelecionada' => $dolarPaginaSelecionada,
+            'dolarFotoBanner' => $dolarFotoBanner,
+            'dolarFotoPergunta' => $dolarFotoPergunta,
+            'dolarFotoServico' => $dolarFotoServico,
+            'dolarFotoTexto' => $dolarFotoTexto
+        ];
+
+        $esteView('paginas/$nomeNovaPagina', $dolarDados);
+    }";
+            //Cria novo arquivo de view baseado no template
+            // $urlArquivoTemplate = APP . '\\Views\\paginas\\templatePagina.php';
+            // $urlNovaPagina = APP . '\\Views\\paginas\\' . $nomeNovaPagina . '.php';
+
+            // if (!file_exists($urlNovaPagina)) {
+            //     copy($urlArquivoTemplate, $urlNovaPagina);
+            // }
+        }
+
+        $conteudoQueSeraImpressoNoArquivoDestino = "<?php 
+
+class PaginasDinamicas extends Controller
+{
+    public function __construct() {
+        $stringCompletaModel
+    }
+    $novoMetodoCompleto
+}";
+
+        file_put_contents($arquivoDestino, $conteudoQueSeraImpressoNoArquivoDestino);
     }
 
 
@@ -95,7 +215,7 @@ class Painel extends Controller
                 'chkPaginaAtiva' => $formulario['chkPaginaAtiva']
 
             ];
-            
+
 
             $dados['fileBannerPrincipal'] = isset($_FILES['fileBannerPrincipal']) ? $_FILES['fileBannerPrincipal'] : "";
             $dados['filePerguntas'] = isset($_FILES['filePerguntas']) ? $_FILES['filePerguntas'] : "";
@@ -111,7 +231,6 @@ class Painel extends Controller
                 Alertas::mensagem('paginas', 'Não foi possível cadastrar a página', 'alert alert-danger');
                 Redirecionamento::redirecionar('Painel/Painel/visualizarPaginas');
             }
-
         } else {
             $paginas = $this->paginasModel->listarMenu();
 

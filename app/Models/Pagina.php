@@ -157,7 +157,7 @@ class Pagina
                 :chk_pagina_ativa
                 )");
 
-        $this->db->bind("ds_pagina", $dados['txtTitutoPagina']);
+        $this->db->bind("ds_pagina", trim($dados['txtTitutoPagina']));
         $this->db->bind("ds_url_menu", null);
         $this->db->bind("ds_breadcrumb_menu", null);
         $this->db->bind("ds_texto_principal", $dados['txtTextPrincipal']);
@@ -218,8 +218,7 @@ class Pagina
         if (!$dados['fileFotosServico']['name'][0] == "") {
             $this->armazenarFotosServico($dados['fileFotosServico'], $ultimoId);
         }
-
-
+        
         return true;
     }
 
