@@ -118,7 +118,7 @@ class Painel extends Controller
         $dolarFotoTexto = $variavelModelFotoTextoIdCompleto
 
         $dolarDados = [
-            'tituloBreadCrumb' => '$nomeNovaPagina' ,
+            'tituloBreadcrumb' => '$nomeNovaPagina' ,
             'paginaSelecionada' => $dolarPaginaSelecionada,
             'dolarFotoBanner' => $dolarFotoBanner,
             'dolarFotoPergunta' => $dolarFotoPergunta,
