@@ -8,11 +8,11 @@
         foreach ($dados['dolarFotoPergunta'] as $dolarFotoPergunta) {
             if ($i == 1) { ?>
                 <div class="col-md py-5">
-                    <img class="img-fluid" src="<?= URL . '\\uploads\\' . $dados['dolarFotoPergunta'][0]->nm_path_arquivo . "\\" .  $dados['dolarFotoPergunta'][0]->nm_arquivo ?>" alt="">
+                    <img class="img-fluid" src="<?= URL . '\\uploads\\' . $dolarFotoPergunta->nm_path_arquivo . "\\" .  $dolarFotoPergunta->nm_arquivo ?>" alt="">
                 </div>
             <?php  } else { ?>
                 <div class="col-md">
-                    <img class="img-fluid" src="<?= URL . '\\uploads\\' . $dados['dolarFotoPergunta'][0]->nm_path_arquivo . "\\" .  $dados['dolarFotoPergunta'][0]->nm_arquivo ?>" alt="">
+                    <img class="img-fluid" src="<?= URL . '\\uploads\\' .  $dolarFotoPergunta->nm_path_arquivo . "\\" .  $dolarFotoPergunta->nm_arquivo ?>" alt="">
                 </div>
         <?php }
             $i++;
