@@ -1,6 +1,5 @@
 <div class="container p-5">
     <div class="row">
-        <?php var_dump($dados['paginaSelecionada'][0]->id_pagina) ?>
         <img class="img-fluid" src="<?= URL . '\\uploads\\' . $dados['dolarFotoBanner'][0]->nm_path_arquivo . "\\" .  $dados['dolarFotoBanner'][0]->nm_arquivo ?>" alt="">
     </div>
     <div class="row py-5 d-flex align-items-center">
