@@ -156,10 +156,12 @@ class Pagina
                 :ds_topico8tab4,
                 :chk_pagina_ativa
                 )");
+                
+        $ds_breadcrumb_menu = GeraNomeArquivoComUnderline::geraNomeArquivoComUnderline($dados['txtTitutoPagina']);
 
         $this->db->bind("ds_pagina", trim($dados['txtTitutoPagina']));
-        $this->db->bind("ds_url_menu", null);
-        $this->db->bind("ds_breadcrumb_menu", null);
+        $this->db->bind("ds_url_menu", "/$ds_breadcrumb_menu");
+        $this->db->bind("ds_breadcrumb_menu",  $ds_breadcrumb_menu);
         $this->db->bind("ds_texto_principal", $dados['txtTextPrincipal']);
         $this->db->bind("ds_tab1", $dados['txtNomeTab1']);
         $this->db->bind("ds_topico1tab1", $dados['txtTopico1Tab1']);
