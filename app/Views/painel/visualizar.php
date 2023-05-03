@@ -8,7 +8,7 @@
 
             <h5 class="tituloIndex">Páginas
                 <div style="float: right;">
-                    <a href="<?= URL ?>/Painel/cadastrarPagina" class="btn lp-btn-liderpro">Nova Página</a>
+                    <a href="<?= URL ?>\\Painel\\cadastrarPagina" class="btn lp-btn-liderpro">Nova Página</a>
                 </div>
             </h5>
 
@@ -34,11 +34,11 @@
                         foreach ($dados['paginas'] as $paginas) { ?>
 
                             <tr>
-                                <td><?= ucfirst($paginas->ds_menu) ?></td>
-                                <td><a href="<?= URL . '/Painel/editarPagina/' . $paginas->id_menu ?>" class="btn btn-warning"><i class="bi bi-pencil-square"></i></a>
+                                <td><?= ucfirst($paginas->ds_pagina) ?></td>
+                                <td><a href="<?= URL . '\\Painel\\editarPagina/' . $paginas->id_pagina ?>" class="btn btn-warning"><i class="bi bi-pencil-square"></i></a>
                                 </td>
                             <td>
-                                <form action="<?= URL . '/Painel/deletarPagina  /' . $paginas->id_menu ?>" method="POST">
+                                <form action="<?= URL . '\\Painel\\deletarPagina  /' . $paginas->id_pagina ?>" method="POST">
                                     <button type="submit" class="btn btn-danger"><span><i class="bi bi-trash-fill"></i></span></button>
                                 </form>
                             </td>

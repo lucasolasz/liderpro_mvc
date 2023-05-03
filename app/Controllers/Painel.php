@@ -20,7 +20,7 @@ class Painel extends Controller
     public function index()
     {
 
-        $paginas = $this->paginasModel->listarMenu();
+        $paginas = $this->paginaDinamicaModel->listarPaginasAtivas();
 
         $dados = [
             'paginas' => $paginas,
@@ -31,15 +31,9 @@ class Painel extends Controller
         $this->view('painel/index', $dados);
     }
 
-    public function gerarPagina(){
-        
-        $paginasBanco = $this->paginaDinamicaModel->listarPaginas();
-        GerarPagina::gerarPaginaDinamica($paginasBanco);
-    }
-
     public function visualizarPaginas()
     {
-        $paginas = $this->paginasModel->listarMenu();
+        $paginas = $this->paginaDinamicaModel->listarPaginas();
 
         $dados = [
             'paginas' => $paginas,
@@ -50,6 +44,11 @@ class Painel extends Controller
         $this->view('painel/visualizar', $dados);
     }
 
+    public function gerarPagina(){
+        
+        $paginasBanco = $this->paginaDinamicaModel->listarPaginas();
+        GerarPagina::gerarPaginaDinamica($paginasBanco);
+    }
 
     public function cadastrarPagina()
     {
