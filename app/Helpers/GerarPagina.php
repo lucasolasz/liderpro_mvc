@@ -48,7 +48,7 @@ class GerarPagina
             $variavelModelFotoPerguntaIdCompleto = $dolarThisMaisSetaSimples . "paginaDinamicaModel" . $setaSimples . "listarFotoPerguntaPeloId($dolarId);";
             $variavelModelFotoServicoIdCompleto = $dolarThisMaisSetaSimples . "paginaDinamicaModel" . $setaSimples . "listarFotoServicoPeloId($dolarId);";
             $variavelModelFotoTextoIdCompleto = $dolarThisMaisSetaSimples . "paginaDinamicaModel" . $setaSimples . "listarFotoTextoPeloId($dolarId);";
-
+            $variavelModelTodasAsPaginas = $dolarThisMaisSetaSimples . "paginaDinamicaModel" . $setaSimples . "listarPaginasAtivas();";
 
             //aqui eu itero o que vem do banco
             $nomeNovaPagina = $nomeArquivoEMetodoDinamico;
@@ -58,6 +58,7 @@ class GerarPagina
     public function $nomeNovaPagina() { 
 
         $dolarId = $paginas->id_pagina;
+        $dolarPaginas = $variavelModelTodasAsPaginas
         $dolarPaginaSelecionada = $variavelModelPaginaIdCompleto
         $dolarFotoBanner = $variavelModelFotoBannerIdCompleto
         $dolarFotoPergunta = $variavelModelFotoPerguntaIdCompleto
@@ -65,6 +66,7 @@ class GerarPagina
         $dolarFotoTexto = $variavelModelFotoTextoIdCompleto
 
         $dolarDados = [
+            'paginas' => $dolarPaginas,
             'tituloBreadcrumb' => '$nomeNovaPagina' ,
             'paginaSelecionada' => $dolarPaginaSelecionada,
             'dolarFotoBanner' => $dolarFotoBanner,
@@ -84,6 +86,33 @@ class GerarPagina
             }
         }
 
+        $metodoIndexCompleto = "
+        
+    public function index() { 
+        $dolarPaginas = $variavelModelTodasAsPaginas
+
+        $dolarDados = [
+            'paginas' => $dolarPaginas,
+            'tituloBreadcrumb' => 'HOME' ,
+        ];
+
+        $esteView('paginas/home', $dolarDados);
+    }";
+
+    $metodoAssistenciaTecnicaCompleto = "
+        
+    public function assistencia_tecnica() { 
+        $dolarPaginas = $variavelModelTodasAsPaginas
+
+        $dolarDados = [
+            'paginas' => $dolarPaginas,
+            'tituloBreadcrumb' => 'assistencia_tecnica' ,
+        ];
+
+        $esteView('paginas/assistencia_tecnica', $dolarDados);
+    }";
+        
+
         $conteudoQueSeraImpressoNoArquivoDestino = "<?php 
 
 class PaginasDinamicas extends Controller
@@ -91,6 +120,8 @@ class PaginasDinamicas extends Controller
     public function __construct() {
         $stringCompletaModel
     }
+    $metodoIndexCompleto
+    $metodoAssistenciaTecnicaCompleto
     $novoMetodoCompleto
 }";
 
