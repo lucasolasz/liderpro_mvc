@@ -120,7 +120,7 @@ class Painel extends Controller
                 Redirecionamento::redirecionar('Painel/visualizarPaginas');
             }
         } else {
-            $paginas = $this->paginasModel->listarMenu();
+            $paginas = $this->paginaDinamicaModel->listarPaginas();
 
             $dados = [
                 'paginas' => $paginas,
