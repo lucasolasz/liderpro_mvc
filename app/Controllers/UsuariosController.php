@@ -7,6 +7,7 @@ class UsuariosController extends Controller
     {
         $this->usuarioModel = $this->model("Usuario");
         $this->paginasModel = $this->model("Pagina");
+        $this->paginaDinamicaModel = $this->model("PaginaDinamica");
     }
 
     public function cadastrar()
@@ -106,7 +107,7 @@ class UsuariosController extends Controller
 
     public function login()
     {
-        $paginas = $this->paginasModel->listarMenu();
+        $paginas = $this->paginaDinamicaModel->listarPaginasAtivas();
         //Evita que codigos maliciosos sejam enviados pelos campos
         $formulario = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
         if (isset($formulario)) {
@@ -136,7 +137,6 @@ class UsuariosController extends Controller
             }
             
         } else {
-            echo "entrei";
             $dados = [
                 'txtSenha' => '',
                 'txtEmail' => '',
