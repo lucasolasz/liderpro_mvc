@@ -32,8 +32,7 @@
     $urlBreadCrumb = "";
     $informacoes = "";
 
-
-    if (isset($dados['paginas'])) {
+    if (isset($dados['paginas']) && !isset($dados["paginasLiderPro"])) {
 
         foreach ($dados['paginas'] as $paginas) {
 
@@ -76,7 +75,7 @@
                 <div class="flex-grow-1 d-flex align-items-center" style="padding-left: 58px">
                     <div class="lp-breadcrumb">
                         <a href="<?= URL ?>">Home</a>
-                        <?php if (isset($dados['paginas'])) { ?>
+                        <?php if (isset($dados['paginas']) && !isset($dados["paginasLiderPro"])) { ?>
                             <a href="<?= URL . '\\PaginasDinamicas' . $urlBreadCrumb ?>"><?= $paginaBreadCrumb ?></a>
                         <?php } ?>
 

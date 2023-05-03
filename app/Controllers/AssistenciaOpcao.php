@@ -6,13 +6,13 @@ class AssistenciaOpcao extends Controller
      //Construtor do model do Usuário que fará o acesso ao banco
      public function __construct()
      {
-        $this->paginasModel = $this->model("Pagina");
+        $this->paginaDinamicaModel = $this->model('PaginaDinamica');
      }
 
 
     public function computador_opc(){
 
-        $paginas = $this->paginasModel->listarMenu();
+        $paginas = $this->paginaDinamicaModel->listarPaginasAtivas();
 
         //Parâmetros enviados para o método do controller VIEW
         $dados = [
@@ -26,7 +26,7 @@ class AssistenciaOpcao extends Controller
 
     public function notebook_opc(){
 
-        $paginas = $this->paginasModel->listarMenu();
+        $paginas = $this->paginaDinamicaModel->listarPaginasAtivas();
 
         //Parâmetros enviados para o método do controller VIEW
         $dados = [
@@ -40,7 +40,7 @@ class AssistenciaOpcao extends Controller
 
     public function tablet_celular_opc(){
 
-        $paginas = $this->paginasModel->listarMenu();
+        $paginas = $this->paginaDinamicaModel->listarPaginasAtivas();
 
         //Parâmetros enviados para o método do controller VIEW
         $dados = [
@@ -54,7 +54,7 @@ class AssistenciaOpcao extends Controller
 
     public function projetor_opc(){
 
-        $paginas = $this->paginasModel->listarMenu();
+        $paginas = $this->paginaDinamicaModel->listarPaginasAtivas();
 
         //Parâmetros enviados para o método do controller VIEW
         $dados = [
@@ -68,7 +68,7 @@ class AssistenciaOpcao extends Controller
     
     public function fonte_alimentacao_opc(){
 
-        $paginas = $this->paginasModel->listarMenu();
+        $paginas = $this->paginaDinamicaModel->listarPaginasAtivas();
 
         //Parâmetros enviados para o método do controller VIEW
         $dados = [
@@ -82,7 +82,7 @@ class AssistenciaOpcao extends Controller
 
     public function tv_monitor_opc(){
 
-        $paginas = $this->paginasModel->listarMenu();
+        $paginas = $this->paginaDinamicaModel->listarPaginasAtivas();
 
         //Parâmetros enviados para o método do controller VIEW
         $dados = [
@@ -96,7 +96,7 @@ class AssistenciaOpcao extends Controller
 
     public function impressora_opc(){
 
-        $paginas = $this->paginasModel->listarMenu();
+        $paginas = $this->paginaDinamicaModel->listarPaginasAtivas();
 
         //Parâmetros enviados para o método do controller VIEW
         $dados = [
@@ -110,7 +110,7 @@ class AssistenciaOpcao extends Controller
 
     public function nobreak_opc(){
 
-        $paginas = $this->paginasModel->listarMenu();
+        $paginas = $this->paginaDinamicaModel->listarPaginasAtivas();
 
         //Parâmetros enviados para o método do controller VIEW
         $dados = [
@@ -124,7 +124,7 @@ class AssistenciaOpcao extends Controller
 
     public function apple_opc(){
 
-        $paginas = $this->paginasModel->listarMenu();
+        $paginas = $this->paginaDinamicaModel->listarPaginasAtivas();
 
         //Parâmetros enviados para o método do controller VIEW
         $dados = [

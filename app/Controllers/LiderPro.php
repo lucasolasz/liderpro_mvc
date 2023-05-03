@@ -7,16 +7,19 @@ class LiderPro extends Controller
     public function __construct()
     {
         $this->paginasModel = $this->model("Pagina");
+        $this->paginaDinamicaModel = $this->model('PaginaDinamica');
     }
 
     public function lider_pro()
     {
         $paginasLiderPro = $this->paginasModel->listarMenuLiderPro();
+        $paginas = $this->paginaDinamicaModel->listarPaginasAtivas();
 
         //Parâmetros enviados para o método do controller VIEW
         $dados = [
             'tituloBreadcrumb' => 'lider_pro',
-            'paginasLiderPro' => $paginasLiderPro
+            'paginasLiderPro' => $paginasLiderPro,
+            'paginas' => $paginas
         ];
 
         //Chamada do novo objeto PAGINAS 
@@ -26,11 +29,13 @@ class LiderPro extends Controller
     public function valores()
     {
         $paginasLiderPro = $this->paginasModel->listarMenuLiderPro();
+        $paginas = $this->paginaDinamicaModel->listarPaginasAtivas();
 
         //Parâmetros enviados para o método do controller VIEW
         $dados = [
             'tituloBreadcrumb' => 'valores',
-            'paginasLiderPro' => $paginasLiderPro
+            'paginasLiderPro' => $paginasLiderPro,
+            'paginas' => $paginas
         ];
 
         //Chamada do novo objeto PAGINAS 
@@ -40,11 +45,13 @@ class LiderPro extends Controller
     public function parcerias()
     {
         $paginasLiderPro = $this->paginasModel->listarMenuLiderPro();
+        $paginas = $this->paginaDinamicaModel->listarPaginasAtivas();
 
         //Parâmetros enviados para o método do controller VIEW
         $dados = [
             'tituloBreadcrumb' => 'parcerias',
-            'paginasLiderPro' => $paginasLiderPro
+            'paginasLiderPro' => $paginasLiderPro,
+            'paginas' => $paginas
         ];
 
         //Chamada do novo objeto PAGINAS 
@@ -54,11 +61,13 @@ class LiderPro extends Controller
     public function informacoes_gerais()
     {
         $paginasLiderPro = $this->paginasModel->listarMenuLiderPro();
+        $paginas = $this->paginaDinamicaModel->listarPaginasAtivas();
 
         //Parâmetros enviados para o método do controller VIEW
         $dados = [
             'tituloBreadcrumb' => 'informacoes_gerais',
-            'paginasLiderPro' => $paginasLiderPro
+            'paginasLiderPro' => $paginasLiderPro,
+            'paginas' => $paginas
         ];
 
         //Chamada do novo objeto PAGINAS 
@@ -68,11 +77,13 @@ class LiderPro extends Controller
     public function termos_de_uso()
     {
         $paginasLiderPro = $this->paginasModel->listarMenuLiderPro();
+        $paginas = $this->paginaDinamicaModel->listarPaginasAtivas();
 
         //Parâmetros enviados para o método do controller VIEW
         $dados = [
             'tituloBreadcrumb' => 'termos_de_uso',
-            'paginasLiderPro' => $paginasLiderPro
+            'paginasLiderPro' => $paginasLiderPro,
+            'paginas' => $paginas
         ];
 
         //Chamada do novo objeto PAGINAS 
@@ -82,11 +93,13 @@ class LiderPro extends Controller
     public function politica_de_privacidade()
     {
         $paginasLiderPro = $this->paginasModel->listarMenuLiderPro();
+        $paginas = $this->paginaDinamicaModel->listarPaginasAtivas();
 
         //Parâmetros enviados para o método do controller VIEW
         $dados = [
             'tituloBreadcrumb' => 'politica_de_privacidade',
-            'paginasLiderPro' => $paginasLiderPro
+            'paginasLiderPro' => $paginasLiderPro,
+            'paginas' => $paginas
         ];
 
         //Chamada do novo objeto PAGINAS 
@@ -96,11 +109,13 @@ class LiderPro extends Controller
     public function informacoes_legais()
     {
         $paginasLiderPro = $this->paginasModel->listarMenuLiderPro();
+        $paginas = $this->paginaDinamicaModel->listarPaginasAtivas();
 
         //Parâmetros enviados para o método do controller VIEW
         $dados = [
             'tituloBreadcrumb' => 'informacoes_legais',
-            'paginasLiderPro' => $paginasLiderPro
+            'paginasLiderPro' => $paginasLiderPro,
+            'paginas' => $paginas
         ];
 
         //Chamada do novo objeto PAGINAS 

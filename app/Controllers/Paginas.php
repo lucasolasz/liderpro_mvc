@@ -6,13 +6,12 @@ class Paginas extends Controller
      //Construtor do model do Usuário que fará o acesso ao banco
      public function __construct()
      {
-        $this->paginasModel = $this->model("Pagina");
         $this->paginaDinamicaModel = $this->model('PaginaDinamica');
      }
 
     public function contatos(){
 
-        $paginas = $this->paginasModel->listarMenu();
+        $paginas = $this->paginaDinamicaModel->listarPaginasAtivas();
 
         //Parâmetros enviados para o método do controller VIEW
         $dados = [
