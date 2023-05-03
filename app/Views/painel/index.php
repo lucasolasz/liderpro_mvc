@@ -17,7 +17,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Usuários</h5>
                             <p class="card-text">Visualize e cadastre novos usuários</p>
-                            <a href="#" class="btn btn-primary">Visualizar</a>
+                            <a href="#" class="btn lp-btn-liderpro">Visualizar</a>
                         </div>
                     </div>
                 </div>
@@ -26,7 +26,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Páginas</h5>
                             <p class="card-text">Visualize e cadastre novos páginas</p>
-                            <a href="<?= URL . '/Painel/visualizarPaginas' ?>" class="btn btn-primary">Visualizar</a>
+                            <a href="<?= URL . '/Painel/visualizarPaginas' ?>" class="btn lp-btn-liderpro">Visualizar</a>
                         </div>
                     </div>
                 </div>
@@ -35,7 +35,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Clientes</h5>
                             <p class="card-text">Visualize e cadastre novos clientes</p>
-                            <a href="#" class="btn btn-primary">Visualizar</a>
+                            <a href="#" class="btn lp-btn-liderpro">Visualizar</a>
                         </div>
                     </div>
                 </div>
