@@ -2,7 +2,7 @@
 
 class Rota
 {
-    private $controlador = 'Paginas';
+    private $controlador = 'PaginasDinamicas';
     //Define o método padrão, caso nao seja solicitado nenhum outro
     private $metodo = 'index';
     private $parametros = [];
