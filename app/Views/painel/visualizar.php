@@ -19,6 +19,7 @@
                     <thead>
                         <tr>
                             <th scope="col">Nome Página</th>
+                            <th scope="col">Página ativa</th>
                             <th scope="col">Ações</th>
                         </tr>
                     </thead>
@@ -27,7 +28,7 @@
                         // Exibe mensagem caso não tenha nenhum evento
                         if (empty($dados['paginas'])) { ?>
                             <tr>
-                                <td colspan="2" class="align-middle">Nenhuma página cadastrada</td>
+                                <td colspan="3" class="align-middle">Nenhuma página cadastrada</td>
                             </tr>
                         <?php  }
 
@@ -35,10 +36,11 @@
 
                             <tr>
                                 <td><?= ucfirst($paginas->ds_pagina) ?></td>
-                                <td><a href="<?= URL . '\\Painel\\editarPagina/' . $paginas->id_pagina ?>" class="btn btn-warning"><i class="bi bi-pencil-square"></i></a>
+                                <td><?php echo $paginas->chk_pagina_ativa == 'S' ? "SIM" : "NÃO" ?></td>
+                                <td><a href="<?= URL . '\\Painel\\editarPagina\\' . $paginas->id_pagina ?>" class="btn btn-warning"><i class="bi bi-pencil-square"></i></a>
                                 </td>
                             <td>
-                                <form action="<?= URL . '\\Painel\\deletarPagina  /' . $paginas->id_pagina ?>" method="POST">
+                                <form action="<?= URL . '\\Painel\\deletarPagina\\' . $paginas->id_pagina ?>" method="POST">
                                     <button type="submit" class="btn btn-danger"><span><i class="bi bi-trash-fill"></i></span></button>
                                 </form>
                             </td>
