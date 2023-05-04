@@ -44,8 +44,8 @@ class Painel extends Controller
         $this->view('painel/visualizar', $dados);
     }
 
-    public function gerarPagina(){
-        
+    public function gerarPagina()
+    {
         $paginasBanco = $this->paginaDinamicaModel->listarPaginas();
         GerarPagina::gerarPaginaDinamica($paginasBanco);
     }
@@ -55,8 +55,6 @@ class Painel extends Controller
 
         $formulario = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
         if (isset($formulario)) {
-
-
 
             $dados = [
                 'txtTitutoPagina' => trim($formulario['txtTitutoPagina']),
@@ -132,17 +130,84 @@ class Painel extends Controller
     }
 
 
-    public function editarPagina()
+    public function editarPagina($id)
     {
+        $paginas = $this->paginaDinamicaModel->listarPaginas();
+        $paginaSelecionada = $this->paginaDinamicaModel->listarPaginasPeloId($id);
+        $fotoBanner = $this->paginaDinamicaModel->listarFotoBannerPeloId($id);
+        $fotoPergunta = $this->paginaDinamicaModel->listarFotoPerguntaPeloId($id);
+        $fotoServico = $this->paginaDinamicaModel->listarFotoServicoPeloId($id);
+        $fotoTexto = $this->paginaDinamicaModel->listarFotoTextoPeloId($id);
 
-        $paginas = $this->paginasModel->listarMenu();
 
-        $dados = [
-            'paginas' => $paginas,
-            'tituloBreadcrumb' => ''
-        ];
+        $formulario = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+        if (isset($formulario)) {
+            
+        } else {
+            $dados = [
+                'paginas' => $paginas,
+                'tituloBreadcrumb' => '',
+                'paginaSelecionada' => $paginaSelecionada,
+                'fotoBanner' => $fotoBanner,
+                'fotoPergunta' => $fotoPergunta,
+                'fotoServico' => $fotoServico,
+                'fotoTexto' => $fotoTexto
+            ];
+        }
 
         $this->view('painel/editar', $dados);
+    }
+
+    public function deletarImagemBanner($idImagem){
+
+        $idPagina = $_GET["id_pagina"];
+
+        if($this->paginaDinamicaModel->deletarImagemBanner($idImagem)){
+            Alertas::mensagemApagaFoto('imagemBanner', 'Banner apagado com sucesso', 'alert alert-success msg-texto');
+            $this->editarPagina($idPagina);
+        } else {
+            Alertas::mensagemApagaFoto('imagemBanner', 'Erro ao apagar o Banner', 'alert alert-danger msg-texto');
+            $this->editarPagina($idPagina);
+        }
+    }
+
+    public function deletarImagemPergunta($idImagem){
+
+        $idPagina = $_GET["id_pagina"];
+
+        if($this->paginaDinamicaModel->deletarImagemPergunta($idImagem)){
+            Alertas::mensagemApagaFoto('imagemPergunta', 'Pergunta apagada com sucesso', 'alert alert-success msg-texto');
+            $this->editarPagina($idPagina);
+        } else {
+            Alertas::mensagemApagaFoto('imagemPergunta', 'Erro ao apagar a pergunta', 'alert alert-danger msg-texto');
+            $this->editarPagina($idPagina);
+        }
+    }
+
+    public function deletarImagemTexto($idImagem){
+
+        $idPagina = $_GET["id_pagina"];
+
+        if($this->paginaDinamicaModel->deletarImagemTexto($idImagem)){
+            Alertas::mensagemApagaFoto('imagemTexto', 'Imagem Texto apagada com sucesso', 'alert alert-success msg-texto');
+            $this->editarPagina($idPagina);
+        } else {
+            Alertas::mensagemApagaFoto('imagemTexto', 'Erro ao apagar a Imagem Texto', 'alert alert-danger msg-texto');
+            $this->editarPagina($idPagina);
+        }
+    }
+
+    public function deletarImagemServico($idImagem){
+
+        $idPagina = $_GET["id_pagina"];
+
+        if($this->paginaDinamicaModel->deletarImagemServico($idImagem)){
+            Alertas::mensagemApagaFoto('imagemServico', 'Foto Servico apagada com sucesso', 'alert alert-success msg-texto');
+            $this->editarPagina($idPagina);
+        } else {
+            Alertas::mensagemApagaFoto('imagemServico', 'Erro ao apagar a Foto Servico', 'alert alert-danger msg-texto');
+            $this->editarPagina($idPagina);
+        }
     }
 
 
