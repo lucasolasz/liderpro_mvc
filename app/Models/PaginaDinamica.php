@@ -89,48 +89,16 @@ class PaginaDinamica
         return $this->db->resultados();
     }
 
-    public function deletarImagemBanner($id)
-    {
-        $this->db->query("DELETE FROM tb_foto_banner WHERE id_foto_banner = :id_foto_banner");
-        $this->db->bind("id_foto_banner", $id);
 
-        if(!$this->db->executa()){
-            return false;
-        }
-
-        return true;
-    }
-
-    public function deletarImagemPergunta($id)
+    public function deletarImagemFormulario($idImagem, $nomeTabela, $nomeIdColuna)
     {   
-        $this->db->query("DELETE FROM tb_foto_pergunta WHERE id_foto_pergunta = :id_foto_pergunta");
-        $this->db->bind("id_foto_pergunta", $id);
-
+        $this->db->query("DELETE FROM $nomeTabela WHERE $nomeIdColuna = :id_foto_formulario");
+        $this->db->bind("id_foto_formulario", $idImagem);
+        
         if(!$this->db->executa()){
             return false;
         }
         return true;
     }
 
-    public function deletarImagemTexto($id)
-    {   
-        $this->db->query("DELETE FROM tb_foto_texto WHERE id_foto_texto = :id_foto_texto");
-        $this->db->bind("id_foto_texto", $id);
-
-        if(!$this->db->executa()){
-            return false;
-        }
-        return true;
-    }
-
-    public function deletarImagemServico($id)
-    {   
-        $this->db->query("DELETE FROM tb_foto_servico WHERE id_foto_servico = :id_foto_servico");
-        $this->db->bind("id_foto_servico", $id);
-
-        if(!$this->db->executa()){
-            return false;
-        }
-        return true;
-    }
 }

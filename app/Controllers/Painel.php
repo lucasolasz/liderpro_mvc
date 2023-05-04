@@ -142,7 +142,6 @@ class Painel extends Controller
 
         $formulario = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
         if (isset($formulario)) {
-            
         } else {
             $dados = [
                 'paginas' => $paginas,
@@ -158,54 +157,34 @@ class Painel extends Controller
         $this->view('painel/editar', $dados);
     }
 
-    public function deletarImagemBanner($idImagem){
+    public function deletarImagemFormulario($idImagem)
+    {
 
-        $idPagina = $_GET["id_pagina"];
+        $idPagina = base64_decode($_GET['id_pagina']);
+        $nomeTabela = base64_decode($_GET["nome_tabela"]);
+        $nomeAlerta = base64_decode($_GET["nome_alerta"]);
+        $nomeMensagem = base64_decode($_GET["nome_mensagem"]);
 
-        if($this->paginaDinamicaModel->deletarImagemBanner($idImagem)){
-            Alertas::mensagemApagaFoto('imagemBanner', 'Banner apagado com sucesso', 'alert alert-success msg-texto');
-            $this->editarPagina($idPagina);
-        } else {
-            Alertas::mensagemApagaFoto('imagemBanner', 'Erro ao apagar o Banner', 'alert alert-danger msg-texto');
-            $this->editarPagina($idPagina);
+        switch ($nomeTabela) {
+            case "tb_foto_pergunta":
+                $nomeIdColuna = "id_foto_pergunta";
+                break;
+            case "tb_foto_banner":
+                $nomeIdColuna = "id_foto_banner";
+                break;
+            case "tb_foto_servico":
+                $nomeIdColuna = "id_foto_servico";
+                break;
+            case "tb_foto_texto":
+                $nomeIdColuna = "id_foto_texto";
+                break;
         }
-    }
 
-    public function deletarImagemPergunta($idImagem){
-
-        $idPagina = $_GET["id_pagina"];
-
-        if($this->paginaDinamicaModel->deletarImagemPergunta($idImagem)){
-            Alertas::mensagemApagaFoto('imagemPergunta', 'Pergunta apagada com sucesso', 'alert alert-success msg-texto');
+        if ($this->paginaDinamicaModel->deletarImagemFormulario($idImagem, $nomeTabela, $nomeIdColuna)) {
+            Alertas::mensagemApagaFoto($nomeAlerta, $nomeMensagem . ' removido(a) com sucesso', 'alert alert-success msg-texto');
             $this->editarPagina($idPagina);
         } else {
-            Alertas::mensagemApagaFoto('imagemPergunta', 'Erro ao apagar a pergunta', 'alert alert-danger msg-texto');
-            $this->editarPagina($idPagina);
-        }
-    }
-
-    public function deletarImagemTexto($idImagem){
-
-        $idPagina = $_GET["id_pagina"];
-
-        if($this->paginaDinamicaModel->deletarImagemTexto($idImagem)){
-            Alertas::mensagemApagaFoto('imagemTexto', 'Imagem Texto apagada com sucesso', 'alert alert-success msg-texto');
-            $this->editarPagina($idPagina);
-        } else {
-            Alertas::mensagemApagaFoto('imagemTexto', 'Erro ao apagar a Imagem Texto', 'alert alert-danger msg-texto');
-            $this->editarPagina($idPagina);
-        }
-    }
-
-    public function deletarImagemServico($idImagem){
-
-        $idPagina = $_GET["id_pagina"];
-
-        if($this->paginaDinamicaModel->deletarImagemServico($idImagem)){
-            Alertas::mensagemApagaFoto('imagemServico', 'Foto Servico apagada com sucesso', 'alert alert-success msg-texto');
-            $this->editarPagina($idPagina);
-        } else {
-            Alertas::mensagemApagaFoto('imagemServico', 'Erro ao apagar a Foto Servico', 'alert alert-danger msg-texto');
+            Alertas::mensagemApagaFoto('imagemBanner', 'Erro ao apagar ' . $nomeMensagem, 'alert alert-danger msg-texto');
             $this->editarPagina($idPagina);
         }
     }

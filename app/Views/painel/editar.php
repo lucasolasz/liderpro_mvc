@@ -41,7 +41,7 @@
                                 <div class="card-body">
                                     <div class="text-center">
                                         <p>Foto atual</p>
-                                        <a href="<?= URL . "\\Painel\\deletarImagemBanner\\$fotoBanner->id_foto_banner?id_pagina=" . $dados['paginaSelecionada'][0]->id_pagina ?>" class="btn btn-danger mt-1"> Excluir imagem <i class="bi bi-trash-fill"></i></a>
+                                        <a href="<?= URL . "\\Painel\\deletarImagemFormulario\\$fotoBanner->id_foto_banner?id_pagina=" . base64_encode($dados['paginaSelecionada'][0]->id_pagina) . '&nome_tabela=' . base64_encode("tb_foto_banner") . '&nome_alerta=' . base64_encode("imagemBanner") . '&nome_mensagem=' . base64_encode("Banner") ?>" class="btn btn-danger mt-1"> Excluir imagem <i class="bi bi-trash-fill"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -76,7 +76,7 @@
                                         <div class="card-body">
                                             <div class="text-center">
                                                 <p>Foto atual</p>
-                                                <a href="<?= URL . "\\Painel\\deletarImagemPergunta\\$fotoPergunta->id_foto_pergunta?id_pagina=" . $dados['paginaSelecionada'][0]->id_pagina ?>" class="btn btn-danger mt-1"> Excluir imagem <i class="bi bi-trash-fill"></i></a>
+                                                <a href="<?= URL . "\\Painel\\deletarImagemFormulario\\$fotoPergunta->id_foto_pergunta?id_pagina=" . base64_encode($dados['paginaSelecionada'][0]->id_pagina) . '&nome_tabela=' . base64_encode("tb_foto_pergunta") . '&nome_alerta=' . base64_encode("imagemPergunta") . '&nome_mensagem=' . base64_encode("Pergunta") ?>" class="btn btn-danger mt-1"> Excluir imagem <i class="bi bi-trash-fill"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -118,7 +118,7 @@
                                 <div class="card-body">
                                     <div class="text-center">
                                         <p>Foto atual</p>
-                                        <a href="<?= URL . "\\Painel\\deletarImagemTexto\\$fotoTexto->id_foto_texto?id_pagina=" . $dados['paginaSelecionada'][0]->id_pagina ?>" class="btn btn-danger mt-1"> Excluir imagem <i class="bi bi-trash-fill"></i></a>
+                                        <a href="<?= URL . "\\Painel\\deletarImagemFormulario\\$fotoTexto->id_foto_texto?id_pagina=" . base64_encode($dados['paginaSelecionada'][0]->id_pagina) . '&nome_tabela=' . base64_encode("tb_foto_texto") . '&nome_alerta=' . base64_encode("imagemTexto") . '&nome_mensagem=' . base64_encode("Foto texto") ?>" class="btn btn-danger mt-1"> Excluir imagem <i class="bi bi-trash-fill"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -157,7 +157,7 @@
                                         <div class="card-body">
                                             <div class="text-center">
                                                 <p>Foto atual</p>
-                                                <a href="<?= URL . "\\Painel\\deletarImagemServico\\$fotoServico->id_foto_servico?id_pagina=" . $dados['paginaSelecionada'][0]->id_pagina ?>" class="btn btn-danger mt-1"> Excluir imagem <i class="bi bi-trash-fill"></i></a>
+                                                <a href="<?= URL . "\\Painel\\deletarImagemFormulario\\$fotoServico->id_foto_servico?id_pagina=" . base64_encode($dados['paginaSelecionada'][0]->id_pagina) . '&nome_tabela=' . base64_encode("tb_foto_servico") . '&nome_alerta=' . base64_encode("imagemServico") . '&nome_mensagem=' . base64_encode("Foto Serviço") ?>" class="btn btn-danger mt-1"> Excluir imagem <i class="bi bi-trash-fill"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -418,6 +418,6 @@
     $(document).ready(function() {
         setInterval(function() {
             $(".msg-texto").hide(1000);
-        }, 2000);
+        }, 4000);
     });
 </script>
