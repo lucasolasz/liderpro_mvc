@@ -68,7 +68,6 @@ class Pagina
 
     public function armazenarPagina($dados)
     {
-
         $this->db->query("INSERT INTO 
         tb_pagina (
             ds_pagina, 
@@ -157,7 +156,7 @@ class Pagina
                 :chk_pagina_ativa
                 )");
                 
-        $ds_breadcrumb_menu = GeraNomeArquivoComUnderline::geraNomeArquivoComUnderline($dados['txtTitutoPagina']);
+        $ds_breadcrumb_menu  = GeraNomeArquivoComUnderline::geraNomeArquivoComUnderline(strval($dados['txtTitutoPagina']));
 
         $this->db->bind("ds_pagina", trim($dados['txtTitutoPagina']));
         $this->db->bind("ds_url_menu", "/$ds_breadcrumb_menu");
@@ -220,7 +219,7 @@ class Pagina
         if (!$dados['fileFotosServico']['name'][0] == "") {
             $this->armazenarFotosServico($dados['fileFotosServico'], $ultimoId);
         }
-        
+
         return true;
     }
 
