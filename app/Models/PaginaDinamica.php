@@ -23,7 +23,7 @@ class PaginaDinamica
     //Retorna registros da tabela menu
     public function listarPaginasAtivas()
     {
-        $this->db->query("SELECT * FROM tb_pagina WHERE chk_pagina_ativa = 'S' LIMIT 7");
+        $this->db->query("SELECT * FROM tb_pagina WHERE chk_pagina_ativa = 'S' LIMIT 6");
 
         return $this->db->resultados();
     }
