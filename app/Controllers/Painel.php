@@ -33,7 +33,7 @@ class Painel extends Controller
 
     public function visualizarPaginas()
     {
-        $paginas = $this->paginaDinamicaModel->listarPaginas();
+        $paginas = $this->paginaDinamicaModel->listarPaginasAtivas();
 
         $dados = [
             'paginas' => $paginas,
@@ -118,7 +118,7 @@ class Painel extends Controller
                 Redirecionamento::redirecionar('Painel/visualizarPaginas');
             }
         } else {
-            $paginas = $this->paginaDinamicaModel->listarPaginas();
+            $paginas = $this->paginaDinamicaModel->listarPaginasAtivas();
 
             $dados = [
                 'paginas' => $paginas,
@@ -132,7 +132,7 @@ class Painel extends Controller
 
     public function editarPagina($id)
     {
-        $paginas = $this->paginaDinamicaModel->listarPaginas();
+        $paginas = $this->paginaDinamicaModel->listarPaginasAtivas();
         $paginaSelecionada = $this->paginaDinamicaModel->listarPaginasPeloId($id);
         $fotoBanner = $this->paginaDinamicaModel->listarFotoBannerPeloId($id);
         $fotoPergunta = $this->paginaDinamicaModel->listarFotoPerguntaPeloId($id);
