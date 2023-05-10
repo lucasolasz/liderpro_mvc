@@ -12,11 +12,12 @@
             <h2>Cadastro de Página</h2>
             <small>Preencha o formulário abaixo para cadastrar uma nova página</small>
 
-            <form name="cadastrar" method="POST" action="<?= URL ?>/Painel/cadastrarPagina" enctype="multipart/form-data">
+            <form name="cadastrar" id="cadastrarForm" method="POST" action="<?= URL ?>/Painel/cadastrarPagina" enctype="multipart/form-data">
 
                 <div class="form-group mt-4">
-                    <label for="txtTitutoPagina">Título da página</label>
+                    <label for="txtTitutoPagina" id="tituloPaginalbl">Título da página *</label>
                     <input type="input" class="form-control" id="txtTitutoPagina" name="txtTitutoPagina">
+                    <small id="recebeAlerta"></small>
                 </div>
 
                 <div class="form-group">
@@ -37,7 +38,7 @@
 
                 <div class="form-group">
                     <label for="txtTextPrincipal">Texto Principal</label>
-                    <textarea class="form-control" id="txtTextPrincipal" name="txtTextPrincipal" rows="8"></textarea>
+                    <textarea class="form-control val-obrigatorio" id="txtTextPrincipal" name="txtTextPrincipal" rows="8"></textarea>
                 </div>
 
                 <div class="form-group mt-4">
@@ -301,7 +302,7 @@
 
                 <div class="row mt-4">
                     <div class="col-md-6">
-                        <input type="submit" value="Cadastrar" id="btn" class="btn lp-btn-liderpro">
+                        <input type="submit" value="Cadastrar" id="btn btnCadastrar" class="btn lp-btn-liderpro">
                     </div>
                 </div>
             </form>
@@ -338,5 +339,30 @@
             return f.name
         }).join(", ")
         $(this).siblings(".fileFotosServico").addClass("selected").html(fileName);
+    });
+
+
+    $(function() {
+        $("form").submit(function(event) {
+            event.preventDefault();
+
+            if($("#txtTitutoPagina").val() == ""){
+                $("#recebeAlerta").html("");
+                $("#recebeAlerta").html("<p style='color: red'> É necessário preencher o campo </p>");
+                $("#txtTitutoPagina").css({
+                    "border-color": "#F00",
+                    "padding": "2px"
+                });
+                $("#tituloPaginalbl").css({
+                    "color": "#F00"
+                });
+                $('html, body').animate({scrollTop:0}, 'slow');
+                return;
+            }
+
+            let form = document.getElementById("cadastrarForm");
+            form.submit();
+        });
+
     });
 </script>
