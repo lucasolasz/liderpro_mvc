@@ -60,13 +60,17 @@
                     </div>
                 <?php } else { ?>
                     <?php foreach ($dados['fotoBanner'] as $fotoBanner) { ?>
-                        <div class="d-flex align-items-center justify-content-center">
-                            <div class="card" style="width: 30rem;">
-                                <img src="<?= URL . "\\uploads\\$fotoBanner->nm_path_arquivo\\$fotoBanner->nm_arquivo " ?>" class="card-img-top" alt="">
-                                <div class="card-body">
-                                    <div class="text-center">
-                                        <p>Foto atual</p>
-                                        <a href="<?= URL . "\\Painel\\deletarImagemFormulario\\$fotoBanner->id_foto_banner?id_pagina=" . base64_encode($dados['paginaSelecionada'][0]->id_pagina) . '&nome_tabela=' . base64_encode("tb_foto_banner") . '&nome_alerta=' . base64_encode("imagemBanner") . '&nome_mensagem=' . base64_encode("Banner") ?>" class="btn btn-danger mt-1"> Excluir imagem <i class="bi bi-trash-fill"></i></a>
+                        <div class="container">
+                            <div class="row d-flex align-items-center justify-content-center">
+                                <div class="col-md-4 ">
+                                    <div class="card mb-4">
+                                        <img src="<?= URL . "\\uploads\\$fotoBanner->nm_path_arquivo\\$fotoBanner->nm_arquivo " ?>" class="card-img-top" alt="">
+                                        <div class="card-body">
+                                            <div class="text-center">
+                                                <p>Foto atual</p>
+                                                <a href="<?= URL . "\\Painel\\deletarImagemFormulario\\$fotoBanner->id_foto_banner?id_pagina=" . base64_encode($dados['paginaSelecionada'][0]->id_pagina) . '&nome_tabela=' . base64_encode("tb_foto_banner") . '&nome_alerta=' . base64_encode("imagemBanner") . '&nome_mensagem=' . base64_encode("Banner") ?>" class="btn btn-danger mt-1"> Excluir imagem <i class="bi bi-trash-fill"></i></a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -89,19 +93,17 @@
                 </div>
 
                 <?= Alertas::mensagemApagaFoto('imagemPergunta') ?>
-                <div class="row">
-                    <div class="d-flex align-items-center justify-content-center">
+                <div class="container">
+                    <div class="row">
                         <?php if (empty($dados['fotoPergunta'])) { ?>
                             <div class="col-sm-12 col-md-12 col-lg-12">
                                 <small style="color: red">Nenhuma foto de pergunta enviada</small>
                             </div>
                         <?php } else { ?>
                             <?php foreach ($dados['fotoPergunta'] as $fotoPergunta) { ?>
-                                <div class="col-sm-3 col-md-3 col-lg-3">
-                                    <div class="card">
-                                        <div class="p-5">
-                                            <img src="<?= URL . "\\uploads\\$fotoPergunta->nm_path_arquivo\\$fotoPergunta->nm_arquivo " ?>" class="card-img-top" alt="">
-                                        </div>
+                                <div class="col-md-4">
+                                    <div class="card mb-4">
+                                        <img src="<?= URL . "\\uploads\\$fotoPergunta->nm_path_arquivo\\$fotoPergunta->nm_arquivo " ?>" class="card-img-top" alt="">
                                         <div class="card-body">
                                             <div class="text-center">
                                                 <p>Foto atual</p>
@@ -144,13 +146,17 @@
                     </div>
                 <?php } else { ?>
                     <?php foreach ($dados['fotoTexto'] as $fotoTexto) { ?>
-                        <div class="d-flex align-items-center justify-content-center">
-                            <div class="card" style="width: 18rem;">
-                                <img src="<?= URL . "\\uploads\\$fotoTexto->nm_path_arquivo\\$fotoTexto->nm_arquivo " ?>" class="card-img-top" alt="">
-                                <div class="card-body">
-                                    <div class="text-center">
-                                        <p>Foto atual</p>
-                                        <a href="<?= URL . "\\Painel\\deletarImagemFormulario\\$fotoTexto->id_foto_texto?id_pagina=" . base64_encode($dados['paginaSelecionada'][0]->id_pagina) . '&nome_tabela=' . base64_encode("tb_foto_texto") . '&nome_alerta=' . base64_encode("imagemTexto") . '&nome_mensagem=' . base64_encode("Foto texto") ?>" class="btn btn-danger mt-1"> Excluir imagem <i class="bi bi-trash-fill"></i></a>
+                        <div class="container">
+                            <div class="row d-flex align-items-center justify-content-center">
+                                <div class="col-md-4 ">
+                                    <div class="card mb-4">
+                                        <img src="<?= URL . "\\uploads\\$fotoTexto->nm_path_arquivo\\$fotoTexto->nm_arquivo " ?>" class="card-img-top" alt="">
+                                        <div class="card-body">
+                                            <div class="text-center">
+                                                <p>Foto atual</p>
+                                                <a href="<?= URL . "\\Painel\\deletarImagemFormulario\\$fotoTexto->id_foto_texto?id_pagina=" . base64_encode($dados['paginaSelecionada'][0]->id_pagina) . '&nome_tabela=' . base64_encode("tb_foto_texto") . '&nome_alerta=' . base64_encode("imagemTexto") . '&nome_mensagem=' . base64_encode("Foto texto") ?>" class="btn btn-danger mt-1"> Excluir imagem <i class="bi bi-trash-fill"></i></a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -190,19 +196,17 @@
                                         </div>
 
                                         <?= Alertas::mensagemApagaFoto('imagemServico') ?>
-                                        <div class="row">
-                                            <div class="d-flex align-items-center justify-content-center">
+                                        <div class="container">
+                                            <div class="row">
                                                 <?php if (empty($dados['fotoServico'])) { ?>
                                                     <div class="col-sm-12 col-md-12 col-lg-12">
                                                         <small style="color: red">Nenhuma foto de serviço enviada</small>
                                                     </div>
                                                 <?php } else { ?>
                                                     <?php foreach ($dados['fotoServico'] as $fotoServico) { ?>
-                                                        <div class="col-sm-3 col-md-3 col-lg-3">
-                                                            <div class="card">
-                                                                <div class="p-5">
-                                                                    <img src="<?= URL . "\\uploads\\$fotoServico->nm_path_arquivo\\$fotoServico->nm_arquivo " ?>" class="card-img-top" alt="">
-                                                                </div>
+                                                        <div class="col-md-4">
+                                                            <div class="card mb-4">
+                                                                <img src="<?= URL . "\\uploads\\$fotoServico->nm_path_arquivo\\$fotoServico->nm_arquivo " ?>" class="card-img-top" alt="">
                                                                 <div class="card-body">
                                                                     <div class="text-center">
                                                                         <p>Foto atual</p>
