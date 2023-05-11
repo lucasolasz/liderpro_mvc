@@ -187,12 +187,10 @@ class Painel extends Controller
 
             ];
 
-            // $dados['id_pagina'] = $id;
-
-            // $dados['fileBannerPrincipal'] = isset($_FILES['fileBannerPrincipal']) ? $_FILES['fileBannerPrincipal'] : "";
-            // $dados['filePerguntas'] = isset($_FILES['filePerguntas']) ? $_FILES['filePerguntas'] : "";
-            // $dados['fileFotoTexto'] = isset($_FILES['fileFotoTexto']) ? $_FILES['fileFotoTexto'] : "";
-            // $dados['fileFotosServico'] = isset($_FILES['fileFotosServico']) ? $_FILES['fileFotosServico'] : "";
+            $dados['fileBannerPrincipal'] = isset($_FILES['fileBannerPrincipal']) ? $_FILES['fileBannerPrincipal'] : "";
+            $dados['filePerguntas'] = isset($_FILES['filePerguntas']) ? $_FILES['filePerguntas'] : "";
+            $dados['fileFotoTexto'] = isset($_FILES['fileFotoTexto']) ? $_FILES['fileFotoTexto'] : "";
+            $dados['fileFotosServico'] = isset($_FILES['fileFotosServico']) ? $_FILES['fileFotosServico'] : "";
 
             if ($this->paginasModel->atualizarPagina($dados)) {
                 //Para exibir mensagem success , não precisa informar o tipo de classe
@@ -250,16 +248,15 @@ class Painel extends Controller
     }
 
 
-    public function deletarPagina()
+    public function deletarPagina($id)
     {
-
-        $paginas = $this->paginasModel->listarMenu();
-
-        $dados = [
-            'paginas' => $paginas,
-            'tituloBreadcrumb' => ''
-        ];
-
-        $this->view('painel/visualizar', $dados);
+        $nomePagina = base64_decode($_GET['nome_pagina']);
+        if ($this->paginasModel->deletarPagina($id,$nomePagina)) {
+            Alertas::mensagem('paginas', 'Página deletada com sucesso');
+            Redirecionamento::redirecionar('Painel/visualizarPaginas');
+        } else {
+            Alertas::mensagem('paginas', 'Não foi possível deletar a página', 'alert alert-danger');
+            Redirecionamento::redirecionar('Painel/visualizarPaginas');
+        }
     }
 }

@@ -395,8 +395,125 @@ class Pagina
         $this->db->bind("id_pagina", $dados['id_pagina']);
 
         $this->db->executa();
-        
-        return true;
 
+        if (!$dados['fileBannerPrincipal']['name'] == "") {
+            if ($this->apagarFotoFisicaDinamico("tb_foto_banner", $dados['id_pagina'])) {
+                $this->armazenaFotoBanner($dados['fileBannerPrincipal'], $dados['id_pagina']);
+            }
+        }
+
+        if (!$dados['filePerguntas']['name'][0] == "") {
+            if ($this->apagarFotoFisicaDinamico("tb_foto_pergunta", $dados['id_pagina'])) {
+                $this->armazenaFotosPerguntas($dados['filePerguntas'], $dados['id_pagina']);
+            }
+        }
+
+        if (!$dados['fileFotoTexto']['name'] == "") {
+            if ($this->apagarFotoFisicaDinamico("tb_foto_texto", $dados['id_pagina'])) {
+                $this->armazenarFotoTexto($dados['fileFotoTexto'], $dados['id_pagina']);
+            }
+        }
+
+        if (!$dados['fileFotosServico']['name'][0] == "") {
+            if ($this->apagarFotoFisicaDinamico("tb_foto_servico", $dados['id_pagina'])) {
+                $this->armazenarFotosServico($dados['fileFotosServico'], $dados['id_pagina']);
+            }
+        }
+
+        return true;
+    }
+
+    public function listaFotoAnteriorDinamico($nomeTabela, $idPagina)
+    {
+        $this->db->query("SELECT * FROM $nomeTabela WHERE fk_pagina = :fk_pagina");
+        $this->db->bind("fk_pagina", $idPagina);
+        return $this->db->resultados();
+    }
+
+
+    public function apagarFotoFisicaDinamico($nomeTabela, $idPagina)
+    {
+        $foto = $this->listaFotoAnteriorDinamico($nomeTabela, $idPagina);
+        //Se nao existe foto registrada
+        if (empty($foto)) {
+            return true;
+        }
+
+        if (count($foto) > 1) {
+
+            for ($i = 0; $i < count($foto); $i++) {
+                $nomeArquivo = $foto[$i]->nm_arquivo;
+                $pathArquivo = $foto[$i]->nm_path_arquivo;
+                $pathCompleto = "uploads\\$pathArquivo\\$nomeArquivo";
+
+                $upload = new Upload();
+                $upload->deletarArquivo(null, $pathCompleto);
+            }
+        } else {
+
+            $nomeArquivo = $foto[0]->nm_arquivo;
+            $pathArquivo = $foto[0]->nm_path_arquivo;
+            $pathCompleto = "uploads\\$pathArquivo\\$nomeArquivo";
+
+            $upload = new Upload();
+            $upload->deletarArquivo(null, $pathCompleto);
+        }
+
+        $this->db->query("DELETE FROM $nomeTabela WHERE fk_pagina = :fk_pagina");
+        $this->db->bind("fk_pagina", $idPagina);
+        $this->db->executa();
+        return true;
+    }
+
+    public function deletarPagina($idPagina, $nomePagina)
+    {
+        $apagouTudo = false;
+        $apagouTudo = $this->deletarImagemBancoDinamico("tb_foto_banner", $idPagina) == true ? true : false;
+        $apagouTudo = $this->deletarImagemBancoDinamico("tb_foto_pergunta", $idPagina) == true ? true : false;
+        $apagouTudo = $this->deletarImagemBancoDinamico("tb_foto_texto", $idPagina) == true ? true : false;
+        $apagouTudo = $this->deletarImagemBancoDinamico("tb_foto_servico", $idPagina) == true ? true : false;
+
+        if ($apagouTudo) {
+            $this->db->query("DELETE FROM tb_pagina WHERE id_pagina = :id_pagina");
+            $this->db->bind("id_pagina", $idPagina);
+            $this->db->executa();
+        }
+
+        $pathCompleto = "uploads\\pagina_id_" . $idPagina;
+        $this->apagar_pasta($pathCompleto);
+
+        $pathCompletoArquivo = APP . "\\Views\\paginas\\$nomePagina.php";
+        $this->apagaPaginaDinamica($pathCompletoArquivo);
+
+        return true;
+    }
+
+    public function apagaPaginaDinamica($pathCompletoArquivo)
+    {
+        if (file_exists($pathCompletoArquivo)) {
+            unlink($pathCompletoArquivo);
+        }
+    }
+
+    public function apagar_pasta($pasta)
+    {
+        if (is_dir($pasta)) {
+            $arquivos = glob($pasta . '/*');
+            foreach ($arquivos as $arquivo) {
+                if (is_file($arquivo)) {
+                    unlink($arquivo);
+                }
+            }
+            rmdir($pasta);
+        }
+    }
+
+
+    public function deletarImagemBancoDinamico($nomeTabela, $idPagina)
+    {
+        $this->db->query("DELETE FROM $nomeTabela WHERE fk_pagina = :fk_pagina");
+        $this->db->bind("fk_pagina", $idPagina);
+        $this->db->executa();
+        return true;
     }
 }

@@ -40,7 +40,7 @@
                                 <td><a href="<?= URL . '\\Painel\\editarPagina\\' . $paginas->id_pagina ?>" class="btn btn-warning"><i class="bi bi-pencil-square"></i></a>
                                 </td>
                             <td>
-                                <form action="<?= URL . '\\Painel\\deletarPagina\\' . $paginas->id_pagina ?>" method="POST">
+                                <form action="<?= URL . "\\Painel\\deletarPagina\\$paginas->id_pagina?nome_pagina=" . base64_encode($paginas->ds_breadcrumb_menu) ?>" method="POST">
                                     <button type="submit" class="btn btn-danger"><span><i class="bi bi-trash-fill"></i></span></button>
                                 </form>
                             </td>
