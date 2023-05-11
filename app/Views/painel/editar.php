@@ -54,7 +54,7 @@
                 <?= Alertas::mensagemApagaFoto('imagemBanner') ?>
                 <?php if (empty($dados['fotoBanner'])) { ?>
                     <div class="row">
-                        <div class="col-sm-12 col-md-12 col-lg-12">
+                        <div class="col ml-0">
                             <small style="color: red">Nenhuma foto de banner enviada</small>
                         </div>
                     </div>
@@ -93,13 +93,16 @@
                 </div>
 
                 <?= Alertas::mensagemApagaFoto('imagemPergunta') ?>
-                <div class="container">
+
+                <?php if (empty($dados['fotoPergunta'])) { ?>
                     <div class="row">
-                        <?php if (empty($dados['fotoPergunta'])) { ?>
-                            <div class="col-sm-12 col-md-12 col-lg-12">
-                                <small style="color: red">Nenhuma foto de pergunta enviada</small>
-                            </div>
-                        <?php } else { ?>
+                        <div class="col ml-0">
+                            <small style="color: red">Nenhuma foto de pergunta enviada</small>
+                        </div>
+                    </div>
+                <?php } else { ?>
+                    <div class="container">
+                        <div class="row">
                             <?php foreach ($dados['fotoPergunta'] as $fotoPergunta) { ?>
                                 <div class="col-md-4">
                                     <div class="card mb-4">
@@ -112,10 +115,10 @@
                                         </div>
                                     </div>
                                 </div>
-                        <?php }
-                        } ?>
+                            <?php } ?>
+                        </div>
                     </div>
-                </div>
+                <?php  } ?>
 
                 <hr>
 
@@ -123,8 +126,6 @@
                     <label for="txtTextPrincipal">Texto Principal</label>
                     <textarea class="form-control" id="txtTextPrincipal" name="txtTextPrincipal" rows="8"><?= $dados['paginaSelecionada'][0]->ds_texto_principal ?></textarea>
                 </div>
-
-                <hr>
 
                 <div class="form-group mt-4">
                     <label for="fileFotoTexto" id="tituloPaginalblFotoTexto">Foto texto</label>
@@ -140,7 +141,7 @@
                 <?= Alertas::mensagemApagaFoto('imagemTexto') ?>
                 <?php if (empty($dados['fotoTexto'])) { ?>
                     <div class="row">
-                        <div class="col-sm-12 col-md-12 col-lg-12">
+                        <div class="col ml-0">
                             <small style="color: red">Nenhuma foto de texto enviada</small>
                         </div>
                     </div>
@@ -196,13 +197,16 @@
                                         </div>
 
                                         <?= Alertas::mensagemApagaFoto('imagemServico') ?>
-                                        <div class="container">
+
+                                        <?php if (empty($dados['fotoServico'])) { ?>
                                             <div class="row">
-                                                <?php if (empty($dados['fotoServico'])) { ?>
-                                                    <div class="col-sm-12 col-md-12 col-lg-12">
-                                                        <small style="color: red">Nenhuma foto de serviço enviada</small>
-                                                    </div>
-                                                <?php } else { ?>
+                                                <div class="col ml-0">
+                                                    <small style="color: red">Nenhuma foto de serviço enviada</small>
+                                                </div>
+                                            </div>
+                                        <?php } else { ?>
+                                            <div class="container">
+                                                <div class="row">
                                                     <?php foreach ($dados['fotoServico'] as $fotoServico) { ?>
                                                         <div class="col-md-4">
                                                             <div class="card mb-4">
@@ -215,10 +219,10 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                <?php }
-                                                } ?>
+                                                    <?php } ?>
+                                                </div>
                                             </div>
-                                        </div>
+                                        <?php } ?>
                                     </div>
                                 </div>
                             </div>
