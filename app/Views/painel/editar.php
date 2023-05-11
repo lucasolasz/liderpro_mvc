@@ -11,19 +11,44 @@
             <h2>Editar Página</h2>
             <small>Preencha o formulário abaixo para cadastrar uma nova página</small>
 
-            <form name="cadastrar" method="POST" action="<?= URL . '\\Painel\\editarPagina\\' . $dados['paginaSelecionada'][0]->id_pagina ?>" enctype="multipart/form-data">
+            <form name="cadastrar" id="editarForm" method="POST" action="<?= URL . '\\Painel\\editarPagina\\' . $dados['paginaSelecionada'][0]->id_pagina ?>" enctype="multipart/form-data">
+
+                <!-- Modal -->
+                <div class="modal fade" id="ExemploModalCentralizado" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="TituloModalCentralizado">Sobrescrita de foto</h5>
+                                <button type="button" class="close fecharModal" data-dismiss="modal" aria-label="Fechar">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                As fotos enviadas, irão sobrescrever as anteriores. Deseja Prosseguir?
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary fecharModal" data-dismiss="modal">Fechar</button>
+                                <button type="button" class="btn btn-primary" id="btnSalvarModal">Salvar mudanças</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="form-group mt-4">
-                    <label for="txtTitutoPagina">Título da página</label>
+                    <label for="txtTitutoPagina" id="tituloPaginalbl">Título da página</label>
                     <input type="input" class="form-control" id="txtTitutoPagina" name="txtTitutoPagina" value="<?= $dados['paginaSelecionada'][0]->ds_pagina ?>">
+                    <small id="recebeAlertaTituloMensagem"></small>
                 </div>
 
                 <div class="form-group">
-                    <label for="fileBannerPrincipal">Foto Banner Principal</label>
-                    <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="fileBannerPrincipal" name="fileBannerPrincipal" lang="pt">
-                        <label class="custom-file-label fileBannerPrincipal" for="fileBannerPrincipal"></label>
+                    <label for="fileBannerPrincipal" id="tituloPaginalblBanner">Foto Banner Principal</label>
+                    <div class="input-group">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="fileBannerPrincipal" accept="image/png, image/jpeg" name="fileBannerPrincipal">
+                            <label class="custom-file-label fileBannerPrincipal" for="fileBannerPrincipal">Escolha uma imagem para substituir a atual</label>
+                        </div>
                     </div>
+                    <small id="recebeMensagemBanner"></small>
                 </div>
 
                 <?= Alertas::mensagemApagaFoto('imagemBanner') ?>
@@ -52,11 +77,15 @@
                 <hr>
 
                 <div class="form-group">
-                    <label for="filePerguntas">Fotos Perguntas (Max 3 arquivos)</label>
-                    <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="filePerguntas" lang="pt" accept="image/png, image/jpeg" name="filePerguntas[]" multiple>
-                        <label class="custom-file-label filePerguntas" for="filePerguntas"></label>
+                    <label for="filePerguntas" id="tituloPaginalblPerguntas">Fotos Perguntas (Max 3 arquivos)</label>
+                    <div class="input-group">
+
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="filePerguntas" accept="image/png, image/jpeg" name="filePerguntas[]" multiple>
+                            <label class="custom-file-label filePerguntas" for="filePerguntas">Escolha as imagens para substituir as atuais</label>
+                        </div>
                     </div>
+                    <small id="recebeMensagemPergunta"></small>
                 </div>
 
                 <?= Alertas::mensagemApagaFoto('imagemPergunta') ?>
@@ -96,11 +125,14 @@
                 <hr>
 
                 <div class="form-group mt-4">
-                    <label for="fileFotoTexto">Foto texto</label>
-                    <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="fileFotoTexto" name="fileFotoTexto" lang="pt">
-                        <label class="custom-file-label fileFotoTexto" for="fileFotoTexto"></label>
+                    <label for="fileFotoTexto" id="tituloPaginalblFotoTexto">Foto texto</label>
+                    <div class="input-group">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="fileFotoTexto" accept="image/png, image/jpeg" name="fileFotoTexto">
+                            <label class="custom-file-label fileFotoTexto" for="fileFotoTexto">Escolha uma imagem para substituir a atual</label>
+                        </div>
                     </div>
+                    <small id="recebeMensagemFotoTexto"></small>
                 </div>
 
                 <?= Alertas::mensagemApagaFoto('imagemTexto') ?>
@@ -147,11 +179,14 @@
                                 <div class="row p-2">
                                     <div class="col-md-12 col-sm-12 col-lg-12">
                                         <div class="form-group mt-4">
-                                            <label for="fileFotosServico">Fotos do Serviço</label>
-                                            <div class="custom-file">
-                                                <input type="file" class="custom-file-input" id="fileFotosServico" lang="pt" accept="image/png, image/jpeg" name="fileFotosServico[]" multiple>
-                                                <label class="custom-file-label fileFotosServico" for="fileFotosServico"></label>
+                                            <label for="fileFotosServico" id="tituloPaginalblFotoServico">Fotos do Serviço</label>
+                                            <div class="input-group">
+                                                <div class="custom-file">
+                                                    <input type="file" class="custom-file-input" id="fileFotosServico" accept="image/png, image/jpeg" name="fileFotosServico[]" multiple>
+                                                    <label class="custom-file-label fileFotosServico" for="fileFotosServico">Escolha uma imagem para substituir a atual</label>
+                                                </div>
                                             </div>
+                                            <small id="recebeMensagemFotoServico"></small>
                                         </div>
 
                                         <?= Alertas::mensagemApagaFoto('imagemServico') ?>
@@ -414,7 +449,7 @@
 
                 <div class="row mt-4">
                     <div class="col-md-6">
-                        <input type="submit" value="Salvar" id="btn" class="btn lp-btn-liderpro">
+                        <input type="button" value="Salvar" id="btnSalvarForm" class="btn lp-btn-liderpro">
                     </div>
                 </div>
             </form>
@@ -458,5 +493,84 @@
         setInterval(function() {
             $(".msg-texto").hide(1000);
         }, 4000);
+    });
+
+    function abreModal() {
+        $('#ExemploModalCentralizado').modal('show');
+    }
+
+    function fecharModal() {
+        $('#ExemploModalCentralizado').modal('hide')
+    }
+
+    $(".fecharModal").on("click", function() {
+        fecharModal();
+    });
+
+
+    function criticaCampoFicaVermelho(idDivMensagem, mensagem, idCampoInput, idCampoLabel) {
+
+        $("#" + idDivMensagem).html("");
+        $("#" + idDivMensagem).html("<p style='color: red'>" + mensagem + "</p>");
+        $("#" + idCampoInput).addClass("is-invalid");
+        $("#" + idCampoLabel).css({
+            "color": "#F00"
+        });
+        $('html, body').animate({
+            scrollTop: 0
+        }, 'slow');
+    }
+
+    function removeCriticaCampoVermelho(idDivMensagem, idCampoInput, idCampoLabel) {
+        $("#" + idDivMensagem).html("");
+        $("#" + idCampoInput).removeClass("is-invalid");
+        $("#" + idCampoLabel).css({
+            "color": "black"
+        });
+    }
+
+
+    //Critica campos antes de salvar
+    $("#btnSalvarForm").on("click", function() {
+
+        if ($("#txtTitutoPagina").val() == "") {
+            criticaCampoFicaVermelho("recebeAlertaTituloMensagem", "É necessário preencher este campo", "txtTitutoPagina", "tituloPaginalbl");
+            return
+        } else {
+            removeCriticaCampoVermelho("recebeAlertaTituloMensagem", "txtTitutoPagina", "tituloPaginalbl");
+        }
+
+        if ($("#filePerguntas").val() != "") {
+
+            var fileInput = document.getElementById("filePerguntas");
+            // files é um objeto FileList (similar ao NodeList)
+            var files = fileInput.files;
+            var file;
+            var y = 0;
+            // percorre os arquivos
+            for (var i = 0; i < files.length; i++) {
+                y++;
+            }
+            console.log(y)
+            if (y < 3 || y > 3) {
+                criticaCampoFicaVermelho("recebeMensagemPergunta", "Só é possível colocar 3 fotos de perguntas. Foram selecionadas: " + y, "filePerguntas", "tituloPaginalblPerguntas");
+                return
+            }
+        } else {
+            removeCriticaCampoVermelho("recebeMensagemPergunta", "filePerguntas", "tituloPaginalblPerguntas")
+        }
+
+        if ($("#fileBannerPrincipal").val() != "" || $("#filePerguntas").val() != "" || $("#fileFotoTexto").val() != "" || $("#fileFotosServico").val() != "") {
+            abreModal();
+            return
+        }
+
+        let form = document.getElementById("editarForm");
+        form.submit();
+    });
+
+    $("#btnSalvarModal").on("click", function() {
+        let form = document.getElementById("editarForm");
+        form.submit();
     });
 </script>
