@@ -34,9 +34,11 @@ class Painel extends Controller
     public function visualizarPaginas()
     {
         $paginas = $this->paginaDinamicaModel->listarPaginasAtivas();
+        $visualizaPaginas = $this->paginaDinamicaModel->listarPaginas();
 
         $dados = [
             'paginas' => $paginas,
+            'visualizaPaginas' => $visualizaPaginas,
             'tituloBreadcrumb' => ''
         ];
 
@@ -252,6 +254,7 @@ class Painel extends Controller
     {
         $nomePagina = base64_decode($_GET['nome_pagina']);
         if ($this->paginasModel->deletarPagina($id,$nomePagina)) {
+            $this->gerarPagina();
             Alertas::mensagem('paginas', 'Página deletada com sucesso');
             Redirecionamento::redirecionar('Painel/visualizarPaginas');
         } else {
