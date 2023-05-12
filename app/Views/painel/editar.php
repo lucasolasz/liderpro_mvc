@@ -36,7 +36,7 @@
 
                 <div class="form-group mt-4">
                     <label for="txtTitutoPagina" id="tituloPaginalbl">Título da página</label>
-                    <input type="input" class="form-control" id="txtTitutoPagina" name="txtTitutoPagina" value="<?= $dados['paginaSelecionada'][0]->ds_pagina ?>">
+                    <input type="input" class="form-control" id="txtTitutoPagina" name="txtTitutoPagina" value="<?= $dados['paginaSelecionada'][0]->ds_pagina ?>" readonly>
                     <small id="recebeAlertaTituloMensagem"></small>
                 </div>
 
@@ -541,12 +541,12 @@
     //Critica campos antes de salvar
     $("#btnSalvarForm").on("click", function() {
 
-        if ($("#txtTitutoPagina").val() == "") {
-            criticaCampoFicaVermelho("recebeAlertaTituloMensagem", "É necessário preencher este campo", "txtTitutoPagina", "tituloPaginalbl");
-            return
-        } else {
-            removeCriticaCampoVermelho("recebeAlertaTituloMensagem", "txtTitutoPagina", "tituloPaginalbl");
-        }
+        // if ($("#txtTitutoPagina").val() == "") {
+        //     criticaCampoFicaVermelho("recebeAlertaTituloMensagem", "É necessário preencher este campo", "txtTitutoPagina", "tituloPaginalbl");
+        //     return
+        // } else {
+        //     removeCriticaCampoVermelho("recebeAlertaTituloMensagem", "txtTitutoPagina", "tituloPaginalbl");
+        // }
 
         if ($("#filePerguntas").val() != "") {
 
