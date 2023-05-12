@@ -49,7 +49,19 @@
             </div>
             <!-- Tab content -->
             <div id="Fotos" class="tabcontent-lp">
-                <h1>FOTOS</h1>
+                <div class="container">
+                    <div class="row">
+                        <?php foreach ($dados['dolarFotoServico'] as $dolarFotoServico) { ?>
+                            <div class="col-md-4">
+                                <div class="card mb-4">
+                                    <img class="img-fluid" src="<?= URL . '\\uploads\\' .  $dolarFotoServico->nm_path_arquivo . "\\" .  $dolarFotoServico->nm_arquivo ?>" alt="">
+                                    <div class="card-body">
+                                    </div>
+                                </div>
+                            </div>
+                        <?php } ?>
+                    </div>
+                </div>
             </div>
 
             <div id="<?= mb_strtoupper($dados['paginaSelecionada'][0]->ds_tab1) ?>" class="tabcontent-lp">
