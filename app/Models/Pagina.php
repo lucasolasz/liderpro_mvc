@@ -479,11 +479,11 @@ class Pagina
             $this->db->executa();
         }
 
-        $pathCompleto = "uploads\\pagina_id_" . $idPagina;
-        $this->apagar_pasta($pathCompleto);
+        $pathCompletoPastaImagensUpload = "uploads\\pagina_id_" . $idPagina;
+        $this->apagar_pasta($pathCompletoPastaImagensUpload);
 
-        $pathCompletoArquivo = APP . "\\Views\\paginas\\$nomePagina.php";
-        $this->apagaPaginaDinamica($pathCompletoArquivo);
+        $pathCompletoArquivoPaginaView = APP . "\\Views\\paginas\\$nomePagina.php";
+        $this->apagaPaginaDinamica($pathCompletoArquivoPaginaView);
 
         return true;
     }
