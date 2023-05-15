@@ -4,24 +4,22 @@
         <div class="col-md">
             <ul class="list-unstyled lista-rodape">
                 <li class="lp-titulo-rodape">SERVIÇOS</li>
-                <li><a href="<?= URL . '/Paginas/assistencia_tecnica' ?>">ASSISTÊNCIA TÉCNICA</a>
+                <li><a href="<?= URL . '/PaginasDinamicas/assistencia_tecnica' ?>">ASSISTÊNCIA TÉCNICA</a>
                     <ul class="list-unstyled lp-submenu-rodape">
-                        <li>Computadores</li>
-                        <li>Notebook</li>
-                        <li>Tablet e Celular</li>
-                        <li>Projetores</li>
-                        <li>Fonte de Alimentação</li>
-                        <li>TV e Monitor</li>
-                        <li>Impressoras</li>
-                        <li>No-break</li>
+                        <li><a href="<?= URL . '/AssistenciaOpcao/computador_opc' ?>">Computadores</a></li>
+                        <li><a href="<?= URL . '/AssistenciaOpcao/notebook_opc' ?>">Notebook</a></li>
+                        <li><a href="<?= URL . '/AssistenciaOpcao/tablet_celular_opc' ?>">Tablet e Celular</a></li>
+                        <li><a href="<?= URL . '/AssistenciaOpcao/projetor_opc' ?>">Projetores</a></li>
+                        <li><a href="<?= URL . '/AssistenciaOpcao/fonte_alimentacao_opc' ?>">Fonte de Alimentação</a></li>
+                        <li><a href="<?= URL . '/AssistenciaOpcao/tv_monitor_opc' ?>">TV e Monitor</a></li>
+                        <li><a href="<?= URL . '/AssistenciaOpcao/impressora_opc' ?>">Impressoras</a></li>
+                        <li><a href="<?= URL . '/AssistenciaOpcao/nobreak_opc' ?>">No-break</a></li>
                     </ul>
                 </li>
-                <li><a href="<?= URL . '/Paginas/gestao_informatica' ?>">GESTÃO DE INFORMÁTICA</a> </li>
-                <li><a href="<?= URL . '/Paginas/cabeamento_estruturado' ?>">CABEAMENTO ESTRUTURADO</a></li>
-                <li><a href="#">SEGURANÇA ELETRÔNICA</a></li>
-                <li><a href="#">SISTEMAS DE TELEFONIA</a></li>
-                <li><a href="<?= URL . '/Paginas/solucoes_nobreak' ?>">SOLUÇÕES DE NOBREAKS</a></li>
-                <li><a href="<?= URL . '/Paginas/solucoes_em_nuvem' ?>"> SOLUÇÕES EM NUVEM</a></li>
+
+                <?php foreach ($dados['paginas'] as $paginas) { ?>
+                    <li><a href="<?= URL . '\\PaginasDinamicas\\' . $paginas->ds_breadcrumb_menu ?>"><?= mb_strtoupper($paginas->ds_pagina) ?></a></li>
+                <?php } ?>
             </ul>
         </div>
         <div class="col-md">
@@ -38,7 +36,7 @@
                     </ul>
                 </li>
                 <li><a href="<?= URL . '/Paginas/parcerias' ?>">PARCEIROS</a></li>
-                <li><a href="<?= URL . '/Paginas/informacoes_legais' ?>">INFORMAÇÕES</a> 
+                <li><a href="<?= URL . '/Paginas/informacoes_legais' ?>">INFORMAÇÕES</a>
                     <ul class="list-unstyled lp-submenu-rodape">
                         <li><a href="<?= URL . '/Paginas/termos_de_uso' ?>">Termos de Uso</a></li>
                         <li><a href="<?= URL . '/Paginas/politica_de_privacidade' ?>">Política de Privacidade</a></li>
@@ -71,11 +69,11 @@
         <div class="col-md d-flex flex-column">
             <ul class="list-unstyled">
                 <li class="lp-titulo-rodape"><a style="text-decoration: none; color: white" href="<?= URL . '/Paginas/contatos' ?>">CONTATOS</a></li>
-                <li>Endereço</li>
-                <li>Telefones</li>
-                <li>Email e Skype</li>
-                <li>Horário de Funcionamento</li>
-                <li>Como chegar</li>
+                <li><a style="text-decoration: none; color: white" href="<?= URL . '/Paginas/contatos' ?>">Endereço</a></li>
+                <li><a style="text-decoration: none; color: white" href="<?= URL . '/Paginas/contatos' ?>">Telefones</a></li>
+                <li><a style="text-decoration: none; color: white" href="<?= URL . '/Paginas/contatos' ?>">Email e Skype</a></li>
+                <li><a style="text-decoration: none; color: white" href="<?= URL . '/Paginas/contatos' ?>">Horário de Funcionamento</a></li>
+                <li><a style="text-decoration: none; color: white" href="<?= URL . '/Paginas/contatos' ?>">Como chegar</a></li>
             </ul>
             <div class="mt-5">
                 <div class="lp-titulo-rodape">REDES SOCIAIS</div>
