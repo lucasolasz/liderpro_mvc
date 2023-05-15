@@ -23,10 +23,10 @@ if ($dados['tituloBreadcrumb'] == "informacoes_legais" ) {
 
 <div class="row d-flex justify-content-center">
 
-    <a class="btn lp-btn-liderpro m-2 <?= $dados['tituloBreadcrumb'] == 'lider_pro' ? 'lp-btn-liderpro-active' : ''; ?>" href="<?= URL . '/LiderPro/lider_pro' ?>" role="button">LIDERPRO</a>
-    <a class="btn lp-btn-liderpro m-2 <?= $dados['tituloBreadcrumb'] == 'valores' ? 'lp-btn-liderpro-active' : ''; ?>" href="<?= URL . '/LiderPro/valores' ?>" role="button">VALORES<br>ÉTICOS</a>
-    <a class="btn lp-btn-liderpro m-2 <?= $dados['tituloBreadcrumb'] == 'parcerias' ? 'lp-btn-liderpro-active' : ''; ?>" href="<?= URL . '/LiderPro/parcerias' ?>" role="button">PARCERIAS E<br>CERTIFICAÇÕES</a>
-    <a class="btn lp-btn-liderpro m-2 <?= $classeBtnAtivoTermo . $classeBtnAtivoPolitica . $classeBtnAtivoInformacoes ?>" href="<?= URL . '/LiderPro/informacoes_legais' ?>" href="#" role="button">INFORMAÇÕES<br>GERAIS</a>
+    <a class="btn lp-btn-liderpro m-2 <?= $dados['tituloBreadcrumb'] == 'lider_pro' ? 'lp-btn-liderpro-active' : ''; ?>" href="<?= URL . '/Paginas/lider_pro' ?>" role="button">LIDERPRO</a>
+    <a class="btn lp-btn-liderpro m-2 <?= $dados['tituloBreadcrumb'] == 'valores' ? 'lp-btn-liderpro-active' : ''; ?>" href="<?= URL . '/Paginas/valores' ?>" role="button">VALORES<br>ÉTICOS</a>
+    <a class="btn lp-btn-liderpro m-2 <?= $dados['tituloBreadcrumb'] == 'parcerias' ? 'lp-btn-liderpro-active' : ''; ?>" href="<?= URL . '/Paginas/parcerias' ?>" role="button">PARCERIAS E<br>CERTIFICAÇÕES</a>
+    <a class="btn lp-btn-liderpro m-2 <?= $classeBtnAtivoTermo . $classeBtnAtivoPolitica . $classeBtnAtivoInformacoes ?>" href="<?= URL . '/Paginas/informacoes_legais' ?>" href="#" role="button">INFORMAÇÕES<br>GERAIS</a>
 </div>
 
 <?php
@@ -37,9 +37,9 @@ if ($dados['tituloBreadcrumb'] == "informacoes_gerais" || $dados['tituloBreadcru
     <div class="row d-flex justify-content-center mt-2">
 
 
-        <a class="btn lp-btn-liderpro-info m-2 <?= $classeBtnAtivoTermo ?>" href="<?= URL . '/LiderPro/termos_de_uso' ?>" role="button">Termos<br>de Uso</a>
-        <a class="btn lp-btn-liderpro-info m-2 <?= $classeBtnAtivoPolitica ?>" href="<?= URL . '/LiderPro/politica_de_privacidade' ?>" role="button">Política de<br>Privacidade</a>
-        <a class="btn lp-btn-liderpro-info m-2 <?= $classeBtnAtivoInformacoes ?>" href="<?= URL . '/LiderPro/informacoes_legais' ?>" role="button">Informações<br>Legais</a>
+        <a class="btn lp-btn-liderpro-info m-2 <?= $classeBtnAtivoTermo ?>" href="<?= URL . '/Paginas/termos_de_uso' ?>" role="button">Termos<br>de Uso</a>
+        <a class="btn lp-btn-liderpro-info m-2 <?= $classeBtnAtivoPolitica ?>" href="<?= URL . '/Paginas/politica_de_privacidade' ?>" role="button">Política de<br>Privacidade</a>
+        <a class="btn lp-btn-liderpro-info m-2 <?= $classeBtnAtivoInformacoes ?>" href="<?= URL . '/Paginas/informacoes_legais' ?>" role="button">Informações<br>Legais</a>
     </div>
 
 <?php  } ?>

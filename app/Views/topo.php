@@ -80,12 +80,12 @@
                         <?php } ?>
 
                         <?php if (isset($dados['paginasLiderPro'])) { ?>
-                            > <a href="<?= URL . '/LiderPro/lider_pro' ?>"> LIDERPRO</a> <?= $informacoes ?> > <a href="<?= URL . '/LiderPro' . $urlBreadCrumb ?>"><?= $paginaBreadCrumb ?></a>
+                            > <a href="<?= URL . '/Paginas/lider_pro' ?>"> LIDERPRO</a> <?= $informacoes ?> > <a href="<?= URL . '/Paginas' . $urlBreadCrumb ?>"><?= $paginaBreadCrumb ?></a>
                         <?php } ?>
                     </div>
                     <div class="ml-auto">
                         <ul class="list-unstyled d-flex mb-0 menu-top">
-                            <li class=""><a href="<?= URL . '/LiderPro/lider_pro' ?>">Liderpro</a></li>
+                            <li class=""><a href="<?= URL . '/Paginas/lider_pro' ?>">Liderpro</a></li>
                             <li><a href="#">Clientes</a></li>
                             <li><a href="<?= URL . '/Paginas/contatos' ?>">Contatos</a></li>
                             <li>
@@ -202,7 +202,7 @@
             </button>
             <div class="collapse navbar-collapse lp-navbar-mobile" id="navbarNavAltMarkup">
                 <div class="navbar-nav d-flex align-items-center lp-item-menu-mobile">
-                    <li><a href="<?= URL . '/LiderPro/lider_pro' ?>">Liderpro</a></li>
+                    <li><a href="<?= URL . '/Paginas/lider_pro' ?>">Liderpro</a></li>
                     <li><a href="#">Clientes</a></li>
                     <li><a href="<?= URL . '/Paginas/contatos' ?>">Contatos</a></li>
                     <li><a href="<?= URL . '/Paginas/assistencia_tecnica' ?>">Assistência Técnica</a>
@@ -223,7 +223,7 @@
             <?php } ?>
 
             <?php if (isset($dados['paginasLiderPro'])) { ?>
-                <a href="<?= URL . '/LiderPro' . $urlBreadCrumb ?>"><?= $paginaBreadCrumb ?></a>
+                <a href="<?= URL . '/Paginas' . $urlBreadCrumb ?>"><?= $paginaBreadCrumb ?></a>
             <?php } ?>
         </div>
     </div>

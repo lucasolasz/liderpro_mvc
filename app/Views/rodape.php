@@ -27,22 +27,22 @@
         <div class="col-md">
             <ul class="list-unstyled lista-rodape">
                 <li class="lp-titulo-rodape">LIDERPRO</li>
-                <li><a href="<?= URL . '/LiderPro/valores' ?>">VALORES</a>
+                <li><a href="<?= URL . '/Paginas/valores' ?>">VALORES</a>
                     <ul class="list-unstyled lp-submenu-rodape">
-                        <li><a href="<?= URL . '/LiderPro/valores' ?>">Nossa Missão</a> </li>
-                        <li><a href="<?= URL . '/LiderPro/valores' ?>">Nossa Visão</a></li>
-                        <li><a href="<?= URL . '/LiderPro/valores' ?>">Honestidade e Confiança</a></li>
-                        <li><a href="<?= URL . '/LiderPro/valores' ?>">Respeito e Lei</a></li>
-                        <li><a href="<?= URL . '/LiderPro/valores' ?>">Integridade</a></li>
-                        <li><a href="<?= URL . '/LiderPro/valores' ?>">Direitos Humanos</a></li>
+                        <li><a href="<?= URL . '/Paginas/valores' ?>">Nossa Missão</a> </li>
+                        <li><a href="<?= URL . '/Paginas/valores' ?>">Nossa Visão</a></li>
+                        <li><a href="<?= URL . '/Paginas/valores' ?>">Honestidade e Confiança</a></li>
+                        <li><a href="<?= URL . '/Paginas/valores' ?>">Respeito e Lei</a></li>
+                        <li><a href="<?= URL . '/Paginas/valores' ?>">Integridade</a></li>
+                        <li><a href="<?= URL . '/Paginas/valores' ?>">Direitos Humanos</a></li>
                     </ul>
                 </li>
-                <li><a href="<?= URL . '/LiderPro/parcerias' ?>">PARCEIROS</a></li>
-                <li><a href="<?= URL . '/LiderPro/informacoes_legais' ?>">INFORMAÇÕES</a> 
+                <li><a href="<?= URL . '/Paginas/parcerias' ?>">PARCEIROS</a></li>
+                <li><a href="<?= URL . '/Paginas/informacoes_legais' ?>">INFORMAÇÕES</a> 
                     <ul class="list-unstyled lp-submenu-rodape">
-                        <li><a href="<?= URL . '/LiderPro/termos_de_uso' ?>">Termos de Uso</a></li>
-                        <li><a href="<?= URL . '/LiderPro/politica_de_privacidade' ?>">Política de Privacidade</a></li>
-                        <li><a href="<?= URL . '/LiderPro/informacoes_legais' ?>">Informações Legais</a></li>
+                        <li><a href="<?= URL . '/Paginas/termos_de_uso' ?>">Termos de Uso</a></li>
+                        <li><a href="<?= URL . '/Paginas/politica_de_privacidade' ?>">Política de Privacidade</a></li>
+                        <li><a href="<?= URL . '/Paginas/informacoes_legais' ?>">Informações Legais</a></li>
                     </ul>
                 </li>
                 <li>ACESSO AO CLIENTE</li>
