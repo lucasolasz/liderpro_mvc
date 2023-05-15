@@ -17,7 +17,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Usuários</h5>
                             <p class="card-text">Visualize e cadastre novos usuários</p>
-                            <a href="#" class="btn lp-btn-liderpro">Visualizar</a>
+                            <a href="<?= URL . '/UsuariosController/visualizarUsuarios' ?>" class="btn lp-btn-liderpro">Visualizar</a>
                         </div>
                     </div>
                 </div>
