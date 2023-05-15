@@ -2,6 +2,13 @@
 
     <?= Alertas::mensagem('usuario') ?>
 
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="<?= URL . "\\Painel\\index" ?>">Painel</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Usuários</li>
+        </ol>
+    </nav>
+
     <div class="card">
 
         <div class="artcor card-header">
