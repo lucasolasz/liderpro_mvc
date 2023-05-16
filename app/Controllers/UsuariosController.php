@@ -24,7 +24,7 @@ class UsuariosController extends Controller
         ];
 
         //Retorna para a view
-        $this->view('usuarios/index', $dados);
+        $this->view('painel/usuarios/index', $dados);
     }
 
     public function editarUsuario($id)
@@ -125,7 +125,7 @@ class UsuariosController extends Controller
         }
 
         //Retorna para a view
-        $this->view('usuarios/editar', $dados);
+        $this->view('painel/usuarios/editar', $dados);
     }
 
 
@@ -227,7 +227,7 @@ class UsuariosController extends Controller
         }
 
         //Retorna para a view
-        $this->view('usuarios/cadastrar', $dados);
+        $this->view('painel/usuarios/cadastrar', $dados);
     }
 
     public function login()
@@ -272,7 +272,7 @@ class UsuariosController extends Controller
         }
 
         //Retorna para a view
-        $this->view('usuarios/login', $dados);
+        $this->view('painel/usuarios/login', $dados);
     }
 
 

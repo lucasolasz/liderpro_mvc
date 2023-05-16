@@ -43,7 +43,7 @@ class Painel extends Controller
         ];
 
         //Retorna para a view
-        $this->view('painel/visualizar', $dados);
+        $this->view('painel/paginas/visualizar', $dados);
     }
 
     public function gerarPagina()
@@ -127,7 +127,7 @@ class Painel extends Controller
                 'tituloBreadcrumb' => ''
             ];
 
-            $this->view('painel/cadastrar', $dados);
+            $this->view('painel/paginas/cadastrar', $dados);
         }
     }
 
@@ -214,7 +214,7 @@ class Painel extends Controller
             ];
         }
 
-        $this->view('painel/editar', $dados);
+        $this->view('painel/paginas/editar', $dados);
     }
 
     public function deletarImagemFormulario($idImagem)

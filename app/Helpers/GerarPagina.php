@@ -75,11 +75,11 @@ class GerarPagina
             'dolarFotoTexto' => $dolarFotoTexto
         ];
 
-        $esteView('paginas/$nomeNovaPagina', $dolarDados);
+        $esteView('paginasDinamicasGeradas/$nomeNovaPagina', $dolarDados);
     }";
             //Cria novo arquivo de view baseado no template
-            $urlArquivoTemplate = APP . '\\Views\\paginas\\templatePagina.php';
-            $urlNovaPagina = APP . '\\Views\\paginas\\' . $nomeNovaPagina . '.php';
+            $urlArquivoTemplate = APP . '\\Views\\painel\\templatePagina.php';
+            $urlNovaPagina = APP . '\\Views\\paginasDinamicasGeradas\\' . $nomeNovaPagina . '.php';
 
             if (!file_exists($urlNovaPagina)) {
                 copy($urlArquivoTemplate, $urlNovaPagina);
@@ -96,7 +96,7 @@ class GerarPagina
             'tituloBreadcrumb' => 'HOME' ,
         ];
 
-        $esteView('paginas/home', $dolarDados);
+        $esteView('painel/paginas/home', $dolarDados);
     }";
 
     $metodoAssistenciaTecnicaCompleto = "
@@ -109,7 +109,7 @@ class GerarPagina
             'tituloBreadcrumb' => 'assistencia_tecnica' ,
         ];
 
-        $esteView('paginas/assistencia_tecnica', $dolarDados);
+        $esteView('painel/paginas/assistencia_tecnica', $dolarDados);
     }";
         
 

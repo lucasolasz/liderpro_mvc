@@ -15,7 +15,7 @@ class PaginasDinamicas extends Controller
             'tituloBreadcrumb' => 'HOME' ,
         ];
 
-        $this->view('paginas/home', $dados);
+        $this->view('painel/paginas/home', $dados);
     }
     
         
@@ -27,7 +27,7 @@ class PaginasDinamicas extends Controller
             'tituloBreadcrumb' => 'assistencia_tecnica' ,
         ];
 
-        $this->view('paginas/assistencia_tecnica', $dados);
+        $this->view('painel/paginas/assistencia_tecnica', $dados);
     }
     
         
@@ -51,7 +51,7 @@ class PaginasDinamicas extends Controller
             'dolarFotoTexto' => $dolarFotoTexto
         ];
 
-        $this->view('paginas/gestao_informatica', $dados);
+        $this->view('paginasDinamicasGeradas/gestao_informatica', $dados);
     }
         
     public function cabeamento_estruturado() { 
@@ -74,7 +74,7 @@ class PaginasDinamicas extends Controller
             'dolarFotoTexto' => $dolarFotoTexto
         ];
 
-        $this->view('paginas/cabeamento_estruturado', $dados);
+        $this->view('paginasDinamicasGeradas/cabeamento_estruturado', $dados);
     }
         
     public function solucoes_de_nobreaks() { 
@@ -97,7 +97,7 @@ class PaginasDinamicas extends Controller
             'dolarFotoTexto' => $dolarFotoTexto
         ];
 
-        $this->view('paginas/solucoes_de_nobreaks', $dados);
+        $this->view('paginasDinamicasGeradas/solucoes_de_nobreaks', $dados);
     }
         
     public function solucoes_em_nuvem() { 
@@ -120,6 +120,6 @@ class PaginasDinamicas extends Controller
             'dolarFotoTexto' => $dolarFotoTexto
         ];
 
-        $this->view('paginas/solucoes_em_nuvem', $dados);
+        $this->view('paginasDinamicasGeradas/solucoes_em_nuvem', $dados);
     }
 }

@@ -38,7 +38,7 @@
 
                 <div class="form-group">
                     <label for="txtTextPrincipal">Texto Principal</label>
-                    <textarea class="form-control val-obrigatorio" id="txtTextPrincipal" name="txtTextPrincipal" rows="8"></textarea>
+                    <textarea class="form-control val-obrigatorio" id="txtTextPrincipal" name="txtTextPrincipal" rows="8" maxlength="800"></textarea>
                 </div>
 
                 <div class="form-group mt-4">
