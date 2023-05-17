@@ -21,7 +21,7 @@ class Paginas extends Controller
         ];
 
         //Chamada do novo objeto PAGINAS 
-        $this->view('paginas/contatos', $dados);
+        $this->view('painel/paginas/contatos', $dados);
 
         
     }
