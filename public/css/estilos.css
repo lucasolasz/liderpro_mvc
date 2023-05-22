@@ -765,3 +765,9 @@ body {
 
 
 /* ------------ BUTTON ASSISTENCIA END -----------*/
+
+.lp-caixa-preview {
+    border: 1px solid black;
+    width: 202px; 
+    height: 142px;
+}

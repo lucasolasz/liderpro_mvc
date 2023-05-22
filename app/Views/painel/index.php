@@ -35,7 +35,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Clientes</h5>
                             <p class="card-text">Visualize e cadastre novos clientes</p>
-                            <a href="#" class="btn lp-btn-liderpro">Visualizar</a>
+                            <a href="<?= URL . '/Clientes/visualizarClientes' ?>" class="btn lp-btn-liderpro">Visualizar</a>
                         </div>
                     </div>
                 </div>
