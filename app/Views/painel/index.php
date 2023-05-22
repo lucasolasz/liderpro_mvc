@@ -39,6 +39,15 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Segmentos</h5>
+                            <p class="card-text">Visualize e cadastre novos segmentos</p>
+                            <a href="<?= URL . '/Segmentos/visualizarSegmentos' ?>" class="btn lp-btn-liderpro">Visualizar</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
