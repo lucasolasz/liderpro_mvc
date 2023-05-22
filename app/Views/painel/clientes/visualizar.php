@@ -34,7 +34,7 @@
                         // Exibe mensagem caso não tenha nenhum evento
                         if (empty($dados['visualizaClientes'])) { ?>
                             <tr>
-                                <td colspan="2" class="align-middle">Nenhum usuário cadastrado</td>
+                                <td colspan="2" class="align-middle">Nenhum cliente cadastrado</td>
                             </tr>
                         <?php  }
 
