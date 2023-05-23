@@ -75,11 +75,11 @@ class GerarPagina
             'dolarFotoTexto' => $dolarFotoTexto
         ];
 
-        $esteView('paginasDinamicasGeradas/$nomeNovaPagina', $dolarDados);
+        $esteView('painel/paginasDinamicasGeradas/$nomeNovaPagina', $dolarDados);
     }";
             //Cria novo arquivo de view baseado no template
             $urlArquivoTemplate = APP . '\\Views\\painel\\templatePagina.php';
-            $urlNovaPagina = APP . '\\Views\\paginasDinamicasGeradas\\' . $nomeNovaPagina . '.php';
+            $urlNovaPagina = APP . '\\Views\\painel\\paginasDinamicasGeradas\\' . $nomeNovaPagina . '.php';
 
             if (!file_exists($urlNovaPagina)) {
                 copy($urlArquivoTemplate, $urlNovaPagina);

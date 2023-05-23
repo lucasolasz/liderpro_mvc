@@ -474,7 +474,7 @@ class Pagina
         $pathCompletoPastaImagensUpload = "uploads\\pagina_id_" . $idPagina;
         $this->apagar_pasta($pathCompletoPastaImagensUpload);
 
-        $pathCompletoArquivoPaginaView = APP . "\\Views\\paginasDinamicasGeradas\\$nomePagina.php";
+        $pathCompletoArquivoPaginaView = APP . "\\Views\\painel\\paginasDinamicasGeradas\\$nomePagina.php";
         $this->apagaPaginaDinamica($pathCompletoArquivoPaginaView);
 
         return true;
