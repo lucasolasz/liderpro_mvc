@@ -18,11 +18,13 @@ class Clientes extends Controller
     {
         $paginas = $this->paginaDinamicaModel->listarPaginasAtivas();
         $visualizaClientes = $this->clienteModel->listarClientes();
+        $segmento = $this->clienteModel->visualizarSegmentos();
 
         $dados = [
             'paginas' => $paginas,
             'visualizaClientes' => $visualizaClientes,
-            'tituloBreadcrumb' => ''
+            'tituloBreadcrumb' => '',
+            'segmento' => $segmento
         ];
 
         //Retorna para a view

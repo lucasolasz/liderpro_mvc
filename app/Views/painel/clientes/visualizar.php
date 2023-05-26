@@ -26,6 +26,9 @@
                     <thead>
                         <tr>
                             <th scope="col">Nome Cliente</th>
+                            <th scope="col">URL</th>
+                            <th scope="col">Segmento</th>
+                            <th scope="col">Logomarca</th>
                             <th scope="col">Ações</th>
                         </tr>
                     </thead>
@@ -34,13 +37,38 @@
                         // Exibe mensagem caso não tenha nenhum evento
                         if (empty($dados['visualizaClientes'])) { ?>
                             <tr>
-                                <td colspan="2" class="align-middle">Nenhum cliente cadastrado</td>
+                                <td colspan="5" class="align-middle">Nenhum cliente cadastrado</td>
                             </tr>
                         <?php  }
 
                         foreach ($dados['visualizaClientes'] as $visualizaClientes) { ?>
                             <tr>
                                 <td><?= ucfirst($visualizaClientes->ds_nome_fantasia) ?></td>
+                                <td><?= ucfirst($visualizaClientes->ds_url) ?></td>
+                                <td>
+                                    <?php
+                                    foreach ($dados['segmento'] as $segmento) {
+                                        if ($visualizaClientes->fk_segmento ==  $segmento->id_segmento) {
+                                            echo ucfirst($segmento->ds_segmento);
+                                        }
+                                    }
+                                    ?>
+                                </td>
+                                <td>
+                                    <?php
+                                    switch ($visualizaClientes->chk_apresentacao_imagem) {
+                                        case "P":
+                                            echo "Principal";
+                                            break;
+                                        case "S":
+                                            echo "Secundária";
+                                            break;
+                                        case "I":
+                                            echo "Inativo";
+                                            break;
+                                    }
+                                    ?>
+                                </td>
                                 <td><a href="<?= URL . '\\Clientes\\editarCliente\\' . $visualizaClientes->id_cliente ?>" class="btn btn-warning"><i class="bi bi-pencil-square"></i></a>
                                 </td>
                                 <td>
