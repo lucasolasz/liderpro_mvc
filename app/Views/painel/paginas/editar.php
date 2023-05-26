@@ -11,7 +11,7 @@
             <h2>Editar Página</h2>
             <small>Preencha o formulário abaixo para cadastrar uma nova página</small>
 
-            <form name="cadastrar" id="editarForm" method="POST" action="<?= URL . '\\Painel\\editarPagina\\' . $dados['paginaSelecionada'][0]->id_pagina ?>" enctype="multipart/form-data">
+            <form name="editarPagina" id="editarPagina" method="POST" action="<?= URL . '\\Painel\\editarPagina\\' . $dados['paginaSelecionada'][0]->id_pagina ?>" enctype="multipart/form-data">
 
                 <!-- Modal -->
                 <div class="modal fade" id="ExemploModalCentralizado" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
@@ -516,37 +516,8 @@
     });
 
 
-    function criticaCampoFicaVermelho(idDivMensagem, mensagem, idCampoInput, idCampoLabel) {
-
-        $("#" + idDivMensagem).html("");
-        $("#" + idDivMensagem).html("<p style='color: red'>" + mensagem + "</p>");
-        $("#" + idCampoInput).addClass("is-invalid");
-        $("#" + idCampoLabel).css({
-            "color": "#F00"
-        });
-        $('html, body').animate({
-            scrollTop: 0
-        }, 'slow');
-    }
-
-    function removeCriticaCampoVermelho(idDivMensagem, idCampoInput, idCampoLabel) {
-        $("#" + idDivMensagem).html("");
-        $("#" + idCampoInput).removeClass("is-invalid");
-        $("#" + idCampoLabel).css({
-            "color": "black"
-        });
-    }
-
-
     //Critica campos antes de salvar
     $("#btnSalvarForm").on("click", function() {
-
-        // if ($("#txtTitutoPagina").val() == "") {
-        //     criticaCampoFicaVermelho("recebeAlertaTituloMensagem", "É necessário preencher este campo", "txtTitutoPagina", "tituloPaginalbl");
-        //     return
-        // } else {
-        //     removeCriticaCampoVermelho("recebeAlertaTituloMensagem", "txtTitutoPagina", "tituloPaginalbl");
-        // }
 
         if ($("#filePerguntas").val() != "") {
 
@@ -565,7 +536,7 @@
                 return
             }
         } else {
-            removeCriticaCampoVermelho("recebeMensagemPergunta", "filePerguntas", "tituloPaginalblPerguntas")
+            removeCriticaCampoVermelho("recebeMensagemPergunta", "filePerguntas", "tituloPaginalblPerguntas");
         }
 
         if ($("#fileBannerPrincipal").val() != "" || $("#filePerguntas").val() != "" || $("#fileFotoTexto").val() != "" || $("#fileFotosServico").val() != "") {
@@ -573,12 +544,12 @@
             return
         }
 
-        let form = document.getElementById("editarForm");
+        let form = document.getElementById("editarPagina");
         form.submit();
     });
 
     $("#btnSalvarModal").on("click", function() {
-        let form = document.getElementById("editarForm");
+        let form = document.getElementById("editarPagina");
         form.submit();
     });
 </script>

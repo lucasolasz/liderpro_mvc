@@ -12,7 +12,7 @@
             <h2>Cadastro de Página</h2>
             <small>Preencha o formulário abaixo para cadastrar uma nova página</small>
 
-            <form name="cadastrar" id="cadastrarForm" method="POST" action="<?= URL ?>/Painel/cadastrarPagina" enctype="multipart/form-data">
+            <form name="cadastrarPagina" id="cadastrarPagina" method="POST" action="<?= URL ?>/Painel/cadastrarPagina" enctype="multipart/form-data">
 
                 <div class="form-group mt-4">
                     <label for="txtTitutoPagina" id="tituloPaginalbl">Título da página *</label>
@@ -347,20 +347,13 @@
             event.preventDefault();
 
             if($("#txtTitutoPagina").val() == ""){
-                $("#recebeAlerta").html("");
-                $("#recebeAlerta").html("<p style='color: red'> É necessário preencher o campo </p>");
-                $("#txtTitutoPagina").css({
-                    "border-color": "#F00",
-                    "padding": "2px"
-                });
-                $("#tituloPaginalbl").css({
-                    "color": "#F00"
-                });
-                $('html, body').animate({scrollTop:0}, 'slow');
+                criticaCampoFicaVermelho("recebeAlerta", "É necessário preencher o campo", "txtTitutoPagina", "tituloPaginalbl");
                 return;
+            } else {
+                removeCriticaCampoVermelho("recebeAlerta", "txtTitutoPagina", "tituloPaginalbl");
             }
 
-            let form = document.getElementById("cadastrarForm");
+            let form = document.getElementById("cadastrarPagina");
             form.submit();
         });
 

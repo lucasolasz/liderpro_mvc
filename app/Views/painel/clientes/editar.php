@@ -12,10 +12,11 @@
             <h2>Editar Cliente</h2>
             <small>Preencha o formulário abaixo para editar o cliente</small>
 
-            <form name="editar" method="POST" action="<?= URL . "\\Clientes\\editarCliente\\" . $dados['cliente']->id_cliente ?>" enctype="multipart/form-data">
+            <form name="editarCliente" id="editarCliente" method="POST" action="<?= URL . "\\Clientes\\editarCliente\\" . $dados['cliente']->id_cliente ?>" enctype="multipart/form-data">
                 <div class="mb-3 mt-4">
-                    <label for="txtNomeFantasia" class="form-label">Nome Fantasia:</label>
+                    <label for="txtNomeFantasia" class="form-label" id="nomeFantasialbl">Nome Fantasia:</label>
                     <input type="text" class="form-control" name="txtNomeFantasia" id="txtNomeFantasia" value="<?= $dados['cliente']->ds_nome_fantasia ?>">
+                    <small id="recebeAlerta"></small>
                 </div>
                 <div class="mb-3 mt-4">
                     <label for="txtUrl" class="form-label">URL ou Rede Social:</label>
@@ -130,5 +131,23 @@
                 $('#preview').html("Arquivo selecionado não é uma imagem.");
             }
         });
+    });
+
+
+    $(function() {
+        $("form").submit(function(event) {
+            event.preventDefault();
+
+            if ($("#txtNomeFantasia").val() == "") {
+                criticaCampoFicaVermelho("recebeAlerta", "É necessário preencher o campo", "txtNomeFantasia", "nomeFantasialbl");
+                return
+            } else {
+                removeCriticaCampoVermelho("recebeAlerta", "txtNomeFantasia", "nomeFantasialbl");
+            }
+
+            let form = document.getElementById("editarCliente");
+            form.submit();
+        });
+
     });
 </script>

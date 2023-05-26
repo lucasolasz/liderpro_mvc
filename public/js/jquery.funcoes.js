@@ -21,3 +21,25 @@ function openCity(evt, cityName) {
     document.getElementById(cityName).style.display = "block";
     evt.currentTarget.className += " active";
 }
+
+
+function criticaCampoFicaVermelho(idDivMensagem, mensagem, idCampoInput, idCampoLabel) {
+
+    $("#" + idDivMensagem).html("");
+    $("#" + idDivMensagem).html("<p style='color: red'>" + mensagem + "</p>");
+    $("#" + idCampoInput).addClass("is-invalid");
+    $("#" + idCampoLabel).css({
+        "color": "#F00"
+    });
+    $('html, body').animate({
+        scrollTop: 0
+    }, 'slow');
+}
+
+function removeCriticaCampoVermelho(idDivMensagem, idCampoInput, idCampoLabel) {
+    $("#" + idDivMensagem).html("");
+    $("#" + idCampoInput).removeClass("is-invalid");
+    $("#" + idCampoLabel).css({
+        "color": "black"
+    });
+}

@@ -12,14 +12,15 @@
             <h2>Cadastro de Segmento</h2>
             <small>Preencha o formulário abaixo para cadastrar um novo segmento</small>
 
-            <form name="cadastrar" method="POST" action="<?= URL ?>/Segmentos/cadastrarSegmento">
+            <form name="cadastrarSegmento" id="cadastrarSegmento" method="POST" action="<?= URL ?>/Segmentos/cadastrarSegmento">
                 <div class="mb-3 mt-4">
-                    <label for="txtNomeSegmento" class="form-label">Nome Segmento</label>
+                    <label for="txtNomeSegmento" class="form-label" id="nomeSegmentolbl">Nome Segmento</label>
                     <input type="text" class="form-control" name="txtNomeSegmento" id="txtNomeSegmento" value="">
+                    <small id="recebeAlerta"></small>
                 </div>
 
                 <div class="mb-3">
-                    <label for="cboSegmento" class="form-label">Segmento:</label>
+                    <label for="cboSegmento" class="form-label">Segmentos existentes:</label>
                     <select class="form-control" name="cboSegmento" id="cboSegmento">
                         <?php foreach ($dados['visualizarSegmentos'] as $visualizarSegmentos) { ?>
                             <option value="<?= $visualizarSegmentos->id_segmento ?>"><?= $visualizarSegmentos->ds_segmento ?></option>
@@ -36,3 +37,22 @@
         </div>
     </div>
 </div>
+
+<script>
+    $(function() {
+        $("form").submit(function(event) {
+            event.preventDefault();
+
+            if ($("#txtNomeSegmento").val() == "") {
+                criticaCampoFicaVermelho("recebeAlerta", "É necessário preencher o campo", "txtNomeSegmento", "nomeSegmentolbl");
+                return
+            } else {
+                removeCriticaCampoVermelho("recebeAlerta", "txtNomeSegmento", "nomeSegmentolbl");
+            }
+
+            let form = document.getElementById("cadastrarSegmento");
+            form.submit();
+        });
+
+    });
+</script>
