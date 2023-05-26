@@ -86,6 +86,7 @@ class Clientes extends Controller
         $segmento = $this->clienteModel->visualizarSegmentos();
         $cliente = $this->clienteModel->listarClientesPorId($id);
         $logomarca = $this->clienteModel->listarFotoLogomarcaPorId($id);
+        $confLogo = $this->clienteModel->listaApresentaçãoLogo();
 
         $formulario = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
         if (isset($formulario)) {
@@ -100,7 +101,14 @@ class Clientes extends Controller
             $dados['cboSegmento'] = $formulario['cboSegmento'] == "" ? NULL : $formulario['cboSegmento'];
             $dados['fileLogomarcaCliente'] = isset($_FILES['fileLogomarcaCliente']) ? $_FILES['fileLogomarcaCliente'] : "";
 
-            if ($this->clienteModel->atualizarCliente($dados)) {
+            $dadosConfigLogo = [
+                'numSegundosConfig1' => $formulario['numSegundosConfig1'],
+                'numSegundosConfig2' => $formulario['numSegundosConfig2']
+            ];
+            $dadosConfigLogo['chkConfigFixo1'] = isset($formulario['chkConfigFixo1']) ? $formulario['chkConfigFixo1'] : "";
+            $dadosConfigLogo['chkConfigFixo2'] = isset($formulario['chkConfigFixo2']) ? $formulario['chkConfigFixo2'] : "";
+
+            if ($this->clienteModel->atualizarCliente($dados, $dadosConfigLogo)) {
 
                 //Para exibir mensagem success , não precisa informar o tipo de classe
                 Alertas::mensagem('cliente', 'Cliente atualizado com sucesso');
@@ -115,7 +123,8 @@ class Clientes extends Controller
                 'tituloBreadcrumb' => '',
                 'segmento' => $segmento,
                 'cliente' => $cliente,
-                'logomarca' => $logomarca
+                'logomarca' => $logomarca,
+                'confLogo' => $confLogo
             ];
 
             $this->view('painel/clientes/editar', $dados);

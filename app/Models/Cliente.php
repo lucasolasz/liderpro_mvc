@@ -116,7 +116,7 @@ class Cliente
     }
 
 
-    public function atualizarCliente($dados)
+    public function atualizarCliente($dados, $dadosConfig)
     {
         $this->db->query("UPDATE tb_clientes SET 
             ds_nome_fantasia = :ds_nome_fantasia,
@@ -140,6 +140,8 @@ class Cliente
                 $this->armazenaFotoCliente($dados['fileLogomarcaCliente'], $dados['id_cliente']);
             }
         }
+
+        $this->salvaConfigApresentacaoLogo($dadosConfig);
 
         return true;
     }
