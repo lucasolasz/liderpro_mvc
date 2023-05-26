@@ -60,7 +60,6 @@ class Cliente
 
     public function armazenarCliente($dados, $dadosConfig)
     {
-
         $this->db->query("INSERT INTO 
         tb_clientes (
             ds_nome_fantasia, 
@@ -82,13 +81,13 @@ class Cliente
 
         $this->db->executa();
 
-        $this->salvaConfigApresentacaoLogo($dadosConfig);
-
         $ultimoId = $this->db->ultimoIdInserido();
 
-        if (!$dados['fileLogomarcaCliente']['name'][0] == "") {
+        if (!$dados['fileLogomarcaCliente']['name'] == "") {
             $this->armazenaFotoCliente($dados['fileLogomarcaCliente'], $ultimoId);
         }
+
+        $this->salvaConfigApresentacaoLogo($dadosConfig);
 
         return true;
     }
