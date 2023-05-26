@@ -8,6 +8,7 @@ class Paginas extends Controller
      {
         $this->paginaDinamicaModel = $this->model('PaginaDinamica');
         $this->paginasModel = $this->model("Pagina");
+        $this->clienteModel = $this->model("Cliente");
      }
 
     public function contatos(){
@@ -24,6 +25,21 @@ class Paginas extends Controller
         $this->view('painel/paginas/contatos', $dados);
 
         
+    }
+
+    public function clientes(){
+
+        $paginas = $this->paginaDinamicaModel->listarPaginasAtivas();
+        $visualizaClientes = $this->clienteModel->listarClientes();
+
+        $dados = [
+            'paginas' => $paginas,
+            'visualizaClientes' => $visualizaClientes,
+            'tituloBreadcrumb' => ''
+        ];
+        
+        //Retorna para a view
+        $this->view('painel/paginas/clientes', $dados);
     }
 
 

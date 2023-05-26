@@ -12,7 +12,7 @@
             <h2>Cadastro de Cliente</h2>
             <small>Preencha o formulário abaixo para cadastrar um novo cliente</small>
 
-            <form name="cadastrar" method="POST" action="<?= URL ?>/Clientes/cadastrarCliente" enctype="multipart/form-data">
+            <form name="cadastrarCliente" id="cadastrarCliente" method="POST" action="<?= URL ?>/Clientes/cadastrarCliente" enctype="multipart/form-data">
                 <div class="mb-3 mt-4">
                     <label for="txtNomeFantasia" class="form-label">Nome Fantasia: *</label>
                     <input type="text" class="form-control" name="txtNomeFantasia" id="txtNomeFantasia" value="">
@@ -27,14 +27,8 @@
                     <label for="cboSegmento" class="form-label">Segmento:</label>
                     <select class="form-control" name="cboSegmento" id="cboSegmento">
                         <option value="NULL"></option>
-                        <?php foreach ($dados['segmento'] as $segmento) {
-                            // //Resgata valor do select 
-                            $segmentoSelected = '';
-                            // if ($segmento->id_segmento == $dados['cboTipoUsuario']) {
-                            //     $segmentoSelected = 'selected';
-                            // }
-                        ?>
-                            <option <?= $segmentoSelected ?> value="<?= $segmento->id_segmento ?>"><?= $segmento->ds_segmento ?></option>
+                        <?php foreach ($dados['segmento'] as $segmento) { ?>
+                            <option value="<?= $segmento->id_segmento ?>"><?= $segmento->ds_segmento ?></option>
                         <?php } ?>
                     </select>
                 </div>
@@ -78,11 +72,61 @@
                             Inativo
                         </label>
                     </div>
+
+                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#configApresentacaoLogo"><i class="bi bi-gear-fill"></i></button>
                 </div>
+
+                <div class="modal fade" id="configApresentacaoLogo" tabindex="-1" aria-labelledby="configApresentacaoLogoLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="configApresentacaoLogoLabel">Configuração Apresentação Logo</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="d-flex flex-column">
+                                    <?php foreach ($dados['confLogo'] as $confLogo) { ?>
+                                        <div>
+                                            <div class="form-group row ">
+                                                <label for="numSegundosConfig" class="col-sm-3 col-form-label"><?= $confLogo->ds_conf_logo ?></label>
+                                                <div class="col-sm-3">
+                                                    <input type="text" class="form-control" id="numSegundosConfig<?= $confLogo->id_conf_logo ?>" name="numSegundosConfig<?= $confLogo->id_conf_logo ?>" value="<?= $confLogo->qt_duracao_seg ?>">
+                                                </div>
+                                                <span>Segundos</span>
+
+                                                <?php
+                                                $checkedFixo = "";
+                                                if ($confLogo->chk_fixo == "S") {
+                                                    $checkedFixo = "checked";
+                                                }
+                                                ?>
+
+                                                <div class="form-check ml-3">
+                                                    <input class="form-check-input" type="checkbox" id="chkConfigFixo<?= $confLogo->id_conf_logo ?>" name="chkConfigFixo<?= $confLogo->id_conf_logo ?>" value="S" <?= $checkedFixo ?>>
+                                                    <label class="form-check-label" for="chkConfigFixo<?= $confLogo->id_conf_logo ?>">
+                                                        Fixo
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <?php } ?>
+
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary btn-lg btn-block" data-dismiss="modal">Ok</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
 
                 <div class="row mt-3">
                     <div class="col-md-6">
-                        <input type="submit" value="Cadastrar" class="btn btn-primary">
+                        <input type="submit" id="btnCadastrar" value="Cadastrar" class="btn lp-btn-liderpro">
                     </div>
                 </div>
             </form>

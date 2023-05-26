@@ -14,7 +14,6 @@ class Clientes extends Controller
         $this->paginaDinamicaModel = $this->model("PaginaDinamica");
     }
 
-
     public function visualizarClientes()
     {
         $paginas = $this->paginaDinamicaModel->listarPaginasAtivas();
@@ -33,20 +32,26 @@ class Clientes extends Controller
 
     public function cadastrarCliente()
     {
-
+ 
         $formulario = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
         if (isset($formulario)) {
 
             $dados = [
                 'txtNomeFantasia' => trim($formulario['txtNomeFantasia']),
                 'txtUrl' => trim($formulario['txtUrl']),
-                'cboSegmento' => trim($formulario['cboSegmento']),
-                'chkApresentacaoImagem' => trim($formulario['chkApresentacaoImagem'])
+                'chkApresentacaoImagem' => trim($formulario['chkApresentacaoImagem']),
             ];
-
+            $dados['cboSegmento'] = $formulario['cboSegmento'] == "NULL" ? null : $formulario['cboSegmento'];
             $dados['fileLogomarcaCliente'] = isset($_FILES['fileLogomarcaCliente']) ? $_FILES['fileLogomarcaCliente'] : "";
 
-            if ($this->clienteModel->armazenarCliente($dados)) {
+            $dadosConfigLogo = [
+                'numSegundosConfig1' => $formulario['numSegundosConfig1'],
+                'numSegundosConfig2' => $formulario['numSegundosConfig2']
+            ];
+            $dadosConfigLogo['chkConfigFixo1'] = isset($formulario['chkConfigFixo1']) ? $formulario['chkConfigFixo1'] : "";
+            $dadosConfigLogo['chkConfigFixo2'] = isset($formulario['chkConfigFixo2']) ? $formulario['chkConfigFixo2'] : "";
+
+            if ($this->clienteModel->armazenarCliente($dados, $dadosConfigLogo)) {
 
                 //Para exibir mensagem success , não precisa informar o tipo de classe
                 Alertas::mensagem('cliente', 'Cliente cadastrado com sucesso');
@@ -58,11 +63,13 @@ class Clientes extends Controller
         } else {
             $paginas = $this->paginaDinamicaModel->listarPaginasAtivas();
             $segmento = $this->clienteModel->visualizarSegmentos();
+            $confLogo = $this->clienteModel->listaApresentaçãoLogo();
 
             $dados = [
                 'paginas' => $paginas,
                 'tituloBreadcrumb' => '',
-                'segmento' => $segmento
+                'segmento' => $segmento,
+                'confLogo' => $confLogo
             ];
 
             $this->view('painel/clientes/cadastrar', $dados);

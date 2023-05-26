@@ -86,7 +86,7 @@
                     <div class="ml-auto">
                         <ul class="list-unstyled d-flex mb-0 menu-top">
                             <li class=""><a href="<?= URL . '/Paginas/lider_pro' ?>">Liderpro</a></li>
-                            <li><a href="#">Clientes</a></li>
+                            <li><a href="<?= URL . '/Paginas/clientes' ?>">Clientes</a></li>
                             <li><a href="<?= URL . '/Paginas/contatos' ?>">Contatos</a></li>
                             <li>
                             <?php if (isset($_SESSION['id_usuario'])) { ?>
@@ -203,7 +203,7 @@
             <div class="collapse navbar-collapse lp-navbar-mobile" id="navbarNavAltMarkup">
                 <div class="navbar-nav d-flex align-items-center lp-item-menu-mobile">
                     <li><a href="<?= URL . '/Paginas/lider_pro' ?>">Liderpro</a></li>
-                    <li><a href="#">Clientes</a></li>
+                    <li><a href="<?= URL . '/Paginas/clientes' ?>">Clientes</a></li>
                     <li><a href="<?= URL . '/Paginas/contatos' ?>">Contatos</a></li>
                     <li><a href="<?= URL . '/Paginas/assistencia_tecnica' ?>">Assistência Técnica</a>
                     <li><a href="<?= URL . '/Paginas/gestao_informatica' ?>">Gestão de informática</a></li>

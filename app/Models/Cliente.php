@@ -35,6 +35,13 @@ class Cliente
     }
 
 
+    public function listaApresentaçãoLogo()
+    {
+
+        $this->db->query("SELECT * FROM tb_conf_logo");
+        return $this->db->resultados();
+    }
+
 
     public function visualizarSegmentos()
     {
@@ -51,8 +58,9 @@ class Cliente
         }
     }
 
-    public function armazenarCliente($dados)
+    public function armazenarCliente($dados, $dadosConfig)
     {
+
         $this->db->query("INSERT INTO 
         tb_clientes (
             ds_nome_fantasia, 
@@ -74,10 +82,35 @@ class Cliente
 
         $this->db->executa();
 
+        $this->salvaConfigApresentacaoLogo($dadosConfig);
+
         $ultimoId = $this->db->ultimoIdInserido();
 
         if (!$dados['fileLogomarcaCliente']['name'][0] == "") {
             $this->armazenaFotoCliente($dados['fileLogomarcaCliente'], $ultimoId);
+        }
+
+        return true;
+    }
+
+
+    public function salvaConfigApresentacaoLogo($dadosConfig)
+    {
+
+        for ($i = 1; $i <= 2; $i++) {
+
+            $this->db->query("UPDATE tb_conf_logo SET 
+            qt_duracao_seg = :qt_duracao_seg,
+            chk_fixo = :chk_fixo
+            
+            WHERE id_conf_logo = :id_conf_logo
+            ");
+
+            $this->db->bind("qt_duracao_seg", $dadosConfig['numSegundosConfig' . $i]);
+            $this->db->bind("chk_fixo", $dadosConfig['chkConfigFixo' . $i]);
+            $this->db->bind("id_conf_logo", $i);
+
+            $this->db->executa();
         }
 
         return true;
