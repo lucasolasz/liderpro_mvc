@@ -71,25 +71,43 @@
                     </div>
                 <?php } ?>
 
+                <?php
+                $checkedApresentacaoLogoPrincipal = "";
+                $checkedApresentacaoLogoSecundaria = "";
+                $checkedApresentacaoLogoInativo = "";
+
+                switch ($dados['cliente']->chk_apresentacao_imagem) {
+                    case "P":
+                        $checkedApresentacaoLogoPrincipal = "checked";
+                        break;
+                    case "S":
+                        $checkedApresentacaoLogoSecundaria = "checked";
+                        break;
+                    case "I":
+                        $checkedApresentacaoLogoInativo = "checked";
+                        break;
+                }
+                ?>
+
                 <div class="form-group mt-3">
                     <label class="form-check-label" for="chkApresentacaoImagem">Apresentação Logo no Site:&nbsp&nbsp&nbsp</label>
                     <div class="form-check form-check-inline">
                         <label class="form-check-label" for="chkApresentacaoImagem">
-                            <input class="form-check-input" type="radio" name="chkApresentacaoImagem" id="chkApresentacaoImagem" value="P" checked>
+                            <input class="form-check-input" type="radio" name="chkApresentacaoImagem" id="chkApresentacaoImagem" value="P" <?= $checkedApresentacaoLogoPrincipal ?>>
                             Principal
                         </label>
                     </div>
 
                     <div class="form-check form-check-inline">
                         <label class="form-check-label" for="chkApresentacaoImagem">
-                            <input class="form-check-input" type="radio" name="chkApresentacaoImagem" id="chkApresentacaoImagem" value="S">
+                            <input class="form-check-input" type="radio" name="chkApresentacaoImagem" id="chkApresentacaoImagem" value="S" <?= $checkedApresentacaoLogoSecundaria ?>>
                             Secundário
                         </label>
                     </div>
 
                     <div class="form-check form-check-inline">
                         <label class="form-check-label" for="chkApresentacaoImagem">
-                            <input class="form-check-input" type="radio" name="chkApresentacaoImagem" id="chkApresentacaoImagem" value="I">
+                            <input class="form-check-input" type="radio" name="chkApresentacaoImagem" id="chkApresentacaoImagem" value="I" <?= $checkedApresentacaoLogoInativo ?>>
                             Inativo
                         </label>
                     </div>
