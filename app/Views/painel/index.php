@@ -53,7 +53,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Apresentação da Logo</h5>
                             <p class="card-text">Visualize e cadastre novos segmentos</p>
-                            <a href="<?= URL . '/Segmentos/visualizarSegmentos' ?>" class="btn lp-btn-liderpro">Visualizar</a>
+                            <a href="<?= URL . '/ApresentacaoLogos/visualizarApresentacaoLogo' ?>" class="btn lp-btn-liderpro">Visualizar</a>
                         </div>
                     </div>
                 </div>
