@@ -31,11 +31,13 @@ class Paginas extends Controller
 
         $paginas = $this->paginaDinamicaModel->listarPaginasAtivas();
         $visualizaClientes = $this->clienteModel->listarClientes();
+        $fotosLogomarca = $this->clienteModel->listarFotosLogomarca();
 
         $dados = [
             'paginas' => $paginas,
             'visualizaClientes' => $visualizaClientes,
-            'tituloBreadcrumb' => ''
+            'tituloBreadcrumb' => '',
+            'fotosLogomarca' => $fotosLogomarca
         ];
         
         //Retorna para a view

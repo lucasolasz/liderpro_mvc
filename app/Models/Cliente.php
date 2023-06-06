@@ -34,6 +34,12 @@ class Cliente
         return $this->db->resultado();
     }
 
+    public function listarFotosLogomarca(){
+        $this->db->query("SELECT * FROM tb_foto_cliente tfc
+        JOIN tb_clientes tc ON tc.id_cliente = tfc.fk_cliente ");
+        return $this->db->resultados();
+    }
+
 
     public function listaApresentaçãoLogo()
     {
