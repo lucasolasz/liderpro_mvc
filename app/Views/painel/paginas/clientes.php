@@ -13,7 +13,7 @@ foreach ($dados['fotosLogomarca'] as $fotosLogomarca) {
         </div>
 
         <div class="col d-flex  justify-content-end">
-            <a class="lp-remove-decoration" href="">Pesquisa avançada de Clientes</a>
+            <a class="lp-remove-decoration" href="<?= URL . '/Paginas/pesquisaAvancadaCliente' ?>">Pesquisa avançada de Clientes</a>
         </div>
     </div>
     
@@ -41,7 +41,7 @@ foreach ($dados['fotosLogomarca'] as $fotosLogomarca) {
 
             for (var i = 0; i < shuffledImages.length; i++) {
                 var image = shuffledImages[i];
-                html += '<div class="col-md-4 d-flex align-items-center justify-content-center">' +
+                html += '<div class="col-md-4 d-flex align-items-center justify-content-center p-3">' +
                     '<img src="' + image['caminho'] + '" class="img-fluid lp-logos-clientes" id="logoCliente" alt="' + image['descricao'] + '">' +
                     '</div>';
             }

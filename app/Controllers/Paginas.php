@@ -44,6 +44,23 @@ class Paginas extends Controller
         $this->view('painel/paginas/clientes', $dados);
     }
 
+    public function pesquisaAvancadaCliente(){
+
+        $paginas = $this->paginaDinamicaModel->listarPaginasAtivas();
+        $visualizaClientes = $this->clienteModel->listarClientes();
+        $fotosLogomarca = $this->clienteModel->listarFotosLogomarca();
+
+        $dados = [
+            'paginas' => $paginas,
+            'visualizaClientes' => $visualizaClientes,
+            'tituloBreadcrumb' => '',
+            'fotosLogomarca' => $fotosLogomarca
+        ];
+        
+        //Retorna para a view
+        $this->view('painel/paginas/pesquisaAvancadaCliente', $dados);
+    }
+
 
 
     public function lider_pro()
