@@ -37,13 +37,13 @@
         foreach ($dados['paginas'] as $paginas) {
 
             if ($paginas->ds_breadcrumb_menu == $dados['tituloBreadcrumb']) {
-                $paginaBreadCrumb =  " > " . mb_strtoupper($paginas->ds_pagina);
+                $paginaBreadCrumb = mb_strtoupper($paginas->ds_pagina);
                 $urlBreadCrumb = $paginas->ds_url_menu;
             }
 
             //Temporário
             if($dados['tituloBreadcrumb'] == "assistencia_tecnica"){
-                $paginaBreadCrumb =  " > " . "ASSISTÊNCIA TÉCNICA";
+                $paginaBreadCrumb =  "ASSISTÊNCIA TÉCNICA";
                 $urlBreadCrumb = "\\assistencia_tecnica";
             }
         }
@@ -65,7 +65,6 @@
             }
         }
     }
-
     ?>
 
     <div class="lp-nav-desktop">
@@ -74,13 +73,12 @@
                 <div style="width: 250px;"></div>
                 <div class="flex-grow-1 d-flex align-items-center" style="padding-left: 58px">
                     <div class="lp-breadcrumb">
-                        <a href="<?= URL ?>">Home</a>
-                        <?php if (isset($dados['paginas']) && !isset($dados["paginasLiderPro"])) { ?>
-                            <a href="<?= URL . '\\PaginasDinamicas' . $urlBreadCrumb ?>"><?= $paginaBreadCrumb ?></a>
+                        <?php if (isset($dados['paginas']) && !isset($dados["paginasLiderPro"]) && $paginaBreadCrumb != "") { ?>
+                            <a href="<?= URL ?>">Home</a> > <a href="<?= URL . '\\PaginasDinamicas' . $urlBreadCrumb ?>"><?= $paginaBreadCrumb ?></a>
                         <?php } ?>
 
                         <?php if (isset($dados['paginasLiderPro'])) { ?>
-                            > <a href="<?= URL . '/Paginas/lider_pro' ?>"> LIDERPRO</a> <?= $informacoes ?> > <a href="<?= URL . '/Paginas' . $urlBreadCrumb ?>"><?= $paginaBreadCrumb ?></a>
+                            <a href="<?= URL ?>">Home</a> > <a href="<?= URL . '/Paginas/lider_pro' ?>"> LIDERPRO</a> <?= $informacoes ?> > <a href="<?= URL . '/Paginas' . $urlBreadCrumb ?>"><?= $paginaBreadCrumb ?></a>
                         <?php } ?>
                     </div>
                     <div class="ml-auto">
@@ -217,7 +215,6 @@
         </nav>
 
         <div class="lp-breadcrumb-mobile ml-5 mt-5">
-            <a href="<?= URL ?>">Home</a>
             <?php if (isset($dados['paginas'])) { ?>
                 <a href="<?= URL . '/Paginas' . $urlBreadCrumb ?>"><?= $paginaBreadCrumb ?></a>
             <?php } ?>
