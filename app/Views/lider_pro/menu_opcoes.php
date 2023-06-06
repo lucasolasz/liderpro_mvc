@@ -23,7 +23,7 @@ if ($dados['tituloBreadcrumb'] == "informacoes_legais" ) {
 
 <div class="row d-flex justify-content-center">
 
-    <a class="btn lp-btn-liderpro m-2 <?= $dados['tituloBreadcrumb'] == 'lider_pro' ? 'lp-btn-liderpro-active' : ''; ?>" href="<?= URL . '/Paginas/lider_pro' ?>" role="button">LIDERPRO</a>
+    <a class="btn d-flex justify-content-center align-items-center lp-btn-liderpro m-2 <?= $dados['tituloBreadcrumb'] == 'lider_pro' ? 'lp-btn-liderpro-active' : ''; ?>" href="<?= URL . '/Paginas/lider_pro' ?>" role="button">LIDERPRO</a>
     <a class="btn lp-btn-liderpro m-2 <?= $dados['tituloBreadcrumb'] == 'valores' ? 'lp-btn-liderpro-active' : ''; ?>" href="<?= URL . '/Paginas/valores' ?>" role="button">VALORES<br>ÉTICOS</a>
     <a class="btn lp-btn-liderpro m-2 <?= $dados['tituloBreadcrumb'] == 'parcerias' ? 'lp-btn-liderpro-active' : ''; ?>" href="<?= URL . '/Paginas/parcerias' ?>" role="button">PARCERIAS E<br>CERTIFICAÇÕES</a>
     <a class="btn lp-btn-liderpro m-2 <?= $classeBtnAtivoTermo . $classeBtnAtivoPolitica . $classeBtnAtivoInformacoes ?>" href="<?= URL . '/Paginas/informacoes_legais' ?>" href="#" role="button">INFORMAÇÕES<br>GERAIS</a>
