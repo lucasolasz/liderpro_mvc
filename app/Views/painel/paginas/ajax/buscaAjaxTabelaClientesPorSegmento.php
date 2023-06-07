@@ -2,7 +2,7 @@
     <table class="table table-borderless">
         <tbody>
             <?php
-            if (!empty($dados['resultado'])) {;
+            if (!empty($dados['resultado'])) {
                 foreach ($dados['resultado'] as $resultado) { ?>
                     <tr>
                         <td class="p-0 m-0">
