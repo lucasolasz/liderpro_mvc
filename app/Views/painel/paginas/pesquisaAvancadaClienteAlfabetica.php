@@ -13,7 +13,7 @@
         </div>
         <div class="col-md-6 d-flex justify-content-end align-items-center">
             <div class="input-group">
-                <input type="text" class="form-control" placeholder="Pesquisar">
+                <input type="text" class="form-control" placeholder="Pesquise pelo nome da empresa">
                 <div class="input-group-append">
                     <span class="input-group-text"><i class="bi bi-search"></i></span>
                 </div>
