@@ -20,4 +20,15 @@ class Controller
         }
         include APP . '/Views/rodape.php';
     }
+
+    public function viewSemTopoRodapeParaAjax($view, $dados = [])
+    {
+        $arquivo = ('../app/Views/' . $view . '.php');
+
+        if (file_exists($arquivo)) {
+            require_once $arquivo;
+        } else {
+            die('O arquivo de view não existe!');
+        }
+    }
 }
