@@ -52,7 +52,7 @@ class Paginas extends Controller
 
         $dados = [
             'paginas' => $paginas,
-            'tituloBreadcrumb' => '',
+            'tituloBreadcrumb' => 'ordemSegmento',
             'segmentos' => $visualizarSegmentos
         ];
         

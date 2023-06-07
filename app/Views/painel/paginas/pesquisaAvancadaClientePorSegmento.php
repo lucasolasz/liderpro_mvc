@@ -3,10 +3,10 @@
     <div class="row d-flex justify-content-start mt-5">
         <div class="col-md-6 d-flex flex-row">
             <div class="">
-                <a class="btn d-flex justify-content-center align-items-center lp-btn-liderpro m-2" href="" role="button">POR ORDEM ALFABÉTICA</a>
+                <a class="btn d-flex justify-content-center align-items-center lp-btn-liderpro m-2 <?= $dados['tituloBreadcrumb'] == 'ordemAlfabetica' ? 'lp-btn-liderpro-active' : ''; ?>" href="" role="button">POR ORDEM ALFABÉTICA</a>
             </div>
             <div>
-                <a class="btn d-flex justify-content-center align-items-center lp-btn-liderpro m-2" href="" role="button">POR ORDEM DE SEGMENTO</a>
+                <a class="btn d-flex justify-content-center align-items-center lp-btn-liderpro m-2 <?= $dados['tituloBreadcrumb'] == 'ordemSegmento' ? 'lp-btn-liderpro-active' : ''; ?>" href="" role="button">POR ORDEM DE SEGMENTO</a>
             </div>
         </div>
         <div class="col-md-6 d-flex justify-content-end align-items-center">
