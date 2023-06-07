@@ -781,6 +781,7 @@ body {
 
 .lp-remove-decoration {
     text-decoration: none;
+    cursor: pointer !important;
     color: var(--azul);
 }
 
