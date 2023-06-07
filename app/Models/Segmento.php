@@ -13,7 +13,7 @@ class Segmento
     //Retorna registros da tabela menu
     public function listarSegmentos()
     {
-        $this->db->query("SELECT * FROM tb_segmento");
+        $this->db->query("SELECT * FROM tb_segmento ORDER BY ds_segmento");
 
         return $this->db->resultados();
     }
@@ -66,5 +66,16 @@ class Segmento
         $this->db->executa();
 
         return true;
+    }
+
+    public function listarClienteSegmento($id_segmento){
+
+        $this->db->query("SELECT * FROM tb_clientes tc 
+           JOIN tb_segmento ts ON ts.id_segmento = tc.fk_segmento
+           WHERE id_segmento = :id_segmento
+           ORDER BY tc.ds_nome_fantasia
+        ");
+        $this->db->bind("id_segmento", $id_segmento);
+        return $this->db->resultados();
     }
 }

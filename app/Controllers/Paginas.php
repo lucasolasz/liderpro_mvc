@@ -9,6 +9,7 @@ class Paginas extends Controller
         $this->paginaDinamicaModel = $this->model('PaginaDinamica');
         $this->paginasModel = $this->model("Pagina");
         $this->clienteModel = $this->model("Cliente");
+        $this->segmentoModel = $this->model("Segmento");
      }
 
     public function contatos(){
@@ -44,21 +45,33 @@ class Paginas extends Controller
         $this->view('painel/paginas/clientes', $dados);
     }
 
-    public function pesquisaAvancadaCliente(){
+    public function pesquisaAvancadaClientePorSegmento(){
 
         $paginas = $this->paginaDinamicaModel->listarPaginasAtivas();
-        $visualizaClientes = $this->clienteModel->listarClientes();
-        $fotosLogomarca = $this->clienteModel->listarFotosLogomarca();
+        $visualizarSegmentos = $this->segmentoModel->listarSegmentos();
 
         $dados = [
             'paginas' => $paginas,
-            'visualizaClientes' => $visualizaClientes,
             'tituloBreadcrumb' => '',
-            'fotosLogomarca' => $fotosLogomarca
+            'segmentos' => $visualizarSegmentos
         ];
         
         //Retorna para a view
-        $this->view('painel/paginas/pesquisaAvancadaCliente', $dados);
+        $this->view('painel/paginas/pesquisaAvancadaClientePorSegmento', $dados);
+    }
+
+    public function buscaAjaxTabelaClientesPorSegmento(){
+
+        //Retorna o valor da direita caso o valor da esquerda esteja ou não esteja settado (null coalesce operator)
+        $dados['id_segmento'] = $_POST['id_segmento'] ?? "";
+        $id_segmento = $dados['id_segmento'];
+        $resultado = $this->segmentoModel->listarClienteSegmento($id_segmento);
+        
+        $dados = [
+            'resultado' => $resultado
+        ];
+
+        $this->viewSemTopoRodapeParaAjax('painel/paginas/ajax/buscaAjaxTabelaClientesPorSegmento', $dados);
     }
 
 

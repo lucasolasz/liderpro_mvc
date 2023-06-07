@@ -13,14 +13,14 @@ foreach ($dados['fotosLogomarca'] as $fotosLogomarca) {
         </div>
 
         <div class="col d-flex  justify-content-end">
-            <a class="lp-remove-decoration" href="<?= URL . '/Paginas/pesquisaAvancadaCliente' ?>">Pesquisa avançada de Clientes</a>
+            <a class="lp-remove-decoration" href="<?= URL . '/Paginas/pesquisaAvancadaClientePorSegmento' ?>">Pesquisa avançada de Clientes</a>
         </div>
     </div>
     
 </div>
 
 <div class="container lp-container-logos p-5 mb-5">
-    <div class="row" id="image-grid"></div>
+    <div class="row" id="image-grid"><p style="color: gray;">Escolha um segmento</p></div>
 </div>
 
 <script>
