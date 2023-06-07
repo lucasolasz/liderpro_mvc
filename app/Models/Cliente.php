@@ -15,8 +15,16 @@ class Cliente
     //Retorna registros da tabela menu
     public function listarClientes()
     {
-        $this->db->query("SELECT * FROM tb_clientes");
+        $this->db->query("SELECT * FROM tb_clientes ORDER BY ds_nome_fantasia");
 
+        return $this->db->resultados();
+    }
+
+    //Retorna registros da tabela menu
+    public function listarClientesComFiltro($letra_alfabeto)
+    {
+        $this->db->query("SELECT * FROM tb_clientes WHERE ds_nome_fantasia LIKE concat(:letra_alfabeto, '%') ORDER BY ds_nome_fantasia");
+        $this->db->bind("letra_alfabeto", $letra_alfabeto);
         return $this->db->resultados();
     }
 

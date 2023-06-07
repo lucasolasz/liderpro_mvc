@@ -45,6 +45,35 @@ class Paginas extends Controller
         $this->view('painel/paginas/clientes', $dados);
     }
 
+    public function pesquisaAvancadaClienteAlfabetica(){
+
+        $paginas = $this->paginaDinamicaModel->listarPaginasAtivas();
+        $letrasAlfabeto = range('A', 'Z');
+
+        $dados = [
+            'paginas' => $paginas,
+            'tituloBreadcrumb' => 'ordemAlfabetica',
+            'letrasAlfabeto' => $letrasAlfabeto
+        ];
+        
+        //Retorna para a view
+        $this->view('painel/paginas/pesquisaAvancadaClienteAlfabetica', $dados);
+    }
+
+    public function buscaAjaxTabelaClientesAlfabetica(){
+
+        //Retorna o valor da direita caso o valor da esquerda esteja ou não esteja settado (null coalesce operator)
+        $dados['letra_alfabeto'] = $_POST['letra_alfabeto'] ?? "";
+        $letra_alfabeto = $dados['letra_alfabeto'];
+        $resultado = $this->clienteModel->listarClientesComFiltro($letra_alfabeto);
+        
+        $dados = [
+            'resultado' => $resultado
+        ];
+
+        $this->viewSemTopoRodapeParaAjax('painel/paginas/ajax/buscaAjaxTabelaClientesAlfabetica', $dados);
+    }
+
     public function pesquisaAvancadaClientePorSegmento(){
 
         $paginas = $this->paginaDinamicaModel->listarPaginasAtivas();
