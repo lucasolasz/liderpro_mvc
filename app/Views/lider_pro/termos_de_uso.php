@@ -17,43 +17,43 @@
             </p>
 
             <p class="lp-paragrafo">
-                Direito de Cópia
+            <span class="lp-titulo-paragrafo"> Direito de Cópia </span>
                 <br>
                 Todas as informações contidas neste website poderão ser copiadas somente para o uso pessoal, interno, educativo e/ou sem vínculo comercial. As informações não poderão ser alteradas, ser parte de outras informações do próprio usuário ou de terceiros, utilizá-los em eventos públicos ou comerciais, transferi-los ou transmiti-los para terceiros e/ou vendê-los ou alugá-los. Exceto com a permissão por escrito da Liderpro Informática determinando o uso das mesmas. Esta permissão de cópia não é uma venda, aluguel ou transferência de titularidade.
             </p>
 
             <p class="lp-paragrafo">
-                Leis Brasileiras
+            <span class="lp-titulo-paragrafo"> Leis Brasileiras </span>
                 <br>
                 Este website foi elaborado baseando-se nas leis do Brasil. A Liderpro Informática não se responsabiliza por qualquer divulgação do conteúdo do seu website em outros países. É proibido inserir ou transmitir qualquer tipo de material com cunho ilegal para este website. O conteúdo que faz parte deste website e a logomarca da Liderpro Informática são protegidos por copyright, marca registrada, patente e qualquer outra lei.
             </p>
 
             <p class="lp-paragrafo">
-                Website de Fabricantes ou Empresas (Terceiros)
+            <span class="lp-titulo-paragrafo"> Website de Fabricantes ou Empresas (Terceiros) </span>
                 <br>
                 A Liderpro Informática não se responsabiliza por qualquer problema que os websites indicados possam ocasionar com o descarregamento (download) de seus programas (softwares ou drivers), com o conteúdo nele encontrado ou qualquer conexão (link) que o mesmo aponte. Nenhuma das informações, produtos e/ou serviços apresentados nos websites indicados são avalizados pela Liderpro Informática. Todo o risco de acesso às conexões (links) indicadas neste website é de responsabilidade do usuário.
             </p>
 
             <p class="lp-paragrafo">
-                Marcas Registradas
+            <span class="lp-titulo-paragrafo"> Marcas Registradas </span>
                 <br>
                 Todas as marcas que aparecem neste website são marcas registradas dos seus respectivos proprietários. Este website não tem, através das marcas registradas que aparecem, o objetivo da promoção de produtos ou publicidade das mesmas.
             </p>
 
             <p class="lp-paragrafo">
-                Fontes de Informação
+            <span class="lp-titulo-paragrafo"> Fontes de Informação </span>
                 <br>
                 As informações que não forem escritas pela Liderpro Informática, terão, ao final de cada texto, a sua bibliografia.
             </p>
 
             <p class="lp-paragrafo">
-                Alterar Conteúdo
+            <span class="lp-titulo-paragrafo"> Alterar Conteúdo </span>
                 <br>
                 A Liderpro Informática se dá ao direito de alterar o conteúdo de qualquer parte do seu website ou texto escrito por ela sem um aviso prévio.
             </p>
 
             <p class="lp-paragrafo">
-                Informações Pessoais
+            <span class="lp-titulo-paragrafo"> Informações Pessoais </span>
                 <br>
                 Todas as informações pessoais (Pessoa Física ou Jurídica) enviadas para a Liderpro Informática através de Formulários Eletrônicos estão regidas pela Política de Privacidade.
             </p>
