@@ -89,19 +89,25 @@
                     <span><img style="height: 20px; width: 20px;" class="p-1" src="<?= URL . '/img/menu_lider_pro/email.png' ?>" alt=""></span>
                     <span><img style="height: 20px; width: 20px;" class="p-1" src="<?= URL . '/img/menu_lider_pro/relogio.png' ?>" alt=""></span>
                 </div>
-                <div class="col-md-7 col-lg-7">
-                    <p class="lp-paragrafo-info">
-                        (21) 2526-8100 <span><img style="height: 20px; width: 20px;" class="ml-3 p-1" src="<?= URL . '/img/menu_lider_pro/whatsapp.png' ?>" alt=""></span>
-
-                        liderpro@liderpro.com.br
-                        <br>
-                        HORÁRIO DE FUNCIONAMENTO:
-                        <br>
-                        Das 8h30 às 18h - De 2ª a 6ª feira, exeto feriados.
-                        Obs.: as 5ª feiras há Feira na rua até às 16h.
-                        <br>
-                        Acesso à garagem pela Rua Visc. de Paranaguá.
-                    </p>
+                <div class="col-md-7 col-lg-7 d-flex flex-column">
+                    <div>
+                        <p class="lp-paragrafo-info m-0">(21) 2526-8100 <span><img style="height: 20px; width: 20px;" class="ml-3 p-1" src="<?= URL . '/img/menu_lider_pro/whatsapp.png' ?>" alt=""></span></p>
+                    </div>
+                    <div>
+                        <p class="lp-paragrafo-info m-0">liderpro@liderpro.com.br</p>
+                    </div>
+                    <div>
+                        <p class="lp-paragrafo-info m-0">HORÁRIO DE FUNCIONAMENTO:</p>
+                    </div>
+                    <div>
+                        <p class="lp-paragrafo-info m-0">Das 8h30 às 18h - De 2ª a 6ª feira, exceto feriados.</p>
+                    </div>
+                    <div>
+                        <p class="lp-paragrafo-info m-0">Obs.: as 5ª feiras há Feira na rua até às 16h.</p>
+                    </div>
+                    <div>
+                        <p class="lp-paragrafo-info m-0">Acesso à garagem pela Rua Visc. de Paranaguá.</p>
+                    </div>
                 </div>
             </div>
         </div>
