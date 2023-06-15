@@ -36,7 +36,7 @@
                 </div>
             </div>
 
-            <div class="row mt-5 d-flex justify-content-center mb-5">
+            <div class="row mt-5 d-flex justify-content-center mb-5 pt-4">
                 <div class="col-md-1 col-lg-1">
                     <span><img style="height: 40px; width: 24px;" class="" src="<?= URL . '/img/menu_lider_pro/informacoes_legais_foto2.png' ?>" alt=""></span>
                 </div>
@@ -60,7 +60,7 @@
             <div class="row d-flex justify-content-center">
                 <div class="col-md-1 col-lg-1">
                     <span><img style="height: 25px; width: 24px;" class="" src="<?= URL . '/img/menu_lider_pro/informacoes_legais_foto3.png' ?>" alt=""></span>
-                </div>
+                    </div>
                 <div class="col-md-7 col-lg-7 ">
 
                     <p class="lp-paragrafo-info">
@@ -84,26 +84,21 @@
                 </div>
             </div>
             <div class="row mt-5 d-flex justify-content-center">
-                <div class="col-md-1 col-lg-1">
-                    <span><img style="height: 20px; width: 20px;" class="p-1" src="<?= URL . '/img/menu_lider_pro/telefone.png' ?>" alt=""></span>
-                    <span><img style="height: 20px; width: 20px;" class="p-1" src="<?= URL . '/img/menu_lider_pro/email.png' ?>" alt=""></span>
-                    <span><img style="height: 20px; width: 20px;" class="p-1" src="<?= URL . '/img/menu_lider_pro/relogio.png' ?>" alt=""></span>
-                </div>
-                <div class="col-md-7 col-lg-7 d-flex flex-column">
+                <div class="col-md-8 col-lg-8 d-flex flex-column">
                     <div>
-                        <p class="lp-paragrafo-info m-0">(21) 2526-8100 <span><img style="height: 20px; width: 20px;" class="ml-3 p-1" src="<?= URL . '/img/menu_lider_pro/whatsapp.png' ?>" alt=""></span></p>
+                        <p class="lp-paragrafo-info m-0"><span><img style="height: 20px; width: 20px;" class="mr-2 p-1" src="<?= URL . '/img/menu_lider_pro/telefone.png' ?>" alt=""></span>(21) 2526-8100 <span><img style="height: 20px; width: 20px;" class="ml-2 p-1" src="<?= URL . '/img/menu_lider_pro/whatsapp.png' ?>" alt=""></span></p>
                     </div>
                     <div>
-                        <p class="lp-paragrafo-info m-0">liderpro@liderpro.com.br</p>
+                        <p class="lp-paragrafo-info m-0"><span><img style="height: 20px; width: 20px;" class="mr-2 p-1" src="<?= URL . '/img/menu_lider_pro/email.png' ?>" alt=""></span>liderpro@liderpro.com.br</p>
                     </div>
                     <div>
-                        <p class="lp-paragrafo-info m-0">HORÁRIO DE FUNCIONAMENTO:</p>
+                        <p class="lp-paragrafo-info m-0"><span><img style="height: 20px; width: 20px;" class="mr-2 p-1" src="<?= URL . '/img/menu_lider_pro/relogio.png' ?>" alt=""></span>HORÁRIO DE FUNCIONAMENTO:</p>
                     </div>
                     <div>
                         <p class="lp-paragrafo-info m-0">Das 8h30 às 18h - De 2ª a 6ª feira, exceto feriados.</p>
                     </div>
                     <div>
-                        <p class="lp-paragrafo-info m-0">Obs.: as 5ª feiras há Feira na rua até às 16h.</p>
+                        <p class="lp-paragrafo-info m-0">Obs.: Às 5ª feiras há Feira na rua até às 16h.</p>
                     </div>
                     <div>
                         <p class="lp-paragrafo-info m-0">Acesso à garagem pela Rua Visc. de Paranaguá.</p>
