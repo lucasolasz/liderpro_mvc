@@ -5,23 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"> -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-    <script src="<?php echo URL ?>/public/js/jquery.funcoes.js"></script>
-
+    <title><?php echo APP_NOME ?></title>
+    <link rel="shortcut icon" href="<?= URL . '/img/favicon.png' ?>" type="image/x-icon" />
 
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet" type='text/css'>
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <!-- Bootstrap -->
 
+    <script src="<?php echo URL ?>/public/js/jquery.funcoes.js"></script>
     <link href="<?php echo URL ?>/public/css/estilos.css" rel="stylesheet">
-    <link rel="shortcut icon" href="<?= URL . '/img/favicon.png' ?>" type="image/x-icon" />
-
-
-    <title><?php echo APP_NOME ?></title>
 </head>
 
 <body>
@@ -42,7 +40,7 @@
             }
 
             //Temporário
-            if($dados['tituloBreadcrumb'] == "assistencia_tecnica"){
+            if ($dados['tituloBreadcrumb'] == "assistencia_tecnica") {
                 $paginaBreadCrumb =  "ASSISTÊNCIA TÉCNICA";
                 $urlBreadCrumb = "\\assistencia_tecnica";
             }
@@ -54,11 +52,10 @@
         foreach ($dados['paginasLiderPro'] as $paginasLiderPro) {
 
             if ($dados['tituloBreadcrumb'] == "termos_de_uso" || $dados['tituloBreadcrumb'] == "politica_de_privacidade" || $dados['tituloBreadcrumb'] == "informacoes_legais") {
-                
+
                 $informacoes = "> INFORMAÇÕES";
                 $paginaBreadCrumb =  $paginasLiderPro->ds_menu;
                 $urlBreadCrumb = $paginasLiderPro->ds_url_menu;
-
             } elseif ($paginasLiderPro->ds_pagina_menu == $dados['tituloBreadcrumb']) {
                 $paginaBreadCrumb = $paginasLiderPro->ds_menu;
                 $urlBreadCrumb = $paginasLiderPro->ds_url_menu;
@@ -87,7 +84,7 @@
                             <li><a href="<?= URL . '/Paginas/clientes' ?>">Clientes</a></li>
                             <li><a href="<?= URL . '/Paginas/contatos' ?>">Contatos</a></li>
                             <li>
-                            <?php if (isset($_SESSION['id_usuario'])) { ?>
+                                <?php if (isset($_SESSION['id_usuario'])) { ?>
                                     <a href="<?= URL . '/Painel/index' ?>">
                                         <img id="lp-menu-painel" src="<?= URL . '/img/login_usuario_logado.png' ?>" alt="" class="img_login">
                                     </a>
@@ -178,9 +175,9 @@
                                         </li>
                                     </ul>
                                 </li>
-                                        
+
                                 <?php foreach ($dados['paginas'] as $paginas) { ?>
-                                    <li><a href="<?= URL . '\\PaginasDinamicas\\' . $paginas->ds_breadcrumb_menu ?>" class="lp-nav-link <?= $dados['tituloBreadcrumb'] == $paginas->ds_breadcrumb_menu ? 'lp-nav-active' : ''; ?>"><?= ucfirst($paginas->ds_pagina)?></a></li>
+                                    <li><a href="<?= URL . '\\PaginasDinamicas\\' . $paginas->ds_breadcrumb_menu ?>" class="lp-nav-link <?= $dados['tituloBreadcrumb'] == $paginas->ds_breadcrumb_menu ? 'lp-nav-active' : ''; ?>"><?= ucfirst($paginas->ds_pagina) ?></a></li>
                                 <?php } ?>
                                 <li class="d-flex align-items-center justify-content-center"><a href="#" class="lp-nav-link">(21)&nbsp2526-8100&nbsp<span><img style="height: 15px; width: 15px;" src="<?= URL . '/img/menu_lider_pro/whatsapp.png' ?>" alt=""></span></a></li>
                             </div>
