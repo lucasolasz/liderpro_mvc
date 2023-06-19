@@ -103,6 +103,21 @@ class Paginas extends Controller
         $this->viewSemTopoRodapeParaAjax('painel/paginas/ajax/buscaAjaxTabelaClientesPorSegmento', $dados);
     }
 
+    public function buscaAjaxAlteraCorSegmentos(){
+
+        //Retorna o valor da direita caso o valor da esquerda esteja ou não esteja settado (null coalesce operator)
+        $dados['id_segmento'] = $_POST['id_segmento'] ?? "";
+        $id_segmento = $dados['id_segmento'];
+        $resultado = $this->segmentoModel->listarSegmentos();
+        
+        $dados = [
+            'resultado' => $resultado,
+            'id_segmento' => $id_segmento
+        ];
+
+        $this->viewSemTopoRodapeParaAjax('painel/paginas/ajax/buscaAjaxAlteraCorSegmentos', $dados);
+    }
+
 
 
     public function lider_pro()

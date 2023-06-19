@@ -25,11 +25,13 @@
     <div class="row mt-5">
         <div class="col-md-3">
             <h3 class="lp-titulo-paragrafo">SEGMENTOS</h3>
-            <ul class="list-unstyled">
-                <?php foreach ($dados['segmentos'] as $segmentos) { ?>
-                    <li class="lp-paragrafo"><a class="lp-remove-decoration opcao-segmento" id="<?= $segmentos->id_segmento ?>"><?= $segmentos->ds_segmento ?></a></li>
-                <?php } ?>
-            </ul>
+            <div id="divResultadoAjaxAlteraCorSegmento">
+                <ul class="list-unstyled">
+                    <?php foreach ($dados['segmentos'] as $segmentos) { ?>
+                        <li class="lp-paragrafo"><a class="lp-remove-decoration opcao-segmento" id="<?= $segmentos->id_segmento ?>"><?= $segmentos->ds_segmento ?></a></li>
+                    <?php } ?>
+                </ul>
+            </div>
         </div>
 
         <div class="col-md-8 lp-container-logos-avancado m-3" id="divResultadoAjaxPorSegmento">
@@ -40,14 +42,14 @@
 </div>
 
 <script>
+
     $(document).ready(function() {
-
         // pesquisarClientePorSegmento();
-
         $(".opcao-segmento").click(function() {
             var id_segmento = $(this).attr('id');
             if (id_segmento != "") {
                 pesquisarClientePorSegmento(id_segmento);
+                alteraCorSegmentoSelecionado(id_segmento);
             } else {
                 pesquisarClientePorSegmento();
             }
@@ -70,6 +72,27 @@
             },
             error: function(data) {
                 console.log("Ocorreu erro ao BUSCAR clientes via AJAX.");
+                // $('#cboCidade').html("Houve um erro ao carregar");
+            }
+        });
+    }
+
+    //Ajax para gerar e buscar os visitantes cadastrados
+
+    function alteraCorSegmentoSelecionado(id_segmento) {
+        $.ajax({
+            url: '<?php echo URL . '/Paginas/buscaAjaxAlteraCorSegmentos' ?>',
+            type: 'POST',
+            data: {
+                id_segmento: id_segmento
+            },
+            success: function(data) {
+                // loading_hide();
+                // $("#divResultadoAjaxAlteraCorSegmento").html("");
+                $("#divResultadoAjaxAlteraCorSegmento").html(data)
+            },
+            error: function(data) {
+                console.log("Ocorreu erro ao BUSCAR segmentos via AJAX.");
                 // $('#cboCidade').html("Houve um erro ao carregar");
             }
         });

@@ -561,8 +561,6 @@ body {
 }
 
 
-
-
 /* ------------ TOPMENU LIDERPRO END -----------*/
 
 /* ------------ FORMULARIO CONTATO -----------*/
@@ -802,4 +800,8 @@ body {
 .lp-parcerias {
     max-height: 140px;
     max-width: 200px; 
+}
+
+.lp-opcao-segmento-active {
+    color: var(--rodape);
 }
