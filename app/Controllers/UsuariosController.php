@@ -240,6 +240,7 @@ class UsuariosController extends Controller
             $dados = [
                 'txtEmail' => trim($formulario['txtEmail']),
                 'txtSenha' => trim($formulario['txtSenha']),
+                'paginas' => $paginas,
                 'senha_erro' => '',
                 'email_erro' => '',
                 'tituloBreadcrumb' => ''
