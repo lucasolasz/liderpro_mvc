@@ -4,13 +4,13 @@
             <div class="container">
                 <div class="row d-flex align-items-center justify-content-center">
                     <figure class="border">
-                        <img class="img-fluid" src="<?= URL . '\\img\\logo-liderpro.png' ?>" alt="">
+                        <img class="img-fluid" src="<?= URL . DIRECTORY_SEPARATOR . 'img' . DIRECTORY_SEPARATOR . 'logo-liderpro.png' ?>" alt="">
                         <figcaption class="text-center">Foto provisória</figcaption>
                     </figure>
                 </div>
             </div>
         <?php } else { ?>
-            <img class="img-fluid" src="<?= URL . '\\uploads\\' . $dados['dolarFotoBanner'][0]->nm_path_arquivo . "\\" .  $dados['dolarFotoBanner'][0]->nm_arquivo ?>" alt="">
+            <img class="img-fluid" src="<?= URL . DIRECTORY_SEPARATOR . 'uploads' . DIRECTORY_SEPARATOR . $dados['dolarFotoBanner'][0]->nm_path_arquivo . DIRECTORY_SEPARATOR .  $dados['dolarFotoBanner'][0]->nm_arquivo ?>" alt="">
         <?php } ?>
     </div>
     <div class="row py-5 d-flex align-items-center">
@@ -18,7 +18,7 @@
             <div class="container">
                 <div class="row d-flex align-items-center justify-content-center">
                     <figure class="border">
-                        <img class="img-fluid" src="<?= URL . '\\img\\logo-liderpro.png' ?>" alt="">
+                        <img class="img-fluid" src="<?= URL . DIRECTORY_SEPARATOR . 'img' .  DIRECTORY_SEPARATOR . 'logo-liderpro.png' ?>" alt="">
                         <figcaption class="text-center">Foto provisória</figcaption>
                     </figure>
                 </div>
@@ -28,11 +28,11 @@
             foreach ($dados['dolarFotoPergunta'] as $dolarFotoPergunta) {
                 if ($i == 1) { ?>
                     <div class="col-md py-5">
-                        <img class="img-fluid" src="<?= URL . '\\uploads\\' . $dolarFotoPergunta->nm_path_arquivo . "\\" .  $dolarFotoPergunta->nm_arquivo ?>" alt="">
+                        <img class="img-fluid" src="<?= URL . DIRECTORY_SEPARATOR . 'uploads' . DIRECTORY_SEPARATOR . $dolarFotoPergunta->nm_path_arquivo . DIRECTORY_SEPARATOR .  $dolarFotoPergunta->nm_arquivo ?>" alt="">
                     </div>
                 <?php  } else { ?>
                     <div class="col-md">
-                        <img class="img-fluid" src="<?= URL . '\\uploads\\' .  $dolarFotoPergunta->nm_path_arquivo . "\\" .  $dolarFotoPergunta->nm_arquivo ?>" alt="">
+                        <img class="img-fluid" src="<?= URL . DIRECTORY_SEPARATOR . 'uploads' . DIRECTORY_SEPARATOR .  $dolarFotoPergunta->nm_path_arquivo . DIRECTORY_SEPARATOR .  $dolarFotoPergunta->nm_arquivo ?>" alt="">
                     </div>
         <?php }
                 $i++;
@@ -50,13 +50,13 @@
                 <div class="container">
                     <div class="row d-flex align-items-center justify-content-center">
                         <figure class="border">
-                            <img class="img-fluid" src="<?= URL . '\\img\\logo-liderpro.png' ?>" alt="">
+                            <img class="img-fluid" src="<?= URL . DIRECTORY_SEPARATOR . 'img' . DIRECTORY_SEPARATOR . 'logo-liderpro.png' ?>" alt="">
                             <figcaption class="text-center">Foto provisória</figcaption>
                         </figure>
                     </div>
                 </div>
             <?php } else { ?>
-                <img class="img-fluid" style="height: 200px; width: 180px" src="<?= URL . '\\uploads\\' . $dados['dolarFotoTexto'][0]->nm_path_arquivo . "\\" .  $dados['dolarFotoTexto'][0]->nm_arquivo ?>" alt="">
+                <img class="img-fluid" style="height: 200px; width: 180px" src="<?= URL . DIRECTORY_SEPARATOR . 'uploads' . DIRECTORY_SEPARATOR . $dados['dolarFotoTexto'][0]->nm_path_arquivo . DIRECTORY_SEPARATOR .  $dados['dolarFotoTexto'][0]->nm_arquivo ?>" alt="">
             <?php } ?>
         </div>
     </div>
@@ -90,7 +90,7 @@
                             foreach ($dados['dolarFotoServico'] as $dolarFotoServico) { ?>
                                 <div class="col-md-4">
                                     <div class="card mb-4">
-                                        <img class="img-fluid" src="<?= URL . '\\uploads\\' .  $dolarFotoServico->nm_path_arquivo . "\\" .  $dolarFotoServico->nm_arquivo ?>" alt="">
+                                        <img class="img-fluid" src="<?= URL . DIRECTORY_SEPARATOR . 'uploads' . DIRECTORY_SEPARATOR .  $dolarFotoServico->nm_path_arquivo . DIRECTORY_SEPARATOR .  $dolarFotoServico->nm_arquivo ?>" alt="">
                                         <div class="card-body">
                                         </div>
                                     </div>
