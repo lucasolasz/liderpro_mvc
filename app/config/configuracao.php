@@ -18,7 +18,7 @@ define('DB_NAME', 'liderp09_liderpro_mvc_hmg');
 define('DB_PORT', '3306');
 
 define('APP', dirname(dirname(__FILE__)));
-define('URL', 'https://liderweb.com.br/liderpro_hmg2');
+define('URL', 'https://liderweb.com.br/liderpro_hmg3');
 
 
 define('APP_NOME', 'Lider Pro - Informática Profissional');
