@@ -22,5 +22,5 @@ define('URL', 'https://liderweb.com.br/liderpro_hmg2');
 
 
 define('APP_NOME', 'Lider Pro - Informática Profissional');
-define('APP_VERSAO', '1.0.0');
+define('APP_VERSAO', '1.20.3');
 
