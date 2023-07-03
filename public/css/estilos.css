@@ -804,3 +804,7 @@ body {
 .lp-opcao-segmento-active {
     color: var(--rodape);
 }
+
+.lp-opcao-letra-active {
+    color: var(--rodape);
+}

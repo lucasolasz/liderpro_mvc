@@ -23,13 +23,8 @@
 
 
     <div class="d-flex flex-column mt-5">
-        <div class="mb-3 d-flex justify-content-between">
-            <a class="lp-remove-decoration opcao-alfabetica" id="1">1</a>
-            <?php foreach ($dados['letrasAlfabeto'] as $letrasAlfabeto) { ?>
-                <a class="lp-remove-decoration opcao-alfabetica" id="<?= $letrasAlfabeto ?>"><?= $letrasAlfabeto ?></a>
-            <?php } ?>
+        <div class="mb-3 d-flex justify-content-between" id="divResultadoAlfabeto">
         </div>
-
         <div class="lp-container-logos-avancado" id="divResultadoAjaxAlfabetica">
             <p style="color: gray;" class="p-3">Escolha uma opção de filtro</p>
         </div>
@@ -39,13 +34,12 @@
 
 <script>
     $(document).ready(function() {
-
-        // pesquisarClientePorSegmento();
-
+        alteraCorLetraSelecionada();
         $(".opcao-alfabetica").click(function() {
             var letra_alfabeto = $(this).attr('id');
             if (letra_alfabeto != "") {
                 pesquisarClientePorSegmento(letra_alfabeto);
+                alteraCorLetraSelecionada(letra_alfabeto);
             } else {
                 pesquisarClientePorSegmento();
             }
@@ -63,12 +57,26 @@
                 letra_alfabeto: letra_alfabeto
             },
             success: function(data) {
-                // loading_hide();
                 $("#divResultadoAjaxAlfabetica").html(data)
             },
             error: function(data) {
                 console.log("Ocorreu erro ao BUSCAR clientes via AJAX.");
-                // $('#cboCidade').html("Houve um erro ao carregar");
+            }
+        });
+    }
+
+    function alteraCorLetraSelecionada(letra_alfabeto) {
+        $.ajax({
+            url: '<?php echo URL . '/Paginas/buscaAjaxAlteraCorLetraSelecionada' ?>',
+            type: 'POST',
+            data: {
+                letra_alfabeto: letra_alfabeto
+            },
+            success: function(data) {
+                $("#divResultadoAlfabeto").html(data)
+            },
+            error: function(data) {
+                console.log("Ocorreu erro ao BUSCAR alfabeto via AJAX.");
             }
         });
     }

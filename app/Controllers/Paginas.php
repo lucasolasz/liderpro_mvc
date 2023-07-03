@@ -119,6 +119,17 @@ class Paginas extends Controller
     }
 
 
+    public function buscaAjaxAlteraCorLetraSelecionada(){
+        $dados['letra_alfabeto'] = $_POST['letra_alfabeto'] ?? "";
+        $letra_alfabeto_selecionada = $dados['letra_alfabeto'];
+        $letrasAlfabeto = range('A', 'Z');
+        $dados = [
+            'letra_alfabeto_selecionada' => $letra_alfabeto_selecionada,
+            'letrasAlfabeto' => $letrasAlfabeto
+        ];
+
+        $this->viewSemTopoRodapeParaAjax('painel/paginas/ajax/buscaAjaxAlteraCorLetraSelecionada', $dados);
+    }
 
     public function lider_pro()
     {
