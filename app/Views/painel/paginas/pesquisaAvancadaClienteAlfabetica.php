@@ -13,7 +13,7 @@
         </div>
         <div class="col-md-6 d-flex justify-content-end align-items-center">
             <div class="input-group">
-                <input type="text" class="form-control" placeholder="Pesquise pelo nome da empresa">
+                <input type="text" class="form-control" id="pesquisarClienteAlfabeto" placeholder="Pesquise pelo nome da empresa">
                 <div class="input-group-append">
                     <span class="input-group-text"><i class="bi bi-search"></i></span>
                 </div>
@@ -38,23 +38,47 @@
         $(".opcao-alfabetica").click(function() {
             var letra_alfabeto = $(this).attr('id');
             if (letra_alfabeto != "") {
-                pesquisarClientePorSegmento(letra_alfabeto);
+                pesquisarClientePorAlfabetoLetraSelecionada(letra_alfabeto);
                 alteraCorLetraSelecionada(letra_alfabeto);
             } else {
-                pesquisarClientePorSegmento();
+                pesquisarClientePorAlfabetoLetraSelecionada();
             }
         });
+
+
+        $("#pesquisarClienteAlfabeto").keyup(function() {
+            var ds_nome_cliente = $(this).val();
+            if (ds_nome_cliente != "") {
+                pesquisarClienteAlfabeto(ds_nome_cliente);
+            } else {
+                pesquisarClienteAlfabeto();
+            }
+        });
+
     });
 
-
-    //Ajax para gerar e buscar os visitantes cadastrados
-
-    function pesquisarClientePorSegmento(letra_alfabeto) {
+    function pesquisarClientePorAlfabetoLetraSelecionada(letra_alfabeto) {
         $.ajax({
             url: '<?php echo URL . '/Paginas/buscaAjaxTabelaClientesAlfabetica' ?>',
             type: 'POST',
             data: {
                 letra_alfabeto: letra_alfabeto
+            },
+            success: function(data) {
+                $("#divResultadoAjaxAlfabetica").html(data)
+            },
+            error: function(data) {
+                console.log("Ocorreu erro ao BUSCAR clientes via AJAX.");
+            }
+        });
+    }
+
+    function pesquisarClienteAlfabeto(ds_nome_cliente) {
+        $.ajax({
+            url: '<?php echo URL . '/Paginas/buscaAjaxTabelaClientesAlfabeticaPesquisa' ?>',
+            type: 'POST',
+            data: {
+                ds_nome_cliente: ds_nome_cliente
             },
             success: function(data) {
                 $("#divResultadoAjaxAlfabetica").html(data)

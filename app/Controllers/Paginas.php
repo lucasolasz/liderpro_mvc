@@ -1,18 +1,19 @@
 <?php
 
-class Paginas extends Controller 
+class Paginas extends Controller
 {
 
-     //Construtor do model do Usuário que fará o acesso ao banco
-     public function __construct()
-     {
+    //Construtor do model do Usuário que fará o acesso ao banco
+    public function __construct()
+    {
         $this->paginaDinamicaModel = $this->model('PaginaDinamica');
         $this->paginasModel = $this->model("Pagina");
         $this->clienteModel = $this->model("Cliente");
         $this->segmentoModel = $this->model("Segmento");
-     }
+    }
 
-    public function contatos(){
+    public function contatos()
+    {
 
         $paginas = $this->paginaDinamicaModel->listarPaginasAtivas();
 
@@ -24,11 +25,10 @@ class Paginas extends Controller
 
         //Chamada do novo objeto PAGINAS 
         $this->view('painel/paginas/contatos', $dados);
-
-        
     }
 
-    public function clientes(){
+    public function clientes()
+    {
 
         $paginas = $this->paginaDinamicaModel->listarPaginasAtivas();
         $visualizaClientes = $this->clienteModel->listarClientes();
@@ -40,12 +40,13 @@ class Paginas extends Controller
             'tituloBreadcrumb' => '',
             'fotosLogomarca' => $fotosLogomarca
         ];
-        
+
         //Retorna para a view
         $this->view('painel/paginas/clientes', $dados);
     }
 
-    public function pesquisaAvancadaClienteAlfabetica(){
+    public function pesquisaAvancadaClienteAlfabetica()
+    {
 
         $paginas = $this->paginaDinamicaModel->listarPaginasAtivas();
         $letrasAlfabeto = range('A', 'Z');
@@ -55,18 +56,19 @@ class Paginas extends Controller
             'tituloBreadcrumb' => 'ordemAlfabetica',
             'letrasAlfabeto' => $letrasAlfabeto
         ];
-        
+
         //Retorna para a view
         $this->view('painel/paginas/pesquisaAvancadaClienteAlfabetica', $dados);
     }
 
-    public function buscaAjaxTabelaClientesAlfabetica(){
+    public function buscaAjaxTabelaClientesAlfabetica()
+    {
 
         //Retorna o valor da direita caso o valor da esquerda esteja ou não esteja settado (null coalesce operator)
         $dados['letra_alfabeto'] = $_POST['letra_alfabeto'] ?? "";
         $letra_alfabeto = $dados['letra_alfabeto'];
         $resultado = $this->clienteModel->listarClientesComFiltro($letra_alfabeto);
-        
+
         $dados = [
             'resultado' => $resultado
         ];
@@ -74,7 +76,27 @@ class Paginas extends Controller
         $this->viewSemTopoRodapeParaAjax('painel/paginas/ajax/buscaAjaxTabelaClientesAlfabetica', $dados);
     }
 
-    public function pesquisaAvancadaClientePorSegmento(){
+    public function buscaAjaxTabelaClientesAlfabeticaPesquisa()
+    {
+        $dados['ds_nome_cliente'] = $_POST['ds_nome_cliente'] ?? "";
+        if ($dados['ds_nome_cliente'] != "") {
+            $ds_nome_cliente = $dados['ds_nome_cliente'];
+            $resultado = $this->clienteModel->listarClientesComFiltro($ds_nome_cliente);
+
+            $dados = [
+                'resultado' => $resultado
+            ];
+        } else {
+            $dados = [
+                'resultado' => null
+            ];
+        }
+
+        $this->viewSemTopoRodapeParaAjax('painel/paginas/ajax/buscaAjaxTabelaClientesAlfabeticaPesquisa', $dados);
+    }
+
+    public function pesquisaAvancadaClientePorSegmento()
+    {
 
         $paginas = $this->paginaDinamicaModel->listarPaginasAtivas();
         $visualizarSegmentos = $this->segmentoModel->listarSegmentos();
@@ -84,18 +106,19 @@ class Paginas extends Controller
             'tituloBreadcrumb' => 'ordemSegmento',
             'segmentos' => $visualizarSegmentos
         ];
-        
+
         //Retorna para a view
         $this->view('painel/paginas/pesquisaAvancadaClientePorSegmento', $dados);
     }
 
-    public function buscaAjaxTabelaClientesPorSegmento(){
+    public function buscaAjaxTabelaClientesPorSegmento()
+    {
 
         //Retorna o valor da direita caso o valor da esquerda esteja ou não esteja settado (null coalesce operator)
         $dados['id_segmento'] = $_POST['id_segmento'] ?? "";
         $id_segmento = $dados['id_segmento'];
         $resultado = $this->segmentoModel->listarClienteSegmento($id_segmento);
-        
+
         $dados = [
             'resultado' => $resultado
         ];
@@ -103,13 +126,14 @@ class Paginas extends Controller
         $this->viewSemTopoRodapeParaAjax('painel/paginas/ajax/buscaAjaxTabelaClientesPorSegmento', $dados);
     }
 
-    public function buscaAjaxAlteraCorSegmentos(){
+    public function buscaAjaxAlteraCorSegmentos()
+    {
 
         //Retorna o valor da direita caso o valor da esquerda esteja ou não esteja settado (null coalesce operator)
         $dados['id_segmento'] = $_POST['id_segmento'] ?? "";
         $id_segmento = $dados['id_segmento'];
         $resultado = $this->segmentoModel->listarSegmentos();
-        
+
         $dados = [
             'resultado' => $resultado,
             'id_segmento' => $id_segmento
@@ -119,7 +143,8 @@ class Paginas extends Controller
     }
 
 
-    public function buscaAjaxAlteraCorLetraSelecionada(){
+    public function buscaAjaxAlteraCorLetraSelecionada()
+    {
         $dados['letra_alfabeto'] = $_POST['letra_alfabeto'] ?? "";
         $letra_alfabeto_selecionada = $dados['letra_alfabeto'];
         $letrasAlfabeto = range('A', 'Z');
