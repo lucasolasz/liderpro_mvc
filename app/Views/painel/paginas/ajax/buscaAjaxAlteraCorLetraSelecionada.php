@@ -20,10 +20,10 @@
     $(".opcao-alfabetica").click(function() {
         var letra_alfabeto = $(this).attr('id');
         if (letra_alfabeto != "") {
-            pesquisarClientePorSegmento(letra_alfabeto);
+            pesquisarClientePorAlfabetoLetraSelecionada(letra_alfabeto);
             alteraCorLetraSelecionada(letra_alfabeto);
         } else {
-            pesquisarClientePorSegmento();
+            pesquisarClientePorAlfabetoLetraSelecionada();
         }
     });
 </script>
