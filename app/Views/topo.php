@@ -10,7 +10,7 @@
 
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet" type='text/css'>
-    
+
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
@@ -179,7 +179,11 @@
                                 <?php foreach ($dados['paginas'] as $paginas) { ?>
                                     <li><a href="<?= URL . '\\PaginasDinamicas\\' . $paginas->ds_breadcrumb_menu ?>" class="lp-nav-link <?= $dados['tituloBreadcrumb'] == $paginas->ds_breadcrumb_menu ? 'lp-nav-active' : ''; ?>"><?= ucfirst($paginas->ds_pagina) ?></a></li>
                                 <?php } ?>
-                                <li class="d-flex align-items-center justify-content-center"><a href="#" class="lp-nav-link">(21)&nbsp2526-8100&nbsp<span><img style="height: 15px; width: 15px;" src="<?= URL . '/img/menu_lider_pro/whatsapp.png' ?>" alt=""></span></a></li>
+                                <li class="d-flex align-items-center justify-content-center" style="width: 200px;">
+                                    <a href="#" class="lp-nav-link">(21)&nbsp2526-8100&nbsp
+                                        <span><img style="height: 15px; width: 15px;" src="<?= URL . '/img/menu_lider_pro/whatsapp.png' ?>" alt=""></span>
+                                    </a>
+                                </li>
                             </div>
                         </div>
                     </nav>
