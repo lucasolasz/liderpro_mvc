@@ -52,7 +52,7 @@
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Apresentação da Logo</h5>
-                            <p class="card-text">Visualize e cadastre novos segmentos</p>
+                            <p class="card-text">Visualize e cadastre novas apresentações e tempos da logo</p>
                             <a href="<?= URL . '/ApresentacaoLogos/visualizarApresentacaoLogo' ?>" class="btn lp-btn-liderpro">Visualizar</a>
                         </div>
                     </div>
