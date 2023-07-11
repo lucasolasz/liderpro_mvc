@@ -19,10 +19,10 @@
     $(".opcao-segmento").click(function() {
         var id_segmento = $(this).attr('id');
         if (id_segmento != "") {
-            pesquisarClientePorSegmento(id_segmento);
+            pesquisarClientePorSegmentoSelecionado(id_segmento);
             alteraCorSegmentoSelecionado(id_segmento);
         } else {
-            pesquisarClientePorSegmento();
+            pesquisarClientePorSegmentoSelecionado();
         }
     });
 </script>
