@@ -251,3 +251,9 @@
         </div>
     </div>
 </div>
+
+<script>
+    // Get the element with id="defaultOpen" and click on it
+    //Abre a primeira aba como padrão 
+    document.getElementById("defaultOpen").click();
+</script>
