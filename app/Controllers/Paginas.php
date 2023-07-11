@@ -95,6 +95,25 @@ class Paginas extends Controller
         $this->viewSemTopoRodapeParaAjax('painel/paginas/ajax/buscaAjaxTabelaClientesAlfabeticaPesquisa', $dados);
     }
 
+    public function buscaAjaxTabelaClientesSegmentoPesquisa()
+    {
+        $dados['ds_nome_cliente'] = $_POST['ds_nome_cliente'] ?? "";
+        if ($dados['ds_nome_cliente'] != "") {
+            $ds_nome_cliente = $dados['ds_nome_cliente'];
+            $resultado = $this->clienteModel->listarClientesComFiltro($ds_nome_cliente);
+
+            $dados = [
+                'resultado' => $resultado
+            ];
+        } else {
+            $dados = [
+                'resultado' => null
+            ];
+        }
+
+        $this->viewSemTopoRodapeParaAjax('painel/paginas/ajax/buscaAjaxTabelaClientesPorSegmentoPesquisa', $dados);
+    }
+
     public function pesquisaAvancadaClientePorSegmento()
     {
 

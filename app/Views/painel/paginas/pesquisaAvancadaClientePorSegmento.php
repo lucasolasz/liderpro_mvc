@@ -13,7 +13,7 @@
         </div>
         <div class="col-md-6 d-flex justify-content-end align-items-center">
             <div class="input-group">
-                <input type="text" class="form-control" placeholder="Pesquise pelo nome da empresa">
+                <input type="text" class="form-control" placeholder="Pesquise pelo nome da empresa" id="pesquisarClienteSegmento">
                 <div class="input-group-append">
                     <span class="input-group-text"><i class="bi bi-search"></i></span>
                 </div>
@@ -44,14 +44,23 @@
 <script>
 
     $(document).ready(function() {
-        // pesquisarClientePorSegmento();
+        // pesquisarClientePorSegmentoSelecionado();
         $(".opcao-segmento").click(function() {
             var id_segmento = $(this).attr('id');
             if (id_segmento != "") {
-                pesquisarClientePorSegmento(id_segmento);
+                pesquisarClientePorSegmentoSelecionado(id_segmento);
                 alteraCorSegmentoSelecionado(id_segmento);
             } else {
-                pesquisarClientePorSegmento();
+                pesquisarClientePorSegmentoSelecionado();
+            }
+        });
+
+        $("#pesquisarClienteSegmento").keyup(function() {
+            var ds_nome_cliente = $(this).val();
+            if (ds_nome_cliente != "") {
+                pesquisarClienteSegmento(ds_nome_cliente);
+            } else {
+                pesquisarClienteSegmento();
             }
         });
     });
@@ -59,7 +68,7 @@
 
     //Ajax para gerar e buscar os visitantes cadastrados
 
-    function pesquisarClientePorSegmento(id_segmento) {
+    function pesquisarClientePorSegmentoSelecionado(id_segmento) {
         $.ajax({
             url: '<?php echo URL . '/Paginas/buscaAjaxTabelaClientesPorSegmento' ?>',
             type: 'POST',
@@ -73,6 +82,22 @@
             error: function(data) {
                 console.log("Ocorreu erro ao BUSCAR clientes via AJAX.");
                 // $('#cboCidade').html("Houve um erro ao carregar");
+            }
+        });
+    }
+
+    function pesquisarClienteSegmento(ds_nome_cliente) {
+        $.ajax({
+            url: '<?php echo URL . '/Paginas/buscaAjaxTabelaClientesSegmentoPesquisa' ?>',
+            type: 'POST',
+            data: {
+                ds_nome_cliente: ds_nome_cliente
+            },
+            success: function(data) {
+                $("#divResultadoAjaxPorSegmento").html(data)
+            },
+            error: function(data) {
+                console.log("Ocorreu erro ao BUSCAR clientes via AJAX.");
             }
         });
     }
