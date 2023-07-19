@@ -89,19 +89,12 @@ body {
     color: var(--azul);
 }
 
-.menu-top li a:hover{
+.menu-top li a:hover {
     color: var(--rodape)
 }
 
-.menu-top-active{
+.menu-top-active {
     color: var(--rodape) !important
-}
-
-.img_login {
-    /* margin-left: 15px; */
-    /* margin-right: 10px; */
-    height: 20px;
-    width: 20px;
 }
 
 .lupa_login {
@@ -569,7 +562,7 @@ body {
     width: 150px;
 }
 
-.lp-btn-liderpro-info-active:hover{
+.lp-btn-liderpro-info-active:hover {
     background: white;
     color: var(--azul);
     width: 150px;
@@ -814,7 +807,7 @@ body {
 
 .lp-parcerias {
     max-height: 140px;
-    max-width: 200px; 
+    max-width: 200px;
 }
 
 .lp-opcao-segmento-active {
@@ -823,4 +816,42 @@ body {
 
 .lp-opcao-letra-active {
     color: var(--rodape);
+}
+
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot');
+    src: url('../fonts/icomoon.eot') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf') format('truetype'),
+        url('../fonts/icomoon.woff') format('woff'),
+        url('../fonts/icomoon.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-login_usuario:before {
+    content: "\e900";
+    font-size: large;
+}
+
+.img_login-logado {
+   color: var(--rodape);
 }

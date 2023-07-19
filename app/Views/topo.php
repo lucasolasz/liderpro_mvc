@@ -113,15 +113,16 @@
                             <li>
                                 <?php if (isset($_SESSION['id_usuario'])) { ?>
                                     <a href="<?= URL . '/Painel/index' ?>">
-                                        <img id="lp-menu-painel" src="<?= URL . '/img/login_usuario_logado.png' ?>" alt="" class="img_login">
+                                    <span class="icon-login_usuario img_login-logado"></span>
                                     </a>
                                     <a href="<?= URL . '/UsuariosController/sair' ?>">Sair <i class="bi bi-x-circle"></i></a>
                                 <?php } else { ?>
-                                    <a href="<?= URL . '/UsuariosController/login' ?>">
-                                        <img src="<?= URL . '/img/login_usuario.png' ?>" alt="" class="img_login">
+                                    <a href="<?= URL . '/UsuariosController/login' ?>" >
+                                        <span class="icon-login_usuario img_login"></span>
                                     </a>
                                 <?php } ?>
                             </li>
+                            
                             <li>
                                 <a href="#">
                                     <img src="<?= URL . '/img/facebook_logo.png' ?>" alt="" class="face_login">
