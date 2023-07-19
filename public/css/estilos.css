@@ -529,20 +529,7 @@ body {
     text-align: center;
 }
 
-.lp-btn-liderpro-info {
-    background: var(--azul);
-    color: white;
-    width: 150px;
-    text-align: center;
-}
-
 .lp-btn-liderpro:hover {
-    color: var(--azul);
-    background-color: white;
-    border: 1px solid var(--azul);
-}
-
-.lp-btn-liderpro-info:hover {
     color: var(--azul);
     background-color: white;
     border: 1px solid var(--azul);
@@ -554,11 +541,32 @@ body {
     border: 1px solid var(--azul);
 }
 
-.lp-btn-liderpro-info-active {
+.lp-btn-liderpro-info {
     color: var(--azul);
     background-color: white;
+    width: 150px;
     border: 1px solid var(--azul);
 }
+
+.lp-btn-liderpro-info:hover {
+    color: white;
+    background-color: var(--azul);
+    width: 150px;
+    border: 1px solid var(--azul);
+}
+
+.lp-btn-liderpro-info-active {
+    background: var(--azul);
+    color: white;
+    width: 150px;
+}
+
+.lp-btn-liderpro-info-active:hover{
+    background: white;
+    color: var(--azul);
+    width: 150px;
+}
+
 
 
 /* ------------ TOPMENU LIDERPRO END -----------*/
