@@ -77,6 +77,18 @@
                         <?php if (isset($dados['paginasLiderPro'])) { ?>
                             <a href="<?= URL ?>">Home</a> > <a href="<?= URL . '/Paginas/lider_pro' ?>"> LIDERPRO</a> <?= $informacoes ?> > <a href="<?= URL . '/Paginas' . $urlBreadCrumb ?>"><?= $paginaBreadCrumb ?></a>
                         <?php } ?>
+
+                        <?php if ($dados['tituloBreadcrumb'] == "clientes") { ?>
+                            <a href="<?= URL ?>">Home</a> > <a href="<?= URL . '/Paginas/clientes' ?>"> CLIENTES</a>
+                        <?php } ?>
+
+                        <?php if ($dados['tituloBreadcrumb'] == "ordemAlfabetica") { ?>
+                            <a href="<?= URL ?>">Home</a> > <a href="<?= URL . '/Paginas/clientes' ?>"> CLIENTES</a> > <a href="<?= URL . '/Paginas/pesquisaAvancadaClienteAlfabetica' ?>"> ORDEM ALFABÉTICA</a>
+                        <?php } ?>
+
+                        <?php if ($dados['tituloBreadcrumb'] == "ordemSegmento") { ?>
+                            <a href="<?= URL ?>">Home</a> > <a href="<?= URL . '/Paginas/clientes' ?>"> CLIENTES</a> > <a href="<?= URL . '/Paginas/pesquisaAvancadaClientePorSegmento' ?>"> ORDEM SEGMENTO</a>
+                        <?php } ?>
                     </div>
                     <div class="ml-auto">
                         <ul class="list-unstyled d-flex mb-0 menu-top">

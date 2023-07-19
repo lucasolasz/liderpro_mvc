@@ -37,7 +37,7 @@ class Paginas extends Controller
         $dados = [
             'paginas' => $paginas,
             'visualizaClientes' => $visualizaClientes,
-            'tituloBreadcrumb' => '',
+            'tituloBreadcrumb' => 'clientes',
             'fotosLogomarca' => $fotosLogomarca
         ];
 
