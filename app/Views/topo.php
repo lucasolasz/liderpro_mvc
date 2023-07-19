@@ -29,6 +29,9 @@
     $paginaBreadCrumb = "";
     $urlBreadCrumb = "";
     $informacoes = "";
+    $liderActive = "";
+    $clientesActive = "";
+    $contatoActive = "";
 
     if (isset($dados['paginas']) && !isset($dados["paginasLiderPro"])) {
 
@@ -62,6 +65,18 @@
             }
         }
     }
+
+    if(isset($dados['liderproActive'])){
+        $liderActive = "active";
+    }
+
+    if(isset($dados['clienteActive'])){
+        $clientesActive = "active";
+    }
+
+    if(isset($dados['contatoActive'])){
+        $contatoActive = "active";
+    }
     ?>
 
     <div class="lp-nav-desktop">
@@ -92,9 +107,9 @@
                     </div>
                     <div class="ml-auto">
                         <ul class="list-unstyled d-flex mb-0 menu-top">
-                            <li class=""><a href="<?= URL . '/Paginas/lider_pro' ?>">Liderpro</a></li>
-                            <li><a href="<?= URL . '/Paginas/clientes' ?>">Clientes</a></li>
-                            <li><a href="<?= URL . '/Paginas/contatos' ?>">Contatos</a></li>
+                            <li><a href="<?= URL . '/Paginas/lider_pro' ?>" class="<?= $liderActive == 'active' ? 'menu-top-active' : ''; ?>">Liderpro</a></li>
+                            <li><a href="<?= URL . '/Paginas/clientes' ?>" class="<?= $clientesActive == 'active' ? 'menu-top-active' : ''; ?>">Clientes</a></li>
+                            <li><a href="<?= URL . '/Paginas/contatos' ?>" class="<?= $contatoActive == 'active' ? 'menu-top-active' : ''; ?>">Contatos</a></li>
                             <li>
                                 <?php if (isset($_SESSION['id_usuario'])) { ?>
                                     <a href="<?= URL . '/Painel/index' ?>">

@@ -89,6 +89,14 @@ body {
     color: var(--azul);
 }
 
+.menu-top li a:hover{
+    color: var(--rodape)
+}
+
+.menu-top-active{
+    color: var(--rodape) !important
+}
+
 .img_login {
     /* margin-left: 15px; */
     /* margin-right: 10px; */

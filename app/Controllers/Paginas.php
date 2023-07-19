@@ -20,6 +20,7 @@ class Paginas extends Controller
         //Parâmetros enviados para o método do controller VIEW
         $dados = [
             'tituloBreadcrumb' => 'contatos',
+            'contatoActive' => 'active', 
             'paginas' => $paginas
         ];
 
@@ -38,6 +39,7 @@ class Paginas extends Controller
             'paginas' => $paginas,
             'visualizaClientes' => $visualizaClientes,
             'tituloBreadcrumb' => 'clientes',
+            'clienteActive' => 'active',
             'fotosLogomarca' => $fotosLogomarca
         ];
 
@@ -54,6 +56,7 @@ class Paginas extends Controller
         $dados = [
             'paginas' => $paginas,
             'tituloBreadcrumb' => 'ordemAlfabetica',
+            'clienteActive' => 'active',
             'letrasAlfabeto' => $letrasAlfabeto
         ];
 
@@ -123,6 +126,7 @@ class Paginas extends Controller
         $dados = [
             'paginas' => $paginas,
             'tituloBreadcrumb' => 'ordemSegmento',
+            'clienteActive' => 'active',
             'segmentos' => $visualizarSegmentos
         ];
 
@@ -183,6 +187,7 @@ class Paginas extends Controller
         //Parâmetros enviados para o método do controller VIEW
         $dados = [
             'tituloBreadcrumb' => 'lider_pro',
+            'liderproActive' => 'active',
             'paginasLiderPro' => $paginasLiderPro,
             'paginas' => $paginas
         ];
@@ -199,6 +204,7 @@ class Paginas extends Controller
         //Parâmetros enviados para o método do controller VIEW
         $dados = [
             'tituloBreadcrumb' => 'valores',
+            'liderproActive' => 'active',
             'paginasLiderPro' => $paginasLiderPro,
             'paginas' => $paginas
         ];
@@ -215,6 +221,7 @@ class Paginas extends Controller
         //Parâmetros enviados para o método do controller VIEW
         $dados = [
             'tituloBreadcrumb' => 'parcerias',
+            'liderproActive' => 'active',
             'paginasLiderPro' => $paginasLiderPro,
             'paginas' => $paginas
         ];
@@ -231,6 +238,7 @@ class Paginas extends Controller
         //Parâmetros enviados para o método do controller VIEW
         $dados = [
             'tituloBreadcrumb' => 'informacoes_gerais',
+            'liderproActive' => 'active',
             'paginasLiderPro' => $paginasLiderPro,
             'paginas' => $paginas
         ];
@@ -247,6 +255,7 @@ class Paginas extends Controller
         //Parâmetros enviados para o método do controller VIEW
         $dados = [
             'tituloBreadcrumb' => 'termos_de_uso',
+            'liderproActive' => 'active',
             'paginasLiderPro' => $paginasLiderPro,
             'paginas' => $paginas
         ];
@@ -263,6 +272,7 @@ class Paginas extends Controller
         //Parâmetros enviados para o método do controller VIEW
         $dados = [
             'tituloBreadcrumb' => 'politica_de_privacidade',
+            'liderproActive' => 'active',
             'paginasLiderPro' => $paginasLiderPro,
             'paginas' => $paginas
         ];
@@ -279,6 +289,7 @@ class Paginas extends Controller
         //Parâmetros enviados para o método do controller VIEW
         $dados = [
             'tituloBreadcrumb' => 'informacoes_legais',
+            'liderproActive' => 'active',
             'paginasLiderPro' => $paginasLiderPro,
             'paginas' => $paginas
         ];
