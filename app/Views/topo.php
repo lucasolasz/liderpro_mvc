@@ -104,6 +104,10 @@
                         <?php if ($dados['tituloBreadcrumb'] == "ordemSegmento") { ?>
                             <a href="<?= URL ?>">Home</a> > <a href="<?= URL . '/Paginas/clientes' ?>"> CLIENTES</a> > <a href="<?= URL . '/Paginas/pesquisaAvancadaClientePorSegmento' ?>"> ORDEM SEGMENTO</a>
                         <?php } ?>
+
+                        <?php if ($dados['tituloBreadcrumb'] == "contatos") { ?>
+                            <a href="<?= URL ?>">Home</a> > <a href="<?= URL . '/Paginas/contatos' ?>"> CONTATOS</a>
+                        <?php } ?>
                     </div>
                     <div class="ml-auto">
                         <ul class="list-unstyled d-flex mb-0 menu-top">
