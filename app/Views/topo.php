@@ -125,13 +125,13 @@
                             
                             <li>
                                 <a href="#">
-                                    <img src="<?= URL . '/img/facebook_logo.png' ?>" alt="" class="face_login">
+                                <span class="icon-facebook_logo"></span>
                                 </a>
                             </li>
 
                             <li>
                                 <a href="#">
-                                    <img src="<?= URL . '/img/lupa_menu.png' ?>" alt="" class="lupa_login">
+                                <span class="icon-lupa_menu"></span>
                                 </a>
                             </li>
                         </ul>

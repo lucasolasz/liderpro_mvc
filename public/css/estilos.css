@@ -847,11 +847,20 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-login_usuario:before {
+
+.icon-lupa_menu:before {
+    content: "\e902";
+    font-size: large;
+  }
+  .icon-facebook_logo:before {
     content: "\e900";
     font-size: large;
-}
+  }
+  .icon-login_usuario:before {
+    content: "\e901";
+    font-size: large;
+  }
 
 .img_login-logado {
-   color: var(--rodape);
+    color: var(--rodape);
 }
