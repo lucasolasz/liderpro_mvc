@@ -101,7 +101,7 @@ class Paginas extends Controller
         if ($dados['ds_nome_cliente'] != "") {
             $ds_nome_cliente = $dados['ds_nome_cliente'];
             $resultado = $this->clienteModel->listarClientesComFiltro($ds_nome_cliente);
-
+            
             $dados = [
                 'resultado' => $resultado
             ];

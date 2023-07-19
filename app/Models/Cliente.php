@@ -23,7 +23,10 @@ class Cliente
     //Retorna registros da tabela menu
     public function listarClientesComFiltro($letra_alfabeto)
     {
-        $this->db->query("SELECT * FROM tb_clientes WHERE ds_nome_fantasia LIKE concat(:letra_alfabeto, '%') ORDER BY ds_nome_fantasia");
+        $this->db->query("SELECT * FROM tb_clientes tcli
+        JOIN tb_segmento tseg on tseg.id_segmento = tcli.fk_segmento 
+        WHERE ds_nome_fantasia LIKE concat('%', :letra_alfabeto, '%') 
+        ORDER BY ds_nome_fantasia");
         $this->db->bind("letra_alfabeto", $letra_alfabeto);
         return $this->db->resultados();
     }

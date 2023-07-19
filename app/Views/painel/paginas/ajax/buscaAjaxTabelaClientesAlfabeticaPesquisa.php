@@ -6,7 +6,7 @@
                 foreach ($dados['resultado'] as $resultado) { ?>
                     <tr>
                         <td class="p-0 m-0">
-                            <p class="lp-paragrafo m-0"><?= ucfirst($resultado->ds_nome_fantasia) ?></p>
+                            <p class="lp-paragrafo m-0"><?= ucfirst($resultado->ds_nome_fantasia) ?> - <?= ucfirst($resultado->ds_segmento) ?></p>
                         </td>
                     </tr>
                 <?php }
