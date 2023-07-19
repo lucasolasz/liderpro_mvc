@@ -13,7 +13,7 @@ foreach ($dados['fotosLogomarca'] as $fotosLogomarca) {
         </div>
 
         <div class="col d-flex  justify-content-end">
-            <a class="lp-remove-decoration" href="<?= URL . '/Paginas/pesquisaAvancadaClienteAlfabetica' ?>">Pesquisa avançada de Clientes</a>
+            <a class="lp-remove-decoration" href="<?= URL . '/Paginas/pesquisaAvancadaClienteAlfabetica' ?>">Pesquisa Avançada de Clientes</a>
         </div>
     </div>
     
