@@ -10,19 +10,16 @@
     </nav>
 
     <div class="card">
-
         <div class="artcor card-header">
-
             <h5 class="tituloIndex">Segmentos
                 <div style="float: right;">
                     <a href="<?= URL . "\\Segmentos\\cadastrarSegmento" ?>" class="btn lp-btn-liderpro">Novo segmento</a>
                 </div>
             </h5>
-
         </div>
         <div class="card-body">
             <div class="table-responsive">
-                <table class="table table-hover">
+                <table id="tableDataTablePtBr" class="table table-hover">
                     <thead>
                         <tr>
                             <th scope="col">Nome Segmento</th>
@@ -41,19 +38,16 @@
                         foreach ($dados['visualizarSegmentos'] as $visualizarSegmentos) { ?>
                             <tr>
                                 <td><?= ucfirst($visualizarSegmentos->ds_segmento) ?></td>
-                                <td><a href="<?= URL . '\\Segmentos\\editarSegmento\\' . $visualizarSegmentos->id_segmento ?>" class="btn btn-warning"><i class="bi bi-pencil-square"></i></a>
-                                </td>
                                 <td>
-                                    <form action="<?= URL . "\\Segmentos\\deletarSegmento\\$visualizarSegmentos->id_segmento" ?>" method="POST">
-                                        <button type="submit" class="btn btn-danger"><span><i class="bi bi-trash-fill"></i></span></button>
-                                    </form>
+                                    <a href="<?= URL . '\\Segmentos\\editarSegmento\\' . $visualizarSegmentos->id_segmento ?>" class="btn btn-warning"><i class="bi bi-pencil-square"></i> Editar</a>
+
+                                    <a href="<?= URL . '\\Segmentos\\deletarSegmento\\' . $visualizarSegmentos->id_segmento ?>" class="btn btn-danger"><i class="bi bi-trash-fill"></i> Exlcuir</a>
                                 </td>
-                            <?php  } ?>
+                            </tr>
+                        <?php  } ?>
                     </tbody>
                 </table>
             </div>
         </div>
-
-
     </div>
 </div>
