@@ -22,6 +22,16 @@ function openCity(evt, cityName) {
     evt.currentTarget.className += " active";
 }
 
+//Inicialização do dataTables
+$(document).ready(function () {
+    var table = new DataTable('#tableDataTablePtBr', {
+        language: {
+            url: '//cdn.datatables.net/plug-ins/1.13.5/i18n/pt-BR.json',
+        },
+    });
+});
+
+
 
 function criticaCampoFicaVermelho(idDivMensagem, mensagem, idCampoInput, idCampoLabel) {
 

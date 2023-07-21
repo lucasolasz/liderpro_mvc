@@ -20,6 +20,12 @@
 
     <script src="<?php echo URL ?>/public/js/jquery.funcoes.js"></script>
     <link href="<?php echo URL ?>/public/css/estilos.css" rel="stylesheet">
+    
+    <!-- DataTables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.css" />
+    <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.js"></script>
+    <script src="https:////cdn.datatables.net/plug-ins/1.13.5/i18n/pt-BR.json"></script>
+    <!-- DataTables -->
 </head>
 
 <body>
