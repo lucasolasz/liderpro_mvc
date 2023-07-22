@@ -22,7 +22,7 @@
         </div>
         <div class="card-body">
             <div class="table-responsive">
-                <table class="table table-hover">
+                <table id="tableDataTablePtBr" class="table table-hover">
                     <thead>
                         <tr>
                             <th scope="col">Nome Configuração</th>
@@ -41,19 +41,15 @@
                         foreach ($dados['configLogo'] as $configLogo) { ?>
                             <tr>
                                 <td><?= ucfirst($configLogo->ds_conf_logo) ?></td>
-                                <td><a href="<?= URL . '\\ApresentacaoLogos\\editarApresentacaoLogo\\' . $configLogo->id_conf_logo ?>" class="btn btn-warning"><i class="bi bi-pencil-square"></i></a>
-                                </td>
                                 <td>
-                                    <form action="<?= URL . "\\ApresentacaoLogos\\deletarApresentacaoLogo\\$configLogo->id_conf_logo" ?>" method="POST">
-                                        <button type="submit" class="btn btn-danger"><span><i class="bi bi-trash-fill"></i></span></button>
-                                    </form>
+                                    <a href="<?= URL . '\\ApresentacaoLogos\\editarApresentacaoLogo\\' . $configLogo->id_conf_logo ?>" class="btn btn-warning"><i class="bi bi-pencil-square"></i> Editar</a>
+
+                                    <a href="<?= URL . "\\ApresentacaoLogos\\deletarApresentacaoLogo\\$configLogo->id_conf_logo" ?>" class="btn btn-danger"><i class="bi bi-trash-fill"></i> Exlcuir</a>
                                 </td>
                             <?php  } ?>
                     </tbody>
                 </table>
             </div>
         </div>
-
-
     </div>
 </div>
