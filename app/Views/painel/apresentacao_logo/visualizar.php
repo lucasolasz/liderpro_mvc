@@ -30,15 +30,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php
-                        // Exibe mensagem caso não tenha nenhum evento
-                        if (empty($dados['configLogo'])) { ?>
-                            <tr>
-                                <td colspan="2" class="align-middle">Nenhuma configuração cadastrada</td>
-                            </tr>
-                        <?php  }
-
-                        foreach ($dados['configLogo'] as $configLogo) { ?>
+                        <?php foreach ($dados['configLogo'] as $configLogo) { ?>
                             <tr>
                                 <td><?= ucfirst($configLogo->ds_conf_logo) ?></td>
                                 <td>

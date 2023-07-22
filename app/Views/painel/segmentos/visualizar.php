@@ -27,15 +27,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php
-                        // Exibe mensagem caso não tenha nenhum evento
-                        if (empty($dados['visualizarSegmentos'])) { ?>
-                            <tr>
-                                <td colspan="2" class="align-middle">Nenhum segmento cadastrado</td>
-                            </tr>
-                        <?php  }
-
-                        foreach ($dados['visualizarSegmentos'] as $visualizarSegmentos) { ?>
+                        <?php foreach ($dados['visualizarSegmentos'] as $visualizarSegmentos) { ?>
                             <tr>
                                 <td><?= ucfirst($visualizarSegmentos->ds_segmento) ?></td>
                                 <td>

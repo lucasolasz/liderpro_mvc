@@ -33,15 +33,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php
-                        // Exibe mensagem caso não tenha nenhum evento
-                        if (empty($dados['visualizaClientes'])) { ?>
-                            <tr>
-                                <td colspan="5" class="align-middle">Nenhum cliente cadastrado</td>
-                            </tr>
-                        <?php  }
-
-                        foreach ($dados['visualizaClientes'] as $visualizaClientes) { ?>
+                        <?php foreach ($dados['visualizaClientes'] as $visualizaClientes) { ?>
                             <tr>
                                 <td><?= ucfirst($visualizaClientes->ds_nome_fantasia) ?></td>
                                 <td><?= ucfirst($visualizaClientes->ds_url) ?></td>

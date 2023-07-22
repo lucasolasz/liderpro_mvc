@@ -31,15 +31,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php
-                        // Exibe mensagem caso não tenha nenhum evento
-                        if (empty($dados['visualizaPaginas'])) { ?>
-                            <tr>
-                                <td colspan="3" class="align-middle">Nenhuma página cadastrada</td>
-                            </tr>
-                        <?php  }
-
-                        foreach ($dados['visualizaPaginas'] as $visualizaPaginas) { ?>
+                        <?php foreach ($dados['visualizaPaginas'] as $visualizaPaginas) { ?>
 
                             <tr>
                                 <td><?= ucfirst($visualizaPaginas->ds_pagina) ?></td>
