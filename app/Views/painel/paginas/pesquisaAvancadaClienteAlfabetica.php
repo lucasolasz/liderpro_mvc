@@ -25,7 +25,7 @@
     <div class="d-flex flex-column mt-5">
         <div class="mb-3 d-flex justify-content-between" id="divResultadoAlfabeto">
         </div>
-        <div class="lp-container-logos-avancado" id="divResultadoAjaxAlfabetica">
+        <div class="lp-container-logos-avancado overflow-auto" id="divResultadoAjaxAlfabetica">
             <p style="color: gray;" class="p-3">Escolha uma opção de filtro</p>
         </div>
     </div>

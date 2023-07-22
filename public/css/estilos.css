@@ -800,6 +800,8 @@ body {
 .lp-container-logos-avancado {
     border-radius: 10px;
     border: 3px solid var(--azul);
+    height: 150px;
+    max-height: 150px;
 }
 
 /* ------------ LOGOS END -----------*/

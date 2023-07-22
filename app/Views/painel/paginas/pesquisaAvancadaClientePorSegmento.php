@@ -34,7 +34,7 @@
             </div>
         </div>
 
-        <div class="col-md-8 lp-container-logos-avancado m-3" id="divResultadoAjaxPorSegmento">
+        <div class="col-md-8 lp-container-logos-avancado m-3 overflow-auto" id="divResultadoAjaxPorSegmento">
             <p style="color: gray;" class="p-3">Escolha um segmento</p>
         </div>
     </div>
