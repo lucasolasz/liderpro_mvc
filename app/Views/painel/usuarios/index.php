@@ -22,7 +22,7 @@
         </div>
         <div class="card-body">
             <div class="table-responsive">
-                <table class="table table-hover">
+                <table id="tableDataTablePtBr" class="table table-hover">
                     <thead>
                         <tr>
                             <th scope="col">Nome usuário</th>
@@ -30,30 +30,18 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php
-                        // Exibe mensagem caso não tenha nenhum evento
-                        if (empty($dados['usuarios'])) { ?>
-                            <tr>
-                                <td colspan="2" class="align-middle">Nenhum usuário cadastrado</td>
-                            </tr>
-                        <?php  }
-
-                        foreach ($dados['usuarios'] as $usuarios) { ?>
+                        <?php foreach ($dados['usuarios'] as $usuarios) { ?>
                             <tr>
                                 <td><?= ucfirst($usuarios->ds_nome_usuario) ?></td>
-                                <td><a href="<?= URL . '\\UsuariosController\\editarUsuario\\' . $usuarios->id_usuario ?>" class="btn btn-warning"><i class="bi bi-pencil-square"></i></a>
-                                </td>
                                 <td>
-                                    <form action="<?= URL . "\\UsuariosController\\deletarUsuario\\$usuarios->id_usuario" ?>" method="POST">
-                                        <button type="submit" class="btn btn-danger"><span><i class="bi bi-trash-fill"></i></span></button>
-                                    </form>
+                                    <a href="<?= URL . '\\UsuariosController\\editarUsuario\\' . $usuarios->id_usuario ?>" class="btn btn-warning"><i class="bi bi-pencil-square"></i> Editar</a>
+
+                                    <a href="<?= URL . "\\UsuariosController\\deletarUsuario\\$usuarios->id_usuario" ?>" class="btn btn-danger"><i class="bi bi-trash-fill"></i> Exlcuir</a>
                                 </td>
                             <?php  } ?>
                     </tbody>
                 </table>
             </div>
         </div>
-
-
     </div>
 </div>
