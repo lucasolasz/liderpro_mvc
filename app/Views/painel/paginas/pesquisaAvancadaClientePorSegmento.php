@@ -25,7 +25,7 @@
     <div class="row mt-5">
         <div class="col-md-3">
             <h3 class="lp-titulo-paragrafo">SEGMENTOS</h3>
-            <div id="divResultadoAjaxAlteraCorSegmento">
+            <div id="divResultadoAjaxAlteraCorSegmento" class="overflow-auto">
                 <ul class="list-unstyled">
                     <?php foreach ($dados['segmentos'] as $segmentos) { ?>
                         <li class="lp-paragrafo"><a class="lp-remove-decoration opcao-segmento" id="<?= $segmentos->id_segmento ?>"><?= $segmentos->ds_segmento ?></a></li>
