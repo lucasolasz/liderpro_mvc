@@ -55,11 +55,11 @@
         </div>
         <div class="col-md d-flex flex-column">
             <div>
-                <ul class="list-unstyled">
+                <ul class="list-unstyled lista-rodape">
                     <li class="lp-titulo-rodape">CLIENTES</li>
-                    <li>RELAÇÃO DE CLIENTES</li>
-                    <li>Por Ordem Alfabética</li>
-                    <li>Por Ordem de Segmentos</li>
+                    <li><a href="<?= URL . '/Paginas/clientes' ?>">RELAÇÃO DE CLIENTES</a></li>
+                    <li><a href="<?= URL . '/Paginas/pesquisaAvancadaClienteAlfabetica' ?>">Por Ordem Alfabética</a></li>
+                    <li><a href="<?= URL . '/Paginas/pesquisaAvancadaClientePorSegmento' ?>">Por Ordem de Segmentos</a></li>
                 </ul>
             </div>
             <div class="mt-auto">
@@ -67,13 +67,13 @@
             </div>
         </div>
         <div class="col-md d-flex flex-column">
-            <ul class="list-unstyled">
-                <li class="lp-titulo-rodape"><a style="text-decoration: none; color: white" href="<?= URL . '/Paginas/contatos' ?>">CONTATOS</a></li>
-                <li><a style="text-decoration: none; color: white" href="<?= URL . '/Paginas/contatos' ?>">Endereço</a></li>
-                <li><a style="text-decoration: none; color: white" href="<?= URL . '/Paginas/contatos' ?>">Telefones</a></li>
-                <li><a style="text-decoration: none; color: white" href="<?= URL . '/Paginas/contatos' ?>">Email e Skype</a></li>
-                <li><a style="text-decoration: none; color: white" href="<?= URL . '/Paginas/contatos' ?>">Horário de Funcionamento</a></li>
-                <li><a style="text-decoration: none; color: white" href="<?= URL . '/Paginas/contatos' ?>">Como chegar</a></li>
+            <ul class="list-unstyled lista-rodape">
+                <li class="lp-titulo-rodape"><a href="<?= URL . '/Paginas/contatos' ?>">CONTATOS</a></li>
+                <li><a href="<?= URL . '/Paginas/contatos' ?>">Endereço</a></li>
+                <li><a href="<?= URL . '/Paginas/contatos' ?>">Telefones</a></li>
+                <li><a href="<?= URL . '/Paginas/contatos' ?>">Email e Skype</a></li>
+                <li><a href="<?= URL . '/Paginas/contatos' ?>">Horário de Funcionamento</a></li>
+                <li><a href="<?= URL . '/Paginas/contatos' ?>">Como chegar</a></li>
             </ul>
             <div class="mt-5">
                 <div class="lp-titulo-rodape">REDES SOCIAIS</div>
