@@ -31,7 +31,8 @@ $(document).ready(function () {
         }, "columnDefs": [{
             "targets": 0,
             "searchable": false
-        }]
+        }],
+        "lengthMenu": [5, 10, 25]
     });
 });
 
