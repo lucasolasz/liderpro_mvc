@@ -28,11 +28,17 @@
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <label for="filePerguntas">Fotos Perguntas (Max 3 arquivos)</label>
-                    <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="filePerguntas" lang="pt" accept="image/png, image/jpeg" name="filePerguntas[]" multiple>
-                        <label class="custom-file-label filePerguntas" for="filePerguntas"></label>
+                <div class="d-flex">
+                    <div class="w-100 bd-highlight">
+                        <label for="filePerguntas" id="perguntasLabel">Fotos Perguntas (Max 3 arquivos)</label>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="filePerguntas" lang="pt" accept="image/png, image/jpeg" name="filePerguntas[]" multiple>
+                            <label class="custom-file-label filePerguntas perguntasLabelInterna" for="filePerguntas"></label>
+                        </div>
+                        <small id="recebeMensagemPergunta"></small>
+                    </div>
+                    <div class="ml-1 flex-shrink-1 align-self-end bd-highlight">
+                        <button class="btn btn-danger" type="button" id="limparUploadPerguntas">Limpar</button></label>
                     </div>
                 </div>
 
@@ -298,11 +304,9 @@
                     </div>
                 </div>
 
-
-
                 <div class="row mt-4">
                     <div class="col-md-6">
-                        <input type="submit" value="Cadastrar" id="btn btnCadastrar" class="btn lp-btn-liderpro">
+                        <input type="button" value="Cadastrar" id="btnCadastrar" class="btn lp-btn-liderpro">
                     </div>
                 </div>
             </form>
@@ -341,21 +345,45 @@
         $(this).siblings(".fileFotosServico").addClass("selected").html(fileName);
     });
 
+    $("#limparUploadPerguntas").on("click", function() {
+        $("#filePerguntas").val("");
+        $(".perguntasLabelInterna").html("");
+    });
 
-    $(function() {
-        $("form").submit(function(event) {
-            event.preventDefault();
+    //Critica campos antes de salvar
+    $("#btnCadastrar").on("click", function() {
 
-            if($("#txtTitutoPagina").val() == ""){
-                criticaCampoFicaVermelho("recebeAlerta", "É necessário preencher o campo", "txtTitutoPagina", "tituloPaginalbl");
-                return;
-            } else {
-                removeCriticaCampoVermelho("recebeAlerta", "txtTitutoPagina", "tituloPaginalbl");
+        if ($("#filePerguntas").val() != "") {
+
+            var fileInput = document.getElementById("filePerguntas");
+            // files é um objeto FileList (similar ao NodeList)
+            var files = fileInput.files;
+            var file;
+            var y = 0;
+            // percorre os arquivos
+            for (var i = 0; i < files.length; i++) {
+                y++;
             }
 
-            let form = document.getElementById("cadastrarPagina");
-            form.submit();
-        });
+            if (y < 3 || y > 3) {
+                criticaCampoFicaVermelho("recebeMensagemPergunta", "É necessário colocar 3 fotos de perguntas. Foram selecionadas: " + y, "filePerguntas", "perguntasLabel");
+                return
+            } else {
+                removeCriticaCampoVermelho("recebeMensagemPergunta", "filePerguntas", "perguntasLabel");
+            }
 
+        } else {
+            removeCriticaCampoVermelho("recebeMensagemPergunta", "filePerguntas", "perguntasLabel");
+        }
+
+        if ($("#txtTitutoPagina").val() == "") {
+            criticaCampoFicaVermelho("recebeAlerta", "É necessário preencher o campo", "txtTitutoPagina", "tituloPaginalbl");
+            return;
+        } else {
+            removeCriticaCampoVermelho("recebeAlerta", "txtTitutoPagina", "tituloPaginalbl");
+        }
+
+        let form = document.getElementById("cadastrarPagina");
+        form.submit();
     });
 </script>
