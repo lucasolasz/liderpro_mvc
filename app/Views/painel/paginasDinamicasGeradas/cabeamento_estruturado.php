@@ -25,7 +25,7 @@ $quantidadeTotalCaracteres = strlen($texto);
             <img class="img-fluid" src="<?= URL . DIRECTORY_SEPARATOR . 'uploads' . DIRECTORY_SEPARATOR . $dados['dolarFotoBanner'][0]->nm_path_arquivo . DIRECTORY_SEPARATOR .  $dados['dolarFotoBanner'][0]->nm_arquivo ?>" alt="">
         <?php } ?>
     </div>
-    <div class="row py-5 d-flex align-items-center">
+    <div class="row py-3 d-flex align-items-center">
         <?php if (empty($dados['dolarFotoPergunta'])) { ?>
             <div class="container">
                 <div class="row d-flex align-items-center justify-content-center">
@@ -39,12 +39,12 @@ $quantidadeTotalCaracteres = strlen($texto);
             $i = 0;
             foreach ($dados['dolarFotoPergunta'] as $dolarFotoPergunta) {
                 if ($i == 1) { ?>
-                    <div class="col-md py-5">
-                        <img class="img-fluid" src="<?= URL . DIRECTORY_SEPARATOR . 'uploads' . DIRECTORY_SEPARATOR . $dolarFotoPergunta->nm_path_arquivo . DIRECTORY_SEPARATOR .  $dolarFotoPergunta->nm_arquivo ?>" alt="">
+                    <div class="col-md py-3">
+                        <img class="img-fluid" style="max-height: 100px; max-width: 330px" src="<?= URL . DIRECTORY_SEPARATOR . 'uploads' . DIRECTORY_SEPARATOR . $dolarFotoPergunta->nm_path_arquivo . DIRECTORY_SEPARATOR .  $dolarFotoPergunta->nm_arquivo ?>" alt="">
                     </div>
                 <?php  } else { ?>
                     <div class="col-md">
-                        <img class="img-fluid" src="<?= URL . DIRECTORY_SEPARATOR . 'uploads' . DIRECTORY_SEPARATOR .  $dolarFotoPergunta->nm_path_arquivo . DIRECTORY_SEPARATOR .  $dolarFotoPergunta->nm_arquivo ?>" alt="">
+                        <img class="img-fluid" style="max-height: 100px; max-width: 330px" src="<?= URL . DIRECTORY_SEPARATOR . 'uploads' . DIRECTORY_SEPARATOR .  $dolarFotoPergunta->nm_path_arquivo . DIRECTORY_SEPARATOR .  $dolarFotoPergunta->nm_arquivo ?>" alt="">
                     </div>
         <?php }
                 $i++;
@@ -77,14 +77,14 @@ $quantidadeTotalCaracteres = strlen($texto);
         </div>
     </div>
 
-    <div class="row py-5">
+    <div class="row py-3">
 
 
         <!-- <div class="col-sm-1 col-md-1 col-lg-1 lp-tab-servicos">SERVIÇOS</div> -->
 
         <div class="col-sm-11 col-md-11 col-lg-11">
 
-            <h2 class="py-5">Serviços</h2>
+            <h2 class="py-3">Serviços</h2>
 
             <!-- Tab links -->
             <div class="tab-lp">
