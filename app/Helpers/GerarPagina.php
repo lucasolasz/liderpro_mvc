@@ -38,7 +38,7 @@ class GerarPagina
 
             $nomeArquivoEMetodoDinamico = GeraNomeArquivoComUnderline::gerar(RemoveAcentosString::removeAcentoEDeixaMinusculaString($paginas->ds_pagina));
 
-            $arquivoDestino = APP . "\\Controllers\\PaginasDinamicas.php";
+            $arquivoDestino = APP . DIRECTORY_SEPARATOR . "Controllers" . DIRECTORY_SEPARATOR . "PaginasDinamicas.php";
 
             $modelEscolhido = "PaginaDinamica";
             $stringModel = "model('" . $modelEscolhido . "');";
@@ -78,8 +78,8 @@ class GerarPagina
         $esteView('painel/paginasDinamicasGeradas/$nomeNovaPagina', $dolarDados);
     }";
             //Cria novo arquivo de view baseado no template
-            $urlArquivoTemplate = APP . '\\Views\\painel\\templatePagina.php';
-            $urlNovaPagina = APP . '\\Views\\painel\\paginasDinamicasGeradas\\' . $nomeNovaPagina . '.php';
+            $urlArquivoTemplate = APP . DIRECTORY_SEPARATOR . 'Views' .  DIRECTORY_SEPARATOR . 'painel' . DIRECTORY_SEPARATOR . 'templatePagina.php';
+            $urlNovaPagina = APP . DIRECTORY_SEPARATOR . 'Views' . DIRECTORY_SEPARATOR . 'painel' . DIRECTORY_SEPARATOR . 'paginasDinamicasGeradas' . DIRECTORY_SEPARATOR . $nomeNovaPagina . '.php';
 
             if (!file_exists($urlNovaPagina)) {
                 copy($urlArquivoTemplate, $urlNovaPagina);
@@ -99,7 +99,7 @@ class GerarPagina
         $esteView('painel/paginas/home', $dolarDados);
     }";
 
-    $metodoAssistenciaTecnicaCompleto = "
+        $metodoAssistenciaTecnicaCompleto = "
         
     public function assistencia_tecnica() { 
         $dolarPaginas = $variavelModelTodasAsPaginas
@@ -111,7 +111,7 @@ class GerarPagina
 
         $esteView('painel/paginas/assistencia_tecnica', $dolarDados);
     }";
-        
+
 
         $conteudoQueSeraImpressoNoArquivoDestino = "<?php 
 
@@ -127,5 +127,4 @@ class PaginasDinamicas extends Controller
 
         file_put_contents($arquivoDestino, $conteudoQueSeraImpressoNoArquivoDestino);
     }
-
 }
