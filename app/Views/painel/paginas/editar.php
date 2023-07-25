@@ -40,13 +40,18 @@
                     <small id="recebeAlertaTituloMensagem"></small>
                 </div>
 
-                <div class="form-group">
-                    <label for="fileBannerPrincipal" id="tituloPaginalblBanner">Foto Banner Principal</label>
-                    <div class="input-group">
-                        <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="fileBannerPrincipal" accept="image/png, image/jpeg" name="fileBannerPrincipal">
-                            <label class="custom-file-label fileBannerPrincipal" for="fileBannerPrincipal">Escolha uma imagem para substituir a atual</label>
+                <div class="d-flex mb-3">
+                    <div class="w-100 bd-highlight">
+                        <label for="fileBannerPrincipal" id="tituloPaginalblBanner">Foto Banner Principal</label>
+                        <div class="input-group">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="fileBannerPrincipal" accept="image/png, image/jpeg" name="fileBannerPrincipal">
+                                <label class="custom-file-label fileBannerPrincipal bannerPrincipalLabelInterna" for="fileBannerPrincipal">Escolha uma imagem para substituir a atual</label>
+                            </div>
                         </div>
+                    </div>
+                    <div class="ml-1 flex-shrink-1 align-self-end bd-highlight">
+                        <button class="btn btn-danger" type="button" id="limparUploadBannerPrincipal">Limpar</button></label>
                     </div>
                     <small id="recebeMensagemBanner"></small>
                 </div>
@@ -80,16 +85,18 @@
 
                 <hr>
 
-                <div class="form-group">
-                    <label for="filePerguntas" id="tituloPaginalblPerguntas">Fotos Perguntas (Max 3 arquivos)</label>
-                    <div class="input-group">
-
+                <div class="d-flex mb-3">
+                    <div class="w-100 bd-highlight">
+                        <label for="filePerguntas" id="perguntasLabel">Fotos Perguntas (Max 3 arquivos)</label>
                         <div class="custom-file">
                             <input type="file" class="custom-file-input" id="filePerguntas" accept="image/png, image/jpeg" name="filePerguntas[]" multiple>
-                            <label class="custom-file-label filePerguntas" for="filePerguntas">Escolha as imagens para substituir as atuais</label>
+                            <label class="custom-file-label filePerguntas perguntasLabelInterna" for="filePerguntas">Escolha as imagens para substituir as atuais</label>
                         </div>
+                        <small id="recebeMensagemPergunta"></small>
                     </div>
-                    <small id="recebeMensagemPergunta"></small>
+                    <div class="ml-1 flex-shrink-1 align-self-end bd-highlight">
+                        <button class="btn btn-danger" type="button" id="limparUploadPerguntas">Limpar</button></label>
+                    </div>
                 </div>
 
                 <?= Alertas::mensagemApagaFoto('imagemPergunta') ?>
@@ -127,15 +134,18 @@
                     <textarea class="form-control" id="txtTextPrincipal" name="txtTextPrincipal" rows="8"><?= $dados['paginaSelecionada'][0]->ds_texto_principal ?></textarea>
                 </div>
 
-                <div class="form-group mt-4">
-                    <label for="fileFotoTexto" id="tituloPaginalblFotoTexto">Foto texto</label>
-                    <div class="input-group">
+                <div class="d-flex mb-3">
+                    <div class="w-100 bd-highlight">
+                        <label for="fileFotoTexto" id="tituloPaginalblFotoTexto">Foto texto</label>
                         <div class="custom-file">
                             <input type="file" class="custom-file-input" id="fileFotoTexto" accept="image/png, image/jpeg" name="fileFotoTexto">
-                            <label class="custom-file-label fileFotoTexto" for="fileFotoTexto">Escolha uma imagem para substituir a atual</label>
+                            <label class="custom-file-label fileFotoTexto fotoTextoLabelInterna" for="fileFotoTexto">Escolha uma imagem para substituir a atual</label>
                         </div>
                     </div>
                     <small id="recebeMensagemFotoTexto"></small>
+                    <div class="ml-1 flex-shrink-1 align-self-end bd-highlight">
+                        <button class="btn btn-danger" type="button" id="limparUploadBannerFotoTexto">Limpar</button></label>
+                    </div>
                 </div>
 
                 <?= Alertas::mensagemApagaFoto('imagemTexto') ?>
@@ -185,15 +195,18 @@
                             <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                                 <div class="row p-2">
                                     <div class="col-md-12 col-sm-12 col-lg-12">
-                                        <div class="form-group mt-4">
-                                            <label for="fileFotosServico" id="tituloPaginalblFotoServico">Fotos do Serviço</label>
-                                            <div class="input-group">
+                                        <div class="d-flex">
+                                            <div class="w-100 bd-highlight">
+                                                <label for="fileFotosServico" id="tituloPaginalblFotoServico">Fotos do Serviço</label>
                                                 <div class="custom-file">
                                                     <input type="file" class="custom-file-input" id="fileFotosServico" accept="image/png, image/jpeg" name="fileFotosServico[]" multiple>
-                                                    <label class="custom-file-label fileFotosServico" for="fileFotosServico">Escolha uma imagem para substituir a atual</label>
+                                                    <label class="custom-file-label fileFotosServico fotoServicoLabelInterna" for="fileFotosServico">Escolha uma imagem para substituir a atual</label>
                                                 </div>
+                                                <small id="recebeMensagemFotoServico"></small>
                                             </div>
-                                            <small id="recebeMensagemFotoServico"></small>
+                                            <div class="ml-1 flex-shrink-1 align-self-end bd-highlight">
+                                                <button class="btn btn-danger" type="button" id="limparUploadBannerFotoServico">Limpar</button></label>
+                                            </div>
                                         </div>
 
                                         <?= Alertas::mensagemApagaFoto('imagemServico') ?>
@@ -515,6 +528,26 @@
         fecharModal();
     });
 
+    $("#limparUploadPerguntas").on("click", function() {
+        $("#filePerguntas").val("");
+        $(".perguntasLabelInterna").html("Escolha as imagens para substituir as atuais");
+    });
+
+    $("#limparUploadBannerPrincipal").on("click", function() {
+        $("#fileBannerPrincipal").val("");
+        $(".bannerPrincipalLabelInterna").html("Escolha uma imagem para substituir a atual");
+    });
+
+    $("#limparUploadBannerFotoTexto").on("click", function() {
+        $("#fileFotoTexto").val("");
+        $(".fotoTextoLabelInterna").html("Escolha uma imagem para substituir a atual");
+    });
+
+    $("#limparUploadBannerFotoServico").on("click", function() {
+        $("#fileFotosServico").val("");
+        $(".fotoServicoLabelInterna").html("Escolha as imagens para substituir as atuais");
+    });
+
 
     //Critica campos antes de salvar
     $("#btnSalvarForm").on("click", function() {
@@ -530,13 +563,15 @@
             for (var i = 0; i < files.length; i++) {
                 y++;
             }
-            console.log(y)
+
             if (y < 3 || y > 3) {
-                criticaCampoFicaVermelho("recebeMensagemPergunta", "Só é possível colocar 3 fotos de perguntas. Foram selecionadas: " + y, "filePerguntas", "tituloPaginalblPerguntas");
+                criticaCampoFicaVermelho("recebeMensagemPergunta", "É necessário colocar 3 fotos de perguntas. Foram selecionadas: " + y, "filePerguntas", "perguntasLabel");
                 return
+            } else {
+                removeCriticaCampoVermelho("recebeMensagemPergunta", "filePerguntas", "perguntasLabel");
             }
         } else {
-            removeCriticaCampoVermelho("recebeMensagemPergunta", "filePerguntas", "tituloPaginalblPerguntas");
+            removeCriticaCampoVermelho("recebeMensagemPergunta", "filePerguntas", "perguntasLabel");
         }
 
         if ($("#fileBannerPrincipal").val() != "" || $("#filePerguntas").val() != "" || $("#fileFotoTexto").val() != "" || $("#fileFotosServico").val() != "") {
