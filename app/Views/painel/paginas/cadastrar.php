@@ -20,11 +20,16 @@
                     <small id="recebeAlerta"></small>
                 </div>
 
-                <div class="form-group">
-                    <label for="fileBannerPrincipal">Foto Banner Principal</label>
-                    <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="fileBannerPrincipal" name="fileBannerPrincipal" lang="pt">
-                        <label class="custom-file-label fileBannerPrincipal" for="fileBannerPrincipal"></label>
+                <div class="d-flex">
+                    <div class="w-100 bd-highlight">
+                        <label for="fileBannerPrincipal">Foto Banner Principal</label>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="fileBannerPrincipal" name="fileBannerPrincipal" lang="pt">
+                            <label class="custom-file-label fileBannerPrincipal bannerPrincipalLabelInterna" for="fileBannerPrincipal"></label>
+                        </div>
+                    </div>
+                    <div class="ml-1 flex-shrink-1 align-self-end bd-highlight">
+                        <button class="btn btn-danger" type="button" id="limparUploadBannerPrincipal">Limpar</button></label>
                     </div>
                 </div>
 
@@ -47,13 +52,19 @@
                     <textarea class="form-control val-obrigatorio" id="txtTextPrincipal" name="txtTextPrincipal" rows="8" maxlength="800"></textarea>
                 </div>
 
-                <div class="form-group mt-4">
-                    <label for="fileFotoTexto">Foto texto</label>
-                    <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="fileFotoTexto" name="fileFotoTexto" lang="pt">
-                        <label class="custom-file-label fileFotoTexto" for="fileFotoTexto"></label>
+                <div class="d-flex">
+                    <div class="w-100 bd-highlight">
+                        <label for="fileFotoTexto">Foto texto</label>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="fileFotoTexto" name="fileFotoTexto" lang="pt">
+                            <label class="custom-file-label fileFotoTexto fotoTextoLabelInterna" for="fileFotoTexto"></label>
+                        </div>
+                    </div>
+                    <div class="ml-1 flex-shrink-1 align-self-end bd-highlight">
+                        <button class="btn btn-danger" type="button" id="limparUploadBannerFotoTexto">Limpar</button></label>
                     </div>
                 </div>
+
 
                 <h5 class="lp-paragrafo">CAMPOS REFERENTES A TABELA INFERIOR DA TELA</h5>
 
@@ -73,11 +84,16 @@
                             <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                                 <div class="row p-2">
                                     <div class="col-md-12 col-sm-12 col-lg-12">
-                                        <div class="form-group mt-4">
-                                            <label for="fileFotosServico">Fotos do Serviço</label>
-                                            <div class="custom-file">
-                                                <input type="file" class="custom-file-input" id="fileFotosServico" lang="pt" accept="image/png, image/jpeg" name="fileFotosServico[]" multiple>
-                                                <label class="custom-file-label fileFotosServico" for="fileFotosServico"></label>
+                                        <div class="d-flex">
+                                            <div class="w-100 bd-highlight">
+                                                <label for="fileFotosServico">Fotos do Serviço</label>
+                                                <div class="custom-file">
+                                                    <input type="file" class="custom-file-input" id="fileFotosServico" lang="pt" accept="image/png, image/jpeg" name="fileFotosServico[]" multiple>
+                                                    <label class="custom-file-label fileFotosServico fotoServicoLabelInterna" for="fileFotosServico"></label>
+                                                </div>
+                                            </div>
+                                            <div class="ml-1 flex-shrink-1 align-self-end bd-highlight">
+                                                <button class="btn btn-danger" type="button" id="limparUploadBannerFotoServico">Limpar</button></label>
                                             </div>
                                         </div>
                                     </div>
@@ -349,6 +365,22 @@
         $("#filePerguntas").val("");
         $(".perguntasLabelInterna").html("");
     });
+
+    $("#limparUploadBannerPrincipal").on("click", function() {
+        $("#fileBannerPrincipal").val("");
+        $(".bannerPrincipalLabelInterna").html("");
+    });
+
+    $("#limparUploadBannerFotoTexto").on("click", function() {
+        $("#fileFotoTexto").val("");
+        $(".fotoTextoLabelInterna").html("");
+    });
+
+    $("#limparUploadBannerFotoServico").on("click", function() {
+        $("#fileFotosServico").val("");
+        $(".fotoServicoLabelInterna").html("");
+    });
+
 
     //Critica campos antes de salvar
     $("#btnCadastrar").on("click", function() {
