@@ -148,7 +148,7 @@ class Pagina
                 :chk_pagina_ativa
                 )");
 
-        $ds_breadcrumb_menu  = GeraNomeArquivoComUnderline::geraNomeArquivoComUnderline($dados['txtTitutoPagina']);
+        $ds_breadcrumb_menu  = GeraNomeArquivoComUnderline::gerar($dados['txtTitutoPagina']);
 
         $this->db->bind("ds_pagina", trim($dados['txtTitutoPagina']));
         $this->db->bind("ds_url_menu", "/$ds_breadcrumb_menu");

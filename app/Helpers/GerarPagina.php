@@ -36,7 +36,7 @@ class GerarPagina
 
         foreach ($paginaDinamica as $paginas) {
 
-            $nomeArquivoEMetodoDinamico = GeraNomeArquivoComUnderline::geraNomeArquivoComUnderline(RemoveAcentosString::removeAcentoEDeixaMinusculaString($paginas->ds_pagina));
+            $nomeArquivoEMetodoDinamico = GeraNomeArquivoComUnderline::gerar(RemoveAcentosString::removeAcentoEDeixaMinusculaString($paginas->ds_pagina));
 
             $arquivoDestino = APP . "\\Controllers\\PaginasDinamicas.php";
 

@@ -3,7 +3,7 @@
 
 class GeraNomeArquivoComUnderline
 {
-    public static function geraNomeArquivoComUnderline($nomeArquivo){
+    public static function gerar($nomeArquivo){
         
         $palavra_explode = explode(" ", $nomeArquivo);
         $tamanhoArray = count($palavra_explode);
