@@ -436,7 +436,7 @@ class Pagina
             for ($i = 0; $i < count($foto); $i++) {
                 $nomeArquivo = $foto[$i]->nm_arquivo;
                 $pathArquivo = $foto[$i]->nm_path_arquivo;
-                $pathCompleto = "uploads\\$pathArquivo\\$nomeArquivo";
+                $pathCompleto = "uploads/$pathArquivo/$nomeArquivo";
 
                 $upload = new Upload();
                 $upload->deletarArquivo(null, $pathCompleto);
@@ -445,7 +445,7 @@ class Pagina
 
             $nomeArquivo = $foto[0]->nm_arquivo;
             $pathArquivo = $foto[0]->nm_path_arquivo;
-            $pathCompleto = "uploads\\$pathArquivo\\$nomeArquivo";
+            $pathCompleto = "uploads/$pathArquivo/$nomeArquivo";
 
             $upload = new Upload();
             $upload->deletarArquivo(null, $pathCompleto);
@@ -471,10 +471,10 @@ class Pagina
             $this->db->executa();
         }
 
-        $pathCompletoPastaImagensUpload = "uploads\\pagina_id_" . $idPagina;
+        $pathCompletoPastaImagensUpload = "uploads/pagina_id_" . $idPagina;
         $this->apagar_pasta($pathCompletoPastaImagensUpload);
 
-        $pathCompletoArquivoPaginaView = APP . "\\Views\\painel\\paginasDinamicasGeradas\\$nomePagina.php";
+        $pathCompletoArquivoPaginaView = APP . "/Views/painel/paginasDinamicasGeradas/$nomePagina.php";
         $this->apagaPaginaDinamica($pathCompletoArquivoPaginaView);
 
         return true;

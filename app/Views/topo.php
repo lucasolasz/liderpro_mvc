@@ -51,7 +51,7 @@
             //Temporário
             if ($dados['tituloBreadcrumb'] == "assistencia_tecnica") {
                 $paginaBreadCrumb =  "ASSISTÊNCIA TÉCNICA";
-                $urlBreadCrumb = "\\assistencia_tecnica";
+                $urlBreadCrumb = "/assistencia_tecnica";
             }
         }
     }
@@ -92,7 +92,7 @@
                 <div class="flex-grow-1 d-flex align-items-center" style="padding-left: 58px">
                     <div class="lp-breadcrumb">
                         <?php if (isset($dados['paginas']) && !isset($dados["paginasLiderPro"]) && $paginaBreadCrumb != "") { ?>
-                            <a href="<?= URL ?>">Home</a> > <a href="<?= URL . '\\PaginasDinamicas' . $urlBreadCrumb ?>"><?= $paginaBreadCrumb ?></a>
+                            <a href="<?= URL ?>">Home</a> > <a href="<?= URL . '/PaginasDinamicas' . $urlBreadCrumb ?>"><?= $paginaBreadCrumb ?></a>
                         <?php } ?>
 
                         <?php if (isset($dados['paginasLiderPro'])) { ?>
@@ -161,7 +161,7 @@
                         <div class="navbar-collapse">
                             <div class="list-unstyled d-flex lp-nav-ul">
                                 <li>
-                                    <a href="<?= URL . '\\PaginasDinamicas\\assistencia_tecnica' ?>" class="lp-nav-link <?= $dados['tituloBreadcrumb'] == 'assistencia_tecnica' ? 'lp-nav-active' : ''; ?>">Assistência Técnica</a>
+                                    <a href="<?= URL . '/PaginasDinamicas/assistencia_tecnica' ?>" class="lp-nav-link <?= $dados['tituloBreadcrumb'] == 'assistencia_tecnica' ? 'lp-nav-active' : ''; ?>">Assistência Técnica</a>
                                     <ul class="list-unstyled submenu">
                                         <li class="sem-categoria">
                                             <a href="<?= URL . '/AssistenciaOpcao/computador_opc' ?>">
@@ -215,7 +215,7 @@
                                 </li>
 
                                 <?php foreach ($dados['paginas'] as $paginas) { ?>
-                                    <li><a href="<?= URL . '\\PaginasDinamicas\\' . $paginas->ds_breadcrumb_menu ?>" class="lp-nav-link <?= $dados['tituloBreadcrumb'] == $paginas->ds_breadcrumb_menu ? 'lp-nav-active' : ''; ?>"><?= ucfirst($paginas->ds_pagina) ?></a></li>
+                                    <li><a href="<?= URL . '/PaginasDinamicas/' . $paginas->ds_breadcrumb_menu ?>" class="lp-nav-link <?= $dados['tituloBreadcrumb'] == $paginas->ds_breadcrumb_menu ? 'lp-nav-active' : ''; ?>"><?= ucfirst($paginas->ds_pagina) ?></a></li>
                                 <?php } ?>
                                 <li class="d-flex align-items-center justify-content-center" style="width: 200px;">
                                     <a href="#" class="lp-nav-link">(21)&nbsp2526-8100&nbsp

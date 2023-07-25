@@ -2,7 +2,7 @@
 
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="<?= URL . "\\ApresentacaoLogos\\visualizarApresentacaoLogo" ?>">Apresentação da Logo</a></li>
+            <li class="breadcrumb-item"><a href="<?= URL . "/ApresentacaoLogos/visualizarApresentacaoLogo" ?>">Apresentação da Logo</a></li>
             <li class="breadcrumb-item active" aria-current="page">Cadastro de Configuração</li>
         </ol>
     </nav>

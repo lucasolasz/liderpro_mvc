@@ -18,7 +18,7 @@
                 </li>
 
                 <?php foreach ($dados['paginas'] as $paginas) { ?>
-                    <li><a href="<?= URL . '\\PaginasDinamicas\\' . $paginas->ds_breadcrumb_menu ?>"><?= mb_strtoupper($paginas->ds_pagina) ?></a></li>
+                    <li><a href="<?= URL . '/PaginasDinamicas/' . $paginas->ds_breadcrumb_menu ?>"><?= mb_strtoupper($paginas->ds_pagina) ?></a></li>
                 <?php } ?>
             </ul>
         </div>

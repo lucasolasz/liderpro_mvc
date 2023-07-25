@@ -1,7 +1,7 @@
 <?php
 $infoImagem =  array();
 foreach ($dados['fotosLogomarca'] as $fotosLogomarca) {
-    $caminho = URL . "\\uploads\\logomarcas\\" . $fotosLogomarca->nm_arquivo;
+    $caminho = URL . "/uploads/logomarcas/" . $fotosLogomarca->nm_arquivo;
     $infoImagem[] = ['caminho' => $caminho];
 }
 ?>

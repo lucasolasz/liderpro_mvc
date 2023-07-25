@@ -1,7 +1,7 @@
 <div class="mx-auto p-5">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="<?= URL ?>\\Painel\\visualizarPaginas">Páginas</a></li>
+            <li class="breadcrumb-item"><a href="<?= URL ?>/Painel/visualizarPaginas">Páginas</a></li>
             <li class="breadcrumb-item active" aria-current="page"><?= ucfirst($dados['paginaSelecionada'][0]->ds_pagina) ?></li>
         </ol>
     </nav>
@@ -11,7 +11,7 @@
             <h2>Editar Página</h2>
             <small>Preencha o formulário abaixo para cadastrar uma nova página</small>
 
-            <form name="editarPagina" id="editarPagina" method="POST" action="<?= URL . '\\Painel\\editarPagina\\' . $dados['paginaSelecionada'][0]->id_pagina ?>" enctype="multipart/form-data">
+            <form name="editarPagina" id="editarPagina" method="POST" action="<?= URL . '/Painel/editarPagina/' . $dados['paginaSelecionada'][0]->id_pagina ?>" enctype="multipart/form-data">
 
                 <!-- Modal -->
                 <div class="modal fade" id="ExemploModalCentralizado" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
@@ -64,11 +64,11 @@
                             <div class="row d-flex align-items-center justify-content-center">
                                 <div class="col-md-4 ">
                                     <div class="card mb-4">
-                                        <img src="<?= URL . "\\uploads\\$fotoBanner->nm_path_arquivo\\$fotoBanner->nm_arquivo " ?>" class="card-img-top" alt="">
+                                        <img src="<?= URL . "/uploads/$fotoBanner->nm_path_arquivo/$fotoBanner->nm_arquivo " ?>" class="card-img-top" alt="">
                                         <div class="card-body">
                                             <div class="text-center">
                                                 <p>Foto atual</p>
-                                                <a href="<?= URL . "\\Painel\\deletarImagemFormulario\\$fotoBanner->id_foto_banner?id_pagina=" . base64_encode($dados['paginaSelecionada'][0]->id_pagina) . '&nome_tabela=' . base64_encode("tb_foto_banner") . '&nome_alerta=' . base64_encode("imagemBanner") . '&nome_mensagem=' . base64_encode("Banner") ?>" class="btn btn-danger mt-1"> Excluir imagem <i class="bi bi-trash-fill"></i></a>
+                                                <a href="<?= URL . "/Painel/deletarImagemFormulario/$fotoBanner->id_foto_banner?id_pagina=" . base64_encode($dados['paginaSelecionada'][0]->id_pagina) . '&nome_tabela=' . base64_encode("tb_foto_banner") . '&nome_alerta=' . base64_encode("imagemBanner") . '&nome_mensagem=' . base64_encode("Banner") ?>" class="btn btn-danger mt-1"> Excluir imagem <i class="bi bi-trash-fill"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -106,11 +106,11 @@
                             <?php foreach ($dados['fotoPergunta'] as $fotoPergunta) { ?>
                                 <div class="col-md-4">
                                     <div class="card mb-4">
-                                        <img src="<?= URL . "\\uploads\\$fotoPergunta->nm_path_arquivo\\$fotoPergunta->nm_arquivo " ?>" class="card-img-top" alt="">
+                                        <img src="<?= URL . "/uploads/$fotoPergunta->nm_path_arquivo/$fotoPergunta->nm_arquivo " ?>" class="card-img-top" alt="">
                                         <div class="card-body">
                                             <div class="text-center">
                                                 <p>Foto atual</p>
-                                                <a href="<?= URL . "\\Painel\\deletarImagemFormulario\\$fotoPergunta->id_foto_pergunta?id_pagina=" . base64_encode($dados['paginaSelecionada'][0]->id_pagina) . '&nome_tabela=' . base64_encode("tb_foto_pergunta") . '&nome_alerta=' . base64_encode("imagemPergunta") . '&nome_mensagem=' . base64_encode("Pergunta") ?>" class="btn btn-danger mt-1"> Excluir imagem <i class="bi bi-trash-fill"></i></a>
+                                                <a href="<?= URL . "/Painel/deletarImagemFormulario/$fotoPergunta->id_foto_pergunta?id_pagina=" . base64_encode($dados['paginaSelecionada'][0]->id_pagina) . '&nome_tabela=' . base64_encode("tb_foto_pergunta") . '&nome_alerta=' . base64_encode("imagemPergunta") . '&nome_mensagem=' . base64_encode("Pergunta") ?>" class="btn btn-danger mt-1"> Excluir imagem <i class="bi bi-trash-fill"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -151,11 +151,11 @@
                             <div class="row d-flex align-items-center justify-content-center">
                                 <div class="col-md-4 ">
                                     <div class="card mb-4">
-                                        <img src="<?= URL . "\\uploads\\$fotoTexto->nm_path_arquivo\\$fotoTexto->nm_arquivo " ?>" class="card-img-top" alt="">
+                                        <img src="<?= URL . "/uploads/$fotoTexto->nm_path_arquivo/$fotoTexto->nm_arquivo " ?>" class="card-img-top" alt="">
                                         <div class="card-body">
                                             <div class="text-center">
                                                 <p>Foto atual</p>
-                                                <a href="<?= URL . "\\Painel\\deletarImagemFormulario\\$fotoTexto->id_foto_texto?id_pagina=" . base64_encode($dados['paginaSelecionada'][0]->id_pagina) . '&nome_tabela=' . base64_encode("tb_foto_texto") . '&nome_alerta=' . base64_encode("imagemTexto") . '&nome_mensagem=' . base64_encode("Foto texto") ?>" class="btn btn-danger mt-1"> Excluir imagem <i class="bi bi-trash-fill"></i></a>
+                                                <a href="<?= URL . "/Painel/deletarImagemFormulario/$fotoTexto->id_foto_texto?id_pagina=" . base64_encode($dados['paginaSelecionada'][0]->id_pagina) . '&nome_tabela=' . base64_encode("tb_foto_texto") . '&nome_alerta=' . base64_encode("imagemTexto") . '&nome_mensagem=' . base64_encode("Foto texto") ?>" class="btn btn-danger mt-1"> Excluir imagem <i class="bi bi-trash-fill"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -210,11 +210,11 @@
                                                     <?php foreach ($dados['fotoServico'] as $fotoServico) { ?>
                                                         <div class="col-md-4">
                                                             <div class="card mb-4">
-                                                                <img src="<?= URL . "\\uploads\\$fotoServico->nm_path_arquivo\\$fotoServico->nm_arquivo " ?>" class="card-img-top" alt="">
+                                                                <img src="<?= URL . "/uploads/$fotoServico->nm_path_arquivo/$fotoServico->nm_arquivo " ?>" class="card-img-top" alt="">
                                                                 <div class="card-body">
                                                                     <div class="text-center">
                                                                         <p>Foto atual</p>
-                                                                        <a href="<?= URL . "\\Painel\\deletarImagemFormulario\\$fotoServico->id_foto_servico?id_pagina=" . base64_encode($dados['paginaSelecionada'][0]->id_pagina) . '&nome_tabela=' . base64_encode("tb_foto_servico") . '&nome_alerta=' . base64_encode("imagemServico") . '&nome_mensagem=' . base64_encode("Foto Serviço") ?>" class="btn btn-danger mt-1"> Excluir imagem <i class="bi bi-trash-fill"></i></a>
+                                                                        <a href="<?= URL . "/Painel/deletarImagemFormulario/$fotoServico->id_foto_servico?id_pagina=" . base64_encode($dados['paginaSelecionada'][0]->id_pagina) . '&nome_tabela=' . base64_encode("tb_foto_servico") . '&nome_alerta=' . base64_encode("imagemServico") . '&nome_mensagem=' . base64_encode("Foto Serviço") ?>" class="btn btn-danger mt-1"> Excluir imagem <i class="bi bi-trash-fill"></i></a>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -470,7 +470,7 @@
 <script>
     // Add the following code if you want the name of the file appear on select
     $("#fileBannerPrincipal").on("change", function() {
-        var fileName = $(this).val().split("\\").pop();
+        var fileName = $(this).val().split("/").pop();
         $(this).siblings(".fileBannerPrincipal").addClass("selected").html(fileName);
     });
 
@@ -484,7 +484,7 @@
 
     // Add the following code if you want the name of the file appear on select
     $("#fileFotoTexto").on("change", function() {
-        var fileName = $(this).val().split("\\").pop();
+        var fileName = $(this).val().split("/").pop();
         $(this).siblings(".fileFotoTexto").addClass("selected").html(fileName);
     });
 

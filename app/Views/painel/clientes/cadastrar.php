@@ -2,7 +2,7 @@
 
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="<?= URL . "\\Clientes\\visualizarClientes" ?>">Clientes</a></li>
+            <li class="breadcrumb-item"><a href="<?= URL . "/Clientes/visualizarClientes" ?>">Clientes</a></li>
             <li class="breadcrumb-item active" aria-current="page">Cadastro de Cliente</li>
         </ol>
     </nav>
@@ -137,7 +137,7 @@
 
 <script>
     $("#fileLogomarcaCliente").on("change", function() {
-        var fileName = $(this).val().split("\\").pop();
+        var fileName = $(this).val().split("/").pop();
         $(this).siblings(".fileLogomarcaCliente").addClass("selected").html(fileName);
     });
 

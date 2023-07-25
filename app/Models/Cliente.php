@@ -183,7 +183,7 @@ class Cliente
 
         $nomeArquivo = $foto[0]->nm_arquivo;
         $pathArquivo = $foto[0]->nm_path_arquivo;
-        $pathCompleto = "uploads\\$pathArquivo\\$nomeArquivo";
+        $pathCompleto = "uploads/$pathArquivo/$nomeArquivo";
 
         $upload = new Upload();
         $upload->deletarArquivo(null, $pathCompleto);
@@ -240,7 +240,7 @@ class Cliente
         if (!empty($foto)) {
             $nomeArquivo = $foto[0]->nm_arquivo;
             $pathArquivo = $foto[0]->nm_path_arquivo;
-            $pathCompletoLogomarcaCliente = "uploads\\$pathArquivo\\$nomeArquivo";
+            $pathCompletoLogomarcaCliente = "uploads/$pathArquivo/$nomeArquivo";
 
             $upload = new Upload();
             $upload->deletarArquivo(null, $pathCompletoLogomarcaCliente);

@@ -2,7 +2,7 @@
 
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="<?= URL . "\\UsuariosController\\visualizarUsuarios" ?>">Usuários</a></li>
+            <li class="breadcrumb-item"><a href="<?= URL . "/UsuariosController/visualizarUsuarios" ?>">Usuários</a></li>
             <li class="breadcrumb-item active" aria-current="page"><?= ucfirst($dados['usuario']->ds_nome_usuario) ?></li>
         </ol>
     </nav>
@@ -12,7 +12,7 @@
             <h2>Editar Usuário</h2>
             <small>Preencha o formulário abaixo para editar o usuário</small>
 
-            <form name="editar" method="POST" action="<?= URL . "\\UsuariosController\\editarUsuario\\" . $dados['usuario']->id_usuario ?>">
+            <form name="editar" method="POST" action="<?= URL . "/UsuariosController/editarUsuario/" . $dados['usuario']->id_usuario ?>">
                 <div class="mb-3 mt-4">
                     <label for="txtNome" class="form-label">Nome: *</label>
                     <input type="text" class="form-control <?= $dados['nome_erro'] ? 'is-invalid' : '' ?>" name="txtNome" id="txtNome" value="<?= $dados['usuario']->ds_nome_usuario ?>">

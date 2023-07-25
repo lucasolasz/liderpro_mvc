@@ -2,7 +2,7 @@
 
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="<?= URL . "\\ApresentacaoLogos\\visualizarApresentacaoLogo" ?>">Apresentação da Logo</a></li>
+            <li class="breadcrumb-item"><a href="<?= URL . "/ApresentacaoLogos/visualizarApresentacaoLogo" ?>">Apresentação da Logo</a></li>
             <li class="breadcrumb-item active" aria-current="page"><?= $dados['configLogo']->ds_conf_logo ?></li>
         </ol>
     </nav>
@@ -12,7 +12,7 @@
             <h2>Editar Configuração</h2>
             <small>Preencha o formulário abaixo para editar uma configuração</small>
 
-            <form name="editarApresentacaoLogo" id="editarApresentacaoLogo" method="POST" action="<?= URL . "\\ApresentacaoLogos\\editarApresentacaoLogo\\" . $dados['configLogo']->id_conf_logo ?>">
+            <form name="editarApresentacaoLogo" id="editarApresentacaoLogo" method="POST" action="<?= URL . "/ApresentacaoLogos/editarApresentacaoLogo/" . $dados['configLogo']->id_conf_logo ?>">
                 <div class="mb-3 mt-4">
                     <label for="txtNomeConfiguracao" class="form-label" id="nomeConfiguracaolbl">Nome Configuração:</label>
                     <input type="text" class="form-control" name="txtNomeConfiguracao" id="txtNomeConfiguracao" value="<?= $dados['configLogo']->ds_conf_logo ?>">

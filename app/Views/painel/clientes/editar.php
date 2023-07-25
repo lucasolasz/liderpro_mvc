@@ -2,7 +2,7 @@
 
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="<?= URL . "\\Clientes\\visualizarClientes" ?>">Clientes</a></li>
+            <li class="breadcrumb-item"><a href="<?= URL . "/Clientes/visualizarClientes" ?>">Clientes</a></li>
             <li class="breadcrumb-item active" aria-current="page"><?= $dados['cliente']->ds_nome_fantasia ?></li>
         </ol>
     </nav>
@@ -12,7 +12,7 @@
             <h2>Editar Cliente</h2>
             <small>Preencha o formulário abaixo para editar o cliente</small>
 
-            <form name="editarCliente" id="editarCliente" method="POST" action="<?= URL . "\\Clientes\\editarCliente\\" . $dados['cliente']->id_cliente ?>" enctype="multipart/form-data">
+            <form name="editarCliente" id="editarCliente" method="POST" action="<?= URL . "/Clientes/editarCliente/" . $dados['cliente']->id_cliente ?>" enctype="multipart/form-data">
                 <div class="mb-3 mt-4">
                     <label for="txtNomeFantasia" class="form-label" id="nomeFantasialbl">Nome Fantasia:</label>
                     <input type="text" class="form-control" name="txtNomeFantasia" id="txtNomeFantasia" value="<?= $dados['cliente']->ds_nome_fantasia ?>">
@@ -65,7 +65,7 @@
                         </div>
                         <div class="col-md-9 lp-caixa-preview d-flex align-items-center justify-content-center">
                             <div id="preview">
-                                <img style="width: 200px; height: 140px; padding: 10px" src="<?= URL . "\\uploads\\" . $dados['logomarca']->nm_path_arquivo . "\\" . $dados['logomarca']->nm_arquivo ?>" alt="Preview" />
+                                <img style="width: 200px; height: 140px; padding: 10px" src="<?= URL . "/uploads/" . $dados['logomarca']->nm_path_arquivo . "/" . $dados['logomarca']->nm_arquivo ?>" alt="Preview" />
                             </div>
                         </div>
                     </div>
@@ -173,7 +173,7 @@
 
 <script>
     $("#fileLogomarcaCliente").on("change", function() {
-        var fileName = $(this).val().split("\\").pop();
+        var fileName = $(this).val().split("/").pop();
         $(this).siblings(".fileLogomarcaCliente").addClass("selected").html(fileName);
     });
 

@@ -4,7 +4,7 @@
 
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="<?= URL . "\\Painel\\index" ?>">Painel</a></li>
+            <li class="breadcrumb-item"><a href="<?= URL . "/Painel/index" ?>">Painel</a></li>
             <li class="breadcrumb-item active" aria-current="page">Apresentação da Logo</li>
         </ol>
     </nav>
@@ -15,7 +15,7 @@
 
             <h5 class="tituloIndex">Apresentação da Logo
                 <!-- <div style="float: right;">
-                    <a href="<?= URL . "\\ApresentacaoLogos\\cadastrarApresentacaoLogo" ?>" class="btn lp-btn-liderpro">Nova Configuração</a>
+                    <a href="<?= URL . "/ApresentacaoLogos/cadastrarApresentacaoLogo" ?>" class="btn lp-btn-liderpro">Nova Configuração</a>
                 </div> -->
             </h5>
 
@@ -34,9 +34,9 @@
                             <tr>
                                 <td><?= ucfirst($configLogo->ds_conf_logo) ?></td>
                                 <td>
-                                    <a href="<?= URL . '\\ApresentacaoLogos\\editarApresentacaoLogo\\' . $configLogo->id_conf_logo ?>" class="btn btn-warning"><i class="bi bi-pencil-square"></i> Editar</a>
+                                    <a href="<?= URL . '/ApresentacaoLogos/editarApresentacaoLogo/' . $configLogo->id_conf_logo ?>" class="btn btn-warning"><i class="bi bi-pencil-square"></i> Editar</a>
 
-                                    <a href="<?= URL . "\\ApresentacaoLogos\\deletarApresentacaoLogo\\$configLogo->id_conf_logo" ?>" class="btn btn-danger"><i class="bi bi-trash-fill"></i> Exlcuir</a>
+                                    <a href="<?= URL . "/ApresentacaoLogos/deletarApresentacaoLogo/$configLogo->id_conf_logo" ?>" class="btn btn-danger"><i class="bi bi-trash-fill"></i> Exlcuir</a>
                                 </td>
                             <?php  } ?>
                     </tbody>

@@ -2,7 +2,7 @@
 
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="<?= URL . "\\Segmentos\\visualizarSegmentos" ?>">Segmentos</a></li>
+            <li class="breadcrumb-item"><a href="<?= URL . "/Segmentos/visualizarSegmentos" ?>">Segmentos</a></li>
             <li class="breadcrumb-item active" aria-current="page"><?= $dados['segmento']->ds_segmento ?></li>
         </ol>
     </nav>
@@ -12,7 +12,7 @@
             <h2>Editar o Segmento</h2>
             <small>Preencha o formulário abaixo para editar o segmento</small>
 
-            <form name="editarSegmento" id="editarSegmento" method="POST" action="<?= URL . "\\Segmentos\\editarSegmento\\" . $dados['segmento']->id_segmento ?>">
+            <form name="editarSegmento" id="editarSegmento" method="POST" action="<?= URL . "/Segmentos/editarSegmento/" . $dados['segmento']->id_segmento ?>">
                 <div class="mb-3 mt-4">
                     <label for="txtNomeSegmento" class="form-label" id="nomeSegmentolbl">Nome Segmento</label>
                     <input type="text" class="form-control" name="txtNomeSegmento" id="txtNomeSegmento" value="<?= $dados['segmento']->ds_segmento ?>">

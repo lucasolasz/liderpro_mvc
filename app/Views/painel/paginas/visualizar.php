@@ -4,7 +4,7 @@
 
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="<?= URL . "\\Painel\\index" ?>">Painel</a></li>
+            <li class="breadcrumb-item"><a href="<?= URL . "/Painel/index" ?>">Painel</a></li>
             <li class="breadcrumb-item active" aria-current="page">Páginas</li>
         </ol>
     </nav>
@@ -15,7 +15,7 @@
 
             <h5 class="tituloIndex">Páginas
                 <div style="float: right;">
-                    <a href="<?= URL ?>\\Painel\\cadastrarPagina" class="btn lp-btn-liderpro">Nova Página</a>
+                    <a href="<?= URL ?>/Painel/cadastrarPagina" class="btn lp-btn-liderpro">Nova Página</a>
                 </div>
             </h5>
 
@@ -37,9 +37,9 @@
                                 <td><?= ucfirst($visualizaPaginas->ds_pagina) ?></td>
                                 <td><?php echo $visualizaPaginas->chk_pagina_ativa == 'S' ? "SIM" : "NÃO" ?></td>
                                 <td>
-                                    <a href="<?= URL . '\\Painel\\editarPagina\\' . $visualizaPaginas->id_pagina ?>" class="btn btn-warning"><i class="bi bi-pencil-square"></i> Editar</a>
+                                    <a href="<?= URL . '/Painel/editarPagina/' . $visualizaPaginas->id_pagina ?>" class="btn btn-warning"><i class="bi bi-pencil-square"></i> Editar</a>
 
-                                    <a href="<?= URL . "\\Painel\\deletarPagina\\$visualizaPaginas->id_pagina?nome_pagina=" . base64_encode($visualizaPaginas->ds_breadcrumb_menu) ?>" class="btn btn-danger"><i class="bi bi-trash-fill"></i> Exlcuir</a>
+                                    <a href="<?= URL . "/Painel/deletarPagina/$visualizaPaginas->id_pagina?nome_pagina=" . base64_encode($visualizaPaginas->ds_breadcrumb_menu) ?>" class="btn btn-danger"><i class="bi bi-trash-fill"></i> Exlcuir</a>
                                 </td>
                             <?php  } ?>
                     </tbody>

@@ -315,7 +315,7 @@
 <script>
     // Add the following code if you want the name of the file appear on select
     $("#fileBannerPrincipal").on("change", function() {
-        var fileName = $(this).val().split("\\").pop();
+        var fileName = $(this).val().split("/").pop();
         $(this).siblings(".fileBannerPrincipal").addClass("selected").html(fileName);
     });
 
@@ -329,7 +329,7 @@
 
     // Add the following code if you want the name of the file appear on select
     $("#fileFotoTexto").on("change", function() {
-        var fileName = $(this).val().split("\\").pop();
+        var fileName = $(this).val().split("/").pop();
         $(this).siblings(".fileFotoTexto").addClass("selected").html(fileName);
     });
 
