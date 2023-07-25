@@ -12,18 +12,19 @@ $quantidadeTotalCaracteres = strlen($texto);
 ?>
 <div class="container p-5">
     <div class="row">
-        <?php if (empty($dados['dolarFotoBanner'])) { ?>
-            <div class="container">
-                <div class="row d-flex align-items-center justify-content-center">
+
+        <div class="container">
+            <div class="row d-flex align-items-center justify-content-center">
+                <?php if (empty($dados['dolarFotoBanner'])) { ?>
                     <figure class="border">
-                        <img class="img-fluid" src="<?= URL . DIRECTORY_SEPARATOR . 'img' . DIRECTORY_SEPARATOR . 'logo-liderpro.png' ?>" alt="">
+                        <img class="img-fluid" style="max-height: 355px; max-width: 1080px" src="<?= URL . DIRECTORY_SEPARATOR . 'img' . DIRECTORY_SEPARATOR . 'logo-liderpro.png' ?>" alt="">
                         <figcaption class="text-center">Foto provisória</figcaption>
                     </figure>
-                </div>
+                <?php } else { ?>
+                    <img class="img-fluid" style="max-height: 355px; max-width: 1080px" src="<?= URL . DIRECTORY_SEPARATOR . 'uploads' . DIRECTORY_SEPARATOR . $dados['dolarFotoBanner'][0]->nm_path_arquivo . DIRECTORY_SEPARATOR .  $dados['dolarFotoBanner'][0]->nm_arquivo ?>" alt="">
+                <?php } ?>
             </div>
-        <?php } else { ?>
-            <img class="img-fluid" src="<?= URL . DIRECTORY_SEPARATOR . 'uploads' . DIRECTORY_SEPARATOR . $dados['dolarFotoBanner'][0]->nm_path_arquivo . DIRECTORY_SEPARATOR .  $dados['dolarFotoBanner'][0]->nm_arquivo ?>" alt="">
-        <?php } ?>
+        </div>
     </div>
     <div class="row py-3 d-flex align-items-center">
         <?php if (empty($dados['dolarFotoPergunta'])) { ?>
