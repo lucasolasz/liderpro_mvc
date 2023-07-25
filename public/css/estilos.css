@@ -316,6 +316,7 @@ body {
     color: var(--rodape) !important;
     text-transform: uppercase;
     font-weight: 700;
+    cursor: pointer;
 }
 
 /* ------------ PAGINAS END ------------*/

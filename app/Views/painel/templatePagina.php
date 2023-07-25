@@ -1,3 +1,15 @@
+<?php
+//Criado para limitar os caracteres do texto principal do serviço
+$texto = $dados['paginaSelecionada'][0]->ds_texto_principal;
+
+// Limitar o texto a 800 caracteres
+$limiteCaracteres = 800;
+$textoDiv1 = substr($texto, 0, $limiteCaracteres);
+$textoDiv2 = substr($texto, $limiteCaracteres);
+
+// Contar o número total de caracteres no texto
+$quantidadeTotalCaracteres = strlen($texto);
+?>
 <div class="container p-5">
     <div class="row">
         <?php if (empty($dados['dolarFotoBanner'])) { ?>
@@ -42,7 +54,11 @@
 
     <div class="row">
         <div class="col-md-9 col-lg-9 d-flex align-items-center">
-            <p class="lp-paragrafo "> <?= $dados['paginaSelecionada'][0]->ds_texto_principal ?><a class="ml-2 lp-link-veja-mais" href="#">VEJA +</a>
+            <p class="lp-paragrafo text-justify"><?= $textoDiv1 ?>
+                <?php if ($quantidadeTotalCaracteres > $limiteCaracteres) { ?>
+                    <a class="ml-2 lp-link-veja-mais" id="vejaMais">VEJA +</a>
+                    <span id="spanContinuacaoTexto"><?= $textoDiv2 ?></span>
+                <?php }  ?>
             </p>
         </div>
         <div class="col-md-3 col-lg-3 d-flex justify-content-center">
@@ -56,7 +72,7 @@
                     </div>
                 </div>
             <?php } else { ?>
-                <img class="img-fluid" style="height: 200px; width: 180px" src="<?= URL . DIRECTORY_SEPARATOR . 'uploads' . DIRECTORY_SEPARATOR . $dados['dolarFotoTexto'][0]->nm_path_arquivo . DIRECTORY_SEPARATOR .  $dados['dolarFotoTexto'][0]->nm_arquivo ?>" alt="">
+                <img class="img-fluid" style="max-height: 200px; max-width: 200px" src="<?= URL . DIRECTORY_SEPARATOR . 'uploads' . DIRECTORY_SEPARATOR . $dados['dolarFotoTexto'][0]->nm_path_arquivo . DIRECTORY_SEPARATOR .  $dados['dolarFotoTexto'][0]->nm_arquivo ?>" alt="">
             <?php } ?>
         </div>
     </div>
@@ -256,4 +272,12 @@
     // Get the element with id="defaultOpen" and click on it
     //Abre a primeira aba como padrão 
     document.getElementById("defaultOpen").click();
+
+    $(document).ready(function() {
+        $("#spanContinuacaoTexto").hide();
+        $("#vejaMais").click(function() {
+            $("#vejaMais").remove();
+            $("#spanContinuacaoTexto").show();
+        });
+    });
 </script>
