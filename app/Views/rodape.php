@@ -25,7 +25,8 @@
         <div class="col-md">
             <ul class="list-unstyled lista-rodape">
                 <li class="lp-titulo-rodape">LIDERPRO</li>
-                <li><a href="<?= URL . '/Paginas/valores' ?>">VALORES</a>
+                <li><a href="<?= URL . '/Paginas/lider_pro' ?>">LIDERPRO</a></li>
+                <li><a href="<?= URL . '/Paginas/valores' ?>">VALORES ÉTICOS</a>
                     <ul class="list-unstyled lp-submenu-rodape">
                         <li><a href="<?= URL . '/Paginas/valores' ?>">Nossa Missão</a> </li>
                         <li><a href="<?= URL . '/Paginas/valores' ?>">Nossa Visão</a></li>
@@ -35,8 +36,8 @@
                         <li><a href="<?= URL . '/Paginas/valores' ?>">Direitos Humanos</a></li>
                     </ul>
                 </li>
-                <li><a href="<?= URL . '/Paginas/parcerias' ?>">PARCEIROS</a></li>
-                <li><a href="<?= URL . '/Paginas/informacoes_legais' ?>">INFORMAÇÕES</a>
+                <li><a href="<?= URL . '/Paginas/parcerias' ?>">PARCEIROS E CERTIFICAÇÕES</a></li>
+                <li><a href="<?= URL . '/Paginas/informacoes_legais' ?>">INFORMAÇÕES GERAIS</a>
                     <ul class="list-unstyled lp-submenu-rodape">
                         <li><a href="<?= URL . '/Paginas/termos_de_uso' ?>">Termos de Uso</a></li>
                         <li><a href="<?= URL . '/Paginas/politica_de_privacidade' ?>">Política de Privacidade</a></li>
