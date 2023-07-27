@@ -1,4 +1,4 @@
-<div class="container p-5">
+<div class="container p-2">
     <div class="row pt-5">
         <div class="col-md-12 col-lg-12 d-flex justify-content-center">
             <p class="lp-paragrafo-sublinhado">CONTATOS</p>
@@ -6,7 +6,7 @@
     </div>
 
     <div class="row pt-4">
-        <div class="col-md-6 col-lg-6 p-5">
+        <div class="col-md-6 col-lg-6 p-2">
             <div class="d-flex flex-column ">
                 <div class="p-2 d-flex justify-content-center">
                     <p class="lp-paragrafo-sublinhado">ENVIAR E-MAIL</p>
@@ -64,7 +64,7 @@
             </div>
         </div>
 
-        <div class="col-md-6 col-lg-6 p-5">
+        <div class="col-md-6 col-lg-6 p-4 ">
             <div class="row">
                 <div class="col-md-1 col-lg-1">
                     <span><img style="height: 30px; width: 18px;" class="" src="<?= URL . '/img/menu_lider_pro/informacoes_legais_foto2.png' ?>" alt=""></span>
@@ -112,7 +112,7 @@
                 <div class="p-1"><a href="<?= URL_TWITTER ?>" target="_blank"><img style="height: 30px; width: 30px;" src="<?= URL . '/img/menu_lider_pro/informacoes_legais_rede_twitter.png' ?>" alt=""></a> </div>
             </div>
 
-            <div class="row py-5">
+            <div class="row py-5 mt-5">
                 <div class="col">
                     <p class="lp-paragrafo d-flex justify-content-center">COMO CHEGAR NA LIDERPRO?</p>
                 </div>
