@@ -94,15 +94,15 @@ body {
 }
 
 .menu-top-btn {
-    background-color: var(--azul);
-    color: white;
+    /* background-color: var(--azul); */
+    color: var(--azul);
     font-weight: 700;
 }
 
 .menu-top-btn:hover{
-    background-color: white;
-    color: var(--azul);
-    box-shadow:0px 0px 0px 1px var(--azul) inset;
+    background-color: var(--azul);
+    color: white;
+    /* box-shadow:0px 0px 0px 1px var(--azul) inset; */
 }
 
 .menu-top-icon:hover {
