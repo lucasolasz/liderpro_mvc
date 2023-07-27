@@ -1,0 +1,37 @@
+:root {
+    --azul: #003399;
+    --rodape: #FE9833;
+}
+
+
+.dropdown-social {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-social-content {
+    display: none;
+    position: absolute;
+    background-color: var(--azul);
+    /* background-color: #f1f1f1; */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-social-content a {
+    color: white;
+    /* color: black; */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-social-content a:hover {
+    background-color: white;
+    color: var(--azul);
+}
+
+.dropdown-social:hover .dropdown-social-content {
+    display: block;
+}

@@ -20,7 +20,8 @@
 
     <script src="<?php echo URL ?>/public/js/jquery.funcoes.js"></script>
     <link href="<?php echo URL ?>/public/css/estilos.css" rel="stylesheet">
-    
+    <link href="<?php echo URL ?>/public/css/top_dropdown_style.css" rel="stylesheet">
+
     <!-- DataTables -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.css" />
     <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.js"></script>
@@ -72,15 +73,15 @@
         }
     }
 
-    if(isset($dados['liderproActive'])){
+    if (isset($dados['liderproActive'])) {
         $liderActive = "active";
     }
 
-    if(isset($dados['clienteActive'])){
+    if (isset($dados['clienteActive'])) {
         $clientesActive = "active";
     }
 
-    if(isset($dados['contatoActive'])){
+    if (isset($dados['contatoActive'])) {
         $contatoActive = "active";
     }
     ?>
@@ -123,7 +124,7 @@
                             <li>
                                 <?php if (isset($_SESSION['id_usuario'])) { ?>
                                     <a href="<?= URL . '/Painel/index' ?>" class="menu-top-icon">
-                                    <span class="icon-login_usuario img_login-logado"></span>
+                                        <span class="icon-login_usuario img_login-logado"></span>
                                     </a>
                                     <a href="<?= URL . '/UsuariosController/sair' ?>">Sair <i class="bi bi-x-circle"></i></a>
                                 <?php } else { ?>
@@ -132,16 +133,21 @@
                                     </a>
                                 <?php } ?>
                             </li>
-                            
+
                             <li>
-                                <a href="#" class="menu-top-icon">
-                                <span class="icon-facebook_logo"></span>
-                                </a>
+                                <div class="dropdown-social">
+                                    <a href="#" class="menu-top-icon btn-face-ico"><span class="icon-facebook_logo"></span></a>
+                                    <div class="dropdown-social-content">
+                                        <a href="<?= URL_FACEBOOK ?>" target="_blank"><i class="bi bi-facebook"></i> Facebook</a>
+                                        <a href="<?= URL_INSTAGRAM ?>" target="_blank"><i class="bi bi-instagram"></i> Instagram</a>
+                                        <a href="<?= URL_TWITTER ?>" target="_blank"><i class="bi bi-twitter"></i> Twitter</a>
+                                    </div>
+                                </div>
                             </li>
 
                             <li>
                                 <a href="#">
-                                <span class="icon-lupa_menu menu-top-icon"></span>
+                                    <span class="icon-lupa_menu menu-top-icon"></span>
                                 </a>
                             </li>
                         </ul>
