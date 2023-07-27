@@ -555,27 +555,27 @@ body {
 }
 
 .lp-btn-liderpro-active {
-    color: var(--azul);
-    background-color: white;
-    border: 1px solid var(--azul);
+    color: white;
+    background-color: var(--rodape);
+    /* border: 1px solid var(--azul); */
 }
 
 .lp-btn-liderpro-info {
-    color: var(--azul);
-    background-color: white;
+    color: white;
+    background-color: var(--azul);
     width: 150px;
-    border: 1px solid var(--azul);
+    /* border: 1px solid var(--azul); */
 }
 
 .lp-btn-liderpro-info:hover {
-    color: white;
-    background-color: var(--azul);
+    color: var(--azul);
+    background-color: white;
     width: 150px;
     border: 1px solid var(--azul);
 }
 
 .lp-btn-liderpro-info-active {
-    background: var(--azul);
+    background: var(--rodape);
     color: white;
     width: 150px;
 }
