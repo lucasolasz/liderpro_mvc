@@ -2,7 +2,12 @@
 $infoImagem =  array();
 foreach ($dados['fotosLogomarca'] as $fotosLogomarca) {
     $caminho = URL . "/uploads/logomarcas/" . $fotosLogomarca->nm_arquivo;
-    $infoImagem[] = ['caminho' => $caminho];
+    $blank = "";
+    $url = $fotosLogomarca->ds_url;
+    if ($fotosLogomarca->ds_url != "") {
+        $blank = "_blank";
+    }
+    $infoImagem[] = ['caminho' => $caminho, 'url' => $url, 'blank' => $blank];
 }
 ?>
 
@@ -16,11 +21,13 @@ foreach ($dados['fotosLogomarca'] as $fotosLogomarca) {
             <a class="lp-remove-decoration" href="<?= URL . '/Paginas/pesquisaAvancadaClienteAlfabetica' ?>">Pesquisa Avançada de Clientes</a>
         </div>
     </div>
-    
+
 </div>
 
 <div class="container lp-container-logos p-5 mb-5">
-    <div class="row" id="image-grid"><p style="color: gray;">Escolha um segmento</p></div>
+    <div class="row" id="image-grid">
+        <p style="color: gray;">Escolha um segmento</p>
+    </div>
 </div>
 
 <script>
@@ -42,7 +49,7 @@ foreach ($dados['fotosLogomarca'] as $fotosLogomarca) {
             for (var i = 0; i < shuffledImages.length; i++) {
                 var image = shuffledImages[i];
                 html += '<div class="col-md-4 d-flex align-items-center justify-content-center p-3">' +
-                    '<img src="' + image['caminho'] + '" class="img-fluid lp-logos-clientes" id="logoCliente" alt="' + image['descricao'] + '">' +
+                    '<a href="' + image['url'] + '" target="' + image['blank'] + '"><img src="' + image['caminho'] + '" class="img-fluid lp-logos-clientes" id="logoCliente" alt="' + image['descricao'] + '"></a>' +
                     '</div>';
             }
 
