@@ -117,31 +117,31 @@
                     </div>
                     <div class="ml-auto">
                         <ul class="list-unstyled d-flex mb-0 menu-top">
-                            <li><a href="<?= URL . '/Paginas/lider_pro' ?>" class="<?= $liderActive == 'active' ? 'menu-top-active' : ''; ?>">Liderpro</a></li>
-                            <li><a href="<?= URL . '/Paginas/clientes' ?>" class="<?= $clientesActive == 'active' ? 'menu-top-active' : ''; ?>">Clientes</a></li>
-                            <li><a href="<?= URL . '/Paginas/contatos' ?>" class="<?= $contatoActive == 'active' ? 'menu-top-active' : ''; ?>">Contatos</a></li>
+                            <li><a href="<?= URL . '/Paginas/lider_pro' ?>" class="<?= $liderActive == 'active' ? 'menu-top-active' : ''; ?> btn-sm menu-top-btn">Liderpro</a></li>
+                            <li><a href="<?= URL . '/Paginas/clientes' ?>" class="<?= $clientesActive == 'active' ? 'menu-top-active' : ''; ?> btn-sm menu-top-btn">Clientes</a></li>
+                            <li><a href="<?= URL . '/Paginas/contatos' ?>" class="<?= $contatoActive == 'active' ? 'menu-top-active' : ''; ?> btn-sm menu-top-btn">Contatos</a></li>
                             <li>
                                 <?php if (isset($_SESSION['id_usuario'])) { ?>
-                                    <a href="<?= URL . '/Painel/index' ?>">
+                                    <a href="<?= URL . '/Painel/index' ?>" class="menu-top-icon">
                                     <span class="icon-login_usuario img_login-logado"></span>
                                     </a>
                                     <a href="<?= URL . '/UsuariosController/sair' ?>">Sair <i class="bi bi-x-circle"></i></a>
                                 <?php } else { ?>
-                                    <a href="<?= URL . '/UsuariosController/login' ?>" >
+                                    <a href="<?= URL . '/UsuariosController/login' ?>" class="menu-top-icon">
                                         <span class="icon-login_usuario img_login"></span>
                                     </a>
                                 <?php } ?>
                             </li>
                             
                             <li>
-                                <a href="#">
+                                <a href="#" class="menu-top-icon">
                                 <span class="icon-facebook_logo"></span>
                                 </a>
                             </li>
 
                             <li>
                                 <a href="#">
-                                <span class="icon-lupa_menu"></span>
+                                <span class="icon-lupa_menu menu-top-icon"></span>
                                 </a>
                             </li>
                         </ul>

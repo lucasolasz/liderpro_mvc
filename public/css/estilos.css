@@ -83,17 +83,34 @@ body {
 .menu-top li a {
     text-transform: uppercase;
     text-decoration: none;
-    /* font-weight: 700; */
+    font-size: 14px;
+}
+
+.menu-top-icon {
+    text-transform: uppercase;
+    text-decoration: none;
     font-size: 14px;
     color: var(--azul);
 }
 
-.menu-top li a:hover {
+.menu-top-btn {
+    background-color: var(--azul);
+    color: white;
+}
+
+.menu-top-btn:hover{
+    background-color: white;
+    color: var(--azul);
+    box-shadow:0px 0px 0px 1px var(--azul) inset;
+}
+
+.menu-top-icon:hover {
     color: var(--rodape)
 }
 
 .menu-top-active {
-    color: var(--rodape) !important
+    color: white;
+    background-color: var(--rodape);
 }
 
 .lupa_login {
@@ -804,7 +821,7 @@ body {
     max-height: 150px;
 }
 
-#divResultadoAjaxAlteraCorSegmento{
+#divResultadoAjaxAlteraCorSegmento {
     max-height: 150px;
 }
 
@@ -857,15 +874,17 @@ body {
 .icon-lupa_menu:before {
     content: "\e902";
     font-size: large;
-  }
-  .icon-facebook_logo:before {
+}
+
+.icon-facebook_logo:before {
     content: "\e900";
     font-size: large;
-  }
-  .icon-login_usuario:before {
+}
+
+.icon-login_usuario:before {
     content: "\e901";
     font-size: large;
-  }
+}
 
 .img_login-logado {
     color: var(--rodape);
