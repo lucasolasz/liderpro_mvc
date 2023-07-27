@@ -105,11 +105,11 @@
             </div>
 
             <div class="row py-2 d-flex justify-content-center">
-                <div class="p-1"><a href="#"><img style="height: 30px; width: 30px;" src="<?= URL . '/img/menu_lider_pro/informacoes_legais_rede_face.png' ?>" alt=""></a> </div>
-                <div class="p-1"><a href="#"><img style="height: 30px; width: 30px;" src="<?= URL . '/img/menu_lider_pro/informacoes_legais_rede_insta.png' ?>" alt=""></a> </div>
-                <div class="p-1"><a href="#"><img style="height: 30px; width: 30px;" src="<?= URL . '/img/menu_lider_pro/informacoes_legais_rede_youtube.png' ?>" alt=""></a> </div>
-                <div class="p-1"><a href="#"><img style="height: 30px; width: 30px;" src="<?= URL . '/img/menu_lider_pro/informacoes_legais_rede_linkedin.png' ?>" alt=""></a> </div>
-                <div class="p-1"><a href="#"><img style="height: 30px; width: 30px;" src="<?= URL . '/img/menu_lider_pro/informacoes_legais_rede_twitter.png' ?>" alt=""></a> </div>
+                <div class="p-1"><a href="<?= URL_FACEBOOK ?>" target="_blank"><img style="height: 30px; width: 30px;" src="<?= URL . '/img/menu_lider_pro/informacoes_legais_rede_face.png' ?>" alt=""></a> </div>
+                <div class="p-1"><a href="<?= URL_INSTAGRAM ?>" target="_blank"><img style="height: 30px; width: 30px;" src="<?= URL . '/img/menu_lider_pro/informacoes_legais_rede_insta.png' ?>" alt=""></a> </div>
+                <div class="p-1"><a href="#" target="_blank"><img style="height: 30px; width: 30px;" src="<?= URL . '/img/menu_lider_pro/informacoes_legais_rede_youtube.png' ?>" alt=""></a> </div>
+                <div class="p-1"><a href="#" target="_blank"><img style="height: 30px; width: 30px;" src="<?= URL . '/img/menu_lider_pro/informacoes_legais_rede_linkedin.png' ?>" alt=""></a> </div>
+                <div class="p-1"><a href="<?= URL_TWITTER ?>" target="_blank"><img style="height: 30px; width: 30px;" src="<?= URL . '/img/menu_lider_pro/informacoes_legais_rede_twitter.png' ?>" alt=""></a> </div>
             </div>
 
             <div class="row py-5">

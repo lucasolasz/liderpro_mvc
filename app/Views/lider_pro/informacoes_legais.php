@@ -60,7 +60,7 @@
             <div class="row d-flex justify-content-center">
                 <div class="col-md-1 col-lg-1">
                     <span><img style="height: 25px; width: 24px;" class="" src="<?= URL . '/img/menu_lider_pro/informacoes_legais_foto3.png' ?>" alt=""></span>
-                    </div>
+                </div>
                 <div class="col-md-7 col-lg-7 ">
 
                     <p class="lp-paragrafo-info">
@@ -74,11 +74,11 @@
                         <a href="#">www.liderweb.com.br</a>
 
                     <div class="row py-2">
-                        <div class="p-1"><a href="#"><img style="height: 30px; width: 30px;" src="<?= URL . '/img/menu_lider_pro/informacoes_legais_rede_face.png' ?>" alt=""></a> </div>
-                        <div class="p-1"><a href="#"><img style="height: 30px; width: 30px;" src="<?= URL . '/img/menu_lider_pro/informacoes_legais_rede_insta.png' ?>" alt=""></a> </div>
-                        <div class="p-1"><a href="#"><img style="height: 30px; width: 30px;" src="<?= URL . '/img/menu_lider_pro/informacoes_legais_rede_youtube.png' ?>" alt=""></a> </div>
-                        <div class="p-1"><a href="#"><img style="height: 30px; width: 30px;" src="<?= URL . '/img/menu_lider_pro/informacoes_legais_rede_linkedin.png' ?>" alt=""></a> </div>
-                        <div class="p-1"><a href="#"><img style="height: 30px; width: 30px;" src="<?= URL . '/img/menu_lider_pro/informacoes_legais_rede_twitter.png' ?>" alt=""></a> </div>
+                        <div class="p-1"><a href="<?= URL_FACEBOOK ?>" target="_blank"><img style="height: 30px; width: 30px;" src="<?= URL . '/img/menu_lider_pro/informacoes_legais_rede_face.png' ?>" alt=""></a> </div>
+                        <div class="p-1"><a href="<?= URL_INSTAGRAM ?>" target="_blank"><img style="height: 30px; width: 30px;" src="<?= URL . '/img/menu_lider_pro/informacoes_legais_rede_insta.png' ?>" alt=""></a> </div>
+                        <div class="p-1"><a href="#" target="_blank"><img style="height: 30px; width: 30px;" src="<?= URL . '/img/menu_lider_pro/informacoes_legais_rede_youtube.png' ?>" alt=""></a> </div>
+                        <div class="p-1"><a href="#" target="_blank"><img style="height: 30px; width: 30px;" src="<?= URL . '/img/menu_lider_pro/informacoes_legais_rede_linkedin.png' ?>" alt=""></a> </div>
+                        <div class="p-1"><a href="<?= URL_TWITTER ?>" target="_blank"><img style="height: 30px; width: 30px;" src="<?= URL . '/img/menu_lider_pro/informacoes_legais_rede_twitter.png' ?>" alt=""></a> </div>
                     </div>
                     </p>
                 </div>
