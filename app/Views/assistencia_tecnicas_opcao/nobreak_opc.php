@@ -113,7 +113,7 @@
                     <li>-Estacionamento no local, grátis, coberto e seguro.</li>
                     <li>-Diversas formas de pagamento.</li>
                     <li>-Contrato de Manutenção Preventiva e Corretiva.</li>
-                    <li>-Descartamos lixo eletrônico. Possuímos Certificado</li>
+                    <li>-Descartamos lixo eletrônico. Possuímos Certificado.</li>
                     <li>-Ambiental de destino final para resíduos tóxicos.</li>
                 </ul>
             </div>
