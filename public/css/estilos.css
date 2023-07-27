@@ -96,6 +96,7 @@ body {
 .menu-top-btn {
     background-color: var(--azul);
     color: white;
+    font-weight: 700;
 }
 
 .menu-top-btn:hover{
