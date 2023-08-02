@@ -141,6 +141,8 @@
                                         <a href="<?= URL_FACEBOOK ?>" target="_blank"><i class="bi bi-facebook"></i> Facebook</a>
                                         <a href="<?= URL_INSTAGRAM ?>" target="_blank"><i class="bi bi-instagram"></i> Instagram</a>
                                         <a href="<?= URL_TWITTER ?>" target="_blank"><i class="bi bi-twitter"></i> Twitter</a>
+                                        <a href="<?= URL_YOUTUBE ?>" target="_blank"><i class="bi bi-youtube"></i> Youtube</a>
+                                        <a href="<?= URL_LINKEDIN ?>" target="_blank"><i class="bi bi-linkedin"></i> LinkedIn</a>
                                     </div>
                                 </div>
                             </li>

@@ -81,8 +81,8 @@
                 <div class="row">
                     <div class="p-2"><a href="<?= URL_FACEBOOK ?>" target="_blank"><img class="lp-logo-rodape" src="<?= URL . '/img/facebook_logo_rodape.png' ?>" alt="Facebook Logo Rodapé"></a></div>
                     <div class="p-2"><a href="<?= URL_INSTAGRAM ?>" target="_blank"><img class="lp-logo-rodape" src="<?= URL . '/img/instagram_logo_rodape.png' ?>" alt=" Instagram Logo rodapé"></a></div>
-                    <div class="p-2"><a href="#" target="_blank"><img class="lp-logo-rodape" src="<?= URL . '/img/youtube_logo_rodape.png' ?>" alt="Youtube Logo rodapé"></a></div>
-                    <div class="p-2"><a href="#" target="_blank"><img class="lp-logo-rodape" src="<?= URL . '/img/linkedin_logo_rodape.png' ?>" alt="Linkedin Logo rodapé"></a></div>
+                    <div class="p-2"><a href="<?= URL_YOUTUBE ?>" target="_blank"><img class="lp-logo-rodape" src="<?= URL . '/img/youtube_logo_rodape.png' ?>" alt="Youtube Logo rodapé"></a></div>
+                    <div class="p-2"><a href="<?= URL_LINKEDIN ?>" target="_blank"><img class="lp-logo-rodape" src="<?= URL . '/img/linkedin_logo_rodape.png' ?>" alt="Linkedin Logo rodapé"></a></div>
                     <div class="p-2"><a href="<?= URL_TWITTER ?>" target="_blank"><img class="lp-logo-rodape" src="<?= URL . '/img/twitter_logo_rodape.png' ?>" alt="Twitter Logo rodapé"></a></div>
                 </div>
             </div>

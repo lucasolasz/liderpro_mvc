@@ -11,6 +11,8 @@
 // define('URL_TWITTER', 'https://twitter.com/liderprobr');
 // define('URL_INSTAGRAM', 'https://www.instagram.com/liderprobr/');
 // define('URL_FACEBOOK', 'https://www.facebook.com/liderprobr');
+// define('URL_LINKEDIN', 'https://www.linkedin.com/company/liderpro-inform-tica/');
+// define('URL_YOUTUBE', 'https://www.youtube.com/@liderprobr1251');
 
 
 
@@ -23,7 +25,8 @@ define('DB_PORT', '3306');
 define('URL_TWITTER', 'https://twitter.com/liderprobr');
 define('URL_INSTAGRAM', 'https://www.instagram.com/liderprobr/');
 define('URL_FACEBOOK', 'https://www.facebook.com/liderprobr');
-
+define('URL_LINKEDIN', 'https://www.linkedin.com/company/liderpro-inform-tica/');
+define('URL_YOUTUBE', 'https://www.youtube.com/@liderprobr1251');
 define('APP', dirname(dirname(__FILE__)));
 define('URL', 'https://liderweb.com.br/liderpro_hmg3');
 
