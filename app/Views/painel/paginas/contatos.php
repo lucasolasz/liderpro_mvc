@@ -5,62 +5,72 @@
         </div>
     </div>
 
+    <?= Alertas::mensagem('email') ?>
+
     <div class="row">
         <div class="col-md-6 col-lg-6 p-5">
             <div class="d-flex flex-column ">
                 <div class="p-2 d-flex justify-content-center">
                     <p class="lp-paragrafo-sublinhado">ENVIAR E-MAIL</p>
                 </div>
-                <div class="p-2">
-                    <div class="form__group field w-100">
-                        <input type="input" class="form__field " placeholder="Name" name="name" id='name' required />
-                        <label for="name" class="form__label">Nome*</label>
+                <form name="emailContato" id="emailContato" method="POST" action="<?= URL ?>/EnvioEmail/enviarEmailContatos">
+                    <div class="p-2">
+                        <div class="form__group field w-100">
+                            <input type="input" class="form__field " name="txtNome" id='txtNome' maxlength="200" required />
+                            <label for="txtNome" class="form__label">Nome*</label>
+                        </div>
+
+                        <div class="form__group field w-100">
+                            <input type="input" class="form__field " name="txtEmail" id='txtEmail' maxlength="100" required />
+                            <label for="txtEmail" class="form__label">Email*</label>
+                        </div>
+
+                        <div class="form__group field w-100">
+                            <input type="input" class="form__field" name="txtTelefone" id='txtTelefone' maxlength="11" required />
+                            <label for="txtTelefone" class="form__label">Telefone: </label>
+                        </div>
+
+                        <div class="form__group field w-100">
+                            <label for="txtDestinatario" class="form__label">Para* </label>
+                            <select id="txtDestinatario" name="cboDestinatario" class="w-100 lp-select-contato">
+                                <option>atendimento@liderpro.com.br</option>
+                                <option>adm@liderpro.com.br</option>
+                                <option>comercial@liderpro.com.br</option>
+                                <option>rh@liderpro.com.br</option>
+                            </select>
+                        </div>
+
+                        <div class="form__group field w-100">
+                            <input type="input" class="form__field " name="txtAssunto" id='txtAssunto' maxlength="40" required />
+                            <label for="txtAssunto" class="form__label">Assunto* </label>
+                        </div>
+
+                        <div class="form-group mt-3">
+                            <label for="txtMensagemEmail" class="label-mensagem">Mensagem*</label>
+                            <textarea class="form-control" name="txtMensagem" rows="3" maxlength="800" required></textarea>
+                        </div>
+
+                        <div>
+                            <p class="campo-obrigatorio">* Campos com preenchimentos obrigatórios</p>
+                        </div>
                     </div>
 
-                    <div class="form__group field w-100">
-                        <input type="input" class="form__field " placeholder="Name" name="name" id='name' required />
-                        <label for="name" class="form__label">Email*</label>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-6 d-flex justify-content-center">
+                            <input type="checkbox" id="enviarCopia" />
+                            <label class="my-0 ml-3 d-flex align-items-center lp-label-contato" for="enviarCopia">Me envie uma cópia deste e-mail</label>
+                        </div>
+                        <div class="col-md-6 col-lg-6 d-flex justify-content-center py-5">
+                            <button class="lp-botao-anexo" role="button">Anexar Arquivos</button>
+                        </div>
                     </div>
 
-                    <div class="form__group field w-100">
-                        <input type="input" class="form__field " placeholder="Name" name="name" id='name' required />
-                        <label for="name" class="form__label">Telefone: </label>
+                    <div class="row py-2">
+                        <div class="col d-flex justify-content-center">
+                            <button class="lp-botao-enviar" role="button" type="submit">ENVIAR</button>
+                        </div>
                     </div>
-
-                    <div class="form__group field w-100">
-                        <input type="input" class="form__field " placeholder="Name" name="name" id='name' required />
-                        <label for="name" class="form__label">Para* </label>
-                    </div>
-
-                    <div class="form__group field w-100">
-                        <input type="input" class="form__field " placeholder="Name" name="name" id='name' required />
-                        <label for="name" class="form__label">Assunto* </label>
-                    </div>
-
-                    <div class="form-group mt-3">
-                        <label for="txtMensagemEmail" class="label-mensagem">Mensagem*</label>
-                        <textarea class="form-control" id="txtMensagemEmail" rows="3"></textarea>
-                    </div>
-
-                    <div>
-                        <p class="campo-obrigatorio">* Campos com preenchimentos obrigatórios</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 col-lg-6 d-flex justify-content-center">
-                        <input type="checkbox" id="enviarCopia" />
-                        <label class="my-0 ml-3 d-flex align-items-center lp-label-contato" for="enviarCopia">Me envie uma cópia deste e-mail</label>
-                    </div>
-                    <div class="col-md-6 col-lg-6 d-flex justify-content-center py-5">
-                        <button class="lp-botao-anexo" role="button">Anexar Arquivos</button>
-                    </div>
-                </div>
-
-                <div class="row py-2">
-                    <div class="col d-flex justify-content-center">
-                        <button class="lp-botao-enviar" role="button" type="submit">ENVIAR</button>
-                    </div>
-                </div>
+                </form>
             </div>
         </div>
 
