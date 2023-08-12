@@ -10,20 +10,20 @@ class EnvioEmail extends Controller
     public function enviarEmailContatos()
     {
         $paginas = $this->paginaDinamicaModel->listarPaginasAtivas();
-        $area = "Contato";
+        $area = "Contato - Lider Pro";
 
         $formulario = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
         if (isset($formulario)) {
 
             $nome = trim($formulario['txtNome']);
-            $emailRemetente = "testelucas@liderweb.com.br";
-            // $emailRemetente = trim($formulario['txtEmail']);
+            $emailRemetente = trim($formulario['txtEmail']);
             $telefone = trim($formulario['txtTelefone']);
             $emailEscolhidoDestinatario = trim($formulario['cboDestinatario']);
             $assunto = trim($formulario['txtAssunto']);
             $mensagem = trim($formulario['txtMensagem']);
+            isset($formulario['enviarCopia'])? $flagEnviaCopia = trim($formulario['enviarCopia']) : $flagEnviaCopia = 'N';
 
-            if (Email::EnviarEmail($nome, $emailRemetente, $telefone, $emailEscolhidoDestinatario, $assunto, $mensagem, $area)) {
+            if (Email::EnviarEmailCliente($nome, $emailRemetente, $area)) {
                 Alertas::mensagem('email', 'E-mail Enviado com sucesso');
                 Redirecionamento::redirecionar('Paginas/contatos');
             } else {

@@ -57,7 +57,7 @@
 
                     <div class="row">
                         <div class="col-md-6 col-lg-6 d-flex justify-content-center">
-                            <input type="checkbox" id="enviarCopia" />
+                            <input type="checkbox" id="enviarCopia" name="enviarCopia" value="S"/>
                             <label class="my-0 ml-3 d-flex align-items-center lp-label-contato" for="enviarCopia">Me envie uma cópia deste e-mail</label>
                         </div>
                         <div class="col-md-6 col-lg-6 d-flex justify-content-center py-5">

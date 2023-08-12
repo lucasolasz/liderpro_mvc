@@ -10,8 +10,8 @@ use PHPMailer\PHPMailer\Exception;
 class Email
 {
 
-    public static function EnviarEmail($nome, $emailRemetente, $telefone, $emailEscolhidoDestinatario, $assunto, $mensagem, $area)
-    {
+    public static function EnviarEmailCliente($nome, $emailRemetente, $area)
+    {   
 
         $mail = new PHPMailer();
 
@@ -22,21 +22,20 @@ class Email
             $mail->SMTPAuth = true; // authentication enabled
             $mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for Gmail
             $mail->Host = HOST_EMAIL;
-            $mail->Username = USER_EMAIL;
+            $mail->Username = USER_EMAIL_NOREPLY;
             $mail->Password = USER_PASS_EMAIL;
             $mail->Port = 465; // or 587
 
             //Recipients
-            $mail->setFrom($emailRemetente, $area);
-            $mail->addAddress($emailEscolhidoDestinatario, $nome);     //Add a recipient
-
-
+            $mail->setFrom(USER_EMAIL_NOREPLY, $area);
+            $mail->addAddress($emailRemetente, $nome);     //Add a recipient
+            
             //Content
             $mail->CharSet = 'UTF-8';
             $mail->isHTML(true); //Set email format to HTML
-            $mail->Subject =  $assunto;
-            $mail->Body    = $mensagem;
-            // $mail->AltBody = "Olá, email teste Teste - corpo.\n Texto segunda linha";
+            $mail->Subject =  'Contato';
+            $body = file_get_contents(APP . '/Views/painel/templateEmailCliente.html');
+            $mail->Body    = $body;
 
             $mail->send();
             return true;
