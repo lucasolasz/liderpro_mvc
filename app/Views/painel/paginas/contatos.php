@@ -7,6 +7,23 @@
 
     <?= Alertas::mensagem('email') ?>
 
+    <!-- Modal -->
+    <div class="modal" id="enviandoEmailModal" tabindex="-1" aria-labelledby="enviandoEmailModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="d-flex justify-content-center">
+                        <strong>Enviando...</strong>
+                        <div class="spinner-border ml-4" role="status">
+                            <span class="sr-only">Loading...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <div class="row">
         <div class="col-md-6 col-lg-6 p-5">
             <div class="d-flex flex-column ">
@@ -57,7 +74,7 @@
 
                     <div class="row">
                         <div class="col-md-6 col-lg-6 d-flex justify-content-center">
-                            <input type="checkbox" id="enviarCopia" name="enviarCopia" value="S"/>
+                            <input type="checkbox" id="enviarCopia" name="enviarCopia" value="S" />
                             <label class="my-0 ml-3 d-flex align-items-center lp-label-contato" for="enviarCopia">Me envie uma cópia deste e-mail</label>
                         </div>
                         <div class="col-md-6 col-lg-6 d-flex justify-content-center py-5">
@@ -67,7 +84,7 @@
 
                     <div class="row py-2">
                         <div class="col d-flex justify-content-center">
-                            <button class="lp-botao-enviar" role="button" type="submit">ENVIAR</button>
+                            <button class="lp-botao-enviar" role="button" id="btnEnviaContato">ENVIAR</button>
                         </div>
                     </div>
                 </form>
@@ -141,3 +158,30 @@
         </div>
     </div>
 </div>
+
+<script>
+    //Critica campos antes de salvar
+    $("#btnEnviaContato").on("click", function() {
+
+        if ($("#txtNome").val() == "") {
+            return true;
+        }
+        if ($("#txtEmail").val() == "") {
+            return true;
+        }
+        if ($("#txtTelefone").val() == "") {
+            return true;
+        }
+        if ($("#txtAssunto").val() == "") {
+            return true;
+        }
+        if ($("#txtMensagem").val() == "") {
+            return true;
+        }
+
+        $('#enviandoEmailModal').modal('show')
+        
+        let form = document.getElementById("emailContato");
+        form.submit();
+    });
+</script>
