@@ -41,7 +41,7 @@
                         </div>
 
                         <div class="form__group field w-100">
-                            <input type="input" class="form__field " name="txtAssunto" id='txtAssunto' maxlength="40" required />
+                            <input type="input" class="form__field " name="txtAssunto" id='txtAssunto' maxlength="35" required />
                             <label for="txtAssunto" class="form__label">Assunto* </label>
                         </div>
 
