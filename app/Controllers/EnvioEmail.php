@@ -21,14 +21,16 @@ class EnvioEmail extends Controller
             $emailEscolhidoDestinatario = trim($formulario['cboDestinatario']);
             $assunto = trim($formulario['txtAssunto']);
             $mensagem = trim($formulario['txtMensagem']);
-            isset($formulario['enviarCopia'])? $flagEnviaCopia = trim($formulario['enviarCopia']) : $flagEnviaCopia = 'N';
+            isset($formulario['enviarCopia']) ? $flagEnviaCopia = true : $flagEnviaCopia = false;
 
-            if (Email::EnviarEmailCliente($nome, $emailRemetente, $area)) {
-                Alertas::mensagem('email', 'E-mail Enviado com sucesso');
-                Redirecionamento::redirecionar('Paginas/contatos');
-            } else {
-                Alertas::mensagem('segmento', 'Não foi possível enviar o e-mail', 'alert alert-danger');
-                Redirecionamento::redirecionar('Paginas/contatos');
+            if (Email::EnviarEmailInterno($nome, $emailRemetente, $telefone, $emailEscolhidoDestinatario, $assunto, $mensagem, $area, $flagEnviaCopia)) {
+                if (Email::EnviarEmailCliente($nome, $emailRemetente, $area)) {
+                    Alertas::mensagem('email', 'E-mail Enviado com sucesso');
+                    Redirecionamento::redirecionar('Paginas/contatos');
+                } else {
+                    Alertas::mensagem('segmento', 'Não foi possível enviar o e-mail', 'alert alert-danger');
+                    Redirecionamento::redirecionar('Paginas/contatos');
+                }
             }
         } else {
             $dados = [
@@ -36,8 +38,7 @@ class EnvioEmail extends Controller
                 'contatoActive' => 'active',
                 'paginas' => $paginas
             ];
+            $this->view('painel/paginas/contatos', $dados);
         }
-
-        $this->view('painel/paginas/contatos', $dados);
     }
 }
