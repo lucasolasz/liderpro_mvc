@@ -44,7 +44,7 @@ class Email
         }
     }
 
-    public static function EnviarEmailInterno($nome, $emailRemetente, $telefone, $emailEscolhidoDestinatario, $assunto, $mensagem, $area, $flagEnviaCopia)
+    public static function EnviarEmailInterno($nome, $emailRemetente, $telefone, $emailEscolhidoDestinatario, $assunto, $mensagem, $area, $flagEnviaCopia, $pathAnexo)
     {
 
         $mail = new PHPMailer();
@@ -77,6 +77,8 @@ class Email
                     <b>Assunto:</b> $assunto <br>
                     <b>Mensagem:</b> $mensagem";
             $mail->Body    = $body;
+
+            $mail->addAttachment($pathAnexo);
 
             $mail->send();
             return true;
