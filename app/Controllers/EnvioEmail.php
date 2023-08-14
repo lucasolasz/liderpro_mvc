@@ -10,7 +10,7 @@ class EnvioEmail extends Controller
     public function enviarEmailContatos()
     {
         $paginas = $this->paginaDinamicaModel->listarPaginasAtivas();
-        $area = "Contato - Lider Pro";
+        $area = "Contato - Liderpro";
         $pathArquivoZip = "";
 
         $formulario = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
