@@ -30,7 +30,7 @@
                 <div class="p-2 d-flex justify-content-center">
                     <p class="lp-paragrafo-sublinhado">ENVIAR E-MAIL</p>
                 </div>
-                <form name="emailContato" id="emailContato" method="POST" action="<?= URL ?>/EnvioEmail/enviarEmailContatos">
+                <form name="emailContato" id="emailContato" method="POST" action="<?= URL ?>/EnvioEmail/enviarEmailContatos" enctype="multipart/form-data">
                     <div class="p-2">
                         <div class="form__group field w-100">
                             <input type="input" class="form__field " name="txtNome" id='txtNome' maxlength="200" required />
@@ -77,9 +77,13 @@
                             <input type="checkbox" id="enviarCopia" name="enviarCopia" value="S" />
                             <label class="my-0 ml-3 d-flex align-items-center lp-label-contato" for="enviarCopia">Me envie uma cópia deste e-mail</label>
                         </div>
-                        <div class="col-md-6 col-lg-6 d-flex justify-content-center py-5">
-                            <button class="lp-botao-anexo" role="button">Anexar Arquivos</button>
+                        <div class="col-md-6 col-lg-6 d-flex justify-content-center py-2">
+                            <input type="file" name="fileAnexoContato[]" id="fileAnexoContato" class="lp-anexa-custom" accept="image/png, image/jpeg" multiple />
+                            <label for="fileAnexoContato" class="lp-botao-anexo">Anexar Arquivos</label>
                         </div>
+                    </div>
+                    <div class="row">
+                        <div class="col d-flex justify-content-end pr-5 py-2" id="fileCount">0 arquivo(s) selecionado(s)</div>
                     </div>
 
                     <div class="row py-2">
@@ -160,6 +164,14 @@
 </div>
 
 <script>
+
+    $(document).ready(function() {
+        $('#fileAnexoContato').on('change', function() {
+            const fileCount = $(this).prop('files').length;
+            $('#fileCount').text(`${fileCount} arquivo(s) selecionado(s)`);
+        });
+    });
+
     //Critica campos antes de salvar
     $("#btnEnviaContato").on("click", function() {
 
@@ -180,7 +192,7 @@
         }
 
         $('#enviandoEmailModal').modal('show')
-        
+
         let form = document.getElementById("emailContato");
         form.submit();
     });

@@ -537,6 +537,7 @@ body {
     height: 300px;
     width: 261px;
 }
+
 /* ------------ MENU ASSISTÊNCIA TÉCNICA END------------*/
 
 /* ------------ TOPMENU LIDERPRO------------*/
@@ -900,4 +901,13 @@ body {
 
 .img_login-logado {
     color: var(--rodape);
+}
+
+.lp-anexa-custom {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
 }
