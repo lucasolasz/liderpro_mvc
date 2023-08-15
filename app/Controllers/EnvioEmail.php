@@ -28,7 +28,7 @@ class EnvioEmail extends Controller
 
             if (!$dados['fileAnexoContato']['name'][0] == "") {
                 $idPasta = uniqid();
-                $this->armazenaFotoAnexoContato($dados['fileAnexoContato'], $idPasta);
+                $this->armazenaFotoAnexoEmail($dados['fileAnexoContato'], $idPasta);
                 $pathArquivoZip = Zip::ziparPastaRetornaPathZip($idPasta);
             }
 
@@ -40,7 +40,7 @@ class EnvioEmail extends Controller
                     Redirecionamento::redirecionar('Paginas/contatos');
                 } else {
                     ApagaPasta::apagar($pathArquivoZip);
-                    Alertas::mensagem('segmento', 'Não foi possível enviar o e-mail', 'alert alert-danger');
+                    Alertas::mensagem('email', 'Não foi possível enviar o e-mail', 'alert alert-danger');
                     Redirecionamento::redirecionar('Paginas/contatos');
                 }
             }
@@ -54,22 +54,70 @@ class EnvioEmail extends Controller
         }
     }
 
+    public function enviarEmailAssistenciaComputador(){
 
-    public function armazenaFotoAnexoContato($dados, $idPasta)
+        $assunto = "Avaliação - Computador";
+        $nomeRota = "computador_opc";
+        
+        $formulario = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+        if (isset($formulario)) {
+        
+            $nome = trim($formulario['txtNome']);
+            $emailRemetente = trim($formulario['txtEmail']);
+            $telefone = trim($formulario['txtTelefone']);
+            // $emailEscolhidoDestinatario = trim($formulario['cboDestinatario']);
+            $equipamento = trim($formulario['txtEquipamento']);
+            $marcaModelo = trim($formulario['txtMarcaModelo']);
+            $mensagem = trim($formulario['txtMensagemEmail']);
+            isset($formulario['enviarCopia']) ? $flagEnviaCopia = true : $flagEnviaCopia = false;
+
+            $dados['fileAnexoAssistencia'] = isset($_FILES['fileAnexoAssistencia']) ? $_FILES['fileAnexoAssistencia'] : "";
+
+            $this->enviarEmailAssistenciaGenerico($assunto, $nome, $emailRemetente, $telefone, $equipamento, $marcaModelo, $mensagem, $flagEnviaCopia, $dados['fileAnexoAssistencia'], $nomeRota);
+        }
+    
+    }
+
+    public function enviarEmailAssistenciaGenerico($assunto, $nome, $emailRemetente, $telefone, $equipamento, $marcaModelo, $mensagem, $flagEnviaCopia, $anexo, $nomeRota){
+        
+        $area = "Assistência - Liderpro";
+        $pathArquivoZip = "";
+
+        if (!$anexo['name'][0] == "") {
+            $idPasta = uniqid();
+            $this->armazenaFotoAnexoEmail($anexo, $idPasta);
+            $pathArquivoZip = Zip::ziparPastaRetornaPathZip($idPasta);
+        }
+
+        if (Email::EnviarEmailInternoAssistencia($nome, $emailRemetente, $telefone, $equipamento, $marcaModelo, $assunto, $mensagem, $area, $flagEnviaCopia, $pathArquivoZip)) {
+            if (Email::EnviarEmailCliente($nome, $emailRemetente, $area)) {
+                ApagaPasta::apagar($pathArquivoZip);
+                Alertas::mensagem('email', 'E-mail Enviado com sucesso');
+                Redirecionamento::redirecionar('AssistenciaOpcao/' . $nomeRota);
+            } else {
+                ApagaPasta::apagar($pathArquivoZip);
+                Alertas::mensagem('email', 'Não foi possível enviar o e-mail', 'alert alert-danger');
+                Redirecionamento::redirecionar('AssistenciaOpcao/' . $nomeRota);
+            }
+        }
+    }
+
+
+    public function armazenaFotoAnexoEmail($anexo, $idPasta)
     {
 
         $pastaArquivo = "anexos/anexo_" . $idPasta;
         $upload = new Upload();
-        $tamanhoArray = count($dados['name']);
+        $tamanhoArray = count($anexo['name']);
 
         for ($i = 0; $i < $tamanhoArray; $i++) {
 
             $arrayImagem = [
-                'name' => $dados['name'][$i],
-                'type' => $dados['type'][$i],
-                'tmp_name' => $dados['tmp_name'][$i],
-                'error' => $dados['error'][$i],
-                'size' => $dados['size'][$i],
+                'name' => $anexo['name'][$i],
+                'type' => $anexo['type'][$i],
+                'tmp_name' => $anexo['tmp_name'][$i],
+                'error' => $anexo['error'][$i],
+                'size' => $anexo['size'][$i],
             ];
 
             $upload->imagem($arrayImagem, NULL, $pastaArquivo);

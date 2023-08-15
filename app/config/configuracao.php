@@ -15,6 +15,7 @@
 // define('URL_YOUTUBE', 'https://www.youtube.com/@liderprobr1251');
 // define('HOST_EMAIL', 'mail.liderweb.com.br');
 // define('USER_EMAIL_NOREPLY', 'noreply@liderweb.com.br');
+// define('USER_EMAIL_ASSISTENCIA', 'atendimento@liderpro.com.br');
 // define('USER_PASS_EMAIL', 'EXigE{GdAaaD');
 
 
@@ -33,6 +34,7 @@ define('URL_LINKEDIN', 'https://www.linkedin.com/company/liderpro-inform-tica/')
 define('URL_YOUTUBE', 'https://www.youtube.com/@liderprobr1251');
 define('HOST_EMAIL', 'mail.liderweb.com.br');
 define('USER_EMAIL_NOREPLY', 'noreply@liderweb.com.br');
+define('USER_EMAIL_ASSISTENCIA', 'atendimento@liderpro.com.br');
 define('USER_PASS_EMAIL', 'EXigE{GdAaaD');
 
 
