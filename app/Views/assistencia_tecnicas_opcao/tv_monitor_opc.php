@@ -63,60 +63,60 @@
                     <p class="lp-paragrafo-sublinhado">Solicite uma Avaliação Grátis</p>
                 </div>
                 <form name="emailAssistencia" id="emailAssistencia" method="POST" action="<?= URL ?>/EnvioEmail/enviarEmailAssistenciaTvMonitor" enctype="multipart/form-data">
-                <div class="p-2">
-                    <div class="form__group field w-100">
-                        <input type="input" class="form__field " name="txtNome" id='txtNome' required />
-                        <label for="txtNome" class="form__label">Nome*</label>
+                    <div class="p-2">
+                        <div class="form__group field w-100">
+                            <input type="input" class="form__field " name="txtNome" id='txtNome' required />
+                            <label for="txtNome" class="form__label">Nome*</label>
+                        </div>
+
+                        <div class="form__group field w-100">
+                            <input type="input" class="form__field " name="txtEmail" id='txtEmail' required />
+                            <label for="txtEmail" class="form__label">Email*</label>
+                        </div>
+
+                        <div class="form__group field w-100">
+                            <input type="input" class="form__field " name="txtTelefone" id='txtTelefone' required />
+                            <label for="txtTelefone" class="form__label">Telefone: </label>
+                        </div>
+
+                        <div class="form__group field w-100">
+                            <input type="input" class="form__field " name="txtEquipamento" id='txtEquipamento' required />
+                            <label for="txtEquipamento" class="form__label">Equipamento* </label>
+                        </div>
+
+                        <div class="form__group field w-100">
+                            <input type="input" class="form__field " name="txtMarcaModelo" id='txtMarcaModelo' required />
+                            <label for="txtMarcaModelo" class="form__label">Marca e Modelo (se souber e/ou se houver)</label>
+                        </div>
+
+                        <div class="form-group mt-3">
+                            <label for="txtMensagemEmail" class="label-mensagem">Descrição do Problema*</label>
+                            <textarea class="form-control" id="txtMensagemEmail" rows="3" name="txtMensagemEmail"></textarea>
+                        </div>
+
+                        <div>
+                            <p class="campo-obrigatorio">* Campos com preenchimentos obrigatórios</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-6 d-flex justify-content-center">
+                            <input type="checkbox" id="enviarCopia" name="enviarCopia" value="S" />
+                            <label class="my-0 ml-3 d-flex align-items-center lp-label-contato" for="enviarCopia">Me envie uma cópia deste e-mail</label>
+                        </div>
+                        <div class="col-md-6 col-lg-6 d-flex justify-content-center py-2">
+                            <input type="file" name="fileAnexoAssistencia[]" id="fileAnexoAssistencia" class="lp-anexa-custom" accept="image/png, image/jpeg" multiple />
+                            <label for="fileAnexoAssistencia" class="lp-botao-anexo">Anexar Arquivos</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col d-flex justify-content-end pr-5 py-2" id="fileCount">0 arquivo(s) selecionado(s)</div>
                     </div>
 
-                    <div class="form__group field w-100">
-                        <input type="input" class="form__field " name="txtEmail" id='txtEmail' required />
-                        <label for="txtEmail" class="form__label">Email*</label>
+                    <div class="row py-2">
+                        <div class="col d-flex justify-content-center">
+                            <button class="lp-botao-enviar" role="button" id="btnEnviaAssistencia">ENVIAR</button>
+                        </div>
                     </div>
-
-                    <div class="form__group field w-100">
-                        <input type="input" class="form__field " name="txtTelefone" id='txtTelefone' required />
-                        <label for="txtTelefone" class="form__label">Telefone: </label>
-                    </div>
-
-                    <div class="form__group field w-100">
-                        <input type="input" class="form__field " name="txtEquipamento" id='txtEquipamento' required />
-                        <label for="txtEquipamento" class="form__label">Equipamento* </label>
-                    </div>
-
-                    <div class="form__group field w-100">
-                        <input type="input" class="form__field " name="txtMarcaModelo" id='txtMarcaModelo' required />
-                        <label for="txtMarcaModelo" class="form__label">Marca e Modelo (se souber e/ou se houver)</label>
-                    </div>
-
-                    <div class="form-group mt-3">
-                        <label for="txtMensagemEmail" class="label-mensagem">Descrição do Problema*</label>
-                        <textarea class="form-control" id="txtMensagemEmail" rows="3" name="txtMensagemEmail"></textarea>
-                    </div>
-
-                    <div>
-                        <p class="campo-obrigatorio">* Campos com preenchimentos obrigatórios</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 col-lg-6 d-flex justify-content-center">
-                        <input type="checkbox" id="enviarCopia" name="enviarCopia" value="S" />
-                        <label class="my-0 ml-3 d-flex align-items-center lp-label-contato" for="enviarCopia">Me envie uma cópia deste e-mail</label>
-                    </div>
-                    <div class="col-md-6 col-lg-6 d-flex justify-content-center py-2">
-                        <input type="file" name="fileAnexoAssistencia[]" id="fileAnexoAssistencia" class="lp-anexa-custom" accept="image/png, image/jpeg" multiple />
-                        <label for="fileAnexoAssistencia" class="lp-botao-anexo">Anexar Arquivos</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col d-flex justify-content-end pr-5 py-2" id="fileCount">0 arquivo(s) selecionado(s)</div>
-                </div>
-
-                <div class="row py-2">
-                    <div class="col d-flex justify-content-center">
-                        <button class="lp-botao-enviar" role="button" id="btnEnviaAssistencia">ENVIAR</button>
-                    </div>
-                </div>
                 </form>
 
                 <div class="row py-4">
