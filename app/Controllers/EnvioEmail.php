@@ -178,6 +178,31 @@ class EnvioEmail extends Controller
     
     }
 
+    public function enviarEmailAssistenciaTvMonitor(){
+
+        $assunto = "Avaliação - Tv/Monitor";
+        $nomeRota = "tv_monitor_opc";
+
+        
+        $formulario = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+        if (isset($formulario)) {
+        
+            $nome = trim($formulario['txtNome']);
+            $emailRemetente = trim($formulario['txtEmail']);
+            $telefone = trim($formulario['txtTelefone']);
+            // $emailEscolhidoDestinatario = trim($formulario['cboDestinatario']);
+            $equipamento = trim($formulario['txtEquipamento']);
+            $marcaModelo = trim($formulario['txtMarcaModelo']);
+            $mensagem = trim($formulario['txtMensagemEmail']);
+            isset($formulario['enviarCopia']) ? $flagEnviaCopia = true : $flagEnviaCopia = false;
+
+            $dados['fileAnexoAssistencia'] = isset($_FILES['fileAnexoAssistencia']) ? $_FILES['fileAnexoAssistencia'] : "";
+
+            $this->enviarEmailAssistenciaGenerico($assunto, $nome, $emailRemetente, $telefone, $equipamento, $marcaModelo, $mensagem, $flagEnviaCopia, $dados['fileAnexoAssistencia'], $nomeRota);
+        }
+    
+    }
+
     public function enviarEmailAssistenciaGenerico($assunto, $nome, $emailRemetente, $telefone, $equipamento, $marcaModelo, $mensagem, $flagEnviaCopia, $anexo, $nomeRota){
         
         $area = "Assistência - Liderpro";
