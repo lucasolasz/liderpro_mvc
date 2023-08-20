@@ -35,3 +35,32 @@
 .dropdown-social:hover .dropdown-social-content {
     display: block;
 }
+
+
+/* ---------------------- Search Button ----------------------*/
+.togglesearch {
+    background: var(--azul);
+    position: absolute;
+    top: 50px;
+    right: 1%;
+    /* width: 350px; */
+    /* height: 60px; */
+    /* line-height: 60px; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    /* border-top:4px solid #D80B15; */
+    display: none;
+    z-index: 1;
+}
+
+.togglesearch:before {
+    content: "";
+    position: absolute;
+    /* top: -50px;
+  right: 13px; */
+    /* border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid #D80B15; */
+}
+
+/* ---------------------- Search Button ----------------------*/

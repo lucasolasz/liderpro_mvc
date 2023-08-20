@@ -20,7 +20,7 @@ class Paginas extends Controller
         //Parâmetros enviados para o método do controller VIEW
         $dados = [
             'tituloBreadcrumb' => 'contatos',
-            'contatoActive' => 'active', 
+            'contatoActive' => 'active',
             'paginas' => $paginas
         ];
 
@@ -104,7 +104,7 @@ class Paginas extends Controller
         if ($dados['ds_nome_cliente'] != "") {
             $ds_nome_cliente = $dados['ds_nome_cliente'];
             $resultado = $this->clienteModel->listarClientesComFiltro($ds_nome_cliente);
-            
+
             $dados = [
                 'resultado' => $resultado
             ];
@@ -296,5 +296,23 @@ class Paginas extends Controller
 
         //Chamada do novo objeto PAGINAS 
         $this->view('lider_pro/informacoes_legais', $dados);
+    }
+
+    public function pesquisarHome()
+    {
+
+        $paginas = $this->paginaDinamicaModel->listarPaginasAtivas();
+
+        $formulario = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+        if (isset($formulario)) {
+            
+        } else {
+            $dados = [
+                'paginas' => $paginas,
+                'tituloBreadcrumb' => 'HOME',
+            ];
+
+            $this->view('painel/paginas/home', $dados);
+        }
     }
 }

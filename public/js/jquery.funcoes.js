@@ -34,6 +34,12 @@ $(document).ready(function () {
         }],
         "lengthMenu": [5, 10, 25]
     });
+
+    $(".icon-lupa_menu").click(function () {
+        console.log("oi");
+        $(".togglesearch").toggle();
+        // $("input[type='text']").focus();
+    });
 });
 
 
