@@ -134,7 +134,7 @@
                         <span><img style="height: 25px; width: 30px;" class="p-1" src="<?= URL . '/img/menu_lider_pro/email.png' ?>" alt=""></span>
                     </div>
                     <div class="col-md-11 col-lg-11">
-                        <p class="lp-paragrafo">liderpro@liderpro.com.br</p>
+                        <p class="lp-paragrafo"><a href="mailto:liderpro@liderpro.com.br">liderpro@liderpro.com.br</a></p>
                     </div>
                 </div>
 

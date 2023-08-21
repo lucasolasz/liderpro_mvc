@@ -89,7 +89,7 @@
                         <p class="lp-paragrafo-info m-0"><span><img style="height: 20px; width: 20px;" class="mr-2 p-1" src="<?= URL . '/img/menu_lider_pro/telefone.png' ?>" alt=""></span><a href="https://wa.me/552125268100?text=Ol%C3%A1%21" target="_blank">(21) 2526-8100</a> <span><img style="height: 20px; width: 20px;" class="ml-2 p-1" src="<?= URL . '/img/menu_lider_pro/whatsapp.png' ?>" alt=""></span></p>
                     </div>
                     <div>
-                        <p class="lp-paragrafo-info m-0"><span><img style="height: 20px; width: 20px;" class="mr-2 p-1" src="<?= URL . '/img/menu_lider_pro/email.png' ?>" alt=""></span>liderpro@liderpro.com.br</p>
+                        <p class="lp-paragrafo-info m-0"><span><img style="height: 20px; width: 20px;" class="mr-2 p-1" src="<?= URL . '/img/menu_lider_pro/email.png' ?>" alt=""></span><a href="mailto:liderpro@liderpro.com.br">liderpro@liderpro.com.br</a></p>
                     </div>
                     <div>
                         <p class="lp-paragrafo-info m-0"><span><img style="height: 20px; width: 20px;" class="mr-2 p-1" src="<?= URL . '/img/menu_lider_pro/relogio.png' ?>" alt=""></span>HORÁRIO DE FUNCIONAMENTO:</p>
