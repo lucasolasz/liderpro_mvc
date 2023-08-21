@@ -151,6 +151,12 @@
                                 <a href="#">
                                     <span class="icon-lupa_menu menu-top-icon"></span>
                                 </a>
+                                <div class="togglesearch">
+                                    <form name="pesquisarHome" id="pesquisarHome" method="POST" action="<?= URL ?>/Paginas/pesquisarServicosHome">
+                                        <input type="text" name="txtPesquisaHome"/>
+                                        <input type="submit" class="lp-btn-liderpro" value="Pesquisar"/>
+                                    </form>
+                                </div>
                             </li>
                         </ul>
                     </div>

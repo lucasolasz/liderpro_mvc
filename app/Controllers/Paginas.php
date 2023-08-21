@@ -298,21 +298,37 @@ class Paginas extends Controller
         $this->view('lider_pro/informacoes_legais', $dados);
     }
 
-    public function pesquisarHome()
+    public function pesquisarServicosHome()
     {
 
         $paginas = $this->paginaDinamicaModel->listarPaginasAtivas();
 
         $formulario = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
         if (isset($formulario)) {
-            
+
+            $dados = [
+                'txtPesquisaHome' => $formulario['txtPesquisaHome']
+            ];
+
+            $resultadoServicos = $this->paginasModel->pesquisarServicosHome($dados);
+            $resultadoAssistencia = $this->paginasModel->pesquisarAssistenciasHome($dados);
+
+            $dados = [
+                'paginas' => $paginas,
+                'tituloBreadcrumb' => 'HOME',
+                'resultadoServicos' => $resultadoServicos,
+                'resultadoAssistencia' => $resultadoAssistencia,
+                'txtPesquisaHome' => $formulario['txtPesquisaHome']
+            ];
+
+            $this->view('painel/paginas/resultado_pesquisa', $dados);
         } else {
             $dados = [
                 'paginas' => $paginas,
                 'tituloBreadcrumb' => 'HOME',
             ];
 
-            $this->view('painel/paginas/home', $dados);
+            $this->view('painel/paginas/resultado_pesquisa', $dados);
         }
     }
 }
