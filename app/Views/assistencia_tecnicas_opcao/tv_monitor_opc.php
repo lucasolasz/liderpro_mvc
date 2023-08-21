@@ -23,7 +23,7 @@
             </div>
 
             <div class="mt-5">
-                <button class="lp-botao-fotos-assistencia" role="button" type="submit">FOTOS</button>
+                <!-- <button class="lp-botao-fotos-assistencia" role="button" type="submit">FOTOS</button> -->
             </div>
 
             <div class="d-flex justify-content-center mt-5">
