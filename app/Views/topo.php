@@ -232,7 +232,7 @@
                                     <li><a href="<?= URL . '/PaginasDinamicas/' . $paginas->ds_breadcrumb_menu ?>" class="lp-nav-link <?= $dados['tituloBreadcrumb'] == $paginas->ds_breadcrumb_menu ? 'lp-nav-active' : ''; ?>"><?= ucfirst($paginas->ds_pagina) ?></a></li>
                                 <?php } ?>
                                 <li class="d-flex align-items-center justify-content-center" style="width: 200px;">
-                                    <a href="#" class="lp-nav-link">(21)&nbsp2526-8100&nbsp
+                                    <a href="https://wa.me/552125268100?text=Ol%C3%A1%21" target="_blank" class="lp-nav-link">(21)&nbsp2526-8100&nbsp
                                         <span><img style="height: 15px; width: 15px;" src="<?= URL . '/img/menu_lider_pro/whatsapp.png' ?>" alt=""></span>
                                     </a>
                                 </li>
