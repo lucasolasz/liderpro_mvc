@@ -86,7 +86,7 @@
             <div class="row mt-5 d-flex justify-content-center">
                 <div class="col-md-8 col-lg-8 d-flex flex-column">
                     <div>
-                        <p class="lp-paragrafo-info m-0"><span><img style="height: 20px; width: 20px;" class="mr-2 p-1" src="<?= URL . '/img/menu_lider_pro/telefone.png' ?>" alt=""></span>(21) 2526-8100 <span><img style="height: 20px; width: 20px;" class="ml-2 p-1" src="<?= URL . '/img/menu_lider_pro/whatsapp.png' ?>" alt=""></span></p>
+                        <p class="lp-paragrafo-info m-0"><span><img style="height: 20px; width: 20px;" class="mr-2 p-1" src="<?= URL . '/img/menu_lider_pro/telefone.png' ?>" alt=""></span><a href="https://wa.me/552125268100?text=Ol%C3%A1%21" target="_blank">(21) 2526-8100</a> <span><img style="height: 20px; width: 20px;" class="ml-2 p-1" src="<?= URL . '/img/menu_lider_pro/whatsapp.png' ?>" alt=""></span></p>
                     </div>
                     <div>
                         <p class="lp-paragrafo-info m-0"><span><img style="height: 20px; width: 20px;" class="mr-2 p-1" src="<?= URL . '/img/menu_lider_pro/email.png' ?>" alt=""></span>liderpro@liderpro.com.br</p>
