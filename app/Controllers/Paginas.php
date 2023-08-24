@@ -306,26 +306,39 @@ class Paginas extends Controller
         $formulario = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
         if (isset($formulario)) {
 
-            $dados = [
-                'txtPesquisaHome' => $formulario['txtPesquisaHome']
-            ];
+            if (!$formulario['txtPesquisaHome'] == "") {
 
-            $resultadoServicos = $this->paginasModel->pesquisarServicosHome($dados);
-            $resultadoAssistencia = $this->paginasModel->pesquisarAssistenciasHome($dados);
-            $resultadoLiderPro = $this->paginasModel->pesquisarLiderProHome($dados);
-            $resultadoClientes = $this->paginasModel->pesquisarClientesHome($dados);
+                $dados = [
+                    'txtPesquisaHome' => $formulario['txtPesquisaHome']
+                ];
+
+                $resultadoServicos = $this->paginasModel->pesquisarServicosHome($dados);
+                $resultadoAssistencia = $this->paginasModel->pesquisarAssistenciasHome($dados);
+                $resultadoLiderPro = $this->paginasModel->pesquisarLiderProHome($dados);
+                $resultadoClientes = $this->paginasModel->pesquisarClientesHome($dados);
+
+                $contagemRegistrosTotal = count($resultadoAssistencia) + count($resultadoLiderPro) + count($resultadoClientes) + count($resultadoServicos);
+
+                $dados = [
+                    'paginas' => $paginas,
+                    'tituloBreadcrumb' => 'HOME',
+                    'resultadoServicos' => $resultadoServicos,
+                    'resultadoAssistencia' => $resultadoAssistencia,
+                    'resultadoLiderPro' => $resultadoLiderPro,
+                    'resultadoClientes' => $resultadoClientes,
+                    'contagemRegistrosTotal' => $contagemRegistrosTotal,
+                    'txtPesquisaHome' => $formulario['txtPesquisaHome']
+                ];
+
+                $this->view('painel/paginas/resultado_pesquisa', $dados);
+            }
 
             $dados = [
                 'paginas' => $paginas,
                 'tituloBreadcrumb' => 'HOME',
-                'resultadoServicos' => $resultadoServicos,
-                'resultadoAssistencia' => $resultadoAssistencia,
-                'resultadoLiderPro' => $resultadoLiderPro,
-                'resultadoClientes' => $resultadoClientes,
-                'txtPesquisaHome' => $formulario['txtPesquisaHome']
             ];
 
-            $this->view('painel/paginas/resultado_pesquisa', $dados);
+            $this->view('painel/paginas/home', $dados);
         } else {
             $dados = [
                 'paginas' => $paginas,

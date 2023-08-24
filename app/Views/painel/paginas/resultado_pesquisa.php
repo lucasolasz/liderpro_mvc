@@ -3,6 +3,7 @@
     <div class="d-flex flex-column mt-5">
         <div>
             <h2>Resultados para: <?= $dados['txtPesquisaHome'] ?></h2>
+            <small>Foram encontrados: <?= $dados['contagemRegistrosTotal'] . " registro(s)" ?> </small>
         </div>
         <hr>
         <div>
@@ -93,3 +94,17 @@
         </div>
     </div>
 </div>
+<script>
+    //Inicialização do dataTables
+    $(document).ready(function() {
+
+        $(".lp-close-pesquisa").click(function() {
+            $(".togglesearch").hide();
+        });
+
+        $(".icon-lupa_menu").click(function() {
+            $(".togglesearch").toggle();
+            $("input[type='text']").focus();
+        });
+    });
+</script>
