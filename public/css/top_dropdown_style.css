@@ -39,7 +39,7 @@
 
 /* ---------------------- Search Button ----------------------*/
 .togglesearch {
-    background: var(--azul);
+    background: white;
     position: absolute;
     top: 50px;
     right: 1%;
@@ -47,6 +47,7 @@
     /* height: 60px; */
     /* line-height: 60px; */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
     /* border-top:4px solid #D80B15; */
     display: none;
     z-index: 1;

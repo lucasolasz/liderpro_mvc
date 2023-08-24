@@ -889,6 +889,10 @@ body {
     font-size: large;
 }
 
+.icon-lupa_menu {
+    cursor: pointer;
+}
+
 .icon-facebook_logo:before {
     content: "\e900";
     font-size: large;
@@ -910,4 +914,41 @@ body {
     overflow: hidden;
     position: absolute;
     z-index: -1;
+}
+
+/* ---------------------- Search Button ----------------------*/
+
+.lp-form-pesquisa {
+    border-radius: 15px;
+    border: 0.5px solid var(--azul);
+    padding: 4px;
+}
+
+.lp-form-pesquisa>#txtPesquisaHome {
+    border: none;
+    width: 400px;
+}
+
+.lp-barra-pesquisa:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+.lp-btn-pesquisa-home {
+    background: transparent;
+}
+
+.lp-form-pesquisa>button {
+    border: none;
+}
+
+.lp-close-pesquisa {
+    border-right: 1px solid var(--azul);
+    cursor: pointer;
+    color: #666666;
+    width: 30px;
+    background: none;
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
 }

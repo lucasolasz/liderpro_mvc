@@ -149,13 +149,12 @@
                             </li>
 
                             <li>
-                                <a href="#">
-                                    <span class="icon-lupa_menu menu-top-icon"></span>
-                                </a>
+                                <span class="icon-lupa_menu menu-top-icon"></span>
                                 <div class="togglesearch">
-                                    <form name="pesquisarHome" id="pesquisarHome" method="POST" action="<?= URL ?>/Paginas/pesquisarServicosHome">
-                                        <input type="text" name="txtPesquisaHome"/>
-                                        <input type="submit" class="lp-btn-liderpro" value="Pesquisar"/>
+                                    <form name="pesquisarHome" id="pesquisarHome" method="POST" action="<?= URL ?>/Paginas/pesquisarServicosHome" class="lp-form-pesquisa">
+                                        <input type="text" name="txtPesquisaHome" id="txtPesquisaHome" placeholder=" O que você procura?" class="lp-barra-pesquisa" />
+                                        <input type="button" value="X" class="lp-close-pesquisa"/>
+                                        <button class="lp-btn-pesquisa-home"><span class="icon-lupa_menu menu-top-icon"></span></button>
                                     </form>
                                 </div>
                             </li>
