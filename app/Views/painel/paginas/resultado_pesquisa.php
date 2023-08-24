@@ -17,7 +17,7 @@
                         <tr>
                             <td>
                                 <a href="<?= URL . '/PaginasDinamicas/' . $resultadoServico->ds_url_menu ?>">
-                                    <p style="color: gray;" class="ml-2"><?= substr($resultadoServico->ds_texto_principal, 0, 350) . "..." ?></p>
+                                    <p style="color: gray;" class="ml-2"><?= substr($resultadoServico->ds_texto_principal, 0, 350) . " ..." ?></p>
                                 </a>
                             </td>
                         </tr>
@@ -68,7 +68,7 @@
                             <td>
                                 <a href="<?= URL . '/Paginas' . $resultadoLiderPro->ds_url_menu ?>">
                                     <p style="color: gray;" class="ml-2">
-                                        <?= substr($resultadoLiderPro->ds_conteudo_pagina, 0, 350) ?>
+                                        <?= substr($resultadoLiderPro->ds_conteudo_pagina, 0, 350) . " ..." ?>
                                     </p>
                                 </a>
                             </td>
