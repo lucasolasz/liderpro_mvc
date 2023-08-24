@@ -649,4 +649,24 @@ class Pagina
 
         return $this->db->resultados();
     }
+
+    public function pesquisarLiderProHome($dados){
+
+        $this->db->query("select * from tb_menu_lider_pro
+        where ds_conteudo_pagina like concat('%', :txtPesquisa, '%') ");
+        $this->db->bind("txtPesquisa", $dados['txtPesquisaHome']);
+
+        return $this->db->resultados();
+    }
+
+    public function pesquisarClientesHome($dados){
+
+        $this->db->query("select * from tb_clientes
+        where ds_nome_fantasia like concat('%', :txtPesquisa, '%') ");
+        $this->db->bind("txtPesquisa", $dados['txtPesquisaHome']);
+
+        return $this->db->resultados();
+    }
+
+
 }

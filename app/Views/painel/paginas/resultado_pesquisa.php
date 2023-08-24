@@ -58,6 +58,36 @@
                             </td>
                         </tr>
                     <?php } ?>
+                    <?php foreach ($dados['resultadoLiderPro'] as $resultadoLiderPro) { ?>
+                        <tr>
+                            <td rowspan="2"><a href="<?= URL . '/Paginas' .  $resultadoLiderPro->ds_url_menu ?>"><?= ucfirst(strtolower($resultadoLiderPro->ds_menu)) ?></a></td>
+                            <td class="lp-titulo-paragrafo"><a href="<?= URL . '/Paginas' . $resultadoLiderPro->ds_url_menu ?>"><?= ucfirst(strtolower($resultadoLiderPro->ds_menu)) ?></a></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="<?= URL . '/Paginas' . $resultadoLiderPro->ds_url_menu ?>">
+                                    <p style="color: gray;" class="ml-2">
+                                        <?= substr($resultadoLiderPro->ds_conteudo_pagina, 0, 350) ?>
+                                    </p>
+                                </a>
+                            </td>
+                        </tr>
+                    <?php } ?>
+                    <?php foreach ($dados['resultadoClientes'] as $resultadoClientes) { ?>
+                        <tr>
+                            <td rowspan="2"><a href="<?= URL . '/Paginas/clientes' ?>"><?= "Cliente - " . ucfirst($resultadoClientes->ds_nome_fantasia) ?></a></td>
+                            <td class="lp-titulo-paragrafo"><a href="<?= URL . '/Paginas/clientes' ?>"><?= "Cliente - " .  ucfirst($resultadoClientes->ds_nome_fantasia) ?></a></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="<?= URL . '/Paginas/clientes' ?>">
+                                    <p style="color: gray;" class="ml-2">
+                                        <?= $resultadoClientes->ds_nome_fantasia ?>
+                                    </p>
+                                </a>
+                            </td>
+                        </tr>
+                    <?php } ?>
                 </thead>
             </table>
         </div>

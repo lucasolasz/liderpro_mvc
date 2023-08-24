@@ -312,12 +312,16 @@ class Paginas extends Controller
 
             $resultadoServicos = $this->paginasModel->pesquisarServicosHome($dados);
             $resultadoAssistencia = $this->paginasModel->pesquisarAssistenciasHome($dados);
+            $resultadoLiderPro = $this->paginasModel->pesquisarLiderProHome($dados);
+            $resultadoClientes = $this->paginasModel->pesquisarClientesHome($dados);
 
             $dados = [
                 'paginas' => $paginas,
                 'tituloBreadcrumb' => 'HOME',
                 'resultadoServicos' => $resultadoServicos,
                 'resultadoAssistencia' => $resultadoAssistencia,
+                'resultadoLiderPro' => $resultadoLiderPro,
+                'resultadoClientes' => $resultadoClientes,
                 'txtPesquisaHome' => $formulario['txtPesquisaHome']
             ];
 
