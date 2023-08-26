@@ -21,7 +21,7 @@ $quantidadeTotalCaracteres = strlen($texto);
                         <figcaption class="text-center">Foto provisória</figcaption>
                     </figure>
                 <?php } else { ?>
-                    <img class="img-fluid" style="max-height: 355px; max-width: 1080px" src="<?= URL . DIRECTORY_SEPARATOR . 'uploads' . DIRECTORY_SEPARATOR . $dados['dolarFotoBanner'][0]->nm_path_arquivo . DIRECTORY_SEPARATOR .  $dados['dolarFotoBanner'][0]->nm_arquivo ?>" alt="">
+                    <img class="img-fluid" src="<?= URL . DIRECTORY_SEPARATOR . 'uploads' . DIRECTORY_SEPARATOR . $dados['dolarFotoBanner'][0]->nm_path_arquivo . DIRECTORY_SEPARATOR .  $dados['dolarFotoBanner'][0]->nm_arquivo ?>" alt="">
                 <?php } ?>
             </div>
         </div>
