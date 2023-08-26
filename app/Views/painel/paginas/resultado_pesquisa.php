@@ -76,14 +76,26 @@
                     <?php } ?>
                     <?php foreach ($dados['resultadoClientes'] as $resultadoClientes) { ?>
                         <tr>
-                            <td rowspan="2"><a href="<?= URL . '/Paginas/clientes' ?>"><?= "Cliente - " . ucfirst($resultadoClientes->ds_nome_fantasia) ?></a></td>
-                            <td class="lp-titulo-paragrafo"><a href="<?= URL . '/Paginas/clientes' ?>"><?= "Cliente - " .  ucfirst($resultadoClientes->ds_nome_fantasia) ?></a></td>
+                            <td rowspan="2">
+                                <a href="<?= URL . '/Paginas/clientes' ?>"><img style="max-width: 140px; max-height: 100px; padding: 10px" src="<?= URL . "/uploads/" . $resultadoClientes->nm_path_arquivo . '/' .  $resultadoClientes->nm_arquivo ?>" alt="">
+                                </a>
+                            </td>
+                            <td class="lp-titulo-paragrafo">
+                                <a href="<?= URL . '/Paginas/clientes' ?>"><?= ucfirst($resultadoClientes->ds_nome_fantasia) . " - " . $resultadoClientes->ds_segmento ?></a>
+                            </td>
                         </tr>
                         <tr>
                             <td>
-                                <a href="<?= URL . '/Paginas/clientes' ?>">
+                                <a href="<?php if ($resultadoClientes->ds_url == "") {
+                                                echo URL;
+                                            } else {
+                                                echo $resultadoClientes->ds_url;
+                                            } ?>" target="_blank">
                                     <p style="color: gray;" class="ml-2">
                                         <?= $resultadoClientes->ds_nome_fantasia ?>
+                                    </p>
+                                    <p style="color: gray;" class="ml-2">
+                                        <?= $resultadoClientes->ds_url ?>
                                     </p>
                                 </a>
                             </td>

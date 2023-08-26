@@ -661,8 +661,10 @@ class Pagina
 
     public function pesquisarClientesHome($dados){
 
-        $this->db->query("select * from tb_clientes
-        where ds_nome_fantasia like concat('%', :txtPesquisa, '%') ");
+        $this->db->query("select * from tb_clientes c
+        join tb_foto_cliente ft on ft.fk_cliente = c.id_cliente
+        join tb_segmento sg on sg.id_segmento = c.fk_segmento
+        where c.ds_nome_fantasia like concat('%', :txtPesquisa, '%') ");
         $this->db->bind("txtPesquisa", $dados['txtPesquisaHome']);
 
         return $this->db->resultados();
