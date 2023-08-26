@@ -257,7 +257,7 @@
                     <li><a href="<?= URL . '/Paginas/lider_pro' ?>">Liderpro</a></li>
                     <li><a href="<?= URL . '/Paginas/clientes' ?>">Clientes</a></li>
                     <li><a href="<?= URL . '/Paginas/contatos' ?>">Contatos</a></li>
-                    <li><a href="<?= URL . '/Paginas/assistencia_tecnica' ?>">Assistência Técnica</a>
+                    <li><a href="<?= URL . '/PaginasDinamicas/assistencia_tecnica' ?>">Assistência Técnica</a>
                         <?php foreach ($dados['paginas'] as $paginas) { ?>
                     <li><a href="<?= URL . '/PaginasDinamicas/' . $paginas->ds_breadcrumb_menu ?>"><?= ucfirst($paginas->ds_pagina) ?></a></li>
                 <?php } ?>
