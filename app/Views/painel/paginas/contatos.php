@@ -113,7 +113,7 @@
                     <span class="-5"><img style="height: 30px; width: 30px;" class="p-1" src="<?= URL . '/img/menu_lider_pro/telefone.png' ?>" alt=""></span>
                 </div>
                 <div class="col-md-11 col-lg-11">
-                    <p class="lp-paragrafo"><a href="https://wa.me/552125268100?text=Ol%C3%A1%21" target="_blank">(21) 2526-8100</a></p>
+                    <p class="lp-paragrafo"><a href="https://wa.me/552125268100?text=Ol%C3%A1%21" target="_blank">(21) 2526-8100&nbsp&nbsp<span><img style="height: 20px; width: 20px;" src="<?= URL . '/img/menu_lider_pro/whatsapp.png' ?>" alt=""></span></a></p>
                 </div>
             </div>
 
