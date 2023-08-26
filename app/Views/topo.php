@@ -247,7 +247,7 @@
 
     <div class="w-100 lp-menu-mobile">
         <nav class="navbar navbar-expand-lg navbar-light ">
-            <a class="navbar-brand" href="<?= URL ?>"><img src="<?= URL . '/img/logo-liderpro-branco.png' ?>" alt=""></a>
+            <a class="navbar-brand" href="<?= URL ?>"><img style="height: 100px; width: 250px" src="<?= URL . '/img/logo-liderpro-branco.png' ?>" alt=""></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
