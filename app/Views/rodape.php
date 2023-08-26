@@ -6,13 +6,13 @@
                 <li class="lp-titulo-rodape">SERVIÇOS</li>
                 <li><a href="<?= URL . '/PaginasDinamicas/assistencia_tecnica' ?>">ASSISTÊNCIA TÉCNICA</a>
                     <ul class="list-unstyled lp-submenu-rodape">
-                        <li><a href="<?= URL . '/AssistenciaOpcao/computador_opc' ?>">Computadores</a></li>
+                        <li><a href="<?= URL . '/AssistenciaOpcao/computador_opc' ?>">Computador</a></li>
                         <li><a href="<?= URL . '/AssistenciaOpcao/notebook_opc' ?>">Notebook</a></li>
                         <li><a href="<?= URL . '/AssistenciaOpcao/tablet_celular_opc' ?>">Tablet e Celular</a></li>
-                        <li><a href="<?= URL . '/AssistenciaOpcao/projetor_opc' ?>">Projetores</a></li>
+                        <li><a href="<?= URL . '/AssistenciaOpcao/projetor_opc' ?>">Projetore</a></li>
                         <li><a href="<?= URL . '/AssistenciaOpcao/fonte_alimentacao_opc' ?>">Fonte de Alimentação</a></li>
                         <li><a href="<?= URL . '/AssistenciaOpcao/tv_monitor_opc' ?>">TV e Monitor</a></li>
-                        <li><a href="<?= URL . '/AssistenciaOpcao/impressora_opc' ?>">Impressoras</a></li>
+                        <li><a href="<?= URL . '/AssistenciaOpcao/impressora_opc' ?>">Impressora</a></li>
                         <li><a href="<?= URL . '/AssistenciaOpcao/nobreak_opc' ?>">No-break</a></li>
                     </ul>
                 </li>
@@ -72,7 +72,7 @@
                 <li class="lp-titulo-rodape"><a href="<?= URL . '/Paginas/contatos' ?>">CONTATOS</a></li>
                 <li><a href="<?= URL . '/Paginas/contatos' ?>">Endereço</a></li>
                 <li><a href="<?= URL . '/Paginas/contatos' ?>">Telefones</a></li>
-                <li><a href="<?= URL . '/Paginas/contatos' ?>">Email e Skype</a></li>
+                <li><a href="<?= URL . '/Paginas/contatos' ?>">E-mail</a></li>
                 <li><a href="<?= URL . '/Paginas/contatos' ?>">Horário de Funcionamento</a></li>
                 <li><a href="<?= URL . '/Paginas/contatos' ?>">Como chegar</a></li>
             </ul>
