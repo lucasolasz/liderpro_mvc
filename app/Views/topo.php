@@ -172,7 +172,7 @@
                 <div class="flex-grow-1">
 
                     <nav class="navbar navbar-expand-lg navbar-dark py-0 pr-0 pl-5">
-                        <div class="navbar-collapse">
+                        <div class="navbar-collapse d-flex justify-content-center">
                             <div class="list-unstyled d-flex lp-nav-ul">
                                 <li>
                                     <a href="<?= URL . '/PaginasDinamicas/assistencia_tecnica' ?>" class="lp-nav-link <?= $dados['tituloBreadcrumb'] == 'assistencia_tecnica' ? 'lp-nav-active' : ''; ?>">Assistência Técnica</a>
