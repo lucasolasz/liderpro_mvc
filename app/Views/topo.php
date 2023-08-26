@@ -153,7 +153,7 @@
                                 <div class="togglesearch">
                                     <form name="pesquisarHome" id="pesquisarHome" method="POST" action="<?= URL ?>/Paginas/pesquisarServicosHome" class="lp-form-pesquisa">
                                         <input type="text" name="txtPesquisaHome" id="txtPesquisaHome" placeholder=" O que você procura?" class="lp-barra-pesquisa" />
-                                        <input type="button" value="X" class="lp-close-pesquisa"/>
+                                        <input type="button" value="X" class="lp-close-pesquisa" />
                                         <button class="lp-btn-pesquisa-home"><span class="icon-lupa_menu menu-top-icon"></span></button>
                                     </form>
                                 </div>
@@ -247,33 +247,21 @@
 
     <div class="w-100 lp-menu-mobile">
         <nav class="navbar navbar-expand-lg navbar-light ">
-            <a class="navbar-brand" href="<?= URL ?>"><img src="<?= URL . '/img/logo-liderpro.png' ?>" alt=""></a>
+            <a class="navbar-brand" href="<?= URL ?>"><img src="<?= URL . '/img/logo-liderpro-branco.png' ?>" alt=""></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse lp-navbar-mobile" id="navbarNavAltMarkup">
                 <div class="navbar-nav d-flex align-items-center lp-item-menu-mobile">
                     <li><a href="<?= URL . '/Paginas/lider_pro' ?>">Liderpro</a></li>
                     <li><a href="<?= URL . '/Paginas/clientes' ?>">Clientes</a></li>
                     <li><a href="<?= URL . '/Paginas/contatos' ?>">Contatos</a></li>
                     <li><a href="<?= URL . '/Paginas/assistencia_tecnica' ?>">Assistência Técnica</a>
-                    <li><a href="<?= URL . '/Paginas/gestao_informatica' ?>">Gestão de informática</a></li>
-                    <li><a href="<?= URL . '/Paginas/cabeamento_estruturado' ?>">Cabeamento Estruturado</a></li>
-                    <li><a href="#">Segurança Eletrônica</a></li>
-                    <li><a href="#">Sistemas de Telefonia</a></li>
-                    <li><a href="<?= URL . '/Paginas/solucoes_nobreak' ?>">Soluções de No-Breaks</a></li>
-                    <li><a href="<?= URL . '/Paginas/solucoes_em_nuvem' ?>">Soluções em Nuvem</a></li>
+                        <?php foreach ($dados['paginas'] as $paginas) { ?>
+                    <li><a href="<?= URL . '/PaginasDinamicas/' . $paginas->ds_breadcrumb_menu ?>"><?= ucfirst($paginas->ds_pagina) ?></a></li>
+                <?php } ?>
                 </div>
             </div>
         </nav>
-
-        <div class="lp-breadcrumb-mobile ml-5 mt-5">
-            <?php if (isset($dados['paginas'])) { ?>
-                <a href="<?= URL . '/Paginas' . $urlBreadCrumb ?>"><?= $paginaBreadCrumb ?></a>
-            <?php } ?>
-
-            <?php if (isset($dados['paginasLiderPro'])) { ?>
-                <a href="<?= URL . '/Paginas' . $urlBreadCrumb ?>"><?= $paginaBreadCrumb ?></a>
-            <?php } ?>
-        </div>
     </div>
