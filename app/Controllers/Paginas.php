@@ -331,14 +331,13 @@ class Paginas extends Controller
                 ];
 
                 $this->view('painel/paginas/resultado_pesquisa', $dados);
+            } else {
+                $dados = [
+                    'paginas' => $paginas,
+                    'tituloBreadcrumb' => 'HOME',
+                ];
+                $this->view('painel/paginas/home', $dados);
             }
-
-            $dados = [
-                'paginas' => $paginas,
-                'tituloBreadcrumb' => 'HOME',
-            ];
-
-            $this->view('painel/paginas/home', $dados);
         } else {
             $dados = [
                 'paginas' => $paginas,
