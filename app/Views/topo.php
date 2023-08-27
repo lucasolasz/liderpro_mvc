@@ -149,7 +149,7 @@
                             </li>
 
                             <li>
-                                <span class="icon-lupa_menu menu-top-icon"></span>
+                                <span class="icon-lupa_menu menu-top-icon" id="icon-lupa_menu"></span>
                                 <div class="togglesearch">
                                     <form name="pesquisarHome" id="pesquisarHome" method="POST" action="<?= URL ?>/Paginas/pesquisarServicosHome" class="lp-form-pesquisa">
                                         <input type="text" name="txtPesquisaHome" id="txtPesquisaHome" placeholder=" O que você procura?" class="lp-barra-pesquisa" />
@@ -262,7 +262,7 @@
                     <li><a href="<?= URL . '/PaginasDinamicas/' . $paginas->ds_breadcrumb_menu ?>"><?= ucfirst($paginas->ds_pagina) ?></a></li>
                 <?php } ?>
                 <li>
-                    <a href="https://wa.me/552125268100?text=Ol%C3%A1%21" target="_blank" >(21)&nbsp2526-8100&nbsp
+                    <a href="https://wa.me/552125268100?text=Ol%C3%A1%21" target="_blank">(21)&nbsp2526-8100&nbsp
                         <span><img style="height: 15px; width: 15px;" src="<?= URL . '/img/menu_lider_pro/whatsapp.png' ?>" alt=""></span>
                     </a>
                 </li>

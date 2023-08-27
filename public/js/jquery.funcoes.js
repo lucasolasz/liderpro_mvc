@@ -39,7 +39,7 @@ $(document).ready(function () {
         $(".togglesearch").hide();
     });
 
-    $(".icon-lupa_menu").click(function () {
+    $("#icon-lupa_menu").click(function () {
         $(".togglesearch").toggle();
         $("input[type='text']").focus();
     });

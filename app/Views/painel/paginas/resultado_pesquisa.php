@@ -106,17 +106,3 @@
         </div>
     </div>
 </div>
-<script>
-    //Inicialização do dataTables
-    $(document).ready(function() {
-
-        $(".lp-close-pesquisa").click(function() {
-            $(".togglesearch").hide();
-        });
-
-        $(".icon-lupa_menu").click(function() {
-            $(".togglesearch").toggle();
-            $("input[type='text']").focus();
-        });
-    });
-</script>
