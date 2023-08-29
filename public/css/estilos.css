@@ -34,7 +34,7 @@ body {
 }
 
 .lp-nav-ul {
-    /* flex-basis: 40em; */
+    /* flex-basis: content; */
 }
 
 .lp-nav-link {
