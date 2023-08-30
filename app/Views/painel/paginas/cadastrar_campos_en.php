@@ -17,15 +17,15 @@
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
 
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                    <button class="nav-link active" id="tab-1-tab" data-toggle="tab" data-target="#tab-1-en" type="button" role="tab" aria-controls="tab-1-en" aria-selected="true">Tab 1 Inglês</button>
-                    <button class="nav-link" id="tab-2-tab" data-toggle="tab" data-target="#tab-2-en" type="button" role="tab" aria-controls="tab-2-en" aria-selected="false">Tab 2 Inglês</button>
-                    <button class="nav-link" id="tab-3-tab" data-toggle="tab" data-target="#tab-3-en" type="button" role="tab" aria-controls="tab-3-en" aria-selected="false">Tab 3 Inglês</button>
-                    <button class="nav-link" id="tab-4-tab" data-toggle="tab" data-target="#tab-4-en" type="button" role="tab" aria-controls="tab-4-en" aria-selected="false">Tab 4 Inglês</button>
+                    <button class="nav-link active" id="tab-1-tab-en" data-toggle="tab" data-target="#tab-1-en" type="button" role="tab" aria-controls="tab-1-en" aria-selected="true">Tab 1 Inglês</button>
+                    <button class="nav-link" id="tab-2-tab-en" data-toggle="tab" data-target="#tab-2-en" type="button" role="tab" aria-controls="tab-2-en" aria-selected="false">Tab 2 Inglês</button>
+                    <button class="nav-link" id="tab-3-tab-en" data-toggle="tab" data-target="#tab-3-en" type="button" role="tab" aria-controls="tab-3-en" aria-selected="false">Tab 3 Inglês</button>
+                    <button class="nav-link" id="tab-4-tab-en" data-toggle="tab" data-target="#tab-4-en" type="button" role="tab" aria-controls="tab-4-en" aria-selected="false">Tab 4 Inglês</button>
                 </div>
             </div>
         </nav>
         <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane fade show active" id="tab-1-en" role="tabpanel" aria-labelledby="tab-1-tab">
+            <div class="tab-pane fade show active" id="tab-1-en" role="tabpanel" aria-labelledby="tab-1-tab-en">
                 <div class="row p-4">
                     <div class="col-md-12 col-sm-12 col-lg-12">
                         <div class="form-group">
@@ -74,7 +74,7 @@
                     </div>
                 </div>
             </div>
-            <div class="tab-pane fade" id="tab-2-en" role="tabpanel" aria-labelledby="tab-2-tab">
+            <div class="tab-pane fade" id="tab-2-en" role="tabpanel" aria-labelledby="tab-2-tab-en">
                 <div class="row p-4">
                     <div class="col-md-12 col-sm-12 col-lg-12">
                         <div class="form-group">
@@ -123,7 +123,7 @@
                     </div>
                 </div>
             </div>
-            <div class="tab-pane fade" id="tab-3-en" role="tabpanel" aria-labelledby="tab-3-tab">
+            <div class="tab-pane fade" id="tab-3-en" role="tabpanel" aria-labelledby="tab-3-tab-en">
                 <div class="row p-4">
                     <div class="col-md-12 col-sm-12 col-lg-12">
                         <div class="form-group">
@@ -172,7 +172,7 @@
                     </div>
                 </div>
             </div>
-            <div class="tab-pane fade" id="tab-4-en" role="tabpanel" aria-labelledby="tab-4-tab">
+            <div class="tab-pane fade" id="tab-4-en" role="tabpanel" aria-labelledby="tab-4-tab-en">
                 <div class="row p-4">
                     <div class="col-md-12 col-sm-12 col-lg-12">
                         <div class="form-group">
