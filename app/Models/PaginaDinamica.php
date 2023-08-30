@@ -32,7 +32,8 @@ class PaginaDinamica
     //Retorna registros da tabela menu
     public function listarPaginasPeloId($id)
     {
-        $this->db->query("SELECT * FROM tb_pagina WHERE id_pagina = :id_pagina");
+        $this->db->query("select * from tb_pagina tp 
+        left join tb_pagina_en tpe on tpe.fk_id_pagina = tp.id_pagina WHERE tp.id_pagina = :id_pagina");
 
         $this->db->bind("id_pagina", $id);
 
