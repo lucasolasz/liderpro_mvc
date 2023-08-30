@@ -1,7 +1,7 @@
 <div class="form-group mt-4">
-    <label for="txtTitutoPaginaEn" id="tituloPaginalbl">Título da página Inglês *</label>
+    <label for="txtTitutoPaginaEn" id="tituloPaginalblEn">Título da página Inglês *</label>
     <input type="input" class="form-control" id="txtTitutoPaginaEn" name="txtTitutoPaginaEn" value="<?= $dados['paginaSelecionada'][0]->ds_pagina_en ?>">
-    <small id="recebeAlerta"></small>
+    <small id="recebeAlertaEn"></small>
 </div>
 
 
