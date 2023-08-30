@@ -33,7 +33,9 @@ class PaginaDinamica
     public function listarPaginasPeloId($id)
     {
         $this->db->query("select * from tb_pagina tp 
-        left join tb_pagina_en tpe on tpe.fk_id_pagina = tp.id_pagina WHERE tp.id_pagina = :id_pagina");
+        left join tb_pagina_en tpe on tpe.fk_id_pagina = tp.id_pagina
+        left join tb_pagina_es tps on tps.fk_id_pagina = tp.id_pagina 
+        WHERE tp.id_pagina = :id_pagina");
 
         $this->db->bind("id_pagina", $id);
 

@@ -197,6 +197,7 @@ class Pagina
         $ultimoId = $this->db->ultimoIdInserido();
 
         $this->armazenarPaginaEn($dados, $ultimoId);
+        $this->armazenarPaginaEs($dados, $ultimoId);
 
         if (!$dados['fileBannerPrincipal']['name'][0] == "") {
             $this->armazenaFotoBanner($dados['fileBannerPrincipal'], $ultimoId);
@@ -345,6 +346,137 @@ class Pagina
         $this->db->bind("ds_topico6tab4_en", $dados['txtTopico6Tab4En']);
         $this->db->bind("ds_topico7tab4_en", $dados['txtTopico7Tab4En']);
         $this->db->bind("ds_topico8tab4_en", $dados['txtTopico8Tab4En']);
+
+        $this->db->executa();
+    }
+
+    public function armazenarPaginaEs($dados, $idPagina)
+    {
+
+
+        $this->db->query("INSERT INTO 
+        tb_pagina_es (
+            fk_id_pagina,
+            ds_pagina_es, 
+            ds_texto_principal_es,
+            ds_tab1_es, 
+            ds_topico1tab1_es, 
+            ds_topico2tab1_es, 
+            ds_topico3tab1_es, 
+            ds_topico4tab1_es, 
+            ds_topico5tab1_es,
+            ds_topico6tab1_es,
+            ds_topico7tab1_es,
+            ds_topico8tab1_es,
+            ds_tab2_es,
+            ds_topico1tab2_es, 
+            ds_topico2tab2_es, 
+            ds_topico3tab2_es, 
+            ds_topico4tab2_es, 
+            ds_topico5tab2_es,
+            ds_topico6tab2_es,
+            ds_topico7tab2_es,
+            ds_topico8tab2_es,
+            ds_tab3_es,
+            ds_topico1tab3_es, 
+            ds_topico2tab3_es, 
+            ds_topico3tab3_es, 
+            ds_topico4tab3_es, 
+            ds_topico5tab3_es,
+            ds_topico6tab3_es,
+            ds_topico7tab3_es,
+            ds_topico8tab3_es,
+            ds_tab4_es,
+            ds_topico1tab4_es, 
+            ds_topico2tab4_es, 
+            ds_topico3tab4_es, 
+            ds_topico4tab4_es, 
+            ds_topico5tab4_es,
+            ds_topico6tab4_es,
+            ds_topico7tab4_es,
+            ds_topico8tab4_es
+            ) 
+            VALUES (
+                :fk_id_pagina,
+                :ds_pagina_es,
+                :ds_texto_principal_es, 
+                :ds_tab1_es, 
+                :ds_topico1tab1_es, 
+                :ds_topico2tab1_es, 
+                :ds_topico3tab1_es, 
+                :ds_topico4tab1_es,
+                :ds_topico5tab1_es, 
+                :ds_topico6tab1_es, 
+                :ds_topico7tab1_es,
+                :ds_topico8tab1_es,
+                :ds_tab2_es, 
+                :ds_topico1tab2_es, 
+                :ds_topico2tab2_es, 
+                :ds_topico3tab2_es, 
+                :ds_topico4tab2_es,
+                :ds_topico5tab2_es, 
+                :ds_topico6tab2_es, 
+                :ds_topico7tab2_es,
+                :ds_topico8tab2_es,
+                :ds_tab3_es, 
+                :ds_topico1tab3_es, 
+                :ds_topico2tab3_es, 
+                :ds_topico3tab3_es, 
+                :ds_topico4tab3_es,
+                :ds_topico5tab3_es, 
+                :ds_topico6tab3_es, 
+                :ds_topico7tab3_es,
+                :ds_topico8tab3_es,
+                :ds_tab4_es, 
+                :ds_topico1tab4_es, 
+                :ds_topico2tab4_es, 
+                :ds_topico3tab4_es, 
+                :ds_topico4tab4_es,
+                :ds_topico5tab4_es, 
+                :ds_topico6tab4_es, 
+                :ds_topico7tab4_es,
+                :ds_topico8tab4_es
+                )");
+
+        $this->db->bind("fk_id_pagina", $idPagina);
+        $this->db->bind("ds_pagina_es", trim($dados['txtTitutoPaginaEs']));
+        $this->db->bind("ds_texto_principal_es", $dados['txtTextPrincipalEs']);
+        $this->db->bind("ds_tab1_es", $dados['txtNomeTab1Es']);
+        $this->db->bind("ds_topico1tab1_es", $dados['txtTopico1Tab1Es']);
+        $this->db->bind("ds_topico2tab1_es", $dados['txtTopico2Tab1Es']);
+        $this->db->bind("ds_topico3tab1_es", $dados['txtTopico3Tab1Es']);
+        $this->db->bind("ds_topico4tab1_es", $dados['txtTopico4Tab1Es']);
+        $this->db->bind("ds_topico5tab1_es", $dados['txtTopico5Tab1Es']);
+        $this->db->bind("ds_topico6tab1_es", $dados['txtTopico6Tab1Es']);
+        $this->db->bind("ds_topico7tab1_es", $dados['txtTopico7Tab1Es']);
+        $this->db->bind("ds_topico8tab1_es", $dados['txtTopico8Tab1Es']);
+        $this->db->bind("ds_tab2_es", $dados['txtNomeTab2Es']);
+        $this->db->bind("ds_topico1tab2_es", $dados['txtTopico1Tab2Es']);
+        $this->db->bind("ds_topico2tab2_es", $dados['txtTopico2Tab2Es']);
+        $this->db->bind("ds_topico3tab2_es", $dados['txtTopico3Tab2Es']);
+        $this->db->bind("ds_topico4tab2_es", $dados['txtTopico4Tab2Es']);
+        $this->db->bind("ds_topico5tab2_es", $dados['txtTopico5Tab2Es']);
+        $this->db->bind("ds_topico6tab2_es", $dados['txtTopico6Tab2Es']);
+        $this->db->bind("ds_topico7tab2_es", $dados['txtTopico7Tab2Es']);
+        $this->db->bind("ds_topico8tab2_es", $dados['txtTopico8Tab2Es']);
+        $this->db->bind("ds_tab3_es", $dados['txtNomeTab3Es']);
+        $this->db->bind("ds_topico1tab3_es", $dados['txtTopico1Tab3Es']);
+        $this->db->bind("ds_topico2tab3_es", $dados['txtTopico2Tab3Es']);
+        $this->db->bind("ds_topico3tab3_es", $dados['txtTopico3Tab3Es']);
+        $this->db->bind("ds_topico4tab3_es", $dados['txtTopico4Tab3Es']);
+        $this->db->bind("ds_topico5tab3_es", $dados['txtTopico5Tab3Es']);
+        $this->db->bind("ds_topico6tab3_es", $dados['txtTopico6Tab3Es']);
+        $this->db->bind("ds_topico7tab3_es", $dados['txtTopico7Tab3Es']);
+        $this->db->bind("ds_topico8tab3_es", $dados['txtTopico8Tab3Es']);
+        $this->db->bind("ds_tab4_es", $dados['txtNomeTab4Es']);
+        $this->db->bind("ds_topico1tab4_es", $dados['txtTopico1Tab4Es']);
+        $this->db->bind("ds_topico2tab4_es", $dados['txtTopico2Tab4Es']);
+        $this->db->bind("ds_topico3tab4_es", $dados['txtTopico3Tab4Es']);
+        $this->db->bind("ds_topico4tab4_es", $dados['txtTopico4Tab4Es']);
+        $this->db->bind("ds_topico5tab4_es", $dados['txtTopico5Tab4Es']);
+        $this->db->bind("ds_topico6tab4_es", $dados['txtTopico6Tab4Es']);
+        $this->db->bind("ds_topico7tab4_es", $dados['txtTopico7Tab4Es']);
+        $this->db->bind("ds_topico8tab4_es", $dados['txtTopico8Tab4Es']);
 
         $this->db->executa();
     }
@@ -523,6 +655,7 @@ class Pagina
         $this->db->executa();
 
         $this->atualizarPaginaEn($dados, $dados['id_pagina']);
+        $this->atualizarPaginaEs($dados, $dados['id_pagina']);
 
         if (!$dados['fileBannerPrincipal']['name'] == "") {
             if ($this->apagarFotoFisicaDinamico("tb_foto_banner", $dados['id_pagina'])) {
@@ -641,6 +774,96 @@ class Pagina
         $this->db->executa();
     }
 
+    public function atualizarPaginaEs($dados, $idPagina)
+    {
+
+        $this->db->query("UPDATE tb_pagina_es SET 
+        ds_pagina_es=:ds_pagina_es,
+        ds_texto_principal_es=:ds_texto_principal_es, 
+        ds_tab1_es=:ds_tab1_es, 
+        ds_topico1tab1_es=:ds_topico1tab1_es, 
+        ds_topico2tab1_es=:ds_topico2tab1_es, 
+        ds_topico3tab1_es=:ds_topico3tab1_es, 
+        ds_topico4tab1_es=:ds_topico4tab1_es, 
+        ds_topico5tab1_es=:ds_topico5tab1_es, 
+        ds_topico6tab1_es=:ds_topico6tab1_es, 
+        ds_topico7tab1_es=:ds_topico7tab1_es, 
+        ds_topico8tab1_es=:ds_topico8tab1_es, 
+        ds_tab2_es=:ds_tab2_es,
+        ds_topico1tab2_es=:ds_topico1tab2_es, 
+        ds_topico2tab2_es=:ds_topico2tab2_es, 
+        ds_topico3tab2_es=:ds_topico3tab2_es, 
+        ds_topico4tab2_es=:ds_topico4tab2_es, 
+        ds_topico5tab2_es=:ds_topico5tab2_es, 
+        ds_topico6tab2_es=:ds_topico6tab2_es, 
+        ds_topico7tab2_es=:ds_topico7tab2_es, 
+        ds_topico8tab2_es=:ds_topico8tab2_es, 
+        ds_tab3_es=:ds_tab3_es, 
+        ds_topico1tab3_es=:ds_topico1tab3_es, 
+        ds_topico2tab3_es=:ds_topico2tab3_es, 
+        ds_topico3tab3_es=:ds_topico3tab3_es, 
+        ds_topico4tab3_es=:ds_topico4tab3_es, 
+        ds_topico5tab3_es=:ds_topico5tab3_es, 
+        ds_topico6tab3_es=:ds_topico6tab3_es, 
+        ds_topico7tab3_es=:ds_topico7tab3_es, 
+        ds_topico8tab3_es=:ds_topico8tab3_es, 
+        ds_tab4_es=:ds_tab4_es, 
+        ds_topico1tab4_es=:ds_topico1tab4_es, 
+        ds_topico2tab4_es=:ds_topico2tab4_es, 
+        ds_topico3tab4_es=:ds_topico3tab4_es, 
+        ds_topico4tab4_es=:ds_topico4tab4_es, 
+        ds_topico5tab4_es=:ds_topico5tab4_es, 
+        ds_topico6tab4_es=:ds_topico6tab4_es, 
+        ds_topico7tab4_es=:ds_topico7tab4_es, 
+        ds_topico8tab4_es=:ds_topico8tab4_es
+        
+        WHERE fk_id_pagina= :fk_id_pagina;
+        ");
+
+
+        $this->db->bind("ds_pagina_es", trim($dados['txtTitutoPaginaEs']));
+        $this->db->bind("ds_texto_principal_es", $dados['txtTextPrincipalEs']);
+        $this->db->bind("ds_tab1_es", $dados['txtNomeTab1Es']);
+        $this->db->bind("ds_topico1tab1_es", $dados['txtTopico1Tab1Es']);
+        $this->db->bind("ds_topico2tab1_es", $dados['txtTopico2Tab1Es']);
+        $this->db->bind("ds_topico3tab1_es", $dados['txtTopico3Tab1Es']);
+        $this->db->bind("ds_topico4tab1_es", $dados['txtTopico4Tab1Es']);
+        $this->db->bind("ds_topico5tab1_es", $dados['txtTopico5Tab1Es']);
+        $this->db->bind("ds_topico6tab1_es", $dados['txtTopico6Tab1Es']);
+        $this->db->bind("ds_topico7tab1_es", $dados['txtTopico7Tab1Es']);
+        $this->db->bind("ds_topico8tab1_es", $dados['txtTopico8Tab1Es']);
+        $this->db->bind("ds_tab2_es", $dados['txtNomeTab2Es']);
+        $this->db->bind("ds_topico1tab2_es", $dados['txtTopico1Tab2Es']);
+        $this->db->bind("ds_topico2tab2_es", $dados['txtTopico2Tab2Es']);
+        $this->db->bind("ds_topico3tab2_es", $dados['txtTopico3Tab2Es']);
+        $this->db->bind("ds_topico4tab2_es", $dados['txtTopico4Tab2Es']);
+        $this->db->bind("ds_topico5tab2_es", $dados['txtTopico5Tab2Es']);
+        $this->db->bind("ds_topico6tab2_es", $dados['txtTopico6Tab2Es']);
+        $this->db->bind("ds_topico7tab2_es", $dados['txtTopico7Tab2Es']);
+        $this->db->bind("ds_topico8tab2_es", $dados['txtTopico8Tab2Es']);
+        $this->db->bind("ds_tab3_es", $dados['txtNomeTab3Es']);
+        $this->db->bind("ds_topico1tab3_es", $dados['txtTopico1Tab3Es']);
+        $this->db->bind("ds_topico2tab3_es", $dados['txtTopico2Tab3Es']);
+        $this->db->bind("ds_topico3tab3_es", $dados['txtTopico3Tab3Es']);
+        $this->db->bind("ds_topico4tab3_es", $dados['txtTopico4Tab3Es']);
+        $this->db->bind("ds_topico5tab3_es", $dados['txtTopico5Tab3Es']);
+        $this->db->bind("ds_topico6tab3_es", $dados['txtTopico6Tab3Es']);
+        $this->db->bind("ds_topico7tab3_es", $dados['txtTopico7Tab3Es']);
+        $this->db->bind("ds_topico8tab3_es", $dados['txtTopico8Tab3Es']);
+        $this->db->bind("ds_tab4_es", $dados['txtNomeTab4Es']);
+        $this->db->bind("ds_topico1tab4_es", $dados['txtTopico1Tab4Es']);
+        $this->db->bind("ds_topico2tab4_es", $dados['txtTopico2Tab4Es']);
+        $this->db->bind("ds_topico3tab4_es", $dados['txtTopico3Tab4Es']);
+        $this->db->bind("ds_topico4tab4_es", $dados['txtTopico4Tab4Es']);
+        $this->db->bind("ds_topico5tab4_es", $dados['txtTopico5Tab4Es']);
+        $this->db->bind("ds_topico6tab4_es", $dados['txtTopico6Tab4Es']);
+        $this->db->bind("ds_topico7tab4_es", $dados['txtTopico7Tab4Es']);
+        $this->db->bind("ds_topico8tab4_es", $dados['txtTopico8Tab4Es']);
+        $this->db->bind("fk_id_pagina", $idPagina);
+
+        $this->db->executa();
+    }
+
     public function listaFotoAnteriorDinamico($nomeTabela, $idPagina)
     {
         $this->db->query("SELECT * FROM $nomeTabela WHERE fk_pagina = :fk_pagina");
@@ -692,6 +915,10 @@ class Pagina
         $apagouTudo = $this->deletarImagemBancoDinamico("tb_foto_servico", $idPagina) == true ? true : false;
 
         if ($apagouTudo) {
+
+            $this->db->query("DELETE FROM tb_pagina_es WHERE fk_id_pagina = :fk_id_pagina");
+            $this->db->bind("fk_id_pagina", $idPagina);
+            $this->db->executa();
 
             $this->db->query("DELETE FROM tb_pagina_en WHERE fk_id_pagina = :fk_id_pagina");
             $this->db->bind("fk_id_pagina", $idPagina);

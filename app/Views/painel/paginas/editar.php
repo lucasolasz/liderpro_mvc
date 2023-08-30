@@ -48,7 +48,9 @@
                     <div class="tab-pane fade" id="nav-profile-ingles" role="tabpanel" aria-labelledby="nav-ingles-tab">
                         <?php include_once 'editar_campos_en.php' ?>
                     </div>
-                    <div class="tab-pane fade" id="nav-contact-espanhol" role="tabpanel" aria-labelledby="nav-espanhol-tab">...</div>
+                    <div class="tab-pane fade" id="nav-contact-espanhol" role="tabpanel" aria-labelledby="nav-espanhol-tab">
+                        <?php include_once 'editar_campos_es.php' ?>
+                    </div>
                 </div>
                 <div class="row mt-4">
                     <div class="col-md-6">
