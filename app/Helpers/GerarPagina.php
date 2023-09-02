@@ -32,7 +32,7 @@ class GerarPagina
         //$id
         $dolarId = $dolar . "idPaginaSelecionada";
         //$_SESSION['linguagem_selecionada']
-        $dolarSessao = $dolar . "__SESSION['linguagem_selecionada']";
+        $dolarSessao = $dolar . "_SESSION['linguagem_selecionada']";
 
         $novoMetodoCompleto = "";
 

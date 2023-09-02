@@ -9,7 +9,7 @@ class PaginasDinamicas extends Controller
         
     public function index() { 
         $paginas = $this->paginaDinamicaModel->listarPaginasAtivas();
-        $__SESSION['linguagem_selecionada'] = isset($__SESSION['linguagem_selecionada']) ? $__SESSION['linguagem_selecionada'] : 'PT';
+        $_SESSION['linguagem_selecionada'] = isset($_SESSION['linguagem_selecionada']) ? $_SESSION['linguagem_selecionada'] : 'PT';
         $dados = [
             'paginas' => $paginas,
             'tituloBreadcrumb' => 'HOME' ,
