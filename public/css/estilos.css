@@ -856,6 +856,65 @@ body {
 
 
 @font-face {
+    font-family: 'icomoon-lang';
+    src: url('../fonts/icomoon-lang.eot');
+    src: url('../fonts/icomoon-lang.eot') format('embedded-opentype'),
+        url('../fonts/icomoon-lang.ttf') format('truetype'),
+        url('../fonts/icomoon-lang.woff') format('woff'),
+        url('../fonts/icomoon-lang.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="iconlang-"],
+[class*=" iconlang-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon-lang' !important;
+    /* speak: never; */
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.iconlang-EN:before {
+    content: "\e900";
+    font-size: 24px;
+}
+
+.iconlang-ES:before {
+    content: "\e902";
+    font-size: 24px;
+}
+
+.iconlang-PT:before {
+    content: "\e904";
+    font-size: 24px;
+}
+
+.iconlang-EN_TRI:before {
+    content: "\e901";
+    font-size: 24px;
+}
+
+.iconlang-ES_TRI:before {
+    content: "\e903";
+    font-size: 24px;
+}
+
+.iconlang-PT_TRI:before {
+    content: "\e905";
+    font-size: 24px;
+}
+
+
+@font-face {
     font-family: 'icomoon';
     src: url('../fonts/icomoon.eot');
     src: url('../fonts/icomoon.eot') format('embedded-opentype'),
