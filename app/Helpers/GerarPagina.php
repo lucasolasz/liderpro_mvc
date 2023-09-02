@@ -31,6 +31,8 @@ class GerarPagina
         $esteView = $dolarThisMaisSetaSimples . "view";
         //$id
         $dolarId = $dolar . "idPaginaSelecionada";
+        //$_SESSION['linguagem_selecionada']
+        $dolarSessao = $dolar . "__SESSION['linguagem_selecionada']";
 
         $novoMetodoCompleto = "";
 
@@ -90,7 +92,7 @@ class GerarPagina
         
     public function index() { 
         $dolarPaginas = $variavelModelTodasAsPaginas
-
+        $dolarSessao = isset($dolarSessao) ? $dolarSessao : 'PT';
         $dolarDados = [
             'paginas' => $dolarPaginas,
             'tituloBreadcrumb' => 'HOME' ,
