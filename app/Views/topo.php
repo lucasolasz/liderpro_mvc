@@ -136,6 +136,37 @@
                             </li>
 
                             <li>
+                                <?php if ($_SESSION['linguagem_selecionada'] == "PT") { ?>
+                                    <div class="dropdown-language">
+                                        <a href="#" class="menu-top-icon"><span class="iconlang-PT_TRI menu-top-icon" id="iconlang-PT"></span></a>
+                                        <div class="dropdown-language-content">
+                                            <a href="<?= URL . "/Paginas/trocaLinguagem/?linguagem=PT" ?>"><span class="iconlang-PT menu-top-icon" id="iconlang-PT"></span></a>
+                                            <a href="<?= URL . "/Paginas/trocaLinguagem/?linguagem=ES" ?>"><span class="iconlang-ES menu-top-icon" id="iconlang-ES"></span></a>
+                                            <a href="<?= URL . "/Paginas/trocaLinguagem/?linguagem=EN" ?>"><span class="iconlang-EN menu-top-icon" id="iconlang-EN"></span></a>
+                                        </div>
+                                    </div>
+                                <?php } elseif ($_SESSION['linguagem_selecionada'] == "EN") { ?>
+                                    <div class="dropdown-language">
+                                        <a href="#" class="menu-top-icon"><span class="iconlang-EN_TRI menu-top-icon" id="iconlang-EN"></span></a>
+                                        <div class="dropdown-language-content">
+                                            <a href="<?= URL . "/Paginas/trocaLinguagem/?linguagem=PT" ?>"><span class="iconlang-PT menu-top-icon" id="iconlang-PT"></span></a>
+                                            <a href="<?= URL . "/Paginas/trocaLinguagem/?linguagem=ES" ?>"><span class="iconlang-ES menu-top-icon" id="iconlang-ES"></span></a>
+                                            <a href="<?= URL . "/Paginas/trocaLinguagem/?linguagem=EN" ?>"><span class="iconlang-EN menu-top-icon" id="iconlang-EN"></span></a>
+                                        </div>
+                                    </div>
+                                <?php } elseif ($_SESSION['linguagem_selecionada'] == "ES") { ?>
+                                    <div class="dropdown-language">
+                                        <a href="#" class="menu-top-icon"><span class="iconlang-ES_TRI menu-top-icon" id="iconlang-ES"></span></a>
+                                        <div class="dropdown-language-content">
+                                            <a href="<?= URL . "/Paginas/trocaLinguagem/?linguagem=PT" ?>"><span class="iconlang-PT menu-top-icon" id="iconlang-PT"></span></a>
+                                            <a href="<?= URL . "/Paginas/trocaLinguagem/?linguagem=ES" ?>"><span class="iconlang-ES menu-top-icon" id="iconlang-ES"></span></a>
+                                            <a href="<?= URL . "/Paginas/trocaLinguagem/?linguagem=EN" ?>"><span class="iconlang-EN menu-top-icon" id="iconlang-EN"></span></a>
+                                        </div>
+                                    </div>
+                                <?php } ?>
+                            </li>
+
+                            <li>
                                 <div class="dropdown-social">
                                     <a href="#" class="menu-top-icon btn-face-ico"><span class="icon-facebook_logo"></span></a>
                                     <div class="dropdown-social-content">

@@ -347,4 +347,19 @@ class Paginas extends Controller
             $this->view('painel/paginas/resultado_pesquisa', $dados);
         }
     }
+
+    public function trocaLinguagem()
+    {
+        $paginas = $this->paginaDinamicaModel->listarPaginasAtivas();
+
+        $linguagem = $_GET['linguagem'];
+
+        $_SESSION['linguagem_selecionada'] = $linguagem;
+
+        $dados = [
+            'paginas' => $paginas,
+            'tituloBreadcrumb' => 'HOME',
+        ];
+        $this->view('painel/paginas/home', $dados);
+    }
 }
