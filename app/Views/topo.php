@@ -206,7 +206,15 @@
                         <div class="navbar-collapse d-flex justify-content-center">
                             <div class="list-unstyled d-flex lp-nav-ul">
                                 <li>
-                                    <a href="<?= URL . '/Paginas/assistencia_tecnica' ?>" class="lp-nav-link <?= $dados['tituloBreadcrumb'] == 'assistencia_tecnica' ? 'lp-nav-active' : ''; ?>">Assistência Técnica</a>
+                                    <a href="<?= URL . '/Paginas/assistencia_tecnica' ?>" class="lp-nav-link <?= $dados['tituloBreadcrumb'] == 'assistencia_tecnica' ? 'lp-nav-active' : ''; ?>">
+                                        <?php if ($_SESSION['linguagem_selecionada'] == "PT") {
+                                            echo "ASSISTÊNCIA TÉCNICA";
+                                        } elseif ($_SESSION['linguagem_selecionada'] == "ES") {
+                                            echo "ASISTENCIA TÉCNICA";
+                                        } elseif ($_SESSION['linguagem_selecionada'] == "EN") {
+                                            echo "TECHNICAL ASSISTANCE";
+                                        } ?>
+                                    </a>
                                     <ul class="list-unstyled submenu">
                                         <li class="sem-categoria">
                                             <a href="<?= URL . '/AssistenciaOpcao/computador_opc' ?>">
