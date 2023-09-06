@@ -31,26 +31,25 @@
             <div class="d-flex justify-content-center mt-5">
                 <ul class="list-unstyled w-100 lp-ul-assistencia">
                     <li class="lp-li-assistencia-titulo">Main Services</li>
-                    <li>-MacBook, iMac, Mac Pro and Mac Mini</li>
-                    <li>-Preventive and Corrective Maintenance</li>
-                    <li>-Data Recovery</li>
-                    <li>-Software Update</li>
-                    <li>-Replacement of parts</li>
-                    <li>-Equipment upgrade</li>
+                    <li>-Preventive Maintenance</li>
+                    <li>-Corrective Maintenance</li>
+                    <li>-Lamp Replacement</li>
+                    <li>-Parts and Plates Repair</li>
+                    <li>-In-Place Installation and Uninstall</li>
                 </ul>
             </div>
 
             <div class="d-flex justify-content-center mt-5">
                 <ul class="list-unstyled w-100 lp-ul-assistencia">
                     <li class="lp-li-assistencia-titulo">Main Problems</li>
-                    <li>-The Macbook won't turn on!</li>
-                    <li>-I can't configure the iMac!</li>
-                    <li>-The wireless network (Wi-Fi) is slow!</li>
-                    <li>-The internet is not working!</li>
-                    <li>-I lost my files/data!</li>
-                    <li>-I'd like to install a new program!</li>
-                    <li>-I want to install a new part on my computer!</li>
-                    <li>-I want to backup my files/data!</li>
+                    <li>-The projector does not turn on!</li>
+                    <li>-The projector is getting too hot!</li>
+                    <li>-The lamp is burnt out!</li>
+                    <li>-The projector is making a noise!</li>
+                    <li>-Very hot air comes out of the projector!</li>
+                    <li>-How do you install a projector on the ceiling?</li>
+                    <li>-Projector housing cracked!</li>
+                    <li>-The projected image is blurred!</li>
                 </ul>
             </div>
         </div>
