@@ -199,7 +199,7 @@
                 <a href="<?= URL ?>" class="position-absolute" style="bottom: 0;">
                     <img src="<?= URL . '/img/logo-liderpro.png' ?>" alt="">
                 </a>
-                <div style="width: 250px;"></div>
+                <div style="width: 270px;"></div>
                 <div class="flex-grow-1">
 
                     <nav class="navbar navbar-expand-lg navbar-dark py-0 pr-0 pl-5">

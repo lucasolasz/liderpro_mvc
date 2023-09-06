@@ -34,7 +34,7 @@ body {
 }
 
 .lp-nav-ul {
-    /* flex-basis: content; */
+    flex-basis: inherit;
 }
 
 .lp-nav-link {
@@ -42,9 +42,9 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-
+    height: 60px;
     padding: 10px;
-    font-size: 14px;
+    font-size: 13px;
 
     color: white;
     font-weight: 700;
