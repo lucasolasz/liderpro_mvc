@@ -206,7 +206,7 @@
                         <div class="navbar-collapse d-flex justify-content-center">
                             <div class="list-unstyled d-flex lp-nav-ul">
                                 <li>
-                                    <a href="<?= URL . '/PaginasDinamicas/assistencia_tecnica' ?>" class="lp-nav-link <?= $dados['tituloBreadcrumb'] == 'assistencia_tecnica' ? 'lp-nav-active' : ''; ?>">Assistência Técnica</a>
+                                    <a href="<?= URL . '/Paginas/assistencia_tecnica' ?>" class="lp-nav-link <?= $dados['tituloBreadcrumb'] == 'assistencia_tecnica' ? 'lp-nav-active' : ''; ?>">Assistência Técnica</a>
                                     <ul class="list-unstyled submenu">
                                         <li class="sem-categoria">
                                             <a href="<?= URL . '/AssistenciaOpcao/computador_opc' ?>">
@@ -300,7 +300,7 @@
                     <li><a href="<?= URL . '/Paginas/lider_pro' ?>">Liderpro</a></li>
                     <li><a href="<?= URL . '/Paginas/clientes' ?>">Clientes</a></li>
                     <li><a href="<?= URL . '/Paginas/contatos' ?>">Contatos</a></li>
-                    <li><a href="<?= URL . '/PaginasDinamicas/assistencia_tecnica' ?>">Assistência Técnica</a>
+                    <li><a href="<?= URL . '/Paginas/assistencia_tecnica' ?>">Assistência Técnica</a>
                         <?php foreach ($dados['paginas'] as $paginas) { ?>
                     <li><a href="<?= URL . '/PaginasDinamicas/' . $paginas->ds_breadcrumb_menu ?>"><?= ucfirst($paginas->ds_pagina) ?></a></li>
                 <?php } ?>

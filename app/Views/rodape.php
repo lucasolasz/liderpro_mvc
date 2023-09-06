@@ -4,7 +4,7 @@
         <div class="col-md">
             <ul class="list-unstyled lista-rodape">
                 <li class="lp-titulo-rodape">SERVIÇOS</li>
-                <li><a href="<?= URL . '/PaginasDinamicas/assistencia_tecnica' ?>">ASSISTÊNCIA TÉCNICA</a>
+                <li><a href="<?= URL . '/Paginas/assistencia_tecnica' ?>">ASSISTÊNCIA TÉCNICA</a>
                     <ul class="list-unstyled lp-submenu-rodape">
                         <li><a href="<?= URL . '/AssistenciaOpcao/computador_opc' ?>">Computador</a></li>
                         <li><a href="<?= URL . '/AssistenciaOpcao/notebook_opc' ?>">Notebook</a></li>
