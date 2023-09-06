@@ -263,24 +263,5 @@
                 </div>
             </a>
         </div>
-
-        <!-- 
-        
-        
-
-    
-
-
-
-        
-
-        
-
-        <div class="d-flex justify-content-center align-items-end">
-            <a href="<?= URL . '/AssistenciaOpcao/apple_opc' ?>">
-                <img class="img-fluid img-fluid-assistencia" src="<?= URL . '/img/paginas/assistencia_tecnica/assistencia_tecnica_apple.png' ?>" alt="">
-            </a>
-        </div> -->
-
     </div>
 </div>

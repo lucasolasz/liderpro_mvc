@@ -1,18 +1,17 @@
 <div class="container p-5">
     <div class="row">
         <div class="col-md-12 col-lg-12 d-flex justify-content-center">
-            <h2 class="lp-titulo-paragrafo">Assistência Técnica Autorizada e Especializada em Equipamentos de Informática</h2>
+            <h2 class="lp-titulo-paragrafo">Asistencia Técnica Autorizada y Especializada en Equipos Informáticos</h2>
         </div>
     </div>
     <div class="row py-5">
-        ESPANHA
         <div class="col-md-12 col-lg-12 d-flex justify-content-center">
-            <p class="lp-paragrafo ">Construímos um laboratório antiestático, com modernos equipamentos eletrônicos de precisão, bancadas de reparo e ferramentas de alta qualidade para executarmos da
-                forma tecnicamente correta e especializada os consertos eletrônicos em vários tipos de equipamentos. Com isso, ganhamos a confiança de fabricantes que nos concederam a
-                responsabilidade de sermos Assistência Técnica Autorizada dos seus equipamentos. Provendo, em seus centros de aprendizados, cursos especializados aos nossos técnicos.
+            <p class="lp-paragrafo ">Construimos un laboratorio antiestático, con modernos equipos electrónicos de precisión, mesas de reparación y herramientas de alta calidad para realizar
+                forma técnicamente correcta y especializada de realizar reparaciones electrónicas en diversos tipos de equipos. Con esto nos ganamos la confianza de los fabricantes quienes nos otorgaron la
+                responsabilidad de ser Asistencia Técnica Autorizada para su equipo. Impartir, en sus centros de aprendizaje, cursos especializados a nuestros técnicos.
                 <br />
                 <br />
-                Prestamos serviços de Assistência Técnica Preditiva, Preventiva, Corretiva e Instalação com atendimentos avulsos ou contratuais para:
+                Brindamos servicios de Asistencia Técnica Predictiva, Preventiva, Correctiva y de Instalación con asistencia separada o contractual para:
             </p>
         </div>
     </div>
@@ -27,7 +26,7 @@
                 </div>
                 <div class="lp-background-assistencia-computador mt-2 div-card-assistencia">
                     <div class="d-flex justify-content-center">
-                        <p class="my-2">Computador e Serviço</p>
+                        <p class="my-2">Computadora y Servicio</p>
                     </div>
                     <div class="d-flex justify-content-center">
                         <img class="lp-imagem-texto-assistencia" src="<?= URL . '/img/paginas/assistencia_tecnica/assistencia_tecnica_computador_mini.png' ?>" alt="">
@@ -35,12 +34,12 @@
 
                     <div class="mt-2">
                         <ul class="px-4">
-                            <li>Manutenção Preventiva</li>
-                            <li>Manutenção corretiva</li>
-                            <li>Recuperação de Dados</li>
-                            <li>Instalação de Programas</li>
-                            <li>Backup - Cópia Segura de Dados</li>
-                            <li>Upgrade de equipamento</li>
+                            <li>Mantenimiento preventivo</li>
+                            <li>Mantenimiento correctivo</li>
+                            <li>Recuperación de datos</li>
+                            <li>Instalación del programa</li>
+                            <li>Copia de seguridad: copia segura de datos</li>
+                            <li>Mejora del equipo</li>
                         </ul>
                     </div>
                 </div>
@@ -56,7 +55,7 @@
                 </div>
                 <div class="lp-background-assistencia-notebook mt-2 div-card-assistencia">
                     <div class="d-flex justify-content-center">
-                        <p class="my-2">Notebook</p>
+                        <p class="my-2">Computadora portátil</p>
                     </div>
                     <div class="d-flex justify-content-center mt-2">
                         <img class="lp-imagem-texto-assistencia" src="<?= URL . '/img/paginas/assistencia_tecnica/assistencia_tecnica_notebook_mini.png' ?>" alt="">
@@ -64,12 +63,12 @@
 
                     <div class="mt-2">
                         <ul class="px-4">
-                            <li>Manutenção Preventiva</li>
-                            <li>Manutenção corretiva</li>
-                            <li>Recuperação de Dados</li>
-                            <li>Instalação de Programas</li>
-                            <li>Backup -Cópia Segura de Dados</li>
-                            <li>Reparo de Peças Quebradas</li>
+                            <li>Mantenimiento preventivo</li>
+                            <li>Mantenimiento correctivo</li>
+                            <li>Recuperación de datos</li>
+                            <li>Instalación del programa</li>
+                            <li>Copia de seguridad: copia segura de datos</li>
+                            <li>Reparación de piezas rotas</li>
                         </ul>
                     </div>
                 </div>
@@ -84,7 +83,7 @@
                 </div>
                 <div class="lp-background-assistencia-tablet-celular mt-2 div-card-assistencia">
                     <div class="d-flex justify-content-center">
-                        <p class="my-2">Tablet e Celular</p>
+                        <p class="my-2">Tableta y teléfono celular</p>
                     </div>
                     <div class="d-flex justify-content-center mt-2">
                         <img class="lp-imagem-texto-assistencia" src="<?= URL . '/img/paginas/assistencia_tecnica/assistencia_tecnica_tablet_celular_mini.png' ?>" alt="">
@@ -92,12 +91,12 @@
 
                     <div class="mt-2">
                         <ul class="px-4">
-                            <li>Manutenção Preventiva</li>
-                            <li>Manutenção corretiva</li>
-                            <li>Recuperação de Dados</li>
-                            <li>Instalação de Programas</li>
-                            <li>Backup -Cópia Segura de Dados</li>
-                            <li>Reparo de Peças Quebradas</li>
+                            <li>Mantenimiento preventivo</li>
+                            <li>Mantenimiento correctivo</li>
+                            <li>Recuperación de datos</li>
+                            <li>Instalación del programa</li>
+                            <li>Copia de seguridad: copia segura de datos</li>
+                            <li>Reparación de piezas rotas</li>
                         </ul>
                     </div>
                 </div>
@@ -111,7 +110,7 @@
                 </div>
                 <div class="lp-background-assistencia-projetor mt-2 div-card-assistencia">
                     <div class="d-flex justify-content-center">
-                        <p class="my-2">Projetor</p>
+                        <p class="my-2">Proyector</p>
                     </div>
                     <div class="d-flex justify-content-center mt-2">
                         <img class="lp-imagem-texto-assistencia" src="<?= URL . '/img/paginas/assistencia_tecnica/assistencia_tecnica_projetor_mini.png' ?>" alt="">
@@ -119,11 +118,11 @@
 
                     <div class="mt-2">
                         <ul class="px-4">
-                            <li>Manutenção Preventiva</li>
-                            <li>Manutenção corretiva</li>
-                            <li>Substituição de Lâmpada</li>
-                            <li>Reparo de Peças e Placas</li>
-                            <li>Instalação e Desinstalação no Local</li>
+                            <li>Mantenimiento preventivo</li>
+                            <li>Mantenimiento correctivo</li>
+                            <li>Reemplazo de lámpara</li>
+                            <li>Reparación de Piezas y Placas</li>
+                            <li>Instalación y desinstalación in situ</li>
                         </ul>
                     </div>
                 </div>
@@ -137,7 +136,7 @@
                 </div>
                 <div class="lp-background-assistencia-fonte mt-2 div-card-assistencia">
                     <div class="d-flex justify-content-center">
-                        <p class="my-2">Fonte de Alimentação</p>
+                        <p class="my-2">Fuente de alimentación</p>
                     </div>
                     <div class="d-flex justify-content-center mt-2">
                         <img class="lp-imagem-texto-assistencia" src="<?= URL . '/img/paginas/assistencia_tecnica/assistencia_tecnica_fonte_mini.png' ?>" alt="">
@@ -145,12 +144,12 @@
 
                     <div class="mt-2">
                         <ul class="px-4">
-                            <li>Manutenção Preventiva</li>
-                            <li>Reparo em Geral</li>
-                            <li>Tipo: AT, ATX, BTX, ITX e EPS</li>
-                            <li>Padrão PC, Servidor e Hotswap</li>
-                            <li>Backup -Cópia Segura de Dados</li>
-                            <li>Teste Digital de Voltagem, Potência e Tensão</li>
+                            <li>Mantenimiento preventivo</li>
+                            <li>Reparación general</li>
+                            <li>Tipo: AT, ATX, BTX, ITX y EPS</li>
+                            <li>PC estándar, servidor y hotswap</li>
+                            <li>Copia de seguridad: copia segura de datos</li>
+                            <li>Prueba Digital de Voltaje, Potencia y Tensión</li>
                         </ul>
                     </div>
                 </div>
@@ -164,7 +163,7 @@
                 </div>
                 <div class="lp-background-assistencia-tv-monitor mt-2 div-card-assistencia">
                     <div class="d-flex justify-content-center">
-                        <p class="my-2">TV / Monitor</p>
+                        <p class="my-2">Televisor/ Monitor</p>
                     </div>
                     <div class="d-flex justify-content-center mt-2">
                         <img class="lp-imagem-texto-assistencia" src="<?= URL . '/img/paginas/assistencia_tecnica/assistencia_tecnica_tv_monitor_mini.png' ?>" alt="">
@@ -172,12 +171,12 @@
 
                     <div class="mt-2">
                         <ul class="px-4">
-                            <li>Manutenção Corretiva</li>
-                            <li>Reparo de Peça, Placa e Fonte</li>
-                            <li>Substituição de Telas Quebradas</li>
-                            <li>Calibração de Imagem</li>
-                            <li>Instalação de Videowall</li>
-                            <li>Modelos de LED, LCD e Plasma</li>
+                            <li>Mantenimiento correctivo</li>
+                            <li>Reparación de piezas, placas y fuentes</li>
+                            <li>Reemplazo de pantalla rota</li>
+                            <li>Calibración de imagen</li>
+                            <li>Instalación de videowall</li>
+                            <li>Modelos LED, LCD y Plasma</li>
                         </ul>
                     </div>
                 </div>
@@ -191,7 +190,7 @@
                 </div>
                 <div class="lp-background-assistencia-impressora mt-2 div-card-assistencia">
                     <div class="d-flex justify-content-center">
-                        <p class="my-2">Impressora</p>
+                        <p class="my-2">Impresora</p>
                     </div>
                     <div class="d-flex justify-content-center mt-2">
                         <img class="lp-imagem-texto-assistencia" src="<?= URL . '/img/paginas/assistencia_tecnica/assistencia_tecnica_impressora_mini.png' ?>" alt="">
@@ -199,12 +198,12 @@
 
                     <div class="mt-2">
                         <ul class="px-4">
-                            <li>Manutenção Preventiva</li>
-                            <li>Manutenção Corretiva</li>
-                            <li>Reparo de Peça, Placa e Fonte</li>
-                            <li>Instalação de Equipamentos</li>
-                            <li>Locação de Impressoras</li>
-                            <li>Manutenção Contratual</li>
+                            <li>Mantenimiento preventivo</li>
+                            <li>Mantenimiento correctivo</li>
+                            <li>Reparación de piezas, placas y fuentes</li>
+                            <li>Instalación de equipos</li>
+                            <li>Alquiler de impresora</li>
+                            <li>Mantenimiento contractual</li>
                         </ul>
                     </div>
                 </div>
@@ -218,7 +217,7 @@
                 </div>
                 <div class="lp-background-assistencia-nobreak mt-2 div-card-assistencia">
                     <div class="d-flex justify-content-center">
-                        <p class="my-2">No-Break</p>
+                        <p class="my-2">UPS</p>
                     </div>
                     <div class="d-flex justify-content-center mt-2">
                         <img class="lp-imagem-texto-assistencia" src="<?= URL . '/img/paginas/assistencia_tecnica/assistencia_tecnica_nobreak_mini.png' ?>" alt="">
@@ -226,12 +225,12 @@
 
                     <div class="mt-2">
                         <ul class="px-4">
-                            <li>Substituição de Baterias</li>
-                            <li>Calibração de Baterias</li>
-                            <li>Manutenção Preventiva</li>
-                            <li>Manutenção Corretiva</li>
-                            <li>Manutenção Contratual</li>
-                            <li>Avaliação Técnica no Local</li>
+                            <li>Reemplazo de la batería</li>
+                            <li>Calibración de la batería</li>
+                            <li>Mantenimiento preventivo</li>
+                            <li>Mantenimiento correctivo</li>
+                            <li>Mantenimiento contractual</li>
+                            <li>Evaluación técnica in situ</li>
                         </ul>
                     </div>
                 </div>
@@ -253,35 +252,17 @@
 
                     <div class="mt-2">
                         <ul class="px-4">
-                            <li>MacBook, iMac, Mac Pro e Mac Mini</li>
-                            <li>Manutenção Preventiva e Corretiva</li>
-                            <li>Recuperação de Dados</li>
-                            <li>Atualização de Software</li>
-                            <li>Manutenção Contratual</li>
-                            <li>Substituição de peças</li>
+                            <li>MacBook, iMac, Mac Pro y Mac Mini</li>
+                            <li>Mantenimiento Preventivo y Correctivo</li>
+                            <li>Recuperación de datos</li>
+                            <li>Actualización de software</li>
+                            <li>Mantenimiento contractual</li>
+                            <li>Reemplazo de piezas</li>
                         </ul>
                     </div>
                 </div>
             </a>
         </div>
-
-        <!-- 
-        
-        
-
-    
-
-
-
-        
-
-        
-
-        <div class="d-flex justify-content-center align-items-end">
-            <a href="<?= URL . '/AssistenciaOpcao/apple_opc' ?>">
-                <img class="img-fluid img-fluid-assistencia" src="<?= URL . '/img/paginas/assistencia_tecnica/assistencia_tecnica_apple.png' ?>" alt="">
-            </a>
-        </div> -->
 
     </div>
 </div>
