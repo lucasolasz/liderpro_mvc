@@ -123,7 +123,6 @@ class PaginasDinamicas extends Controller
         $stringCompletaModel
     }
     $metodoIndexCompleto
-    $metodoAssistenciaTecnicaCompleto
     $novoMetodoCompleto
 }";
 
