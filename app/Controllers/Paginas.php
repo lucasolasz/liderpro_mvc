@@ -48,8 +48,13 @@ class Paginas extends Controller
             'fotosLogomarca' => $fotosLogomarca
         ];
 
-        //Retorna para a view
-        $this->view('painel/paginas/clientes', $dados);
+        if ($_SESSION['linguagem_selecionada'] == "PT") {
+            $this->view('painel/paginas/clientes', $dados);
+        } elseif ($_SESSION['linguagem_selecionada'] == "ES") {
+            $this->view('painel/paginas/clientes_es', $dados);
+        } elseif ($_SESSION['linguagem_selecionada'] == "EN") {
+            $this->view('painel/paginas/clientes_en', $dados);
+        }
     }
 
     public function pesquisaAvancadaClienteAlfabetica()
