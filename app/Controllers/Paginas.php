@@ -24,8 +24,13 @@ class Paginas extends Controller
             'paginas' => $paginas
         ];
 
-        //Chamada do novo objeto PAGINAS 
-        $this->view('painel/paginas/contatos', $dados);
+        if ($_SESSION['linguagem_selecionada'] == "PT") {
+            $this->view('painel/paginas/contatos', $dados);
+        } elseif ($_SESSION['linguagem_selecionada'] == "ES") {
+            $this->view('painel/paginas/contatos_es', $dados);
+        } elseif ($_SESSION['linguagem_selecionada'] == "EN") {
+            $this->view('painel/paginas/contatos_en', $dados);
+        }
     }
 
     public function clientes()
