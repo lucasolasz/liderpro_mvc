@@ -70,8 +70,13 @@ class Paginas extends Controller
             'letrasAlfabeto' => $letrasAlfabeto
         ];
 
-        //Retorna para a view
-        $this->view('painel/paginas/pesquisaAvancadaClienteAlfabetica', $dados);
+        if ($_SESSION['linguagem_selecionada'] == "PT") {
+            $this->view('painel/paginas/pesquisaAvancadaClienteAlfabetica', $dados);
+        } elseif ($_SESSION['linguagem_selecionada'] == "ES") {
+            $this->view('painel/paginas/pesquisaAvancadaClienteAlfabetica_es', $dados);
+        } elseif ($_SESSION['linguagem_selecionada'] == "EN") {
+            $this->view('painel/paginas/pesquisaAvancadaClienteAlfabetica_en', $dados);
+        }
     }
 
     public function buscaAjaxTabelaClientesAlfabetica()
