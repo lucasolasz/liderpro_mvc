@@ -192,8 +192,13 @@ class Paginas extends Controller
             'paginas' => $paginas
         ];
 
-        //Chamada do novo objeto PAGINAS 
-        $this->view('lider_pro/lider_pro', $dados);
+        if ($_SESSION['linguagem_selecionada'] == "PT") {
+            $this->view('lider_pro/lider_pro', $dados);
+        } elseif ($_SESSION['linguagem_selecionada'] == "ES") {
+            $this->view('lider_pro/lider_pro_es', $dados);
+        } elseif ($_SESSION['linguagem_selecionada'] == "EN") {
+            $this->view('lider_pro/lider_pro_en', $dados);
+        }
     }
 
     public function valores()
@@ -209,8 +214,13 @@ class Paginas extends Controller
             'paginas' => $paginas
         ];
 
-        //Chamada do novo objeto PAGINAS 
-        $this->view('lider_pro/valores', $dados);
+        if ($_SESSION['linguagem_selecionada'] == "PT") {
+            $this->view('lider_pro/valores', $dados);
+        } elseif ($_SESSION['linguagem_selecionada'] == "ES") {
+            $this->view('lider_pro/valores_es', $dados);
+        } elseif ($_SESSION['linguagem_selecionada'] == "EN") {
+            $this->view('lider_pro/valores_en', $dados);
+        }
     }
 
     public function parcerias()
@@ -226,7 +236,13 @@ class Paginas extends Controller
             'paginas' => $paginas
         ];
 
-        //Chamada do novo objeto PAGINAS 
+        // if ($_SESSION['linguagem_selecionada'] == "PT") {
+        //     $this->view('lider_pro/parcerias', $dados);
+        // } elseif ($_SESSION['linguagem_selecionada'] == "ES") {
+        //     $this->view('lider_pro/parcerias_es', $dados);
+        // } elseif ($_SESSION['linguagem_selecionada'] == "EN") {
+        //     $this->view('lider_pro/parcerias_en', $dados);
+        // }
         $this->view('lider_pro/parcerias', $dados);
     }
 
@@ -243,8 +259,13 @@ class Paginas extends Controller
             'paginas' => $paginas
         ];
 
-        //Chamada do novo objeto PAGINAS 
-        $this->view('lider_pro/informacoes_gerais', $dados);
+        if ($_SESSION['linguagem_selecionada'] == "PT") {
+            $this->view('lider_pro/informacoes_gerais', $dados);
+        } elseif ($_SESSION['linguagem_selecionada'] == "ES") {
+            $this->view('lider_pro/informacoes_gerais_es', $dados);
+        } elseif ($_SESSION['linguagem_selecionada'] == "EN") {
+            $this->view('lider_pro/informacoes_gerais_en', $dados);
+        }
     }
 
     public function termos_de_uso()
@@ -260,8 +281,13 @@ class Paginas extends Controller
             'paginas' => $paginas
         ];
 
-        //Chamada do novo objeto PAGINAS 
-        $this->view('lider_pro/termos_de_uso', $dados);
+        if ($_SESSION['linguagem_selecionada'] == "PT") {
+            $this->view('lider_pro/termos_de_uso', $dados);
+        } elseif ($_SESSION['linguagem_selecionada'] == "ES") {
+            $this->view('lider_pro/termos_de_uso_es', $dados);
+        } elseif ($_SESSION['linguagem_selecionada'] == "EN") {
+            $this->view('lider_pro/termos_de_uso_en', $dados);
+        }
     }
 
     public function politica_de_privacidade()
@@ -277,8 +303,13 @@ class Paginas extends Controller
             'paginas' => $paginas
         ];
 
-        //Chamada do novo objeto PAGINAS 
-        $this->view('lider_pro/politica_de_privacidade', $dados);
+        if ($_SESSION['linguagem_selecionada'] == "PT") {
+            $this->view('lider_pro/politica_de_privacidade', $dados);
+        } elseif ($_SESSION['linguagem_selecionada'] == "ES") {
+            $this->view('lider_pro/politica_de_privacidade_es', $dados);
+        } elseif ($_SESSION['linguagem_selecionada'] == "EN") {
+            $this->view('lider_pro/politica_de_privacidade_en', $dados);
+        }
     }
 
     public function informacoes_legais()
@@ -294,8 +325,13 @@ class Paginas extends Controller
             'paginas' => $paginas
         ];
 
-        //Chamada do novo objeto PAGINAS 
-        $this->view('lider_pro/informacoes_legais', $dados);
+        if ($_SESSION['linguagem_selecionada'] == "PT") {
+            $this->view('lider_pro/informacoes_legais', $dados);
+        } elseif ($_SESSION['linguagem_selecionada'] == "ES") {
+            $this->view('lider_pro/informacoes_legais_es', $dados);
+        } elseif ($_SESSION['linguagem_selecionada'] == "EN") {
+            $this->view('lider_pro/informacoes_legais_en', $dados);
+        }
     }
 
     public function pesquisarServicosHome()
