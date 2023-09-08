@@ -145,8 +145,13 @@ class Paginas extends Controller
             'segmentos' => $visualizarSegmentos
         ];
 
-        //Retorna para a view
-        $this->view('painel/paginas/pesquisaAvancadaClientePorSegmento', $dados);
+        if ($_SESSION['linguagem_selecionada'] == "PT") {
+            $this->view('painel/paginas/pesquisaAvancadaClientePorSegmento', $dados);
+        } elseif ($_SESSION['linguagem_selecionada'] == "ES") {
+            $this->view('painel/paginas/pesquisaAvancadaClientePorSegmento_es', $dados);
+        } elseif ($_SESSION['linguagem_selecionada'] == "EN") {
+            $this->view('painel/paginas/pesquisaAvancadaClientePorSegmento_en', $dados);
+        }
     }
 
     public function buscaAjaxTabelaClientesPorSegmento()
