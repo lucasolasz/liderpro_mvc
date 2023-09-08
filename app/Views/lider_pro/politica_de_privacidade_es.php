@@ -21,11 +21,11 @@
                 <br>
                 &#160;1. Registro de Usuario, con datos para recibir Noticias Electrónicas u otra información (si desea cancelar por completo la recepción de correos electrónicos, el usuario tendrá esta opción al final de cada correo electrónico);
                 <br>
-                & # 160; 2. Registro de Cliente Individual, con datos para completar la Factura e información (usuario y contraseña) para acceder a la base de datos en línea;
+                &#160; 2. Registro de Cliente Individual, con datos para completar la Factura e información (usuario y contraseña) para acceder a la base de datos en línea;
                 <br>
-                & # 160; 3. Registro de Cliente de Contratación de Servicios, con datos para completar la Factura, Contrato Legal e información (usuario y contraseña) para acceder a la base de datos en línea;
+                &#160; 3. Registro de Cliente de Contratación de Servicios, con datos para completar la Factura, Contrato Legal e información (usuario y contraseña) para acceder a la base de datos en línea;
                 <br>
-                & # 160; 4. Registro de Proveedores, con datos para diligenciamiento de Facturas, pagos o depósitos bancarios y/o Contrato Legal;
+                &#160; 4. Registro de Proveedores, con datos para diligenciamiento de Facturas, pagos o depósitos bancarios y/o Contrato Legal;
                 <br>
                 &#160;5. Registro de Empleados, con datos para completar el Contrato de Trabajo e información personal solicitada por el Departamento de Personal y/o el Departamento de Recursos Humanos;
                 <br>
@@ -41,9 +41,9 @@
                 <br>
                 &#160;1. Si realiza un pedido –producto y/o servicio- que necesitamos enviar por flete y, por tanto, tendremos que facilitar sus datos a la empresa de transporte;
                 <br>
-                & # 160; 2. O casos muy especiales, como determinaciones judiciales por el suministro de datos de un determinado usuario;
+                &#160; 2. O casos muy especiales, como determinaciones judiciales por el suministro de datos de un determinado usuario;
                 <br>
-                & # 160; 3. O en situaciones en las que sea necesario revelar ciertos datos, necesarios para identificar, contactar o emprender acciones legales contra alguien que (intencionalmente o no) está utilizando nuestros servicios con fines ilegales.
+                &#160; 3. O en situaciones en las que sea necesario revelar ciertos datos, necesarios para identificar, contactar o emprender acciones legales contra alguien que (intencionalmente o no) está utilizando nuestros servicios con fines ilegales.
             </p>
 
             <p class="lp-paragrafo">
@@ -69,11 +69,11 @@
                 <br>
                 &#160;1. Para notificarle información relacionada con el sitio web y su funcionamiento;
                 <br>
-                & # 160; 2. Para enviar información solicitada por el usuario;
+                &#160; 2. Para enviar información solicitada por el usuario;
                 <br>
-                & # 160; 3. Comunicar cambios en el servicio o información pertinente al usuario;
+                &#160; 3. Comunicar cambios en el servicio o información pertinente al usuario;
                 <br>
-                & # 160; 4. Comunicar la disponibilidad de una o más ofertas de empleo en nuestra empresa.
+                &#160; 4. Comunicar la disponibilidad de una o más ofertas de empleo en nuestra empresa.
             </p>
 
             <p class="lp-paragrafo">
