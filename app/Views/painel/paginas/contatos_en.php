@@ -155,7 +155,7 @@
             <div class="row">
                 <div class="col d-flex justify-content-center flex-column">
                     <p class="lp-paragrafo">• Free parking on site. </p>
-                    <p class="lp-paragrafo">• Metro 300 meters away (Gloria station, exit A).</p>
+                    <p class="lp-paragrafo">• Subway at 300 meters (Gloria station, exit A).</p>
                 </div>
             </div>
 
