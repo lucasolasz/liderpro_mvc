@@ -119,9 +119,20 @@
                     </div>
                     <div class="ml-auto">
                         <ul class="list-unstyled d-flex mb-0 menu-top">
-                            <li><a href="<?= URL . '/Paginas/lider_pro' ?>" class="<?= $liderActive == 'active' ? 'menu-top-active' : ''; ?> btn-sm menu-top-btn">Liderpro</a></li>
-                            <li><a href="<?= URL . '/Paginas/clientes' ?>" class="<?= $clientesActive == 'active' ? 'menu-top-active' : ''; ?> btn-sm menu-top-btn">Clientes</a></li>
-                            <li><a href="<?= URL . '/Paginas/contatos' ?>" class="<?= $contatoActive == 'active' ? 'menu-top-active' : ''; ?> btn-sm menu-top-btn">Contatos</a></li>
+                            <?php if ($_SESSION['linguagem_selecionada'] == "PT") { ?>
+                                <li><a href="<?= URL . '/Paginas/lider_pro' ?>" class="<?= $liderActive == 'active' ? 'menu-top-active' : ''; ?> btn-sm menu-top-btn">Liderpro</a></li>
+                                <li><a href="<?= URL . '/Paginas/clientes' ?>" class="<?= $clientesActive == 'active' ? 'menu-top-active' : ''; ?> btn-sm menu-top-btn">Clientes</a></li>
+                                <li><a href="<?= URL . '/Paginas/contatos' ?>" class="<?= $contatoActive == 'active' ? 'menu-top-active' : ''; ?> btn-sm menu-top-btn">Contatos</a></li>
+                            <?php  } elseif ($_SESSION['linguagem_selecionada'] == "ES") { ?>
+                                <li><a href="<?= URL . '/Paginas/lider_pro' ?>" class="<?= $liderActive == 'active' ? 'menu-top-active' : ''; ?> btn-sm menu-top-btn">Liderpro</a></li>
+                                <li><a href="<?= URL . '/Paginas/clientes' ?>" class="<?= $clientesActive == 'active' ? 'menu-top-active' : ''; ?> btn-sm menu-top-btn">Clientes</a></li>
+                                <li><a href="<?= URL . '/Paginas/contatos' ?>" class="<?= $contatoActive == 'active' ? 'menu-top-active' : ''; ?> btn-sm menu-top-btn">Contactos</a></li>
+                            <?php  } elseif ($_SESSION['linguagem_selecionada'] == "EN") { ?>
+                                <li><a href="<?= URL . '/Paginas/lider_pro' ?>" class="<?= $liderActive == 'active' ? 'menu-top-active' : ''; ?> btn-sm menu-top-btn">Liderpro</a></li>
+                                <li><a href="<?= URL . '/Paginas/clientes' ?>" class="<?= $clientesActive == 'active' ? 'menu-top-active' : ''; ?> btn-sm menu-top-btn">Customers</a></li>
+                                <li><a href="<?= URL . '/Paginas/contatos' ?>" class="<?= $contatoActive == 'active' ? 'menu-top-active' : ''; ?> btn-sm menu-top-btn">Contacts</a></li>
+                            <?php } ?>
+
                             <li>
                                 <?php if (isset($_SESSION['id_usuario'])) { ?>
                                     <a href="<?= URL . '/Painel/index' ?>" class="menu-top-icon">
