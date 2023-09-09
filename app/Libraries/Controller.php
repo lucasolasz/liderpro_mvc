@@ -18,7 +18,13 @@ class Controller
         } else {
             die('O arquivo de view não existe!');
         }
-        include APP . '/Views/rodape.php';
+        if ($_SESSION['linguagem_selecionada'] == "PT") {
+            include APP . '/Views/rodape.php';
+        } elseif ($_SESSION['linguagem_selecionada'] == "ES") {
+            include APP . '/Views/rodape_es.php';
+        } elseif ($_SESSION['linguagem_selecionada'] == "EN") {
+            include APP . '/Views/rodape_en.php';
+        }
     }
 
     public function viewSemTopoRodapeParaAjax($view, $dados = [])
