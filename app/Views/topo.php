@@ -46,7 +46,14 @@
         foreach ($dados['paginas'] as $paginas) {
 
             if ($paginas->ds_breadcrumb_menu == $dados['tituloBreadcrumb']) {
-                $paginaBreadCrumb = mb_strtoupper($paginas->ds_pagina);
+
+                if ($_SESSION['linguagem_selecionada'] == 'PT') {
+                    $paginaBreadCrumb = mb_strtoupper($paginas->ds_pagina);
+                } elseif ($_SESSION['linguagem_selecionada'] == 'ES') {
+                    $paginaBreadCrumb = mb_strtoupper($paginas->ds_pagina_es);
+                } elseif ($_SESSION['linguagem_selecionada'] == 'EN') {
+                    $paginaBreadCrumb = mb_strtoupper($paginas->ds_pagina_en);
+                }
                 $urlBreadCrumb = $paginas->ds_url_menu;
             }
 
@@ -64,11 +71,27 @@
 
             if ($dados['tituloBreadcrumb'] == "termos_de_uso" || $dados['tituloBreadcrumb'] == "politica_de_privacidade" || $dados['tituloBreadcrumb'] == "informacoes_legais") {
 
-                $informacoes = "> INFORMAÇÕES";
-                $paginaBreadCrumb =  $paginasLiderPro->ds_menu;
-                $urlBreadCrumb = $paginasLiderPro->ds_url_menu;
+                if ($paginasLiderPro->ds_pagina_menu == $dados['tituloBreadcrumb']) {
+                    if ($_SESSION['linguagem_selecionada'] == 'PT') {
+                        $informacoes = "> INFORMAÇÕES";
+                        $paginaBreadCrumb =  $paginasLiderPro->ds_menu;
+                    } elseif ($_SESSION['linguagem_selecionada'] == 'ES') {
+                        $informacoes = "> INFORMACIÓN";
+                        $paginaBreadCrumb =  $paginasLiderPro->ds_menu_es;
+                    } elseif ($_SESSION['linguagem_selecionada'] == 'EN') {
+                        $informacoes = "> INFORMATION";
+                        $paginaBreadCrumb =  $paginasLiderPro->ds_menu_en;
+                    }
+                    $urlBreadCrumb = $paginasLiderPro->ds_url_menu;
+                }
             } elseif ($paginasLiderPro->ds_pagina_menu == $dados['tituloBreadcrumb']) {
-                $paginaBreadCrumb = $paginasLiderPro->ds_menu;
+                if ($_SESSION['linguagem_selecionada'] == 'PT') {
+                    $paginaBreadCrumb =  $paginasLiderPro->ds_menu;
+                } elseif ($_SESSION['linguagem_selecionada'] == 'ES') {
+                    $paginaBreadCrumb =  $paginasLiderPro->ds_menu_es;
+                } elseif ($_SESSION['linguagem_selecionada'] == 'EN') {
+                    $paginaBreadCrumb =  $paginasLiderPro->ds_menu_en;
+                }
                 $urlBreadCrumb = $paginasLiderPro->ds_url_menu;
             }
         }
@@ -101,20 +124,54 @@
                             <a href="<?= URL ?>">Home</a> > <a href="<?= URL . '/Paginas/lider_pro' ?>"> LIDERPRO</a> <?= $informacoes ?> > <a href="<?= URL . '/Paginas' . $urlBreadCrumb ?>"><?= $paginaBreadCrumb ?></a>
                         <?php } ?>
 
-                        <?php if ($dados['tituloBreadcrumb'] == "clientes") { ?>
-                            <a href="<?= URL ?>">Home</a> > <a href="<?= URL . '/Paginas/clientes' ?>"> CLIENTES</a>
-                        <?php } ?>
+                        <?php if ($_SESSION['linguagem_selecionada'] == 'PT') { ?>
+                            <?php if ($dados['tituloBreadcrumb'] == "clientes") { ?>
+                                <a href="<?= URL ?>">Home</a> > <a href="<?= URL . '/Paginas/clientes' ?>"> CLIENTES</a>
+                            <?php } ?>
 
-                        <?php if ($dados['tituloBreadcrumb'] == "ordemAlfabetica") { ?>
-                            <a href="<?= URL ?>">Home</a> > <a href="<?= URL . '/Paginas/clientes' ?>"> CLIENTES</a> > <a href="<?= URL . '/Paginas/pesquisaAvancadaClienteAlfabetica' ?>"> ORDEM ALFABÉTICA</a>
-                        <?php } ?>
+                            <?php if ($dados['tituloBreadcrumb'] == "ordemAlfabetica") { ?>
+                                <a href="<?= URL ?>">Home</a> > <a href="<?= URL . '/Paginas/clientes' ?>"> CLIENTES</a> > <a href="<?= URL . '/Paginas/pesquisaAvancadaClienteAlfabetica' ?>"> ORDEM ALFABÉTICA</a>
+                            <?php } ?>
 
-                        <?php if ($dados['tituloBreadcrumb'] == "ordemSegmento") { ?>
-                            <a href="<?= URL ?>">Home</a> > <a href="<?= URL . '/Paginas/clientes' ?>"> CLIENTES</a> > <a href="<?= URL . '/Paginas/pesquisaAvancadaClientePorSegmento' ?>"> ORDEM SEGMENTO</a>
-                        <?php } ?>
+                            <?php if ($dados['tituloBreadcrumb'] == "ordemSegmento") { ?>
+                                <a href="<?= URL ?>">Home</a> > <a href="<?= URL . '/Paginas/clientes' ?>"> CLIENTES</a> > <a href="<?= URL . '/Paginas/pesquisaAvancadaClientePorSegmento' ?>"> ORDEM SEGMENTO</a>
+                            <?php } ?>
 
-                        <?php if ($dados['tituloBreadcrumb'] == "contatos") { ?>
-                            <a href="<?= URL ?>">Home</a> > <a href="<?= URL . '/Paginas/contatos' ?>"> CONTATOS</a>
+                            <?php if ($dados['tituloBreadcrumb'] == "contatos") { ?>
+                                <a href="<?= URL ?>">Home</a> > <a href="<?= URL . '/Paginas/contatos' ?>"> CONTATOS</a>
+                            <?php } ?>
+                        <?php } elseif ($_SESSION['linguagem_selecionada'] == 'ES') { ?>
+                            <?php if ($dados['tituloBreadcrumb'] == "clientes") { ?>
+                                <a href="<?= URL ?>">Home</a> > <a href="<?= URL . '/Paginas/clientes' ?>"> CLIENTES</a>
+                            <?php } ?>
+
+                            <?php if ($dados['tituloBreadcrumb'] == "ordemAlfabetica") { ?>
+                                <a href="<?= URL ?>">Home</a> > <a href="<?= URL . '/Paginas/clientes' ?>"> CLIENTES</a> > <a href="<?= URL . '/Paginas/pesquisaAvancadaClienteAlfabetica' ?>"> ORDEN ALFABETICA</a>
+                            <?php } ?>
+
+                            <?php if ($dados['tituloBreadcrumb'] == "ordemSegmento") { ?>
+                                <a href="<?= URL ?>">Home</a> > <a href="<?= URL . '/Paginas/clientes' ?>"> CLIENTES</a> > <a href="<?= URL . '/Paginas/pesquisaAvancadaClientePorSegmento' ?>"> ORDEN DE LOS SEGMENTOS</a>
+                            <?php } ?>
+
+                            <?php if ($dados['tituloBreadcrumb'] == "contatos") { ?>
+                                <a href="<?= URL ?>">Home</a> > <a href="<?= URL . '/Paginas/contatos' ?>"> CONTACTOS</a>
+                            <?php } ?>
+                        <?php  } elseif ($_SESSION['linguagem_selecionada'] == 'EN') { ?>
+                            <?php if ($dados['tituloBreadcrumb'] == "clientes") { ?>
+                                <a href="<?= URL ?>">Home</a> > <a href="<?= URL . '/Paginas/clientes' ?>"> CUSTOMERS</a>
+                            <?php } ?>
+
+                            <?php if ($dados['tituloBreadcrumb'] == "ordemAlfabetica") { ?>
+                                <a href="<?= URL ?>">Home</a> > <a href="<?= URL . '/Paginas/clientes' ?>"> CUSTOMERS</a> > <a href="<?= URL . '/Paginas/pesquisaAvancadaClienteAlfabetica' ?>"> ALPHABETICAL ORDER</a>
+                            <?php } ?>
+
+                            <?php if ($dados['tituloBreadcrumb'] == "ordemSegmento") { ?>
+                                <a href="<?= URL ?>">Home</a> > <a href="<?= URL . '/Paginas/clientes' ?>"> CUSTOMERS</a> > <a href="<?= URL . '/Paginas/pesquisaAvancadaClientePorSegmento' ?>"> SEGMENT ORDER</a>
+                            <?php } ?>
+
+                            <?php if ($dados['tituloBreadcrumb'] == "contatos") { ?>
+                                <a href="<?= URL ?>">Home</a> > <a href="<?= URL . '/Paginas/contatos' ?>"> CONTACTS</a>
+                            <?php } ?>
                         <?php } ?>
                     </div>
                     <div class="ml-auto">
@@ -194,7 +251,13 @@
                                 <span class="icon-lupa_menu menu-top-icon" id="icon-lupa_menu"></span>
                                 <div class="togglesearch">
                                     <form name="pesquisarHome" id="pesquisarHome" method="POST" action="<?= URL ?>/Paginas/pesquisarServicosHome" class="lp-form-pesquisa">
-                                        <input type="text" name="txtPesquisaHome" id="txtPesquisaHome" placeholder=" O que você procura?" class="lp-barra-pesquisa" />
+                                        <?php if ($_SESSION['linguagem_selecionada'] == 'PT') { ?>
+                                            <input type="text" name="txtPesquisaHome" id="txtPesquisaHome" placeholder=" O que você procura?" class="lp-barra-pesquisa" />
+                                        <?php } elseif ($_SESSION['linguagem_selecionada'] == 'ES') {  ?>
+                                            <input type="text" name="txtPesquisaHome" id="txtPesquisaHome" placeholder=" ¿Qué buscas?" class="lp-barra-pesquisa" />
+                                        <?php } elseif ($_SESSION['linguagem_selecionada'] == 'EN') {  ?>
+                                            <input type="text" name="txtPesquisaHome" id="txtPesquisaHome" placeholder=" What are you looking for?" class="lp-barra-pesquisa" />
+                                        <?php }  ?>
                                         <input type="button" value="X" class="lp-close-pesquisa" />
                                         <button class="lp-btn-pesquisa-home"><span class="icon-lupa_menu menu-top-icon"></span></button>
                                     </form>
