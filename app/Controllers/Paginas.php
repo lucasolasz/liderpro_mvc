@@ -416,7 +416,13 @@ class Paginas extends Controller
             'paginas' => $paginas,
             'tituloBreadcrumb' => 'HOME',
         ];
-        $this->view('painel/paginas/home', $dados);
+        if ($_SESSION['linguagem_selecionada'] == 'PT') {
+            $this->view('painel/paginas/home', $dados);
+        } elseif ($_SESSION['linguagem_selecionada'] == 'ES') {
+            $this->view('painel/paginas/home_es', $dados);
+        } elseif ($_SESSION['linguagem_selecionada'] == 'EN') {
+            $this->view('painel/paginas/home_en', $dados);
+        }
     }
 
     public function assistencia_tecnica()

@@ -97,8 +97,13 @@ class GerarPagina
             'paginas' => $dolarPaginas,
             'tituloBreadcrumb' => 'HOME' ,
         ];
-
-        $esteView('painel/paginas/home', $dolarDados);
+        if($dolarSessao == 'PT') {
+            $esteView('painel/paginas/home', $dolarDados);
+        } elseif ($dolarSessao == 'ES') {
+            $esteView('painel/paginas/home_es', $dolarDados);
+        } elseif ($dolarSessao == 'EN') {
+            $esteView('painel/paginas/home_en', $dolarDados);
+        }
     }";
 
         $metodoAssistenciaTecnicaCompleto = "

@@ -14,20 +14,13 @@ class PaginasDinamicas extends Controller
             'paginas' => $paginas,
             'tituloBreadcrumb' => 'HOME' ,
         ];
-
-        $this->view('painel/paginas/home', $dados);
-    }
-    
-        
-    public function assistencia_tecnica() { 
-        $paginas = $this->paginaDinamicaModel->listarPaginasAtivas();
-
-        $dados = [
-            'paginas' => $paginas,
-            'tituloBreadcrumb' => 'assistencia_tecnica' ,
-        ];
-
-        $this->view('painel/paginas/assistencia_tecnica', $dados);
+        if($_SESSION['linguagem_selecionada'] == 'PT') {
+            $this->view('painel/paginas/home', $dados);
+        } elseif ($_SESSION['linguagem_selecionada'] == 'ES') {
+            $this->view('painel/paginas/home_es', $dados);
+        } elseif ($_SESSION['linguagem_selecionada'] == 'EN') {
+            $this->view('painel/paginas/home_en', $dados);
+        }
     }
     
         
