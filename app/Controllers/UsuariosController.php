@@ -311,9 +311,11 @@ class UsuariosController extends Controller
         unset($_SESSION['ds_email_usuario']);
         unset($_SESSION['fk_cargo']);
         unset($_SESSION['fk_tipo_usuario']);
-
+        $linguagemSelecionadaTemp = $_SESSION['linguagem_selecionada'];
         session_destroy();
 
+        session_start();
+        $_SESSION['linguagem_selecionada'] = $linguagemSelecionadaTemp;
         Redirecionamento::redirecionar('UsuariosController/login');
     }
 }
