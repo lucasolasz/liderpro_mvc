@@ -413,7 +413,15 @@ class Paginas extends Controller
     {
         $paginas = $this->paginaDinamicaModel->listarPaginasAtivas();
 
-        $linguagem = $_GET['linguagem'];
+        if (
+            $_GET['linguagem'] == "PT" ||
+            $_GET['linguagem'] == "ES" ||
+            $_GET['linguagem'] == "EN"
+        ) {
+            $linguagem = $_GET['linguagem'];
+        } else {
+            $linguagem = "PT";
+        }
 
         $_SESSION['linguagem_selecionada'] = $linguagem;
 
