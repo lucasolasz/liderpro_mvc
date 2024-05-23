@@ -199,19 +199,19 @@ class Pagina
         $this->armazenarPaginaEn($dados, $ultimoId);
         $this->armazenarPaginaEs($dados, $ultimoId);
 
-        if (!$dados['fileBannerPrincipal']['name'][0] == "") {
+        if (isset($dados['fileBannerPrincipal']['name'][0]) && $dados['fileBannerPrincipal']['name'][0] != "") {
             $this->armazenaFotoBanner($dados['fileBannerPrincipal'], $ultimoId);
         }
-
-        if (!$dados['filePerguntas']['name'][0] == "") {
+        
+        if (isset($dados['filePerguntas']['name'][0]) && $dados['filePerguntas']['name'][0] != "") {
             $this->armazenaFotosPerguntas($dados['filePerguntas'], $ultimoId);
         }
-
-        if (!$dados['fileFotoTexto']['name'][0] == "") {
+        
+        if (isset($dados['fileFotoTexto']['name'][0]) && $dados['fileFotoTexto']['name'][0] != "") {
             $this->armazenarFotoTexto($dados['fileFotoTexto'], $ultimoId);
         }
 
-        if (!$dados['fileFotosServico']['name'][0] == "") {
+        if (isset($dados['fileFotosServico']['name'][0]) && $dados['fileFotosServico']['name'][0] != "") {
             $this->armazenarFotosServico($dados['fileFotosServico'], $ultimoId);
         }
 
