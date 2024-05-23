@@ -1129,4 +1129,97 @@ class Pagina
 
         return $this->db->resultados();
     }
+
+
+
+    public function pesquisarServicosHomeEs($dados)
+    {
+
+
+        $this->db->query("
+        select * from tb_pagina_es tp 
+        where 
+        ds_pagina_es like concat('%', :txtPesquisa1, '%') 
+        or ds_texto_principal_es like concat('%', :txtPesquisa2, '%') 
+        or ds_tab1_es like concat('%', :txtPesquisa3, '%') 
+        or ds_topico1tab1_es like concat('%', :txtPesquisa4, '%') 
+        or ds_topico2tab1_es like concat('%', :txtPesquisa5, '%') 
+        or ds_topico3tab1_es like concat('%', :txtPesquisa6, '%') 
+        or ds_topico4tab1_es like concat('%', :txtPesquisa7, '%') 
+        or ds_topico5tab1_es like concat('%', :txtPesquisa8, '%') 
+        or ds_topico6tab1_es like concat('%', :txtPesquisa9, '%') 
+        or ds_topico7tab1_es like concat('%', :txtPesquisa10, '%') 
+        or ds_topico8tab1_es like concat('%', :txtPesquisa11, '%') 
+        or ds_tab2_es like concat('%', :txtPesquisa12, '%') 
+        or ds_topico1tab2_es like concat('%', :txtPesquisa13, '%') 
+        or ds_topico2tab2_es like concat('%', :txtPesquisa14, '%') 
+        or ds_topico3tab2_es like concat('%', :txtPesquisa15, '%') 
+        or ds_topico4tab2_es like concat('%', :txtPesquisa16, '%') 
+        or ds_topico5tab2_es like concat('%', :txtPesquisa17, '%') 
+        or ds_topico6tab2_es like concat('%', :txtPesquisa18, '%') 
+        or ds_topico7tab2_es like concat('%', :txtPesquisa19, '%') 
+        or ds_topico8tab2_es like concat('%', :txtPesquisa20, '%') 
+        or ds_tab3_es like concat('%', :txtPesquisa21, '%') 
+        or ds_topico1tab3_es like concat('%', :txtPesquisa22, '%') 
+        or ds_topico2tab3_es like concat('%', :txtPesquisa23, '%') 
+        or ds_topico3tab3_es like concat('%', :txtPesquisa24, '%') 
+        or ds_topico4tab3_es like concat('%', :txtPesquisa25, '%') 
+        or ds_topico5tab3_es like concat('%', :txtPesquisa26, '%') 
+        or ds_topico6tab3_es like concat('%', :txtPesquisa27, '%') 
+        or ds_topico7tab3_es like concat('%', :txtPesquisa28, '%') 
+        or ds_topico8tab3_es like concat('%', :txtPesquisa29, '%') 
+        or ds_tab4_es like concat('%', :txtPesquisa30, '%') 
+        or ds_topico1tab4_es like concat('%', :txtPesquisa31, '%') 
+        or ds_topico2tab4_es like concat('%', :txtPesquisa32, '%') 
+        or ds_topico3tab4_es like concat('%', :txtPesquisa33, '%') 
+        or ds_topico4tab4_es like concat('%', :txtPesquisa34, '%') 
+        or ds_topico5tab4_es like concat('%', :txtPesquisa35, '%') 
+        or ds_topico6tab4_es like concat('%', :txtPesquisa36, '%') 
+        or ds_topico7tab4_es like concat('%', :txtPesquisa37, '%') 
+        or ds_topico8tab4_es like concat('%', :txtPesquisa38, '%') 
+        ");
+
+
+        $this->db->bind("txtPesquisa1", $dados['txtPesquisaHome']);
+        $this->db->bind("txtPesquisa2", $dados['txtPesquisaHome']);
+        $this->db->bind("txtPesquisa3", $dados['txtPesquisaHome']);
+        $this->db->bind("txtPesquisa4", $dados['txtPesquisaHome']);
+        $this->db->bind("txtPesquisa5", $dados['txtPesquisaHome']);
+        $this->db->bind("txtPesquisa6", $dados['txtPesquisaHome']);
+        $this->db->bind("txtPesquisa7", $dados['txtPesquisaHome']);
+        $this->db->bind("txtPesquisa8", $dados['txtPesquisaHome']);
+        $this->db->bind("txtPesquisa9", $dados['txtPesquisaHome']);
+        $this->db->bind("txtPesquisa10", $dados['txtPesquisaHome']);
+        $this->db->bind("txtPesquisa11", $dados['txtPesquisaHome']);
+        $this->db->bind("txtPesquisa12", $dados['txtPesquisaHome']);
+        $this->db->bind("txtPesquisa13", $dados['txtPesquisaHome']);
+        $this->db->bind("txtPesquisa14", $dados['txtPesquisaHome']);
+        $this->db->bind("txtPesquisa15", $dados['txtPesquisaHome']);
+        $this->db->bind("txtPesquisa16", $dados['txtPesquisaHome']);
+        $this->db->bind("txtPesquisa17", $dados['txtPesquisaHome']);
+        $this->db->bind("txtPesquisa18", $dados['txtPesquisaHome']);
+        $this->db->bind("txtPesquisa19", $dados['txtPesquisaHome']);
+        $this->db->bind("txtPesquisa20", $dados['txtPesquisaHome']);
+        $this->db->bind("txtPesquisa21", $dados['txtPesquisaHome']);
+        $this->db->bind("txtPesquisa22", $dados['txtPesquisaHome']);
+        $this->db->bind("txtPesquisa23", $dados['txtPesquisaHome']);
+        $this->db->bind("txtPesquisa24", $dados['txtPesquisaHome']);
+        $this->db->bind("txtPesquisa25", $dados['txtPesquisaHome']);
+        $this->db->bind("txtPesquisa26", $dados['txtPesquisaHome']);
+        $this->db->bind("txtPesquisa27", $dados['txtPesquisaHome']);
+        $this->db->bind("txtPesquisa28", $dados['txtPesquisaHome']);
+        $this->db->bind("txtPesquisa29", $dados['txtPesquisaHome']);
+        $this->db->bind("txtPesquisa30", $dados['txtPesquisaHome']);
+        $this->db->bind("txtPesquisa31", $dados['txtPesquisaHome']);
+        $this->db->bind("txtPesquisa32", $dados['txtPesquisaHome']);
+        $this->db->bind("txtPesquisa33", $dados['txtPesquisaHome']);
+        $this->db->bind("txtPesquisa34", $dados['txtPesquisaHome']);
+        $this->db->bind("txtPesquisa35", $dados['txtPesquisaHome']);
+        $this->db->bind("txtPesquisa36", $dados['txtPesquisaHome']);
+        $this->db->bind("txtPesquisa37", $dados['txtPesquisaHome']);
+        $this->db->bind("txtPesquisa38", $dados['txtPesquisaHome']);
+
+
+        return $this->db->resultados();
+    }
 }

@@ -373,6 +373,11 @@ class Paginas extends Controller
                 $resultadoLiderPro = $this->paginasModel->pesquisarLiderProHome($dados);
                 $resultadoClientes = $this->paginasModel->pesquisarClientesHome($dados);
 
+                $resultadoServicos = $this->paginasModel->pesquisarServicosHomeEs($dados);
+                $resultadoAssistencia = $this->paginasModel->pesquisarAssistenciasHome($dados);
+                $resultadoLiderPro = $this->paginasModel->pesquisarLiderProHome($dados);
+                $resultadoClientes = $this->paginasModel->pesquisarClientesHome($dados);
+
                 $contagemRegistrosTotal = count($resultadoAssistencia) + count($resultadoLiderPro) + count($resultadoClientes) + count($resultadoServicos);
 
                 $dados = [
