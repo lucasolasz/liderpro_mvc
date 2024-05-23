@@ -52,6 +52,16 @@ class Painel extends Controller
         GerarPagina::gerarPaginaDinamica($paginasBanco);
     }
 
+    public function verificaSePaginaExiste($paginaNova) {
+        $paginasBanco = $this->paginaDinamicaModel->listarPaginas();
+        foreach($paginasBanco as $pagina) {
+            if($pagina->ds_breadcrumb_menu === $paginaNova){
+                return true;
+            }
+        }
+        return false;
+    }
+
     public function cadastrarPagina()
     {
 
@@ -187,18 +197,26 @@ class Painel extends Controller
             $dados['fileFotoTexto'] = isset($_FILES['fileFotoTexto']) ? $_FILES['fileFotoTexto'] : "";
             $dados['fileFotosServico'] = isset($_FILES['fileFotosServico']) ? $_FILES['fileFotosServico'] : "";
 
-            if ($this->paginasModel->armazenarPagina($dados)) {
+            $paginaNova = GeraNomeArquivoComUnderline::gerar(RemoveAcentosString::removeAcentoEDeixaMinusculaString($dados['txtTitutoPagina']));
 
-                //Gera página
-                $this->gerarPagina();
-
-                //Para exibir mensagem success , não precisa informar o tipo de classe
-                Alertas::mensagem('paginas', 'Página cadastrada com sucesso');
+            if($this->verificaSePaginaExiste($paginaNova)){
+                Alertas::mensagem('paginas', 'Já existe página com este nome', 'alert alert-danger');
                 Redirecionamento::redirecionar('Painel/visualizarPaginas');
             } else {
-                Alertas::mensagem('paginas', 'Não foi possível cadastrar a página', 'alert alert-danger');
-                Redirecionamento::redirecionar('Painel/visualizarPaginas');
+                if ($this->paginasModel->armazenarPagina($dados)) {
+
+                    //Gera página
+                    $this->gerarPagina();
+    
+                    //Para exibir mensagem success , não precisa informar o tipo de classe
+                    Alertas::mensagem('paginas', 'Página cadastrada com sucesso');
+                    Redirecionamento::redirecionar('Painel/visualizarPaginas');
+                } else {
+                    Alertas::mensagem('paginas', 'Não foi possível cadastrar a página', 'alert alert-danger');
+                    Redirecionamento::redirecionar('Painel/visualizarPaginas');
+                }
             }
+            
         } else {
             $paginas = $this->paginaDinamicaModel->listarPaginasAtivas();
 
