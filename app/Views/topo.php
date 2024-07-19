@@ -231,23 +231,20 @@
 
                             <li>
                                 <div id="overlayPesquisa" class="hiddenPesquisa"></div>
-                                <span class="icon-lupa_menu menu-top-icon" id="icon-lupa_menu"></span>
-                                <div class="togglesearch">
-                                    <form name="pesquisarHome" id="pesquisarHome" method="POST"
+                                <div class="divPesquisa d-flex">
+                                    <span class="icon-lupa_menu menu-top-icon mr-2" id="icon-lupa_menu"></span>
+                                    <form name="pesquisarHome" id="pesquisarHome" method="POST" style="display: none;"
                                         action="<?= URL ?>/Paginas/pesquisarServicosHome" class="lp-form-pesquisa">
                                         <?php if ($_SESSION['linguagem_selecionada'] == 'PT') { ?>
                                             <input type="text" name="txtPesquisaHome" id="txtPesquisaHome"
-                                                placeholder=" O que você procura?" class="lp-barra-pesquisa" />
+                                                placeholder=" O que você procura?" />
                                         <?php } elseif ($_SESSION['linguagem_selecionada'] == 'ES') { ?>
                                             <input type="text" name="txtPesquisaHome" id="txtPesquisaHome"
-                                                placeholder=" ¿Qué buscas?" class="lp-barra-pesquisa" />
+                                                placeholder=" ¿Qué buscas?" />
                                         <?php } elseif ($_SESSION['linguagem_selecionada'] == 'EN') { ?>
                                             <input type="text" name="txtPesquisaHome" id="txtPesquisaHome"
-                                                placeholder=" What are you looking for?" class="lp-barra-pesquisa" />
+                                                placeholder=" What are you looking for?" />
                                         <?php } ?>
-                                        <input type="button" value="X" class="lp-close-pesquisa" />
-                                        <button class="lp-btn-pesquisa-home"><span
-                                                class="icon-lupa_menu menu-top-icon"></span></button>
                                     </form>
                                 </div>
                             </li>

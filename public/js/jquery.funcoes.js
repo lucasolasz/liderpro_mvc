@@ -40,12 +40,15 @@ $(document).ready(function () {
     });
 
     $("#icon-lupa_menu").click(function () {
+        $("#pesquisarHome").addClass('zIndexPesquisa');
+        $("#icon-lupa_menu").addClass('zIndexPesquisa');
+
         $('#overlayPesquisa').removeClass('hiddenPesquisa');
         $('#carrousel-prev').addClass('zIndexCarouselPesquisa');
         $('#carrousel-next').addClass('zIndexCarouselPesquisa');
         $('#carouselExampleIndicators').addClass('zIndexCarouselPesquisa');
-        $(".togglesearch").toggle();
-        $("input[type='text']").focus();
+
+        $("#pesquisarHome").show("slow");
     });
 
 
@@ -53,6 +56,9 @@ $(document).ready(function () {
         fecharInputPesquisa();
     });
 
+    $("#overlayPesquisa").on("click", function() {
+        fecharInputPesquisa();
+    })
 });
 
 function fecharInputPesquisa() {
@@ -61,6 +67,7 @@ function fecharInputPesquisa() {
     $('#carrousel-prev').removeClass('zIndexCarouselPesquisa');
     $('#carrousel-next').removeClass('zIndexCarouselPesquisa');
     $('#carouselExampleIndicators').removeClass('zIndexCarouselPesquisa');
+    $("#pesquisarHome").hide("slow");
 }
 
 function criticaCampoFicaVermelho(idDivMensagem, mensagem, idCampoInput, idCampoLabel) {

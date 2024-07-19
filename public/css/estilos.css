@@ -977,15 +977,13 @@ body {
 
 /* ---------------------- Search Button ----------------------*/
 
-.lp-form-pesquisa {
-    border-radius: 15px;
-    border: 0.5px solid var(--azul);
-    padding: 4px;
-}
-
 .lp-form-pesquisa>#txtPesquisaHome {
-    border: none;
-    width: 400px;
+    border-radius: 15px;
+    font-size: small;
+    padding-left: 15px;
+    border: 0.5px solid var(--azul);
+    outline: none;
+    width: 300px;
 }
 
 .lp-barra-pesquisa:focus {
@@ -1029,4 +1027,8 @@ body {
 
 .zIndexCarouselPesquisa{
     z-index: -1;
+}
+
+.zIndexPesquisa {
+    z-index: 1;
 }
