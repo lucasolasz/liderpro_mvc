@@ -444,7 +444,7 @@ class Paginas extends Controller
 
         $dados = [
             'paginas' => $paginas,
-            'tituloBreadcrumb' => 'assistencia_tecnica',
+            'tituloBreadcrumb' => 'assistencia_tecnica'
         ];
 
         if ($_SESSION['linguagem_selecionada'] == "PT") {

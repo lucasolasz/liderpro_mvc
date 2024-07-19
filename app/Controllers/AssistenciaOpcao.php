@@ -18,7 +18,8 @@ class AssistenciaOpcao extends Controller
         //Parâmetros enviados para o método do controller VIEW
         $dados = [
             'tituloBreadcrumb' => 'computador_opc',
-            'paginas' => $paginas
+            'paginas' => $paginas,
+            'assistenciaSelecionada' => 'COMPUTADOR'
         ];
 
         if ($_SESSION['linguagem_selecionada'] == "PT") {
@@ -38,7 +39,8 @@ class AssistenciaOpcao extends Controller
         //Parâmetros enviados para o método do controller VIEW
         $dados = [
             'tituloBreadcrumb' => 'notebook_opc',
-            'paginas' => $paginas
+            'paginas' => $paginas,
+            'assistenciaSelecionada' => 'NOTEBOOK'
         ];
 
         if ($_SESSION['linguagem_selecionada'] == "PT") {
@@ -58,7 +60,8 @@ class AssistenciaOpcao extends Controller
         //Parâmetros enviados para o método do controller VIEW
         $dados = [
             'tituloBreadcrumb' => 'tablet_celular_opc',
-            'paginas' => $paginas
+            'paginas' => $paginas,
+            'assistenciaSelecionada' => 'TABLET/CELULAR'
         ];
 
         if ($_SESSION['linguagem_selecionada'] == "PT") {
@@ -78,7 +81,8 @@ class AssistenciaOpcao extends Controller
         //Parâmetros enviados para o método do controller VIEW
         $dados = [
             'tituloBreadcrumb' => 'projetor_opc',
-            'paginas' => $paginas
+            'paginas' => $paginas,
+            'assistenciaSelecionada' => 'PROJETOR'
         ];
 
         if ($_SESSION['linguagem_selecionada'] == "PT") {
@@ -98,7 +102,8 @@ class AssistenciaOpcao extends Controller
         //Parâmetros enviados para o método do controller VIEW
         $dados = [
             'tituloBreadcrumb' => 'fonte_alimentacao_opc',
-            'paginas' => $paginas
+            'paginas' => $paginas,
+            'assistenciaSelecionada' => 'FONTE ALIMENTAÇÃO'
         ];
 
         if ($_SESSION['linguagem_selecionada'] == "PT") {
@@ -118,7 +123,8 @@ class AssistenciaOpcao extends Controller
         //Parâmetros enviados para o método do controller VIEW
         $dados = [
             'tituloBreadcrumb' => 'tv_monitor_opc',
-            'paginas' => $paginas
+            'paginas' => $paginas,
+            'assistenciaSelecionada' => 'TV/MONITOR'
         ];
 
         if ($_SESSION['linguagem_selecionada'] == "PT") {
@@ -138,7 +144,8 @@ class AssistenciaOpcao extends Controller
         //Parâmetros enviados para o método do controller VIEW
         $dados = [
             'tituloBreadcrumb' => 'impressora_opc',
-            'paginas' => $paginas
+            'paginas' => $paginas,
+            'assistenciaSelecionada' => 'IMPRESSORA'
         ];
 
         if ($_SESSION['linguagem_selecionada'] == "PT") {
@@ -158,7 +165,8 @@ class AssistenciaOpcao extends Controller
         //Parâmetros enviados para o método do controller VIEW
         $dados = [
             'tituloBreadcrumb' => 'nobreak_opc',
-            'paginas' => $paginas
+            'paginas' => $paginas,
+            'assistenciaSelecionada' => 'NO-BREAKS'
         ];
 
         if ($_SESSION['linguagem_selecionada'] == "PT") {
@@ -178,7 +186,8 @@ class AssistenciaOpcao extends Controller
         //Parâmetros enviados para o método do controller VIEW
         $dados = [
             'tituloBreadcrumb' => 'apple_opc',
-            'paginas' => $paginas
+            'paginas' => $paginas,
+            'assistenciaSelecionada' => 'APPLE'
         ];
 
         if ($_SESSION['linguagem_selecionada'] == "PT") {

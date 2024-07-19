@@ -117,7 +117,12 @@
                 <div class="flex-grow-1 d-flex align-items-center" style="padding-left: 58px">
                     <div class="lp-breadcrumb">
                         <?php if (isset($dados['paginas']) && !isset($dados["paginasLiderPro"]) && $paginaBreadCrumb != "") { ?>
-                            <a href="<?= URL ?>">Home</a> > <a href="<?= URL . '/PaginasDinamicas' . $urlBreadCrumb ?>"><?= $paginaBreadCrumb ?></a>
+                            <a href="<?= URL ?>">Home</a> > <a href="<?= URL . '/Paginas' . $urlBreadCrumb ?>"><?= $paginaBreadCrumb ?></a>
+                        <?php } ?>
+
+                        <?php if (isset($dados['assistenciaSelecionada'])) { ?>
+                            <a href="<?= URL ?>">Home</a> > <a href="<?= URL ?>/Paginas/assistencia_tecnica">ASSISTÊNCIA TÉCNICA</a> > <a href="<?= URL . '/AssistenciaOpcao/' . $dados['tituloBreadcrumb'] ?>"><?= $dados['assistenciaSelecionada'] ?></a>
+                            
                         <?php } ?>
 
                         <?php if (isset($dados['paginasLiderPro'])) { ?>
