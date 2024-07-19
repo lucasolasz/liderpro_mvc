@@ -230,6 +230,7 @@
                             <?php } ?>
 
                             <li>
+                                <div id="overlayPesquisa" class="hiddenPesquisa"></div>
                                 <span class="icon-lupa_menu menu-top-icon" id="icon-lupa_menu"></span>
                                 <div class="togglesearch">
                                     <form name="pesquisarHome" id="pesquisarHome" method="POST"

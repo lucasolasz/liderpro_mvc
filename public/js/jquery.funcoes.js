@@ -36,16 +36,32 @@ $(document).ready(function () {
     });
 
     $(".lp-close-pesquisa").click(function () {
-        $(".togglesearch").hide();
+        fecharInputPesquisa();
     });
 
     $("#icon-lupa_menu").click(function () {
+        $('#overlayPesquisa').removeClass('hiddenPesquisa');
+        $('#carrousel-prev').addClass('zIndexCarouselPesquisa');
+        $('#carrousel-next').addClass('zIndexCarouselPesquisa');
+        $('#carouselExampleIndicators').addClass('zIndexCarouselPesquisa');
         $(".togglesearch").toggle();
         $("input[type='text']").focus();
     });
+
+
+    $("#txtPesquisaHome").on("blur", function () {
+        fecharInputPesquisa();
+    });
+
 });
 
-
+function fecharInputPesquisa() {
+    $(".togglesearch").hide();
+    $('#overlayPesquisa').addClass('hiddenPesquisa');
+    $('#carrousel-prev').removeClass('zIndexCarouselPesquisa');
+    $('#carrousel-next').removeClass('zIndexCarouselPesquisa');
+    $('#carouselExampleIndicators').removeClass('zIndexCarouselPesquisa');
+}
 
 function criticaCampoFicaVermelho(idDivMensagem, mensagem, idCampoInput, idCampoLabel) {
 

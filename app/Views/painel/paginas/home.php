@@ -20,11 +20,11 @@
                 <img src="<?= URL . '/img/banner/banner_solucao_nuvem.png' ?>" class="d-block w-100" alt="...">
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
+        <button id="carrousel-prev" class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators" data-slide="next">
+        <button id="carrousel-next" class="carousel-control-next" type="button" data-target="#carouselExampleIndicators" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </button>
