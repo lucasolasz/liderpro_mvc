@@ -44,12 +44,12 @@
                         <li><a href="<?= URL . '/Paginas/informacoes_legais' ?>">Legal Information</a></li>
                     </ul>
                 </li>
-                <li>CUSTOMER ACCESS</li>
+                <li><a href="<?= URL . '/UsuariosController/login' ?>">CUSTOMER ACCESS</a></li>
                 <li>LANGUAGES
                     <ul class="list-unstyled lp-submenu-rodape">
-                        <li>Portuguese</li>
-                        <li>English</li>
-                        <li>Spanish</li>
+                        <li><a href="<?= URL . "/Paginas/trocaLinguagem/?linguagem=PT" ?>">Portuguese</a></li>
+                        <li><a href="<?= URL . "/Paginas/trocaLinguagem/?linguagem=EN" ?>">English</a></li>
+                        <li><a href="<?= URL . "/Paginas/trocaLinguagem/?linguagem=ES" ?>">Spanish</a></li>
                     </ul>
                 </li>
             </ul>
