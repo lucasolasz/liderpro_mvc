@@ -8,9 +8,11 @@
                     <ul class="list-unstyled lp-submenu-rodape">
                         <li><a href="<?= URL . '/AssistenciaOpcao/computador_opc' ?>">Computadora</a></li>
                         <li><a href="<?= URL . '/AssistenciaOpcao/notebook_opc' ?>">Computadora portátil</a></li>
-                        <li><a href="<?= URL . '/AssistenciaOpcao/tablet_celular_opc' ?>">Tableta y teléfono celular</a></li>
+                        <li><a href="<?= URL . '/AssistenciaOpcao/tablet_celular_opc' ?>">Tableta y teléfono celular</a>
+                        </li>
                         <li><a href="<?= URL . '/AssistenciaOpcao/projetor_opc' ?>">Proyector</a></li>
-                        <li><a href="<?= URL . '/AssistenciaOpcao/fonte_alimentacao_opc' ?>">Fuente de alimentación</a></li>
+                        <li><a href="<?= URL . '/AssistenciaOpcao/fonte_alimentacao_opc' ?>">Fuente de alimentación</a>
+                        </li>
                         <li><a href="<?= URL . '/AssistenciaOpcao/tv_monitor_opc' ?>">Televisor y monitor</a></li>
                         <li><a href="<?= URL . '/AssistenciaOpcao/impressora_opc' ?>">Impresora</a></li>
                         <li><a href="<?= URL . '/AssistenciaOpcao/nobreak_opc' ?>">UPS</a></li>
@@ -18,7 +20,9 @@
                 </li>
 
                 <?php foreach ($dados['paginas'] as $paginas) { ?>
-                    <li><a href="<?= URL . '/PaginasDinamicas/' . $paginas->ds_breadcrumb_menu ?>"><?= mb_strtoupper($paginas->ds_pagina) ?></a></li>
+                    <li><a
+                            href="<?= URL . '/PaginasDinamicas/' . $paginas->ds_breadcrumb_menu ?>"><?= mb_strtoupper($paginas->ds_pagina) ?></a>
+                    </li>
                 <?php } ?>
             </ul>
         </div>
@@ -45,13 +49,6 @@
                     </ul>
                 </li>
                 <li><a href="<?= URL . '/UsuariosController/login' ?>">ACCESO DE CLIENTES</a></li>
-                <li>IDIOMAS
-                    <ul class="list-unstyled lp-submenu-rodape">
-                        <li><a href="<?= URL . "/Paginas/trocaLinguagem/?linguagem=PT" ?>">Portugués</a></li>
-                        <li><a href="<?= URL . "/Paginas/trocaLinguagem/?linguagem=EN" ?>">Inglés</a></li>
-                        <li><a href="<?= URL . "/Paginas/trocaLinguagem/?linguagem=ES" ?>">Español</a></li>
-                    </ul>
-                </li>
             </ul>
         </div>
         <div class="col-md d-flex flex-column">
@@ -59,22 +56,31 @@
                 <ul class="list-unstyled lista-rodape">
                     <li class="lp-titulo-rodape">CLIENTES</li>
                     <li><a href="<?= URL . '/Paginas/clientes' ?>">LISTA DE CLIENTES</a></li>
-                    <li><a href="<?= URL . '/Paginas/pesquisaAvancadaClienteAlfabetica' ?>">Por orden alfabético</a></li>
-                    <li><a href="<?= URL . '/Paginas/pesquisaAvancadaClientePorSegmento' ?>">Por orden de segmentos</a></li>
+                    <li><a href="<?= URL . '/Paginas/pesquisaAvancadaClienteAlfabetica' ?>">Por orden alfabético</a>
+                    </li>
+                    <li><a href="<?= URL . '/Paginas/pesquisaAvancadaClientePorSegmento' ?>">Por orden de segmentos</a>
+                    </li>
                 </ul>
             </div>
             <div class="mt-5">
                 <div class="lp-titulo-rodape">REDES SOCIALES</div>
                 <div class="row">
-                    <div class="p-2"><a href="<?= URL_FACEBOOK ?>" target="_blank"><img class="lp-logo-rodape" src="<?= URL . '/img/facebook_logo_rodape.png' ?>" alt="Facebook Logo Rodapé"></a></div>
-                    <div class="p-2"><a href="<?= URL_INSTAGRAM ?>" target="_blank"><img class="lp-logo-rodape" src="<?= URL . '/img/instagram_logo_rodape.png' ?>" alt=" Instagram Logo rodapé"></a></div>
-                    <div class="p-2"><a href="<?= URL_YOUTUBE ?>" target="_blank"><img class="lp-logo-rodape" src="<?= URL . '/img/youtube_logo_rodape.png' ?>" alt="Youtube Logo rodapé"></a></div>
-                    <div class="p-2"><a href="<?= URL_LINKEDIN ?>" target="_blank"><img class="lp-logo-rodape" src="<?= URL . '/img/linkedin_logo_rodape.png' ?>" alt="Linkedin Logo rodapé"></a></div>
-                    <div class="p-2"><a href="<?= URL_TWITTER ?>" target="_blank"><img class="lp-logo-rodape" src="<?= URL . '/img/twitter_logo_rodape.png' ?>" alt="Twitter Logo rodapé"></a></div>
+                    <div class="p-2"><a href="<?= URL_FACEBOOK ?>" target="_blank"><img class="lp-logo-rodape"
+                                src="<?= URL . '/img/facebook_logo_rodape.png' ?>" alt="Facebook Logo Rodapé"></a></div>
+                    <div class="p-2"><a href="<?= URL_INSTAGRAM ?>" target="_blank"><img class="lp-logo-rodape"
+                                src="<?= URL . '/img/instagram_logo_rodape.png' ?>" alt=" Instagram Logo rodapé"></a>
+                    </div>
+                    <div class="p-2"><a href="<?= URL_YOUTUBE ?>" target="_blank"><img class="lp-logo-rodape"
+                                src="<?= URL . '/img/youtube_logo_rodape.png' ?>" alt="Youtube Logo rodapé"></a></div>
+                    <div class="p-2"><a href="<?= URL_LINKEDIN ?>" target="_blank"><img class="lp-logo-rodape"
+                                src="<?= URL . '/img/linkedin_logo_rodape.png' ?>" alt="Linkedin Logo rodapé"></a></div>
+                    <div class="p-2"><a href="<?= URL_TWITTER ?>" target="_blank"><img class="lp-logo-rodape"
+                                src="<?= URL . '/img/twitter_logo_rodape.png' ?>" alt="Twitter Logo rodapé"></a></div>
                 </div>
             </div>
             <div class="mt-auto">
-                <a href="<?= URL ?>"><img class="img-fluid" style="padding: 20px;" src="<?= URL . '/img/logo-liderpro-rodape.png' ?>" alt="Logo Lider Pro Rodapé"></a>
+                <a href="<?= URL ?>"><img class="img-fluid" style="padding: 20px;"
+                        src="<?= URL . '/img/logo-liderpro-rodape.png' ?>" alt="Logo Lider Pro Rodapé"></a>
             </div>
         </div>
         <div class="col-md d-flex flex-column">
@@ -88,6 +94,12 @@
             </ul>
             <ul class="list-unstyled lista-rodape">
                 <li class="lp-titulo-rodape" id="linkpesquisaRodape">BUSCAR</li>
+            </ul>
+            <ul class="list-unstyled lista-rodape">
+                <li class="lp-titulo-rodape">IDIOMAS</li>
+                <li><a href="<?= URL . "/Paginas/trocaLinguagem/?linguagem=PT" ?>">Portugués</a></li>
+                <li><a href="<?= URL . "/Paginas/trocaLinguagem/?linguagem=EN" ?>">Inglés</a></li>
+                <li><a href="<?= URL . "/Paginas/trocaLinguagem/?linguagem=ES" ?>">Español</a></li>
             </ul>
         </div>
     </div>

@@ -48,13 +48,6 @@
                     </ul>
                 </li>
                 <li><a href="<?= URL . '/UsuariosController/login' ?>">ACESSO AO CLIENTE</a></li>
-                <li>IDIOMAS
-                    <ul class="list-unstyled lp-submenu-rodape">
-                        <li><a href="<?= URL . "/Paginas/trocaLinguagem/?linguagem=PT" ?>">Português</a></li>
-                        <li><a href="<?= URL . "/Paginas/trocaLinguagem/?linguagem=EN" ?>">Inglês</a></li>
-                        <li><a href="<?= URL . "/Paginas/trocaLinguagem/?linguagem=ES" ?>">Espanhol</a></li>
-                    </ul>
-                </li>
             </ul>
         </div>
         <div class="col-md d-flex flex-column">
@@ -100,6 +93,12 @@
             </ul>
             <ul class="list-unstyled lista-rodape">
                 <li class="lp-titulo-rodape" id="linkpesquisaRodape">PESQUISA</li>
+            </ul>
+            <ul class="list-unstyled lista-rodape">
+                <li class="lp-titulo-rodape">IDIOMAS</li>
+                <li><a href="<?= URL . "/Paginas/trocaLinguagem/?linguagem=PT" ?>">Português</a></li>
+                <li><a href="<?= URL . "/Paginas/trocaLinguagem/?linguagem=EN" ?>">Inglês</a></li>
+                <li><a href="<?= URL . "/Paginas/trocaLinguagem/?linguagem=ES" ?>">Espanhol</a></li>
             </ul>
         </div>
     </div>
