@@ -48,7 +48,6 @@
                         <li><a href="<?= URL . '/Paginas/informacoes_legais' ?>">Información legal</a></li>
                     </ul>
                 </li>
-                <li><a href="<?= URL . '/UsuariosController/login' ?>">ACCESO DE CLIENTES</a></li>
             </ul>
         </div>
         <div class="col-md d-flex flex-column">
@@ -100,6 +99,9 @@
                 <li><a href="<?= URL . "/Paginas/trocaLinguagem/?linguagem=PT" ?>">Portugués</a></li>
                 <li><a href="<?= URL . "/Paginas/trocaLinguagem/?linguagem=EN" ?>">Inglés</a></li>
                 <li><a href="<?= URL . "/Paginas/trocaLinguagem/?linguagem=ES" ?>">Español</a></li>
+            </ul>
+            <ul class="list-unstyled lista-rodape">
+                <li class="lp-titulo-rodape"><a href="<?= URL . '/UsuariosController/login' ?>">ACCESO DE CLIENTES</a></li>
             </ul>
         </div>
     </div>

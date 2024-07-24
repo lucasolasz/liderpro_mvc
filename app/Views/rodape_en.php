@@ -99,6 +99,9 @@
                 <li><a href="<?= URL . "/Paginas/trocaLinguagem/?linguagem=EN" ?>">English</a></li>
                 <li><a href="<?= URL . "/Paginas/trocaLinguagem/?linguagem=ES" ?>">Spanish</a></li>
             </ul>
+            <ul class="list-unstyled lista-rodape">
+                <li class="lp-titulo-rodape"><a href="<?= URL . '/UsuariosController/login' ?>">CUSTOMER ACCESS</a></li>
+            </ul>
         </div>
     </div>
 </footer>
