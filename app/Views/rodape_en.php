@@ -86,6 +86,9 @@
                 <li><a href="<?= URL . '/Paginas/contatos' ?>">Opening Hours</a></li>
                 <li><a href="<?= URL . '/Paginas/contatos' ?>">How to get</a></li>
             </ul>
+            <ul class="list-unstyled lista-rodape">
+                <li class="lp-titulo-rodape" id="linkpesquisaRodape">SEARCH</li>
+            </ul>
         </div>
     </div>
 </footer>

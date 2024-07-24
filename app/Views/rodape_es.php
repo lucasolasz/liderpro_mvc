@@ -86,6 +86,9 @@
                 <li><a href="<?= URL . '/Paginas/contatos' ?>">Horas de oficina</a></li>
                 <li><a href="<?= URL . '/Paginas/contatos' ?>">Como llegar</a></li>
             </ul>
+            <ul class="list-unstyled lista-rodape">
+                <li class="lp-titulo-rodape" id="linkpesquisaRodape">BUSCAR</li>
+            </ul>
         </div>
     </div>
 </footer>

@@ -59,6 +59,13 @@ $(document).ready(function () {
     $("#overlayPesquisa").on("click", function() {
         fecharInputPesquisa();
     })
+
+
+    $("#linkpesquisaRodape").click(function(){
+        $('html, body').animate({scrollTop: 0}, 'slow');
+        $("#icon-lupa_menu").click();
+        return false;
+    });
 });
 
 function fecharInputPesquisa() {
