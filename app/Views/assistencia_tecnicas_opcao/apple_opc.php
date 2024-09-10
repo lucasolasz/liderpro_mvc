@@ -87,7 +87,7 @@
                         </div>
 
                         <div class="form__group field w-100">
-                            <input type="input" class="form__field " name="txtMarcaModelo" id='txtMarcaModelo' required />
+                            <input type="input" class="form__field " name="txtMarcaModelo" id='txtMarcaModelo' />
                             <label for="txtMarcaModelo" class="form__label">Marca e Modelo (se souber e/ou se houver)</label>
                         </div>
 

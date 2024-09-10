@@ -95,7 +95,7 @@
                         </div>
 
                         <div class="form__group field w-100">
-                            <input type="input" class="form__field " name="txtMarcaModelo" id='txtMarcaModelo' required />
+                            <input type="input" class="form__field " name="txtMarcaModelo" id='txtMarcaModelo' />
                             <label for="txtMarcaModelo" class="form__label">Make and Model (if known and/or if any)</label>
                         </div>
 
